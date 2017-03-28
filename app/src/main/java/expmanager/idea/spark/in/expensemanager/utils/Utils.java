@@ -1,10 +1,12 @@
 package expmanager.idea.spark.in.expensemanager.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -57,5 +59,16 @@ public class Utils {
      float di = ctx.getResources().getDisplayMetrics().density;
      int margin = (int) (val * di);
       return margin;
+    }
+
+    /**
+     * Method to hide the keyboard. Pass the activity context
+     * @param context
+     */
+    public static void hideKeyboard(Activity context){
+        InputMethodManager inputManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
     }
 }

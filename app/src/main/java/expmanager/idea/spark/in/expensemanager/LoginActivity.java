@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 if ((!userName.getText().toString().isEmpty()) && (!password.getText().toString().isEmpty())) {
-
+                    Utils.hideKeyboard(LoginActivity.this);
                     progressBar.setVisibility(View.VISIBLE);
                     LoginRequest loginRequest = new LoginRequest(userName.getText().toString(), password.getText().toString(), Utils.getDeviceId(LoginActivity.this));
                     RetrofitApi.getApi().loginExpenseManager(loginRequest).enqueue(new Callback<ResponseBody>() {

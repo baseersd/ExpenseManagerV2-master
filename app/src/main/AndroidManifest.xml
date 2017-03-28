@@ -42,6 +42,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:screenOrientation="landscape" />
         <activity
             android:name=".AdminActivity"

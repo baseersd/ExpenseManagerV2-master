@@ -16,8 +16,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="100dip"
-        android:layout_marginStart="100dip"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
         android:layout_toRightOf="@+id/view"
         android:orientation="vertical">
 
@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -35,44 +35,43 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:gravity="center_vertical"
-                android:text="New To Expense Manager?"
-                android:textColor="#d4e157"
+                android:text="@string/new_to_expense_tracker"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/yellow"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/sign_up"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/button_background"
+                style="@style/button_style"
+                android:layout_gravity="end"
                 android:text="@string/sign_up"
-                android:textColor="@color/editTextBackgroundWhite"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="100dp"
             android:orientation="vertical">
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
                 android:id="@+id/texwtView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login"
-                android:textColor="#d4e157"
-                android:textSize="20sp" />
+                android:text="@string/login"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/text_size_large" />
 
             <EditText
                 android:id="@+id/username_login"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="23dp"
+                android:layout_marginTop="@dimen/login_screen_edit_text_margin"
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/edit_text_background"
-                android:ems="10"
-                android:hint="Username"
+                android:ems="15"
+                android:hint="@string/username"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:paddingLeft="6dp"
@@ -82,9 +81,11 @@
                 android:id="@+id/password_login"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginTop="@dimen/login_screen_edit_text_margin"
                 android:background="@drawable/edit_text_background"
-                android:ems="10"
-                android:hint="Password"
+                android:ems="15"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:paddingLeft="6dp"
@@ -92,48 +93,15 @@
 
             <Button
                 android:id="@+id/loginbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/button_background"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:text="Login"
-                android:textColor="@color/editTextBackgroundWhite"
+                style="@style/button_style"
+                android:layout_marginTop="@dimen/login_screen_edit_text_margin"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/login"
                 android:textStyle="bold" />
 
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="70dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/forgot_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/button_background"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:text="Forgot Password"
-                android:textColor="@color/yellow" />
-
-            <Button
-                android:id="@+id/use_pin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/button_background"
-                android:text="Use Pin"
-                android:textColor="@color/yellow" />
-        </LinearLayout>
-
-
     </LinearLayout>
 
     <ProgressBar
@@ -142,5 +110,27 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/view"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginStart="150dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/forgot_password"
+            style="@style/button_style"
+            android:layout_marginRight="5dp"
+            android:text="@string/forgot_password"
+            />
+
+        <Button
+            android:id="@+id/use_pin"
+            style="@style/button_style"
+            android:layout_marginLeft="5dp"
+            android:text="@string/use_pin"/>
+    </LinearLayout>
 </RelativeLayout>

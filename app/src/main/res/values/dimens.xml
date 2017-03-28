@@ -10,4 +10,8 @@
 
     <dimen name="activity_staff_margin">64dp</dimen>
 
+    <dimen name="login_screen_edit_text_margin">30dp</dimen>
+    <dimen name="text_size_large">25sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+
 </resources>

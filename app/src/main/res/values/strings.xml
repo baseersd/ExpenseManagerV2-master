@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">ExpenseManager</string>
 
-    <string name="forgot_password">Forgot Password ?</string>
+    <string name="forgot_password_ques">Forgot Password ?</string>
+    <string name="forgot_password">Forgot Password</string>
     <string name="back">back</string>
     <string name="please_enter_your_username_and_mail">Please enter your username and mail</string>
     <string name="send_new_password">Send new password</string>
@@ -13,6 +14,9 @@
     <string name="today_expense_text">3 products were bought extra this month, your profit will be reduced by $40.00 from last month</string>
     <string name="checkout">Check out the in tangible expenses for this month</string>
 
+    <string name="new_to_expense_tracker">New to Expense Manager !</string>
+    <string name="login">Login</string>
+    <string name="use_pin">Use Pin</string>
 
     <string name="ion_bag">&#xf110;</string>
     <string name="ion_clock">&#xf26e;</string>
