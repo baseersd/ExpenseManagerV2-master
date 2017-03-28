@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@color/blue">
+
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grocery Today"
+        android:layout_weight="0.7"
+        android:textStyle="bold"
+        android:textColor="@color/editTextBackgroundWhite"
+        android:textSize="20dp" />
+
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3 items"
+        android:layout_weight="1"
+        android:textColor="@color/editTextBackgroundWhite"
+        android:textSize="18dp" />
+
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$40.00"
+        android:layout_weight="1"
+        android:textColor="@color/editTextBackgroundWhite"
+        android:textSize="18dp" />
+
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/editTextBackgroundWhite"
+        android:textSize="18dp" />
+
+
+</LinearLayout>
