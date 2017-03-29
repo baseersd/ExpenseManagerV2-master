@@ -97,10 +97,12 @@ public class AdminTangibleExpenses extends Fragment {
             public void onClick(View view) {
 
                 if (flag == 0) {
+                    imgArrow.setImageResource(R.drawable.right_arrow);
                     main_layout.getLayoutParams().width = convertWidth;
                     main_layout.requestLayout();
                     flag = 1;
                 } else {
+                    imgArrow.setImageResource(R.drawable.left_arrow);
                     main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
                     main_layout.requestLayout();
                     flag = 0;

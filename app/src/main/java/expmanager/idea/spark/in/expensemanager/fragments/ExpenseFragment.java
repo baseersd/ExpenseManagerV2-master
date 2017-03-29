@@ -29,16 +29,17 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 
     public TodayExpenseAdapter adapter;
     public TodayExpenseAdapter weekAdapter;
-    private Button imgAddocrExpense, addexpbtn;
+    private ImageView imgAddocrExpense, addexpbtn;
     private ImageView imgArrow;
-    RelativeLayout main_layout;
+    private RelativeLayout main_layout;
+    private RelativeLayout slide_layout;
 
     int flag;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.expense,
+        View rootView = inflater.inflate(R.layout.expense1,
                 container, false);
 
         Display display = getActivity().getWindowManager().getDefaultDisplay();
@@ -47,30 +48,40 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 
         final int convertWidth = (int) (width*0.65);
 
-        imgAddocrExpense = (Button) rootView.findViewById(R.id.img_ocr_expense);
+        imgAddocrExpense = (ImageView) rootView.findViewById(R.id.img_ocr_expense);
         imgAddocrExpense.setOnClickListener(this);
 
         //drawableInitialasation(rootView);
 
-        addexpbtn = (Button) rootView.findViewById(R.id.img_add_expense);
+        addexpbtn = (ImageView) rootView.findViewById(R.id.img_add_expense);
         addexpbtn.setOnClickListener(this);
 
         imgArrow = (ImageView) rootView.findViewById(R.id.img_arrow);
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.parent_main_layout);
 
+        slide_layout = (RelativeLayout) rootView.findViewById(R.id.slide_nav_bar);
+
         imgArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (flag == 0) {
-                    main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();
+                    //imgArrow.setImageDrawable(getResources().getDrawable(R.drawable.right_arrow));
+                    imgArrow.setImageResource(R.drawable.left_arrow);
+                    /*main_layout.getLayoutParams().width = convertWidth;
+                    main_layout.requestLayout();*/
+                    slide_layout.setVisibility(View.VISIBLE);
                     flag = 1;
+
                 } else {
-                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();
+                    //imgArrow.setImageDrawable(getResources().getDrawable(R.drawable.left_arrow));
+                    imgArrow.setImageResource(R.drawable.right_arrow);
+                    /*main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                    main_layout.requestLayout();*/
                     flag = 0;
+                    slide_layout.setVisibility(View.GONE);
+
                 }
 
             }
