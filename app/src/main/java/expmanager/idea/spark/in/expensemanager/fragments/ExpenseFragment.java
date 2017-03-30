@@ -32,7 +32,6 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
     private ImageView imgAddocrExpense, addexpbtn;
     private ImageView imgArrow;
     private RelativeLayout main_layout;
-    private RelativeLayout slide_layout;
 
     int flag;
 
@@ -60,27 +59,21 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.parent_main_layout);
 
-        slide_layout = (RelativeLayout) rootView.findViewById(R.id.slide_nav_bar);
-
         imgArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (flag == 0) {
-                    //imgArrow.setImageDrawable(getResources().getDrawable(R.drawable.right_arrow));
-                    imgArrow.setImageResource(R.drawable.left_arrow);
-                    /*main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();*/
-                    slide_layout.setVisibility(View.VISIBLE);
+                    imgArrow.setImageResource(R.drawable.right_arrow);
+                    main_layout.getLayoutParams().width = convertWidth;
+                    main_layout.requestLayout();
                     flag = 1;
 
                 } else {
-                    //imgArrow.setImageDrawable(getResources().getDrawable(R.drawable.left_arrow));
-                    imgArrow.setImageResource(R.drawable.right_arrow);
-                    /*main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();*/
+                    imgArrow.setImageResource(R.drawable.left_arrow);
+                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                    main_layout.requestLayout();
                     flag = 0;
-                    slide_layout.setVisibility(View.GONE);
 
                 }
 

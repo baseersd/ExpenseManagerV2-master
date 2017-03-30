@@ -3,15 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="horizontal"
-    android:weightSum="1">
+    android:orientation="horizontal">
 
 
     <RelativeLayout
         android:id="@+id/parent_main_layout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.7"
         android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginLeft="@dimen/margin_medium"
         android:gravity="left">
@@ -27,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -43,8 +42,7 @@
                     android:id="@+id/today_expensies_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/doller_img"
-                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/doller_img"
                     android:text="Todays Expense"
@@ -87,7 +85,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recycler_view"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -109,14 +108,14 @@
                     android:textColor="@color/expense_side_panel_text_color"
                     android:textSize="22dp" />
 
-                <ImageView
+                <!--<ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="30dp"
                     android:layout_marginLeft="150dp"
                     android:background="@drawable/double_circlular_view"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add" />-->
 
             </RelativeLayout>
 
@@ -141,26 +140,24 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/margin_medium"
             android:background="@color/yellow"
-            android:src="@drawable/right_arrow" />
+            android:src="@drawable/left_arrow" />
 
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/slide_nav_bar"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="0.3"
-        android:paddingLeft="@dimen/margin_medium"
-        android:paddingRight="@dimen/margin_medium"
         android:background="@color/expense_side_panel_bg_color"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
             android:id="@+id/txt_hi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
             android:text="HI!"
             android:textColor="@color/expense_side_panel_text_color"
             android:textSize="@dimen/text_size_xlarge" />
@@ -172,6 +169,7 @@
             android:layout_below="@id/txt_hi"
             android:maxLines="10"
             android:ellipsize="end"
+            android:paddingLeft="@dimen/margin_medium"
             android:text="@string/today_expense_text"
             android:textSize="@dimen/text_size_medium"
             android:textColor="@color/expense_side_panel_text_color" />
@@ -188,6 +186,7 @@
             android:id="@+id/recycler_view_today_products"
             android:layout_width="match_parent"
             android:layout_height="130dp"
+            android:paddingLeft="@dimen/margin_medium"
             android:layout_alignLeft="@+id/txt_hi"
             android:layout_below="@id/view_above_recycler_view" />
 
@@ -282,6 +281,7 @@
                 android:paddingLeft="@dimen/margin_medium"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/expense_side_panel_text_color"
+                android:textSize="@dimen/text_size_medium"
                 android:text="Do you want to add these as tangible from now on" />
 
             <ImageView
@@ -319,6 +319,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/rel_tangible"
             android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium">
             <ImageView
                 android:id="@+id/imgview_history_log"

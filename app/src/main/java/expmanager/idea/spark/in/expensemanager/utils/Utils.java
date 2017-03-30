@@ -2,6 +2,7 @@ package expmanager.idea.spark.in.expensemanager.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -30,6 +31,10 @@ public class Utils {
 
     public static String getDeviceId(Context context) {
 
+        // for Emulators, pass 123 as the deviceId
+        if ((Build.DEVICE.equals("generic")) || (Build.DEVICE.equals("generic_x86")) || (Build.DEVICE.equals("vbox86p"))) {
+            return "123";
+        }
         return Settings.Secure.getString(context.getContentResolver(),
                 Settings.Secure.ANDROID_ID);
     }
@@ -68,7 +73,9 @@ public class Utils {
     public static void hideKeyboard(Activity context){
         InputMethodManager inputManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        inputManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(),
-                InputMethodManager.HIDE_NOT_ALWAYS);
+        if(context.getCurrentFocus() != null) {
+            inputManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 }
