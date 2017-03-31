@@ -20,6 +20,7 @@
     <color name="expense_side_panel_text_color">#4b7970</color>
     <color name="expense_side_panel_bg_color">#D4e157</color>
     <color name="circular_ring_color">#1FB598</color>
+    <color name="expense_main_panel_list_bg">#1FB598</color>
 
     <color name="bluelay">#3179c3</color>
 </resources>

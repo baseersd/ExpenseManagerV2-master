@@ -80,7 +80,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+        RecyclerView recyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         RecyclerView recyclerViewWeek = (RecyclerView) rootView.findViewById(R.id.recycler_view_week);
@@ -95,8 +95,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
 
         adapter = new TodayExpenseAdapter(makeExpansesList());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        recyclerViewToday.setLayoutManager(layoutManager);
+        recyclerViewToday.setAdapter(adapter);
 
         weekAdapter = new TodayExpenseAdapter(makeExpansesList());
         recyclerViewWeek.setLayoutManager(layoutManagerWeek);
