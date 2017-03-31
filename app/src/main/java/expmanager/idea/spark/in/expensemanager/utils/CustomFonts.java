@@ -30,7 +30,7 @@ import android.widget.TextView;
     }
 
     public void init() {
-        Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans-Regular.ttf");
+        Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans-Light.ttf");
         setTypeface(font,1);
 
     }
