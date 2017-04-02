@@ -43,7 +43,7 @@ public class expenseAdapter extends BaseAdapter {
         TextView expTitle = (TextView) row.findViewById(R.id.lblexpitemname);
         TextView expAmt = (TextView) row.findViewById(R.id.lblexpitemprice);
 
-        expTitle.setText(listItem.get(position).getExpDescription());
+        expTitle.setText(listItem.get(position).getExpProductName());
         expAmt.setText("$" + String.format("%.2f", listItem.get(position).getExpAmt()));
 
 

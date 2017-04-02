@@ -12,14 +12,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
+import expmanager.idea.spark.in.expensemanager.common.AppConstants;
+import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.ExpanseGroup;
 import expmanager.idea.spark.in.expensemanager.model.ExpanseItem;
+import expmanager.idea.spark.in.expensemanager.model.Expense;
+import expmanager.idea.spark.in.expensemanager.model.Invoice;
+import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
 /**
  * Created by Ramana.Reddy on 2/24/2017.
@@ -32,6 +39,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
     private ImageView imgAddocrExpense, addexpbtn;
     private ImageView imgArrow;
     private RelativeLayout main_layout;
+    private DatabaseHandler myDbHelper;
+    private TextView mEmptyTodayExpense, mEmptyWeekExpense;
 
     int flag;
 
@@ -46,6 +55,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         int width = display.getWidth();
 
         final int convertWidth = (int) (width*0.65);
+
+        myDbHelper = new DatabaseHandler(getContext());
 
         imgAddocrExpense = (ImageView) rootView.findViewById(R.id.img_ocr_expense);
         imgAddocrExpense.setOnClickListener(this);
@@ -83,25 +94,32 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         RecyclerView recyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
+        mEmptyTodayExpense = (TextView) rootView.findViewById(R.id.tv_empty_list_today);
+        mEmptyWeekExpense = (TextView) rootView.findViewById(R.id.tv_empty_list_week_expense);
+
         RecyclerView recyclerViewWeek = (RecyclerView) rootView.findViewById(R.id.recycler_view_week);
         LinearLayoutManager layoutManagerWeek = new LinearLayoutManager(getActivity());
 
         // RecyclerView has some built in animations to it, using the DefaultItemAnimator.
         // Specifically when you call notifyItemChanged() it does a fade animation for the changing
         // of the data in the ViewHolder. If you would like to disable this you can use the following:
-        RecyclerView.ItemAnimator animator = recyclerView.getItemAnimator();
+        RecyclerView.ItemAnimator animator = recyclerViewToday.getItemAnimator();
         if (animator instanceof DefaultItemAnimator) {
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
-        adapter = new TodayExpenseAdapter(makeExpansesList());
+        List<ExpanseGroup> todaysExpenseList = makeExpansesList();
+        adapter = new TodayExpenseAdapter(todaysExpenseList);
         recyclerViewToday.setLayoutManager(layoutManager);
         recyclerViewToday.setAdapter(adapter);
+        mEmptyTodayExpense.setVisibility(todaysExpenseList.size() == 0? View.VISIBLE : View.GONE);
 
-        weekAdapter = new TodayExpenseAdapter(makeExpansesList());
+
+        List<ExpanseGroup> weeksExpenseList = makeExpansesList();
+        weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
         recyclerViewWeek.setLayoutManager(layoutManagerWeek);
         recyclerViewWeek.setAdapter(weekAdapter);
-
+        mEmptyWeekExpense.setVisibility(weeksExpenseList.size() == 0? View.VISIBLE : View.GONE);
 
         return rootView;
     }
@@ -114,21 +132,87 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 //       textView.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
 //    }
 
-    public static List<ExpanseItem> makeExpanseItems() {
+    public List<ExpanseItem> makeExpanseItems() {
         ExpanseItem item1 = new ExpanseItem("Olive oil", "2 lt", "$10.00");
         ExpanseItem item2 = new ExpanseItem("Sugar", "5 kg", "$20.00");
         ExpanseItem item3 = new ExpanseItem("Carrots", "5 kg", "$10.00");
 
+        getExpenseListforDate(Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));
         return Arrays.asList(item1, item2, item3);
     }
 
-    public static List<ExpanseGroup> makeExpansesList() {
-        return Arrays.asList(makeExpanseGroup(),
-                makeExpanseGroup());
+    public List<ExpanseItem> makeExpenseItems(List<Expense> expensesList){
+        List<ExpanseItem> expenseList = new ArrayList<>();
+        for(Expense expense : expensesList){
+            String productCost = getString(R.string.currencysymbol) + expense.getExpAmt();
+            ExpanseItem expenseItem = new ExpanseItem(expense.getExpProductName(),
+                    String.valueOf(expense.getExpUnit()),productCost);
+            expenseList.add(expenseItem);
+        }
+        return expenseList;
     }
 
-    public static ExpanseGroup makeExpanseGroup() {
+    private List<ExpanseGroup> getExpenseListforDate(String date){
+        List<ExpanseGroup> expenseList = new ArrayList<>();
+        myDbHelper.openConnection();
+        try {
+            List<String> categoriesForToday = myDbHelper.getExpenseNameforDate("01-04-2017");
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            myDbHelper.closeConnection();
+        }
+        return expenseList;
+    }
+    private List<ExpanseGroup> makeExpansesList() {
+
+        List<ExpanseGroup> expenseGroupList = new ArrayList<>();
+        myDbHelper.openConnection();
+        List<Invoice> invoicesListForToday = null;
+        try {
+            /*categoriesForToday = myDbHelper.getExpenseNameforDate(
+                    Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));*/
+            invoicesListForToday = myDbHelper.getAllInvoicesForToday();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            myDbHelper.closeConnection();
+        }
+
+        for(Invoice invoice: invoicesListForToday){
+            ExpanseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
+                    invoice.getInvBillNumber(), invoice.getInvAmt());
+            expenseGroupList.add(expenseGroup);
+        }
+
+        return expenseGroupList;
+       /* return Arrays.asList(makeExpanseGroup(),
+                makeExpanseGroup());*/
+    }
+
+    public ExpanseGroup makeExpanseGroup() {
         return new ExpanseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
+    }
+
+    public ExpanseGroup makeExpenseGroup(String expenseName, int invoiceId, double invoiceAmount){
+
+        StringBuilder expenseCost = new StringBuilder();
+        expenseCost.append(getString(R.string.currencysymbol));
+        expenseCost.append(invoiceAmount);
+        myDbHelper.openConnection();
+        List<Expense> expenseProduct = null;
+        try {
+            expenseProduct = myDbHelper.getExpensesforToday(invoiceId);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            myDbHelper.closeConnection();
+        }
+
+        StringBuilder itemsString = new StringBuilder();
+        itemsString.append(expenseProduct.size());
+        itemsString.append(" item(s)");
+        return new ExpanseGroup(expenseName, makeExpenseItems(expenseProduct), itemsString.toString(), expenseCost.toString());
     }
 
     @Override

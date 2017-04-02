@@ -27,6 +27,6 @@ public class ExpenseChildViewHolder extends ChildViewHolder {
     public void setDetails(String name,String quantity,String cost) {
         childName.setText(name);
         childQuantity.setText(quantity);
-        childQuantity.setText(cost);
+        childCost.setText(cost);
     }
 }

@@ -10,7 +10,6 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Grocery Today"
         android:paddingLeft="@dimen/margin_medium"
         android:paddingTop="@dimen/margin_small"
         android:paddingBottom="@dimen/margin_small"
@@ -23,7 +22,6 @@
         android:id="@+id/quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3 items"
         android:layout_weight="1"
         android:textColor="@color/editTextBackgroundWhite"
         android:textSize="18dp" />
@@ -32,7 +30,6 @@
         android:id="@+id/cost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="$40.00"
         android:layout_weight="1"
         android:textColor="@color/editTextBackgroundWhite"
         android:textSize="18dp" />

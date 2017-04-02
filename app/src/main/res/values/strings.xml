@@ -40,7 +40,10 @@
     <string name="ion_person">&#xf213;</string>
     <string name="ion_clipboard">&#xf127;</string>
     <string name="ion_gear_b">&#xf13e;</string>
-
+    <string name="expense_name">Expense Name</string>
+    <string name="currencysymbol">$</string>
+    <string name="no_expenses_recored">No expeses are recored for today</string>
+    <string name="no_expenses_recored_forweek">No expenses recorded for this week</string>
 
 
 </resources>

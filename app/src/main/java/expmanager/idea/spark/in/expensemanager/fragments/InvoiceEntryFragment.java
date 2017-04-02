@@ -35,6 +35,7 @@ import java.util.Locale;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
+import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
@@ -113,10 +114,10 @@ public class InvoiceEntryFragment extends Fragment implements View.OnClickListen
         txtinvno= (EditText)v.findViewById(R.id.input_invno);
         txtinvDate = (EditText)v.findViewById(R.id.input_invdate);
 
-        invdateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        //invdateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         txtinvDate.setInputType(InputType.TYPE_NULL);
         Calendar newDate = Calendar.getInstance();
-        txtinvDate.setText(invdateFormatter.format(newDate.getTime()));
+        txtinvDate.setText(Utils.getDateTimeforFormat("dd-MM-yyyy"));
         txtinvDate.setOnClickListener(this);
 
 
@@ -160,7 +161,10 @@ public class InvoiceEntryFragment extends Fragment implements View.OnClickListen
                 if(txtinvno.getText().length()>0 && txtinvDate.getText().length()>0 && txtinvdesc.getText().length()>0 && txtamt.getText().length()>0 ){
 
 
-                    myDbHelper.insetInvoice(new Invoice(txtinvno.getText().toString(),txtinvDate.getText().toString(),txtinvdesc.getText().toString(),filePath,spnPaymentMode.getSelectedItem().toString(), 3,filePath, Double.parseDouble(txtamt.getText().toString()),0.0));
+                    myDbHelper.insetInvoice(new Invoice(txtinvno.getText().toString(),txtinvDate.getText().toString(),
+                            txtinvdesc.getText().toString(),filePath,spnPaymentMode.getSelectedItem().toString(),
+                            Integer.parseInt(txtinvno.getText().toString()),
+                            3,filePath, Double.parseDouble(txtamt.getText().toString()),0.0));
 
 
 

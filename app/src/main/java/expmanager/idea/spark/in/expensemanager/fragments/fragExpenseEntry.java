@@ -72,7 +72,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     //Add Expense Form
     AutoCompleteTextView autoCatId;
     AutoCompleteTextView autoInvId;
-    EditText expDesc;
+    EditText expProductName;
     EditText expDate;
     EditText expUnit;
     EditText expAmt;
@@ -170,7 +170,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         expDate.setInputType(InputType.TYPE_NULL);
         expDate.setText(mParam4);
 
-        expDesc = (EditText) v.findViewById(R.id.exp_descrip);
+        expProductName = (EditText) v.findViewById(R.id.exp_descrip);
         lnrRecursiveLayout = (LinearLayout) v.findViewById(R.id.lnrRecursiveLayout);
 
         lstExpItems = (ListView) v.findViewById(R.id.lstExpItems);
@@ -202,40 +202,55 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         btnExpAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0 && expAmt.getText().length() > 0 && expDate.getText().length() > 0 && expDesc.getText().length() > 0) {
+                if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0
+                        && expAmt.getText().length() > 0 && expDate.getText().length() > 0
+                        && expProductName.getText().length() > 0) {
 
                     myDbHelper.openConnection();
                     int catId = myDbHelper.getCatId(autoCatId.getText().toString());
                     if (catId == 0) {
-                        myDbHelper.insetCategory(autoCatId.getText().toString(), "",0);
+                        myDbHelper.insetCategory(autoCatId.getText().toString(), 0,0);//ToDO: Replace 2nd Parameter with CategoryId
                         catId = myDbHelper.getCatId(autoCatId.getText().toString());
                     }
                     int invId=0;
-                    invId = myDbHelper.getInvId(autoInvId.getText().toString());
+                    invId = Integer.parseInt(autoInvId.getText().toString());
+                   /* invId = myDbHelper.getInvId(autoInvId.getText().toString());
                     if (invId == 0) {
                         Toast.makeText(getContext(), "Invalid Invoice No", Toast.LENGTH_SHORT).show();
                         return;
-                    }
+                    }*/
 
                     expAmtSofar = expAmtSofar + Double.parseDouble(expAmt.getText().toString());
 
-                    if(!isEditFlag){
-                        myDbHelper.insetExpense(new Expense(expDate.getText().toString(), expDesc.getText().toString(), catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0, Double.parseDouble(expAmt.getText().toString()), 0, "",0,weekindex,0));
-                    }else{
-                        myDbHelper.updateExpense(new Expense(expDate.getText().toString(), expDesc.getText().toString(), catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0, Double.parseDouble(expAmt.getText().toString()), 0, "",0,weekindex,editedExpId));
-                        isEditFlag =false;
+                    try {
+                        if (!isEditFlag) {
+                            myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0
+                                    expProductName.getText().toString(),
+                                    catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                                    Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, 0));
+                        } else {
+                            myDbHelper.updateExpense(new Expense(expDate.getText().toString(), 0, //ToDO: ProductId to be passed instead of 0
+                                    expProductName.getText().toString(),
+                                    catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                                    Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, editedExpId));
+                            isEditFlag = false;
+                        }
+                    }catch (Exception ex){
+                        ex.printStackTrace();
+                    }finally {
+                        myDbHelper.closeConnection();
                     }
 
                     /*if (chkexpIsRecursive.isChecked()) {
                         myDbHelper.insetRecursiveExpense(myDbHelper.getMaxExpenseId(), spnrecursivetype.getSelectedItem().toString(), Util.getCurrentDate(), "", Util.getCurrentDate(), SharedPref.getCurUserId(getContext()));
                     }*/
-                    myDbHelper.closeConnection();
+
 
                     refreshAdapter();
                     loadExpenseItems();
 
                     btnExpAdd.setText("Add");
-                    expDesc.setText("");
+                    expProductName.setText("");
                     expAmt.setText("");
                     expUnit.setText("");
                     autoCatId.setText("");
@@ -377,6 +392,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 Toast.makeText(getContext(), "All Expense Saved Successfully", Toast.LENGTH_SHORT).show();
                 //mListener.openWeekView();
                 dialog.cancel();
+
+                ExpenseFragment fragmentorg = new ExpenseFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
             }
         });
 
@@ -514,7 +532,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         myDbHelper.closeConnection();
 
         if(lv.size()>0){
-            expDesc.setText(lv.get(0).getExpDescription());
+            expProductName.setText(lv.get(0).getExpProductName());
             expAmt.setText("" + lv.get(0).getExpAmt());
             expAmtSofar = expAmtSofar - lv.get(0).getExpAmt();
             expUnit.setText("" + lv.get(0).getExpUnit());
