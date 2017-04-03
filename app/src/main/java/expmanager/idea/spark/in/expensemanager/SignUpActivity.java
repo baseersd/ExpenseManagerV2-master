@@ -38,7 +38,7 @@ import retrofit2.Response;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnBack,btnSignUp;
-    private EditText userName,email,password;
+    private EditText email,password;//userName
     private ProgressBar progressBar;
 
     @Override
@@ -47,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.sign_up_activity);
 
         btnBack = (Button) findViewById(R.id.btn_back);
-        userName = (EditText) findViewById(R.id.user_name_sign_up);
+        //userName = (EditText) findViewById(R.id.user_name_sign_up);
         email = (EditText) findViewById(R.id.email_sign_up);
         password = (EditText) findViewById(R.id.password_sign_up);
         btnSignUp = (Button) findViewById(R.id.btn_sign_up);
@@ -77,11 +77,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 }
 
 
-                if((!userName.getText().toString().isEmpty())&&(!email.getText().toString().isEmpty())&&(!password.getText().toString().isEmpty())){
+                if((!email.getText().toString().isEmpty())&&(!password.getText().toString().isEmpty())){
 
                     progressBar.setVisibility(View.VISIBLE);
 
-                    SignUpRequest signUpRequest = new SignUpRequest(email.getText().toString(),userName.getText().toString(),password.getText().toString(), Utils.getDeviceId(SignUpActivity.this));
+                    SignUpRequest signUpRequest = new SignUpRequest(email.getText().toString(),password.getText().toString(), Utils.getDeviceId(SignUpActivity.this));
                     RetrofitApi.getApi().SignUpExpenseManager(signUpRequest).enqueue(new Callback<ResponseBody>() {
                         @Override
                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

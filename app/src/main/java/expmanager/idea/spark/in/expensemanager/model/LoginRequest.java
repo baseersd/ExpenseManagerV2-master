@@ -17,16 +17,16 @@ public class LoginRequest {
     @SerializedName("password")
     @Expose
     private String password;
-    @SerializedName("username")
+    @SerializedName("email")
     @Expose
-    private String username;
+    private String email;
 
 
-    public LoginRequest(String username,String password,String deviceId){
+    public LoginRequest(String email,String password,String deviceId){
 
         this.deviceId = deviceId;
         this.password = password;
-        this.username = username;
+        this.email = email;
 
     }
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Vai alla home page"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Vai in alto"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Altre opzioni"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Fine"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Visualizza tutte"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Scegli un\'applicazione"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"OFF"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ON"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Cerca…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Cancella query"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Query di ricerca"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Cerca"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Invia query"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Ricerca vocale"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Condividi con"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Condividi con %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Comprimi"</string>
+    <string name="instabug_audio_recorder_permission_denied">Autorizzazione alla registrazione audio non consentita</string>
+    <string name="instabug_err_invalid_comment">Inserisci un commento valido</string>
+    <string name="instabug_err_invalid_email">Inserisci un indirizzo e-mail valido</string>
+    <string name="instabug_external_storage_permission_denied">Autorizzazione alla memoria negata</string>
+    <string name="instabug_str_action_submit">invio</string>
+    <string name="instabug_str_add_photo">Seleziona un\'immagine dalla Galleria</string>
+    <string name="instabug_str_alert_message_max_attachments">Rimuovere un allegato esistente per aggiungere una nuova.</string>
+    <string name="instabug_str_alert_title_max_attachments">Non può Aggiungi allegato</string>
+    <string name="instabug_str_annotate">Disegna sull\'immagine della schermata</string>
+    <string name="instabug_str_audio">Audio</string>
+    <string name="instabug_str_bug_comment_hint">Cos\'è successo?</string>
+    <string name="instabug_str_bug_header">Segnala un problema</string>
+    <string name="instabug_str_conversations">Conversazioni</string>
+    <string name="instabug_str_dialog_message_preparing">Preparazione…</string>
+    <string name="instabug_str_email_hint">Inserisci indirizzo e-mail</string>
+    <string name="instabug_str_error_survey_without_answer">Indagine non può essere presentato senza una risposta.</string>
+    <string name="instabug_str_feedback_comment_hint">Come possiamo migliorare?</string>
+    <string name="instabug_str_feedback_header">Suggerisci un miglioramento</string>
+    <string name="instabug_str_hint_enter_your_answer">Inserisci la tua risposta</string>
+    <string name="instabug_str_hold_to_record">Tocca e tieni premuto per registrare</string>
+    <string name="instabug_str_image">Immagine</string>
+    <string name="instabug_str_image_loading_error">Impossibile caricare l\'immagine</string>
+    <string name="instabug_str_invocation_dialog_title">Come possiamo aiutarti?</string>
+    <string name="instabug_str_messages">Messaggi</string>
+    <string name="instabug_str_notification_title">"Team di %1$s"</string>
+    <string name="instabug_str_notifications_body">%1$d nuovi messaggi da %2$s e da altri</string>
+    <string name="instabug_str_please_wait">Attendi qualche secondo</string>
+    <string name="instabug_str_record_audio">Registra una nota vocale</string>
+    <string name="instabug_str_record_video">Fai una registrazione dello schermo</string>
+    <string name="instabug_str_release_stop_record">Rilascia per allegare</string>
+    <string name="instabug_str_sending_message_hint">Scrivi il messaggio</string>
+    <string name="instabug_str_shake_hint">Ci piacerebbe conoscere la tua opinione&lt;br/>&lt;b>Scuoti&lt;/b> il dispositivo per contattarci.</string>
+    <string name="instabug_str_success_note">Feedback ricevuto.\nGrazie per aver contribuito a migliorare %s.</string>
+    <string name="instabug_str_swipe_hint">Ci piacerebbe conoscere la tua opinione&lt;br />&lt;b>Scorri con 2 dita&lt;/b> per contattarci.</string>
+    <string name="instabug_str_take_screenshot">Scatta un\'immagine della schermata</string>
+    <string name="instabug_str_talk_to_us">Parlaci</string>
+    <string name="instabug_str_thank_you">Grazie</string>
+    <string name="instabug_str_video">Video</string>
+    <string name="instabug_str_video_encoder_busy">Video Encoder è occupato a codificare un altro video</string>
+    <string name="instabug_str_video_encoding_error">Impossibile codificare il video a causa della scarsa memoria</string>
+    <string name="instabug_str_video_player">Lettore video</string>
+    <string name="instabug_str_video_recording_hint">Premere il record di quando è pronto</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Ricerca"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

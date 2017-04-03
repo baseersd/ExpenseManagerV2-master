@@ -42,7 +42,7 @@ import retrofit2.Response;
 public class OrganizationFragment extends Fragment {
 
     private ImageView setupexp;
-    private EditText etOrganizationName;
+    private EditText etOrganizationName,etAddressLine1,etAddressLine2,etActivationCode,etSuburb,etCityId,etAbn,etAcn;
     private ProgressBar progressBar;
 
     @Override
@@ -68,7 +68,18 @@ public class OrganizationFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.organization_layout,
                 container, false);
         setupexp = (ImageView) rootView.findViewById(R.id.setupexp);
+
+
         etOrganizationName = (EditText) rootView.findViewById(R.id.et_organization);
+        etActivationCode = (EditText) rootView.findViewById(R.id.et_activation_code);
+        etAddressLine1 = (EditText) rootView.findViewById(R.id.et_address_line1);
+        etAddressLine2 = (EditText) rootView.findViewById(R.id.et_address_line2);
+        etSuburb = (EditText) rootView.findViewById(R.id.et_suburb);
+        etCityId = (EditText) rootView.findViewById(R.id.et_city_id);
+        etAbn = (EditText) rootView.findViewById(R.id.et_abn);
+        etAcn = (EditText) rootView.findViewById(R.id.et_acn);
+
+
         progressBar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
 
 //        TextView  textView = (TextView) rootView.findViewById(R.id.textView5);

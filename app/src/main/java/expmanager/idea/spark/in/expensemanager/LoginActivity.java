@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button forgotPassword;
     private Button usePin;
     private Button signUp;
-    private EditText userName, password;
+    private EditText email, password;
     private ProgressBar progressBar;
 
 
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         usePin = (Button) findViewById(R.id.use_pin);
         signUp = (Button) findViewById(R.id.sign_up);
 
-        userName = (EditText) findViewById(R.id.username_login);
+        email = (EditText) findViewById(R.id.email_login);
         password = (EditText) findViewById(R.id.password_login);
 
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
@@ -68,10 +68,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
 
-                if ((!userName.getText().toString().isEmpty()) && (!password.getText().toString().isEmpty())) {
+                if ((!email.getText().toString().isEmpty()) && (!password.getText().toString().isEmpty())) {
                     Utils.hideKeyboard(LoginActivity.this);
                     progressBar.setVisibility(View.VISIBLE);
-                    LoginRequest loginRequest = new LoginRequest(userName.getText().toString(), password.getText().toString(), Utils.getDeviceId(LoginActivity.this));
+                    LoginRequest loginRequest = new LoginRequest(email.getText().toString(), password.getText().toString(), Utils.getDeviceId(LoginActivity.this));
                     RetrofitApi.getApi().loginExpenseManager(loginRequest).enqueue(new Callback<ResponseBody>() {
                         @Override
                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {

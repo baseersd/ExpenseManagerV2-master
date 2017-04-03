@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"홈 탐색"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"위로 탐색"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"옵션 더보기"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"완료"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"전체 보기"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"앱 선택"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"사용 안함"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"사용"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"검색..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"검색어 삭제"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"검색어"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"검색"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"검색어 보내기"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"음성 검색"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"공유 대상"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s와(과) 공유"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"접기"</string>
+    <string name="instabug_audio_recorder_permission_denied">오디오 녹음 권한 거부됨</string>
+    <string name="instabug_err_invalid_comment">유효한 의견을 입력해주십시오</string>
+    <string name="instabug_err_invalid_email">유효한 이메일을 입력해주십시오</string>
+    <string name="instabug_external_storage_permission_denied">스토리지 권한 거부됨</string>
+    <string name="instabug_str_action_submit">제출</string>
+    <string name="instabug_str_add_photo">갤러리에서 사진 선택</string>
+    <string name="instabug_str_alert_message_max_attachments">새 첨부 파일을 추가하려면 기존 첨부 파일을 제거하십시오.</string>
+    <string name="instabug_str_alert_title_max_attachments">첨부 파일을 추가 할 수 없습니다.</string>
+    <string name="instabug_str_annotate">스크린샷 위에 그리기</string>
+    <string name="instabug_str_audio">오디오</string>
+    <string name="instabug_str_bug_comment_hint">무엇이 잘못됐습니까?</string>
+    <string name="instabug_str_bug_header">오류 신고</string>
+    <string name="instabug_str_conversations">대화</string>
+    <string name="instabug_str_dialog_message_preparing">준비 중입니다…</string>
+    <string name="instabug_str_email_hint">이메일 주소 입력</string>
+    <string name="instabug_str_error_survey_without_answer">설문 조사는 답변없이 제출할 수 없습니다.</string>
+    <string name="instabug_str_feedback_comment_hint">어떤 것을 향상시켜야 할까요?</string>
+    <string name="instabug_str_feedback_header">향상 제안</string>
+    <string name="instabug_str_hint_enter_your_answer">답을 입력하십시오.</string>
+    <string name="instabug_str_hold_to_record">누른 상태에서 녹음하기</string>
+    <string name="instabug_str_image">이미지</string>
+    <string name="instabug_str_image_loading_error">이미지 불러오기 실패</string>
+    <string name="instabug_str_invocation_dialog_title">어떤 부분을 도와드릴까요?</string>
+    <string name="instabug_str_messages">메시지</string>
+    <string name="instabug_str_notification_title">"%1$s 팀"</string>
+    <string name="instabug_str_notifications_body">%2$s님과 다른 사용자들로부터 %1$d개의 새 메시지</string>
+    <string name="instabug_str_please_wait">잠시만 기다리세요</string>
+    <string name="instabug_str_record_audio">음성 메모 녹음하기</string>
+    <string name="instabug_str_record_video">사용 화면 녹화</string>
+    <string name="instabug_str_release_stop_record">버튼을 놓아서 첨부하기</string>
+    <string name="instabug_str_sending_message_hint">메시지 내용 입력</string>
+    <string name="instabug_str_shake_hint">피드백을 들려주세요.&lt;br/>연락하려면 기기를 &lt;b>흔들어주세요&lt;/b>.</string>
+    <string name="instabug_str_success_note">피드백을 잘 받았습니다.\n%s 향상에 도움을 주셔서 감사합니다.</string>
+    <string name="instabug_str_swipe_hint">피드백을 들려주세요.&lt;br/>연락하려면 &lt;b>두 손가락으로 밀어주세요.&lt;/b></string>
+    <string name="instabug_str_take_screenshot">스크린샷 촬영</string>
+    <string name="instabug_str_talk_to_us">개발사 문의</string>
+    <string name="instabug_str_thank_you">감사합니다</string>
+    <string name="instabug_str_video">비디오</string>
+    <string name="instabug_str_video_encoder_busy">인코더가 다른 동영상을 인코딩 중입니다</string>
+    <string name="instabug_str_video_encoding_error">메모리 부족으로 동영상 인코딩에 실패했습니다</string>
+    <string name="instabug_str_video_player">동영상 플레이어</string>
+    <string name="instabug_str_video_recording_hint">準備ができたらレコードを押す</string>
+    <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

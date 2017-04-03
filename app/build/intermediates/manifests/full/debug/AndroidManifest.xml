@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="expmanager.idea.spark.in.expensemanager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name="expmanager.idea.spark.in.expensemanager.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.SplashScreen"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.ForgotPasswordActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.StaffActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.SignUpActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.LoginActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.AdminActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.UsePinActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="expmanager.idea.spark.in.expensemanager.ForgotPinActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.instabug.library.InstabugFeedbackActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/InstabugSdkTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service android:name="com.instabug.library.network.worker.uploader.InstabugSessionUploaderService" />
+        <service android:name="com.instabug.library.bugreporting.network.InstabugBugsUploaderService" />
+        <service android:name="com.instabug.library.crashreporting.network.InstabugCrashesUploaderService" />
+        <service android:name="com.instabug.library.messaging.InstabugMessageUploaderService" />
+        <service android:name="com.instabug.library.network.worker.fetcher.InstabugFeaturesFetcherService" />
+        <service android:name="com.instabug.library.surveys.network.service.InstabugSurveysSubmitterService" />
+        <service android:name="com.instabug.library.internal.video.VideoProcessingService" />
+
+        <receiver android:name="com.instabug.library.network.InstabugNetworkReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

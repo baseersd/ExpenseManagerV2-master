@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"التنقل إلى الشاشة الرئيسية"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s، %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s، %2$s، %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"خيارات إضافية"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"تم"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"إيقاف"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"تشغيل"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"بحث…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"محو طلب البحث"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"طلب البحث"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"بحث"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"البحث الصوتي"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏مشاركة مع %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <string name="instabug_audio_recorder_permission_denied">إذن التسجيل الصوتي تم رفضة</string>
+    <string name="instabug_err_invalid_comment">الرجاء إدخال تعليق صحيح</string>
+    <string name="instabug_err_invalid_email">الرجاء إدخال بريد إلكتروني صحيح لاتاحة الفرصة لنا لنعود اليكم</string>
+    <string name="instabug_external_storage_permission_denied">إذن الذاكرة تم رفضة</string>
+    <string name="instabug_str_action_submit">إرسال</string>
+    <string name="instabug_str_add_photo">قم بتحديد صورة من المعرض</string>
+    <string name="instabug_str_alert_message_max_attachments">قم بحذف إحدى المرفقات لإضافة واحدة جديدة.</string>
+    <string name="instabug_str_alert_title_max_attachments">لا يمكن إضافة المرفق</string>
+    <string name="instabug_str_annotate">ارسم على الصورة</string>
+    <string name="instabug_str_audio">تسجيل صوتي</string>
+    <string name="instabug_str_bug_comment_hint">ما الخطأ الذي حدث؟</string>
+    <string name="instabug_str_bug_header">الإبلاغ عن مشكلة</string>
+    <string name="instabug_str_cancel">إلغاء</string>
+    <string name="instabug_str_conversations">المحادثات</string>
+    <string name="instabug_str_dialog_message_preparing">إعداد…</string>
+    <string name="instabug_str_email_hint">ادخل بريدك الإلكتروني</string>
+    <string name="instabug_str_error_survey_without_answer">لا يمكن تقديم الإستبيان دون إجابة.</string>
+    <string name="instabug_str_feedback_comment_hint">كيف يمكننا التحسين؟</string>
+    <string name="instabug_str_feedback_header">اقتراح تحسين</string>
+    <string name="instabug_str_hint_enter_your_answer">أدخل إجابتك</string>
+    <string name="instabug_str_hold_to_record">اضغط باستمرار للتسجيل</string>
+    <string name="instabug_str_image">صورة</string>
+    <string name="instabug_str_invocation_dialog_title">كيف يمكننا المساعدة؟</string>
+    <string name="instabug_str_next">التالي</string>
+    <string name="instabug_str_notification_title">" فريق %1$s"</string>
+    <string name="instabug_str_notifications_body">%1$d رسالة جديدة من %2$s و آخرين</string>
+    <string name="instabug_str_ok">حسنا</string>
+    <string name="instabug_str_please_wait">برجاء الإنتظار</string>
+    <string name="instabug_str_record_audio">تسجيل ملاحظة صوتية</string>
+    <string name="instabug_str_record_video">تسجيل فيديو من الشاشة</string>
+    <string name="instabug_str_release_stop_record">قم بالتحرير للإرفاق</string>
+    <string name="instabug_str_shake_hint">نحب أن نعرف تعليقاتك&lt;br />&lt;b>قم بهز&lt;/b> الجهاز للتحدث إلينا</string>
+    <string name="instabug_str_success_note">لقد تسلّمنا تعليقك. نشكرك على مساعدتنا على تحسين %s</string>
+    <string name="instabug_str_swipe_hint">نحب أن نعرف تعليقاتك&lt;br />&lt;b>اسحب بإصبعين&lt;/b> للتحدث إلينا</string>
+    <string name="instabug_str_take_screenshot">خذ لقطة للشاشة</string>
+    <string name="instabug_str_talk_to_us">تحدث معنا</string>
+    <string name="instabug_str_thank_you">شكراً لك</string>
+    <string name="instabug_str_video">فيديو</string>
+    <string name="instabug_str_video_recording_hint">الرجاء الضغط عن الإستعداد</string>
+    <string msgid="146198913615257606" name="search_menu_title">"البحث"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+</resources>

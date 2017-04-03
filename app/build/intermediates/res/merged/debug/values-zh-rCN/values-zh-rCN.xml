@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"转到主屏幕"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s：%2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s - %2$s：%3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"转到上一层级"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"更多选项"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"完成"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"查看全部"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"选择应用"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"关闭"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"开启"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"搜索…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"清除查询"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"搜索查询"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"搜索"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"提交查询"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"语音搜索"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"分享方式"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"通过%s分享"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收起"</string>
+    <string name="instabug_audio_recorder_permission_denied">录音权限被拒绝</string>
+    <string name="instabug_err_invalid_comment">请输入有效的评论</string>
+    <string name="instabug_err_invalid_email">请输入有效的电子邮件地址</string>
+    <string name="instabug_external_storage_permission_denied">无存储权限</string>
+    <string name="instabug_str_action_submit">提交</string>
+    <string name="instabug_str_add_photo">从图库中选择图像</string>
+    <string name="instabug_str_alert_message_max_attachments">删除现有附件以添加新附件。</string>
+    <string name="instabug_str_alert_title_max_attachments">无法添加附件</string>
+    <string name="instabug_str_annotate">在截屏上画画</string>
+    <string name="instabug_str_audio">音频</string>
+    <string name="instabug_str_bug_comment_hint">出了什么错？</string>
+    <string name="instabug_str_bug_header">报告问题</string>
+    <string name="instabug_str_conversations">对话</string>
+    <string name="instabug_str_dialog_message_preparing">准备…</string>
+    <string name="instabug_str_email_hint">输入电子邮件地址</string>
+    <string name="instabug_str_error_survey_without_answer">无法提交调查问卷。</string>
+    <string name="instabug_str_feedback_comment_hint">我们如何改进？</string>
+    <string name="instabug_str_feedback_header">改进建议</string>
+    <string name="instabug_str_hint_enter_your_answer">输入您的答案</string>
+    <string name="instabug_str_hold_to_record">按住即可录音</string>
+    <string name="instabug_str_image">图像</string>
+    <string name="instabug_str_image_loading_error">无法加载图像</string>
+    <string name="instabug_str_invocation_dialog_title">有什么可以帮您的吗？</string>
+    <string name="instabug_str_messages">消息</string>
+    <string name="instabug_str_notification_title">"%1$s 团队"</string>
+    <string name="instabug_str_notifications_body">%1$d 条新消息，来自 %2$s 和其他人</string>
+    <string name="instabug_str_please_wait">请稍候</string>
+    <string name="instabug_str_record_audio">录制语音注释</string>
+    <string name="instabug_str_record_video">录制屏幕</string>
+    <string name="instabug_str_release_stop_record">松开即可添加附件</string>
+    <string name="instabug_str_sending_message_hint">输入您的消息</string>
+    <string name="instabug_str_shake_hint">我们希望得到您的反馈意见&lt;br/>&lt;b>摇晃&lt;/b>您的设备，与我们沟通。</string>
+    <string name="instabug_str_success_note">我们收到了您的反馈意见。\n感谢您帮助我们把 %s 做得更好！</string>
+    <string name="instabug_str_swipe_hint">我们希望得到您的反馈意见&lt;br />&lt;b>用 2 个手指滑动&lt;/b>，与我们沟通。</string>
+    <string name="instabug_str_take_screenshot">截屏</string>
+    <string name="instabug_str_talk_to_us">与我们沟通</string>
+    <string name="instabug_str_thank_you">谢谢</string>
+    <string name="instabug_str_video">视频</string>
+    <string name="instabug_str_video_encoder_busy">视频解码器正在解码其他视频</string>
+    <string name="instabug_str_video_encoding_error">内存太少，无法对视频进行编码</string>
+    <string name="instabug_str_video_player">视频播放器</string>
+    <string name="instabug_str_video_recording_hint">准备好后，按记录</string>
+    <string msgid="146198913615257606" name="search_menu_title">"搜索"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

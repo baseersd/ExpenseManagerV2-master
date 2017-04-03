@@ -13,9 +13,9 @@ public class SignUpRequest {
     @SerializedName("email")
     @Expose
     private String email;
-    @SerializedName("username")
-    @Expose
-    private String username;
+//    @SerializedName("username")
+//    @Expose
+//    private String username;
     @SerializedName("password")
     @Expose
     private String password;
@@ -24,10 +24,10 @@ public class SignUpRequest {
     private String deviceId;
 
 
-    public SignUpRequest(String email,String username, String password, String deviceId){
+    public SignUpRequest(String email, String password, String deviceId){
 
         this.email = email;
-        this.username = username;
+       // this.username = username;
         this.password = password;
         this.deviceId = deviceId;
     }

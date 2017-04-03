@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Visa startsidan"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navigera uppåt"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Fler alternativ"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Klart"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Visa alla"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Välj en app"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"AV"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"PÅ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Sök …"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Ta bort frågan"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Sökfråga"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Sök"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Skicka fråga"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Röstsökning"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Dela med"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Dela med %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Komprimera"</string>
+    <string name="instabug_audio_recorder_permission_denied">Tillstånd för ljudinspelning nekades</string>
+    <string name="instabug_err_invalid_comment">Vänligen fyll i en giltig kommentar</string>
+    <string name="instabug_err_invalid_email">Vänligen ange en giltig e-postadress</string>
+    <string name="instabug_external_storage_permission_denied">Lagringsåtkomst nekad</string>
+    <string name="instabug_str_action_submit">Skicka</string>
+    <string name="instabug_str_add_photo">Välj bild från galleri</string>
+    <string name="instabug_str_alert_message_max_attachments">Ta bort en befintlig bilagan du vill lägga till en ny.</string>
+    <string name="instabug_str_alert_title_max_attachments">Kan inte lägga till bilaga</string>
+    <string name="instabug_str_annotate">Rita på skärmavbild</string>
+    <string name="instabug_str_audio">Ljud</string>
+    <string name="instabug_str_bug_comment_hint">Vad gick fel?</string>
+    <string name="instabug_str_bug_header">Rapportera ett problem</string>
+    <string name="instabug_str_conversations">Samtal</string>
+    <string name="instabug_str_dialog_message_preparing">Förbereder…</string>
+    <string name="instabug_str_email_hint">Ange din e-postadress</string>
+    <string name="instabug_str_error_survey_without_answer">Undersökningen kan inte lämnas utan svar.</string>
+    <string name="instabug_str_feedback_comment_hint">Hur kan vi bli bättre?</string>
+    <string name="instabug_str_feedback_header">Föreslå en förbättring</string>
+    <string name="instabug_str_hint_enter_your_answer">Ange ditt svar</string>
+    <string name="instabug_str_hold_to_record">Tryck och håll för att spela in</string>
+    <string name="instabug_str_image">Bild</string>
+    <string name="instabug_str_image_loading_error">Kunde inte läsa in bild</string>
+    <string name="instabug_str_invocation_dialog_title">Hur kan vi hjälpa till?</string>
+    <string name="instabug_str_messages">Meddelanden</string>
+    <string name="instabug_str_notification_title">"Teamet för %1$s"</string>
+    <string name="instabug_str_notifications_body">%1$d nya meddelanden från bland andra %2$s</string>
+    <string name="instabug_str_please_wait">Vänligen vänta ett ögonblick</string>
+    <string name="instabug_str_record_audio">Spela in en röstnotis</string>
+    <string name="instabug_str_record_video">Gör en skärminspelning</string>
+    <string name="instabug_str_release_stop_record">Släpp för att bifoga</string>
+    <string name="instabug_str_sending_message_hint">Skriv ditt meddelande</string>
+    <string name="instabug_str_shake_hint">Vi vill gärna höra dina synpunkter.&lt;br/>&lt;b>Skaka&lt;/b> din enhet för att prata med oss.</string>
+    <string name="instabug_str_success_note">Vi har tagit emot dina synpunkter.\nTack för att du hjälper oss att göra %s bättre.</string>
+    <string name="instabug_str_swipe_hint">Vi vill gärna höra dina synpunkter.&lt;br/>&lt;b>Svep med två fingrar&lt;/b> för att prata med oss.</string>
+    <string name="instabug_str_take_screenshot">Ta en skärmavbild</string>
+    <string name="instabug_str_talk_to_us">Prata med oss</string>
+    <string name="instabug_str_thank_you">Tack</string>
+    <string name="instabug_str_video">Video</string>
+    <string name="instabug_str_video_encoder_busy">Videokodaren är upptage med att koda en annan video</string>
+    <string name="instabug_str_video_encoding_error">Kunde inte koda videon på grund av brist på ledigt minne</string>
+    <string name="instabug_str_video_player">Videospelare</string>
+    <string name="instabug_str_video_recording_hint">Tlačová rekord, keď je pripravený</string>
+    <string msgid="146198913615257606" name="search_menu_title">"Sök"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">">999"</string>
+</resources>
