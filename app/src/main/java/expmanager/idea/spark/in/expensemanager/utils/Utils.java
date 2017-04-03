@@ -45,6 +45,12 @@ public class Utils {
         return dateFormat.format(date);
     }
 
+    public static String getDateTimeforFormat(String format){
+        DateFormat dateFormat = new SimpleDateFormat(format);
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
     public static int[] getWeeksOfMonth(int month, int year) {
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.YEAR, year);

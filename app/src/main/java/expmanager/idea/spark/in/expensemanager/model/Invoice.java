@@ -4,16 +4,17 @@ package expmanager.idea.spark.in.expensemanager.model;
 
 public class Invoice {
     private String invNo, invDate, invDesc,  invImgPath, invPayMode, invCreatedAt;
-    private int invCreateBy;
+    private int invBillNumber,invCreateBy;
     private double invAmt, invDisc;
 
-    public Invoice(String invNo, String invDate, String invDesc, String invImgPath, String invPayMode, int invCreateBy, String invCreatedAt, double invAmt, double invDisc) {
+    public Invoice(String invNo, String invDate, String invDesc, String invImgPath, String invPayMode, int invBillNumber, int invCreateBy, String invCreatedAt, double invAmt, double invDisc) {
         super();
         this.invNo = invNo;
         this.invDate=invDate;
         this.invDesc= invDesc;
         this.invImgPath=invImgPath;
         this.invPayMode=invPayMode;
+        this.invBillNumber = invBillNumber;
         this.invCreateBy=invCreateBy;
         this.invCreatedAt=invCreatedAt;
         this.invAmt=invAmt;
@@ -55,4 +56,13 @@ public class Invoice {
     public double getInvDisc() {
         return invDisc;
     }
+
+    public int getInvBillNumber() {
+        return invBillNumber;
+    }
+
+    public void setInvBillNumber(int invBillNumber) {
+        this.invBillNumber = invBillNumber;
+    }
+
 }

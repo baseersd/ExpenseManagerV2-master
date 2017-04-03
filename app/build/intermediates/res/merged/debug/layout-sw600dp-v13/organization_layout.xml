@@ -153,7 +153,6 @@
         android:textStyle="bold" />
 
     <ImageView
-
         android:id="@+id/setupexp"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -164,6 +163,14 @@
         android:layout_marginRight="29dp"
         android:background="@drawable/circular_view"
         android:src="@drawable/right_arrow" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/img_company_logo"
+        android:src="@drawable/header_logo"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"

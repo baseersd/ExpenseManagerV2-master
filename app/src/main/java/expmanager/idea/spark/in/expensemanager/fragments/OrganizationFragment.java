@@ -3,7 +3,10 @@ package expmanager.idea.spark.in.expensemanager.fragments;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import expmanager.idea.spark.in.expensemanager.LoginActivity;
@@ -35,15 +39,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by Haresh.Veldurty on 2/21/2017.
  */
 
 public class OrganizationFragment extends Fragment {
 
-    private ImageView setupexp;
+    private ImageView setupexp,imgCompanyLogo;
     private EditText etOrganizationName,etAddressLine1,etAddressLine2,etActivationCode,etSuburb,etCityId,etAbn,etAcn;
     private ProgressBar progressBar;
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    private String base64Image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,12 +88,27 @@ public class OrganizationFragment extends Fragment {
         etAbn = (EditText) rootView.findViewById(R.id.et_abn);
         etAcn = (EditText) rootView.findViewById(R.id.et_acn);
 
+        imgCompanyLogo = (ImageView) rootView.findViewById(R.id.img_company_logo);
 
         progressBar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
+
+        imgCompanyLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                }
+
+            }
+        });
 
 //        TextView  textView = (TextView) rootView.findViewById(R.id.textView5);
 //
 //        textView.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
+
+
 
         setupexp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,11 +120,22 @@ public class OrganizationFragment extends Fragment {
                     return;
                 }
 
-                if (!etOrganizationName.getText().toString().isEmpty()) {
+                if ((!etOrganizationName.getText().toString().isEmpty())&&(!etActivationCode.getText().toString().isEmpty())) {
 
                     progressBar.setVisibility(View.VISIBLE);
 
-                    CreateOrganisationRequest createOrganisationRequest = new CreateOrganisationRequest(etOrganizationName.getText().toString(), Utils.getDeviceId(getActivity()));
+                    CreateOrganisationRequest createOrganisationRequest = new CreateOrganisationRequest();
+                    createOrganisationRequest.setCompanyName(etOrganizationName.getText().toString());
+                    createOrganisationRequest.setDeviceId(Utils.getDeviceId(getActivity()));
+                    createOrganisationRequest.setSubscriptionCode(etActivationCode.getText().toString());
+                    createOrganisationRequest.setAddressLine1(etAddressLine1.getText().toString());
+                    createOrganisationRequest.setAddressLine2(etAddressLine2.getText().toString());
+                    createOrganisationRequest.setAbn(etAbn.getText().toString());
+                    createOrganisationRequest.setAcn(etAcn.getText().toString());
+                    createOrganisationRequest.setSuburb(etSuburb.getText().toString());
+                    createOrganisationRequest.setCityId(etCityId.getText().toString());
+                    createOrganisationRequest.setImageUrl("");
+
                     SessionManager sessionManager = new SessionManager(getActivity());
                     RetrofitApi.getApi().CreateOrganisation(sessionManager.getAuthToken(), createOrganisationRequest).enqueue(new Callback<ResponseBody>() {
                         @Override
@@ -154,5 +189,17 @@ public class OrganizationFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
 
+            ByteArrayOutputStream bao = new ByteArrayOutputStream();
+            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);
+            byte [] ba = bao.toByteArray();
+            base64Image = Base64.encodeToString(ba,Base64.DEFAULT);
+
+        }
+    }
 }

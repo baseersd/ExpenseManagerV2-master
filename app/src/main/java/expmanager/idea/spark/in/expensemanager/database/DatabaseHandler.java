@@ -10,6 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.model.AddExpenseRequest;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
@@ -17,6 +18,10 @@ import expmanager.idea.spark.in.expensemanager.model.Sales;
 import expmanager.idea.spark.in.expensemanager.model.Staff;
 import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
+
+import static expmanager.idea.spark.in.expensemanager.database.DatabaseConstants.CategoriesTableColumns.*;
+import static expmanager.idea.spark.in.expensemanager.database.DatabaseConstants.ExpenseTableColumns.*;
+import static expmanager.idea.spark.in.expensemanager.database.DatabaseConstants.TableNames.*;
 
 /**
  * Created by kveldurty on 12/17/16.
@@ -147,9 +152,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + ")";
 
 
-        db.execSQL("CREATE TABLE `categories` ( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `description` TEXT, `created_at` TEXT, `created_by` INTEGER )");
+        db.execSQL(DatabaseConstants.CREATE_CATEGORIES_TABLE);
 
-        db.execSQL("CREATE TABLE `expenses` ( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `category_id` INTEGER, `invoice_id` INTEGER, `date` TEXT, `description` TEXT,`unit` INTEGER, `amount` NUMERIC, `is_approved` INTEGER, `is_recurssive` INTEGER, `created_at` TEXT, `created_by` INTEGER, `is_saved` INTEGER, 'week_index' INTEGER)");
+        db.execSQL(DatabaseConstants.CREATE_EXPENSE_TABLE);
 
         db.execSQL("CREATE TABLE `income_types` ( `id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `description` TEXT, `created_at` TEXT, `created_by` INTEGER )");
 
@@ -193,8 +198,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_MANUAL_EXPENSE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
 
-        db.execSQL("drop table IF EXISTS categories");
-        db.execSQL("drop table IF EXISTS expenses");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORIES);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_EXPENSES);
         db.execSQL("drop table IF EXISTS income_types");
         db.execSQL("drop table IF EXISTS incomes");
         db.execSQL("drop table IF EXISTS invoices");
@@ -390,6 +395,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return contactList;
     }
 
+    public ArrayList<Expense> getExpensesforToday(int invoiceId){
+        ArrayList<Expense> expList=new ArrayList<Expense>();
+        Cursor expListCursor;
+        try{
+
+            if(invoiceId==0){
+                expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved =0  and date =? order by created_at DESC",
+                        new String[]{Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY)});
+            }else {
+                //expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved >0 and invoice_id=? and date =? order by created_at DESC",
+//                expListCursor = db.rawQuery("SELECT * FROM expenses where invoice_id=? and date =? order by created_at DESC",
+//                        new String[]{String.valueOf(invoiceId),Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY)});
+                expListCursor = db.rawQuery("SELECT * FROM expenses where invoice_id=? order by created_at DESC",
+                        new String[]{String.valueOf(invoiceId)});
+
+            }
+
+
+            while(expListCursor.moveToNext()){
+                expList.add(getExpenseObjectFromCursor(expListCursor));
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }
+        return expList;
+    }
+
     public ArrayList<Expense> getExpenses(int expId){
         ArrayList<Expense> expList=new ArrayList<Expense>();
         Cursor expListCursor;
@@ -403,22 +435,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
             while(expListCursor.moveToNext()){
-                String expDate = expListCursor.getString(expListCursor.getColumnIndex("date"));
-                String expDesc = expListCursor.getString(expListCursor.getColumnIndex("description"));
-                int expcreatedby = expListCursor.getInt(expListCursor.getColumnIndex("created_by"));
-                int expUnit = expListCursor.getInt(expListCursor.getColumnIndex("unit"));
-                String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex("created_at"));
-                int expcatId = expListCursor.getInt(expListCursor.getColumnIndex("category_id"));
-                int expInvId = expListCursor.getInt(expListCursor.getColumnIndex("invoice_id"));
-                int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex("is_approved"));
-                int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex("is_recurssive"));
-                double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex("amount"));
-                int isSaved = expListCursor.getInt(expListCursor.getColumnIndex("is_saved"));
-                int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex("week_index"));
-                int id =  expListCursor.getInt(expListCursor.getColumnIndex("id"));
-
-                Expense cat = new Expense(expDate,expDesc,expcatId, expInvId,expUnit,expIsApproved,expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex1,id);
-                expList.add(cat);
+                expList.add(getExpenseObjectFromCursor(expListCursor));
             }
         }catch(Exception e){
             Log.i("DB", "Exception While Get Categories:" + e.getMessage());
@@ -426,6 +443,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return expList;
     }
 
+    private Invoice getInvoiceFromCursor(Cursor cursor){
+        String invNo, invDate, invDesc,  invImgPath, invPayMode, invCreatedAt;
+        int invBillNumber,invCreateBy;
+        double invAmt, invDisc;
+        Invoice invoice = null;
+
+        invNo = cursor.getString(0);
+        invDate = cursor.getString(1);
+        invImgPath = cursor.getString(2);
+        invDesc = cursor.getString(3);
+        invAmt = cursor.getDouble(4);
+        invDisc = cursor.getDouble(5);
+        invPayMode = cursor.getString(6);
+        invBillNumber = cursor.getInt(7);
+        invCreatedAt = cursor.getString(8);
+        invCreateBy = cursor.getInt(9);
+
+        return new Invoice(invNo,invDate,invDesc,invImgPath,invPayMode,invBillNumber,invCreateBy,
+                invCreatedAt,invAmt,invDisc);
+    }
+
+    public ArrayList<Invoice> getAllInvoicesForToday(){
+        ArrayList<Invoice> invoiceList=new ArrayList<Invoice>();
+        Cursor cursor;
+        try{
+
+            cursor = db.rawQuery("SELECT * FROM invoices where date = ? order by created_at DESC",
+                        new String[]{Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY)});
+
+            while(cursor != null && cursor.moveToNext()){
+                invoiceList.add(getInvoiceFromCursor(cursor));
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }
+        return invoiceList;
+    }
 
     public void insetInvoice(Invoice inv) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -445,36 +499,58 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public void deleteExpenseIsnotSaved() {
-        String query = "delete from expenses where is_saved =0";
-        Cursor catCursor = db.rawQuery(query, null);
-        catCursor.moveToFirst();
-        catCursor.close();
+        Cursor catCursor = null;
+        try {
+            String query = "delete from expenses where is_saved =0";
+            catCursor = db.rawQuery(query, null);
+            catCursor.moveToFirst();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            if(catCursor != null && !catCursor.isClosed())
+            catCursor.close();
+        }
     }
 
     public int getCatId(String name) {
-        String query = "SELECT id FROM categories where name =?";
-        Cursor catCursor = db.rawQuery(query, new String[]{name});
+        StringBuilder query = new StringBuilder();
+        query.append("SELECT id FROM ");//Todo: Fetch Category_id instead of id.
+        query.append(TABLE_CATEGORIES);
+        query.append(" Where ");
+        query.append(CATEGORIES_TBL_COLUMN_CATEGORY_NAME);
+        query.append(" =? ");
 
-        if (catCursor.getCount() > 0) {
-            catCursor.moveToFirst();
-            return catCursor.getInt(catCursor.getColumnIndex("id"));
+        Cursor catCursor = null;
+        int categoryId = 0;
+        try {
+            catCursor = db.rawQuery(query.toString(), new String[]{name});
 
-        } else {
-            return 0;
+            if (catCursor.getCount() > 0) {
+                catCursor.moveToFirst();
+                categoryId = catCursor.getInt(catCursor.getColumnIndex(KEY_ID));
+
+            }
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }finally {
+            if(catCursor != null && !catCursor.isClosed()){
+                catCursor.close();
+            }
         }
+        return categoryId;
     }
 
-    public void insetCategory(String catName, String catDesc, int catCreatedBy) {
+    public void insetCategory(String catName, int catId, int catCreatedBy) {
         ContentValues cv = new ContentValues();
-        cv.put("name", catName);
-        cv.put("description", catDesc);
-        cv.put("created_at", catCreatedBy);
-        cv.put("created_by", Utils.getDateTime());
-        db.insert("categories", null, cv);
+        cv.put(CATEGORIES_TBL_COLUMN_CATEGORY_NAME, catName);
+        cv.put(CATEGORIES_TBL_COLUMN_CATEGORY_ID, catId);
+        cv.put(CATEGORIES_TBL_COLUMN_CREATED_BY, catCreatedBy);
+        cv.put(CATEGORIES_TBL_COLUMN_CREATED_AT, Utils.getDateTime());
+        db.insert(TABLE_CATEGORIES, null, cv);
     }
 
     public int getInvId(String name) {
-        String query = "SELECT id FROM invoices where bill_number =?";
+        String query = "SELECT id FROM invoices where bill_number =?"; //Todo: Change the id to invoice_id
         Cursor catCursor = db.rawQuery(query, new String[]{name});
 
         if (catCursor.getCount() > 0) {
@@ -486,40 +562,31 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
     }
 
-    public void insetExpense(Expense exp) {
+    private ContentValues getContentValue(Expense exp){
         ContentValues cv = new ContentValues();
-        cv.put("category_id", exp.getExpCatId());
-        cv.put("invoice_id", exp.getExpInvId());
-        cv.put("date", exp.getExpDate());
-        cv.put("description", exp.getExpDescription());
-        cv.put("unit", exp.getExpUnit());
-        cv.put("amount", exp.getExpAmt());
-        cv.put("is_approved", exp.getExpIsApproved());
-        cv.put("is_recurssive", exp.getExpIsRecursive());
-        cv.put("created_at", Utils.getDateTime());
-        cv.put("created_by", exp.getExpCreateBy());
-        cv.put("is_saved", exp.getIsSaved());
-        cv.put("week_index", exp.getExpWeekIndex());
-        long val = db.insert("expenses", null, cv);
+        cv.put(EXPENSE_TBL_COLUMN_CATEGORY_ID, exp.getExpCatId());
+        cv.put(EXPENSE_TBL_COLUMN_INVOICE_ID, exp.getExpInvId());
+        cv.put(EXPENSE_TBL_COLUMN_DATE, exp.getExpDate());
+        cv.put(EXPENSE_TBL_COLUMN_PRODUCT_ID, exp.getExpProductId());
+        cv.put(EXPENSE_TBL_COLUMN_PRODUCT_NAME, exp.getExpProductName());
+        cv.put(EXPENSE_TBL_COLUMN_UNIT, exp.getExpUnit());
+        cv.put(EXPENSE_TBL_COLUMN_AMOUNT, exp.getExpAmt());
+        cv.put(EXPENSE_TBL_COLUMN_IS_APPROVED, exp.getExpIsApproved());
+        cv.put(EXPENSE_TBL_COLUMN_IS_RECURSSIVE, exp.getExpIsRecursive());
+        cv.put(EXPENSE_TBL_COLUMN_CREATED_AT, Utils.getDateTime());
+        cv.put(EXPENSE_TBL_COLUMN_CREATED_BY, exp.getExpCreateBy());
+        cv.put(EXPENSE_TBL_COLUMN_IS_SAVED, exp.getIsSaved());
+        cv.put(EXPENSE_TBL_COLUMN_WEEK_INDEX, exp.getExpWeekIndex());
+        return cv;
+    }
+    public void insetExpense(Expense exp) {
+        db.insert(DatabaseConstants.TableNames.TABLE_EXPENSES, null, getContentValue(exp));
     }
 
     public void updateExpense(Expense exp){
-        ContentValues cv = new ContentValues();
-        cv.put("category_id", exp.getExpCatId());
-        cv.put("invoice_id", exp.getExpInvId());
-        cv.put("date", exp.getExpDate());
-        cv.put("description", exp.getExpDescription());
-        cv.put("unit", exp.getExpUnit());
-        cv.put("amount", exp.getExpAmt());
-        cv.put("is_approved", exp.getExpIsApproved());
-        cv.put("is_recurssive", exp.getExpIsRecursive());
-        cv.put("created_at", Utils.getDateTime());
-        cv.put("created_by", exp.getExpCreateBy());
-        cv.put("is_saved", exp.getIsSaved());
-        cv.put("week_index", exp.getExpWeekIndex());
 
         db.update("expenses",
-                cv,
+                getContentValue(exp),
                 "id= ?",
                 new String[]{String.valueOf(exp.getExpid())});
     }
@@ -561,6 +628,26 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
     }
 
+    private Expense getExpenseObjectFromCursor(Cursor expListCursor){
+        String expDate = expListCursor.getString(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_DATE));
+        int expProdId = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_PRODUCT_ID));
+        String expProdName = expListCursor.getString(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_PRODUCT_NAME));
+        int expcreatedby = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_CREATED_BY));
+        int expUnit = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_UNIT));
+        String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_CREATED_AT));
+        int expcatId = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_CATEGORY_ID));
+        int expInvId = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_INVOICE_ID));
+        int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_APPROVED));
+        int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_RECURSSIVE));
+        double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_AMOUNT));
+        int isSaved = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_SAVED));
+        int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_WEEK_INDEX));
+        int id =  expListCursor.getInt(expListCursor.getColumnIndex(KEY_ID));
+
+        return new Expense(expDate,expProdId,expProdName,expcatId, expInvId,expUnit,expIsApproved,
+                expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex1,id);
+
+    }
     public ArrayList<Expense> getExpensesload(int id){
         ArrayList<Expense> expList=new ArrayList<Expense>();
         Cursor expListCursor;
@@ -568,22 +655,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved = 0 and category_id=? order by created_at DESC", new String[]{String.valueOf(id)});
 
             while(expListCursor.moveToNext()){
-                String expDate = expListCursor.getString(expListCursor.getColumnIndex("date"));
-                String expDesc = expListCursor.getString(expListCursor.getColumnIndex("description"));
-                int expcreatedby = expListCursor.getInt(expListCursor.getColumnIndex("created_by"));
-                int expUnit = expListCursor.getInt(expListCursor.getColumnIndex("unit"));
-                String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex("created_at"));
-                int expcatId = expListCursor.getInt(expListCursor.getColumnIndex("category_id"));
-                int expInvId = expListCursor.getInt(expListCursor.getColumnIndex("invoice_id"));
-                int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex("is_approved"));
-                int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex("is_recurssive"));
-                double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex("amount"));
-                int isSaved = expListCursor.getInt(expListCursor.getColumnIndex("is_saved"));
-                int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex("week_index"));
-                int idw =  expListCursor.getInt(expListCursor.getColumnIndex("id"));
-
-                Expense cat = new Expense(expDate,expDesc,expcatId, expInvId,expUnit,expIsApproved,expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex1,idw);
-                expList.add(cat);
+                expList.add(getExpenseObjectFromCursor(expListCursor));
             }
         }catch(Exception e){
             Log.i("DB", "Exception While Get Categories:" + e.getMessage());
@@ -592,12 +664,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public String getCatName(int id) {
-        String query = "SELECT name FROM categories where id =" + id;
-        Cursor catCursor = db.rawQuery(query, null);
+        StringBuilder query = new StringBuilder();
+        query.append("SELECT ");
+        query.append(CATEGORIES_TBL_COLUMN_CATEGORY_NAME);
+        query.append(" FROM ");
+        query.append(TABLE_CATEGORIES);
+        query.append(" where id =");
+        query.append(id);
+        Cursor catCursor = db.rawQuery(query.toString(), null);
 
         if (catCursor.getCount() > 0) {
             catCursor.moveToFirst();
-            return catCursor.getString(catCursor.getColumnIndex("name"));
+            return catCursor.getString(catCursor.getColumnIndex(CATEGORIES_TBL_COLUMN_CATEGORY_NAME));
         } else {
             return "";
         }
@@ -615,22 +693,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             }
 
             while(expListCursor.moveToNext()){
-                String expDate = expListCursor.getString(expListCursor.getColumnIndex("date"));
-                String expDesc = expListCursor.getString(expListCursor.getColumnIndex("description"));
-                int expcreatedby = expListCursor.getInt(expListCursor.getColumnIndex("created_by"));
-                int expUnit = expListCursor.getInt(expListCursor.getColumnIndex("unit"));
-                String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex("created_at"));
-                int expcatId = expListCursor.getInt(expListCursor.getColumnIndex("category_id"));
-                int expInvId = expListCursor.getInt(expListCursor.getColumnIndex("invoice_id"));
-                int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex("is_approved"));
-                int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex("is_recurssive"));
-                double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex("amount"));
-                int isSaved = expListCursor.getInt(expListCursor.getColumnIndex("is_saved"));
-                int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex("week_index"));
-                int id =  expListCursor.getInt(expListCursor.getColumnIndex("id"));
-
-                Expense cat = new Expense(expDate,expDesc,expcatId, expInvId,expUnit,expIsApproved,expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex,id);
-                expList.add(cat);
+                expList.add(getExpenseObjectFromCursor(expListCursor));
             }
         }catch(Exception e){
             Log.i("DB", "Exception While Get Categories:" + e.getMessage());
@@ -646,22 +709,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             expListCursor = db.rawQuery("SELECT * FROM expenses where id=?", new String[]{String.valueOf(expId)});
 
             while(expListCursor.moveToNext()){
-                String expDate = expListCursor.getString(expListCursor.getColumnIndex("date"));
-                String expDesc = expListCursor.getString(expListCursor.getColumnIndex("description"));
-                int expcreatedby = expListCursor.getInt(expListCursor.getColumnIndex("created_by"));
-                int expUnit = expListCursor.getInt(expListCursor.getColumnIndex("unit"));
-                String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex("created_at"));
-                int expcatId = expListCursor.getInt(expListCursor.getColumnIndex("category_id"));
-                int expInvId = expListCursor.getInt(expListCursor.getColumnIndex("invoice_id"));
-                int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex("is_approved"));
-                int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex("is_recurssive"));
-                double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex("amount"));
-                int isSaved = expListCursor.getInt(expListCursor.getColumnIndex("is_saved"));
-                int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex("week_index"));
-                int id =  expListCursor.getInt(expListCursor.getColumnIndex("id"));
-
-                Expense cat = new Expense(expDate,expDesc,expcatId, expInvId,expUnit,expIsApproved,expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex1,id);
-                expList.add(cat);
+                expList.add(getExpenseObjectFromCursor(expListCursor));
             }
         }catch(Exception e){
             Log.i("DB", "Exception While Get Categories:" + e.getMessage());
@@ -670,20 +718,36 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public String[] getCatname() {
-        String query = "SELECT name FROM categories";
-        Cursor catCursor = db.rawQuery(query, null);
+        StringBuilder queryString = new StringBuilder();
+        queryString.append("SELECT ");
+        queryString.append(CATEGORIES_TBL_COLUMN_CATEGORY_NAME);
+        queryString.append(" FROM ");
+        queryString.append(TABLE_CATEGORIES);
 
-        if (catCursor.getCount() > 0) {
-            String[] str = new String[catCursor.getCount()];
-            int i = 0;
-            while (catCursor.moveToNext()) {
-                str[i] = catCursor.getString(catCursor.getColumnIndex("name"));
-                i++;
+        Cursor catCursor = null;
+        String[] str = null;
+        try {
+            catCursor = db.rawQuery(queryString.toString(), null);
+
+            if (catCursor != null && catCursor.getCount() > 0) {
+                str = new String[catCursor.getCount()];
+                int i = 0;
+                while (catCursor.moveToNext()) {
+                    str[i] = catCursor.getString(catCursor.getColumnIndex(CATEGORIES_TBL_COLUMN_CATEGORY_NAME));
+                    i++;
+                }
             }
-            return str;
-        } else {
-            return new String[]{};
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            if(catCursor != null && !catCursor.isClosed()){
+                catCursor.close();
+            }
         }
+        if(str != null)
+            return str;
+        else
+            return new String[]{};
     }
     public void deleteExpense(int id) {
         String query = "delete from expenses where id=?";
@@ -692,4 +756,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         catCursor.close();
     }
 
+    public ArrayList<String> getExpenseNameforDate(String date){
+        ArrayList<String> expenseNameList = new ArrayList<>();
+
+        Cursor cursor;
+        //Select invoices.description from invoices inner join expenses1 on invoices.bill_number = expenses1.invoice_id where expenses1.date = '01-04-2017'
+        try{
+            cursor = db.rawQuery("Select invoices.description from invoices inner join expenses on invoices.bill_number = expenses.invoice_id where expenses.date = ?", new String[]{date});
+            //cursor = db.rawQuery("Select invoices.description from invoices inner join expenses on invoices.bill_number = expenses.invoice_id", null);
+
+            while(cursor.moveToNext()){
+                expenseNameList.add(cursor.getString(cursor.getColumnIndex("invoices.description")));
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }
+        return expenseNameList;
+    }
 }

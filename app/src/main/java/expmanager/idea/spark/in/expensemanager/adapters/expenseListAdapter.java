@@ -69,7 +69,7 @@ public class expenseListAdapter extends BaseAdapter {
         mDbhelper.openConnection();
         lblcat.setText(mDbhelper.getCatName(listItem.get(position).getExpCatId()));
         mDbhelper.closeConnection();
-        lbldesc.setText(listItem.get(position).getExpDescription());
+        lbldesc.setText(listItem.get(position).getExpProductName());
         lblunit.setText("" + listItem.get(position).getExpUnit());
         lblamt.setText("$" + String.format("%.2f", listItem.get(position).getExpAmt()));
 

@@ -92,6 +92,10 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable\\instabug_transition_from_default_bg_to_default_bg_with_thin_top_gray_stroke_dark.xml"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rounded_corner.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable\\rounded_corner.xml"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },

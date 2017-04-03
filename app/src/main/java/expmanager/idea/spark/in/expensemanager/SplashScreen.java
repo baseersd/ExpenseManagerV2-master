@@ -42,6 +42,7 @@ DatabaseHandler db;
 
                     if(sessionManager.getCompanyId().isEmpty()||sessionManager.getCompanyId()==null) {
 
+
                         Intent i = new Intent(SplashScreen.this, MainActivity.class);
                         startActivity(i);
 

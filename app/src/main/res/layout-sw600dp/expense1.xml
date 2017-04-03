@@ -46,8 +46,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@id/doller_img"
                     android:text="Todays Expense"
-                    android:textColor="@color/expense_side_panel_text_color"
-                    android:textSize="22dp" />
+                    android:textColor="@color/expense_main_panel_list_bg"
+                    android:textSize="@dimen/text_size_xlarge" />
 
                 <ImageView
                     android:id="@+id/img_add_expense"
@@ -73,18 +73,31 @@
             </RelativeLayout>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view"
+                android:id="@+id/recycler_view_todays"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/linear_header"
                 android:layout_alignRight="@id/linear_header"
                 android:layout_below="@id/linear_header" />
 
+            <TextView
+                android:id="@+id/tv_empty_list_today"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@id/linear_header"
+                android:layout_alignRight="@id/linear_header"
+                android:text="@string/no_expenses_recored"
+                android:textSize="@dimen/text_size_large"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_below="@id/recycler_view_todays"
+                android:visibility="gone"/>
+
             <RelativeLayout
                 android:id="@+id/linear_week_expense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/recycler_view"
+                android:layout_below="@+id/tv_empty_list_today"
                 android:layout_marginTop="@dimen/margin_large"
                 android:layout_marginBottom="@dimen/margin_medium"
                 android:orientation="horizontal">
@@ -105,8 +118,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_toEndOf="@+id/doller_img_2"
                     android:text="This Week Expense"
-                    android:textColor="@color/expense_side_panel_text_color"
-                    android:textSize="22dp" />
+                    android:textColor="@color/expense_main_panel_list_bg"
+                    android:textSize="@dimen/text_size_xlarge" />
 
                 <!--<ImageView
                     android:layout_width="wrap_content"
@@ -127,7 +140,18 @@
                 android:layout_alignRight="@id/linear_week_expense"
                 android:layout_below="@id/linear_week_expense" />
 
-
+            <TextView
+                android:id="@+id/tv_empty_list_week_expense"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@id/linear_week_expense"
+                android:layout_alignRight="@id/linear_week_expense"
+                android:layout_below="@id/recycler_view_week"
+                android:text="@string/no_expenses_recored_forweek"
+                android:textSize="@dimen/text_size_large"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:visibility="gone"/>
         </RelativeLayout>
 
 

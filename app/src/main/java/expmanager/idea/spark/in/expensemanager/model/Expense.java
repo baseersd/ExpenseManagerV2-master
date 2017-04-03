@@ -2,14 +2,17 @@ package expmanager.idea.spark.in.expensemanager.model;
 
 
 public class Expense {
-    private String expDate, expDescription, expCreatedAt;
-    private int expCatId, expInvId,expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
+    private String expDate, expProductName, expCreatedAt;
+    private int expCatId, expProdId, expInvId,expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
     private double expAmt;
 
-    public Expense(String expDate, String expDescription, int expCatId, int expInvId, int expUnit, int expIsApproved, int expIsRecursive, double expAmt, int expCreateBy, String expCreatedAt, int isSaved, int expWeekIndex, int expid) {
+    public Expense(String expDate, int expProdId, String expProductName, int expCatId, int expInvId, int expUnit,
+                   int expIsApproved, int expIsRecursive, double expAmt, int expCreateBy,
+                   String expCreatedAt, int isSaved, int expWeekIndex, int expid) {
         super();
         this.expDate = expDate;
-        this.expDescription=expDescription;
+        this.expProdId = expProdId;
+        this.expProductName = expProductName;
         this.expCatId= expCatId;
         this.expInvId=expInvId;
         this.expUnit = expUnit;
@@ -31,8 +34,12 @@ public class Expense {
         return expDate;
     }
 
-    public String getExpDescription() {
-        return expDescription;
+    public int getExpProductId() {
+        return expProdId;
+    }
+
+    public String getExpProductName() {
+        return expProductName;
     }
 
     public int getExpCatId() {
