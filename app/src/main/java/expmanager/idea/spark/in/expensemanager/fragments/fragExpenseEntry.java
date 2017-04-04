@@ -221,7 +221,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                     }*/
 
                     expAmtSofar = expAmtSofar + Double.parseDouble(expAmt.getText().toString());
-
+                    weekindex = Utils.getCurrentWeekofYear();
                     try {
                         if (!isEditFlag) {
                             myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0

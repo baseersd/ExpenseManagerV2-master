@@ -84,4 +84,9 @@ public class Utils {
                     InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
+
+
+    public static int getCurrentWeekofYear() {
+        return Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+    }
 }
