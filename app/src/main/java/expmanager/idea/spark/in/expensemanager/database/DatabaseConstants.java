@@ -1,10 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.database;
 
 
-/**
- * Created by Baseer Ahmed on 4/1/2017.
- */
-
 public class DatabaseConstants {
 
     private static final String KEY_ID = "id";

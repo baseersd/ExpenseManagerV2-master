@@ -115,7 +115,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         mEmptyTodayExpense.setVisibility(todaysExpenseList.size() == 0? View.VISIBLE : View.GONE);
 
 
-        List<ExpanseGroup> weeksExpenseList = makeExpansesList();
+        List<ExpanseGroup> weeksExpenseList = makeWeekExpensesList(Utils.getCurrentWeekofYear());
         weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
         recyclerViewWeek.setLayoutManager(layoutManagerWeek);
         recyclerViewWeek.setAdapter(weekAdapter);
@@ -186,8 +186,29 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
 
         return expenseGroupList;
-       /* return Arrays.asList(makeExpanseGroup(),
-                makeExpanseGroup());*/
+    }
+
+    private List<ExpanseGroup> makeWeekExpensesList(int weekIndex){
+        List<ExpanseGroup> expenseGroupList = new ArrayList<>();
+        myDbHelper.openConnection();
+        List<Invoice> invoicesListForWeek = null;
+        try {
+            /*categoriesForToday = myDbHelper.getExpenseNameforDate(
+                    Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));*/
+            invoicesListForWeek = myDbHelper.getAllInvoicesForWeek(weekIndex);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            myDbHelper.closeConnection();
+        }
+
+        for(Invoice invoice: invoicesListForWeek){
+            ExpanseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
+                    invoice.getInvBillNumber(), invoice.getInvAmt());
+            expenseGroupList.add(expenseGroup);
+        }
+
+        return expenseGroupList;
     }
 
     public ExpanseGroup makeExpanseGroup() {

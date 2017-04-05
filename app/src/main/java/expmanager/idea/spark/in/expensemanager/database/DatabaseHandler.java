@@ -481,6 +481,32 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return invoiceList;
     }
 
+    public ArrayList<Invoice> getAllInvoicesForWeek(int weekIndex){
+        ArrayList<Invoice> invoiceList=new ArrayList<Invoice>();
+        Cursor cursor = null;
+        try{
+
+            String query = "select distinct invoices.amount, invoices.bill_number, " +
+                    "invoices.description from expenses inner join invoices ON invoices.bill_number = expenses.invoice_id " +
+                    "and expenses.week_index = "+weekIndex+" order by expenses.created_at DESC";
+            cursor = db.rawQuery(query,null);
+
+            while(cursor != null && cursor.moveToNext()){
+                Invoice invoice = new Invoice();
+                invoice.setInvAmt(cursor.getDouble(cursor.getColumnIndex("amount")));
+                invoice.setInvBillNumber(cursor.getInt(cursor.getColumnIndex("bill_number")));
+                invoice.setInvDesc(cursor.getString(cursor.getColumnIndex("description")));
+                invoiceList.add(invoice);
+            }
+
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }finally {
+            if(cursor != null && !cursor.isClosed())
+                cursor.close();
+        }
+        return invoiceList;
+    }
     public void insetInvoice(Invoice inv) {
         SQLiteDatabase db = this.getWritableDatabase();
 
