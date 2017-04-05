@@ -1,0 +1,6 @@
+{
+  "errorStatus":{
+    "statusCode": 1,
+    "message":"Server cannot able to process the data"
+  }
+}

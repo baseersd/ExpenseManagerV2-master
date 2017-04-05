@@ -11,6 +11,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Gravity;
@@ -33,11 +35,14 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.adapters.CategoriesAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseListAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
+import expmanager.idea.spark.in.expensemanager.model.CategoryList;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
@@ -50,7 +55,8 @@ import expmanager.idea.spark.in.expensemanager.utils.Utils;
  * Use the {@link fragExpenseEntry#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener {
+public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSelectedListener,
+        AdapterView.OnItemClickListener, CategoriesAdapter.OnItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -99,6 +105,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private double totExpPerWeek;
     private int totCatItem, totExpItem;
     LinearLayout.LayoutParams mainLayParams;
+    private RecyclerView mRecyleViewCategories;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.Adapter mAdapter;
 
     public fragExpenseEntry() {
         // Required empty public constructor
@@ -334,10 +343,31 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             }
         });
 
+        initUI(v);
         // Inflate the layout for this fragment
         return v;
     }
 
+    private void initUI(View v){
+        mRecyleViewCategories = (RecyclerView)v.findViewById(R.id.recycler_view_categories);
+        mLayoutManager = new LinearLayoutManager(
+                this.getContext(),
+                LinearLayoutManager.HORIZONTAL,
+                false
+        );
+        mRecyleViewCategories.setLayoutManager(mLayoutManager);
+        // Initialize a new Adapter for RecyclerView
+        List<CategoryList> categoryList = new ArrayList<>();
+        categoryList.add(new CategoryList("Milk","http://clipart-library.com/images/8iAb8xKjT.jpg"));
+        categoryList.add(new CategoryList("Meat","http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
+        categoryList.add(new CategoryList("Eggs","http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
+        categoryList.add(new CategoryList("Bread","http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
+        mAdapter = new CategoriesAdapter(this.getContext(),categoryList,this);
+
+        // Set an adapter for RecyclerView
+        mRecyleViewCategories.setAdapter(mAdapter);
+
+    }
     private void loadPreview(double disc){
         // custom dialog
         dialog = new Dialog(getActivity());
@@ -611,6 +641,11 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         }else if (view.getId()==R.id.btnexpdelete){
             deleteExpense((int) id);
         }
+    }
+
+    @Override
+    public void onItemClick(CategoryList item) {
+        autoCatId.setText(item.getCategoryName());
     }
 
     /**

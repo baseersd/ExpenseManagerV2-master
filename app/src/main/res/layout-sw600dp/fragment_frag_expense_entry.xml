@@ -83,6 +83,13 @@
                 android:singleLine="true"
                 android:textColorHint="@android:color/darker_gray" />
 
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/editTextBackgroundWhite"
+            >
+        </android.support.v7.widget.RecyclerView>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
