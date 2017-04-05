@@ -6,22 +6,19 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseGroup;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseItem;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.utils.CustomFonts;
 
 /**
@@ -92,20 +89,20 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
         return rootView;
     }
 
-    public static List<ExpanseItem> makeExpanseItems() {
-        ExpanseItem item1 = new ExpanseItem("Olive oil", "2 lt","$10.00");
-        ExpanseItem item2 = new ExpanseItem("Sugar", "5 kg","$20.00");
-        ExpanseItem item3 = new ExpanseItem("Carrots", "5 kg","$10.00");
+    public static List<ExpenseItem> makeExpanseItems() {
+        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt","$10.00");
+        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg","$20.00");
+        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg","$10.00");
 
 
         return Arrays.asList(item1, item2, item3);
     }
 
-    public static List<ExpanseGroup> makeExpansesList() {
+    public static List<ExpenseGroup> makeExpansesList() {
         return Arrays.asList(makeExpanseGroup(),
                 makeExpanseGroup());
     }
-    public static ExpanseGroup makeExpanseGroup() {
-        return new ExpanseGroup("Grocery Today",makeExpanseItems(),"3 items","$40.00");
+    public static ExpenseGroup makeExpanseGroup() {
+        return new ExpenseGroup("Grocery Today",makeExpanseItems(),"3 items","$40.00");
     }
 }

@@ -8,13 +8,13 @@ import java.util.List;
  * Created by Ramana.Reddy on 2/24/2017.
  */
 
-public class ExpanseGroup extends ExpandableGroup<ExpanseItem> {
+public class ExpenseGroup extends ExpandableGroup<ExpenseItem> {
 
     private String name;
     private String count;
     private String totalCost;
 
-    public ExpanseGroup(String title, List<ExpanseItem> items, String count,String totalCost) {
+    public ExpenseGroup(String title, List<ExpenseItem> items, String count,String totalCost) {
         super(title, items);
         this.count = count;
         this.totalCost = totalCost;

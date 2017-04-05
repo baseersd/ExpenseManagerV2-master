@@ -9,7 +9,6 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,9 +21,9 @@ import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseGroup;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseItem;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
@@ -108,14 +107,14 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
-        List<ExpanseGroup> todaysExpenseList = makeExpansesList();
+        List<ExpenseGroup> todaysExpenseList = makeExpansesList();
         adapter = new TodayExpenseAdapter(todaysExpenseList);
         recyclerViewToday.setLayoutManager(layoutManager);
         recyclerViewToday.setAdapter(adapter);
         mEmptyTodayExpense.setVisibility(todaysExpenseList.size() == 0? View.VISIBLE : View.GONE);
 
 
-        List<ExpanseGroup> weeksExpenseList = makeWeekExpensesList(Utils.getCurrentWeekofYear());
+        List<ExpenseGroup> weeksExpenseList = makeWeekExpensesList(Utils.getCurrentWeekofYear());
         weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
         recyclerViewWeek.setLayoutManager(layoutManagerWeek);
         recyclerViewWeek.setAdapter(weekAdapter);
@@ -132,28 +131,28 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 //       textView.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
 //    }
 
-    public List<ExpanseItem> makeExpanseItems() {
-        ExpanseItem item1 = new ExpanseItem("Olive oil", "2 lt", "$10.00");
-        ExpanseItem item2 = new ExpanseItem("Sugar", "5 kg", "$20.00");
-        ExpanseItem item3 = new ExpanseItem("Carrots", "5 kg", "$10.00");
+    public List<ExpenseItem> makeExpanseItems() {
+        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt", "$10.00");
+        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg", "$20.00");
+        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg", "$10.00");
 
         getExpenseListforDate(Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));
         return Arrays.asList(item1, item2, item3);
     }
 
-    public List<ExpanseItem> makeExpenseItems(List<Expense> expensesList){
-        List<ExpanseItem> expenseList = new ArrayList<>();
+    public List<ExpenseItem> makeExpenseItems(List<Expense> expensesList){
+        List<ExpenseItem> expenseList = new ArrayList<>();
         for(Expense expense : expensesList){
             String productCost = getString(R.string.currencysymbol) + expense.getExpAmt();
-            ExpanseItem expenseItem = new ExpanseItem(expense.getExpProductName(),
+            ExpenseItem expenseItem = new ExpenseItem(expense.getExpProductName(),
                     String.valueOf(expense.getExpUnit()),productCost);
             expenseList.add(expenseItem);
         }
         return expenseList;
     }
 
-    private List<ExpanseGroup> getExpenseListforDate(String date){
-        List<ExpanseGroup> expenseList = new ArrayList<>();
+    private List<ExpenseGroup> getExpenseListforDate(String date){
+        List<ExpenseGroup> expenseList = new ArrayList<>();
         myDbHelper.openConnection();
         try {
             List<String> categoriesForToday = myDbHelper.getExpenseNameforDate("01-04-2017");
@@ -164,9 +163,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
         return expenseList;
     }
-    private List<ExpanseGroup> makeExpansesList() {
+    private List<ExpenseGroup> makeExpansesList() {
 
-        List<ExpanseGroup> expenseGroupList = new ArrayList<>();
+        List<ExpenseGroup> expenseGroupList = new ArrayList<>();
         myDbHelper.openConnection();
         List<Invoice> invoicesListForToday = null;
         try {
@@ -180,7 +179,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
 
         for(Invoice invoice: invoicesListForToday){
-            ExpanseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
+            ExpenseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
                     invoice.getInvBillNumber(), invoice.getInvAmt());
             expenseGroupList.add(expenseGroup);
         }
@@ -188,8 +187,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         return expenseGroupList;
     }
 
-    private List<ExpanseGroup> makeWeekExpensesList(int weekIndex){
-        List<ExpanseGroup> expenseGroupList = new ArrayList<>();
+    private List<ExpenseGroup> makeWeekExpensesList(int weekIndex){
+        List<ExpenseGroup> expenseGroupList = new ArrayList<>();
         myDbHelper.openConnection();
         List<Invoice> invoicesListForWeek = null;
         try {
@@ -203,7 +202,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
 
         for(Invoice invoice: invoicesListForWeek){
-            ExpanseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
+            ExpenseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
                     invoice.getInvBillNumber(), invoice.getInvAmt());
             expenseGroupList.add(expenseGroup);
         }
@@ -211,11 +210,11 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         return expenseGroupList;
     }
 
-    public ExpanseGroup makeExpanseGroup() {
-        return new ExpanseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
+    public ExpenseGroup makeExpanseGroup() {
+        return new ExpenseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
     }
 
-    public ExpanseGroup makeExpenseGroup(String expenseName, int invoiceId, double invoiceAmount){
+    public ExpenseGroup makeExpenseGroup(String expenseName, int invoiceId, double invoiceAmount){
 
         StringBuilder expenseCost = new StringBuilder();
         expenseCost.append(getString(R.string.currencysymbol));
@@ -233,7 +232,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         StringBuilder itemsString = new StringBuilder();
         itemsString.append(expenseProduct.size());
         itemsString.append(" item(s)");
-        return new ExpanseGroup(expenseName, makeExpenseItems(expenseProduct), itemsString.toString(), expenseCost.toString());
+        return new ExpenseGroup(expenseName, makeExpenseItems(expenseProduct), itemsString.toString(), expenseCost.toString());
     }
 
     @Override

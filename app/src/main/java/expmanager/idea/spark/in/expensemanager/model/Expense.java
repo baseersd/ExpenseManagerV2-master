@@ -2,7 +2,7 @@ package expmanager.idea.spark.in.expensemanager.model;
 
 
 public class Expense {
-    private String expDate, expProductName, expCreatedAt;
+    private String expDate, expProdName, expCreatedAt;
     private int expCatId, expProdId, expInvId,expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
     private double expAmt;
 
@@ -12,7 +12,7 @@ public class Expense {
         super();
         this.expDate = expDate;
         this.expProdId = expProdId;
-        this.expProductName = expProductName;
+        this.expProdName = expProductName;
         this.expCatId= expCatId;
         this.expInvId=expInvId;
         this.expUnit = expUnit;
@@ -39,7 +39,7 @@ public class Expense {
     }
 
     public String getExpProductName() {
-        return expProductName;
+        return expProdName;
     }
 
     public int getExpCatId() {
@@ -81,4 +81,61 @@ public class Expense {
     public int getExpWeekIndex() {
         return expWeekIndex;
     }
+
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    public void setExpProductName(String expProductName) {
+        this.expProdName = expProductName;
+    }
+
+    public void setExpCreatedAt(String expCreatedAt) {
+        this.expCreatedAt = expCreatedAt;
+    }
+
+    public void setExpCatId(int expCatId) {
+        this.expCatId = expCatId;
+    }
+
+    public void setExpProdId(int expProdId) {
+        this.expProdId = expProdId;
+    }
+
+    public void setExpInvId(int expInvId) {
+        this.expInvId = expInvId;
+    }
+
+    public void setExpIsApproved(int expIsApproved) {
+        this.expIsApproved = expIsApproved;
+    }
+
+    public void setExpIsRecursive(int expIsRecursive) {
+        this.expIsRecursive = expIsRecursive;
+    }
+
+    public void setExpCreateBy(int expCreateBy) {
+        this.expCreateBy = expCreateBy;
+    }
+
+    public void setExpUnit(int expUnit) {
+        this.expUnit = expUnit;
+    }
+
+    public void setIsSaved(int isSaved) {
+        this.isSaved = isSaved;
+    }
+
+    public void setExpWeekIndex(int expWeekIndex) {
+        this.expWeekIndex = expWeekIndex;
+    }
+
+    public void setExpid(int expid) {
+        this.expid = expid;
+    }
+
+    public void setExpAmt(double expAmt) {
+        this.expAmt = expAmt;
+    }
+
 }

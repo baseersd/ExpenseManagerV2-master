@@ -10,8 +10,8 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseGroup;
-import expmanager.idea.spark.in.expensemanager.model.ExpanseItem;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.utils.ExpenseChildViewHolder;
 import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
 
@@ -43,7 +43,7 @@ public class TodayExpenseAdapter extends ExpandableRecyclerViewAdapter<ExpenseTi
     public void onBindChildViewHolder(ExpenseChildViewHolder holder, int flatPosition,
                                       ExpandableGroup group, int childIndex) {
 
-        final ExpanseItem artist = ((ExpanseItem) group.getItems().get(childIndex));
+        final ExpenseItem artist = ((ExpenseItem) group.getItems().get(childIndex));
         holder.setDetails(artist.getName(),artist.getQuantity(),artist.getCost());
     }
 
@@ -51,7 +51,7 @@ public class TodayExpenseAdapter extends ExpandableRecyclerViewAdapter<ExpenseTi
     public void onBindGroupViewHolder(ExpenseTitleViewHolder holder, int flatPosition,
                                       ExpandableGroup group) {
 
-        ExpanseGroup expanseGroup = (ExpanseGroup) group;
+        ExpenseGroup expanseGroup = (ExpenseGroup) group;
 
         holder.setDetails(group.getTitle(),expanseGroup.getCount(),expanseGroup.getTotalCost());
     }

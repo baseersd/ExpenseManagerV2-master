@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by Ramana.Reddy on 2/24/2017.
  */
 
-public class ExpanseItem implements Parcelable {
+public class ExpenseItem implements Parcelable {
 
     private String name;
     private String quantity;
@@ -37,13 +37,13 @@ public class ExpanseItem implements Parcelable {
         this.cost = cost;
     }
 
-    public ExpanseItem(String name,String quantity,String cost) {
+    public ExpenseItem(String name,String quantity,String cost) {
         this.name = name;
         this.quantity = quantity;
         this.cost = cost;
     }
 
-    protected ExpanseItem(Parcel in) {
+    protected ExpenseItem(Parcel in) {
         name = in.readString();
         quantity = in.readString();
         cost = in.readString();
@@ -61,15 +61,15 @@ public class ExpanseItem implements Parcelable {
         return 0;
     }
 
-    public static final Creator<ExpanseItem> CREATOR = new Creator<ExpanseItem>() {
+    public static final Creator<ExpenseItem> CREATOR = new Creator<ExpenseItem>() {
         @Override
-        public ExpanseItem createFromParcel(Parcel in) {
-            return new ExpanseItem(in);
+        public ExpenseItem createFromParcel(Parcel in) {
+            return new ExpenseItem(in);
         }
 
         @Override
-        public ExpanseItem[] newArray(int size) {
-            return new ExpanseItem[size];
+        public ExpenseItem[] newArray(int size) {
+            return new ExpenseItem[size];
         }
     };
 }
