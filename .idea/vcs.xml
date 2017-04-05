@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-<<<<<<< HEAD
-=======
-    <mapping directory="$PROJECT_DIR$/../../../../../Documents/androidWorkspace/ExpenseManagerV2-master" vcs="Git" />
->>>>>>> 3ed39bb79ca3f0a4e94e4570035a2e4b24c6f0da
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

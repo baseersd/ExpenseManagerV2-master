@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -47,12 +48,13 @@ import static android.app.Activity.RESULT_OK;
 
 public class OrganizationFragment extends Fragment {
 
-    private ImageView setupexp,imgCompanyLogo;
-    private EditText etOrganizationName,etAddressLine1,etAddressLine2,etActivationCode,etSuburb,etCityId,etAbn,etAcn;
+    private ImageView setupexp, imgCompanyLogo;
+    private EditText etOrganizationName, etAddressLine1, etAddressLine2, etActivationCode, etSuburb, etCityId, etAbn, etAcn;
     private ProgressBar progressBar;
 
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    private String base64Image;
+
+    private int PICK_IMAGE_REQUEST = 1;
+    private String base64Image="";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,10 +98,12 @@ public class OrganizationFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-                }
+                Intent intent = new Intent();
+                // Show only images, no videos or anything else
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                // Always show the chooser (if there are multiple options available)
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
 
             }
         });
@@ -107,7 +111,6 @@ public class OrganizationFragment extends Fragment {
 //        TextView  textView = (TextView) rootView.findViewById(R.id.textView5);
 //
 //        textView.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
-
 
 
         setupexp.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +123,7 @@ public class OrganizationFragment extends Fragment {
                     return;
                 }
 
-                if ((!etOrganizationName.getText().toString().isEmpty())&&(!etActivationCode.getText().toString().isEmpty())) {
+                if ((!etOrganizationName.getText().toString().isEmpty()) && (!etActivationCode.getText().toString().isEmpty())) {
 
                     progressBar.setVisibility(View.VISIBLE);
 
@@ -134,7 +137,7 @@ public class OrganizationFragment extends Fragment {
                     createOrganisationRequest.setAcn(etAcn.getText().toString());
                     createOrganisationRequest.setSuburb(etSuburb.getText().toString());
                     createOrganisationRequest.setCityId(etCityId.getText().toString());
-                    createOrganisationRequest.setImageUrl("");
+                    createOrganisationRequest.setImageUrl(base64Image);
 
                     SessionManager sessionManager = new SessionManager(getActivity());
                     RetrofitApi.getApi().CreateOrganisation(sessionManager.getAuthToken(), createOrganisationRequest).enqueue(new Callback<ResponseBody>() {
@@ -191,15 +194,32 @@ public class OrganizationFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
 
-            ByteArrayOutputStream bao = new ByteArrayOutputStream();
-            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);
-            byte [] ba = bao.toByteArray();
-            base64Image = Base64.encodeToString(ba,Base64.DEFAULT);
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
+            Uri uri = data.getData();
+
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                imgCompanyLogo.setImageBitmap(bitmap);
+                ByteArrayOutputStream bao = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);
+                byte[] ba = bao.toByteArray();
+                base64Image = Base64.encodeToString(ba, Base64.DEFAULT);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
     }
+
+/*
+*   Convert base64 to bitmap*/
+//    public static Bitmap decodeBase64(String input)
+//    {
+//        byte[] decodedBytes = Base64.decode(input, 0);
+//        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+//    }
 }

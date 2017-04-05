@@ -1,4 +1,4 @@
-#Mon Apr 03 16:35:00 IST 2017
+#Wed Apr 05 12:03:52 IST 2017
 file.9=C\:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_0545367ce655d5f014c6e33cd357150559011d99\\classes.dex
 base.10=C\:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c1bc667380284a6b596bf9124049af1bf06bd882
 file.8=C\:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\converter-gson-2.0.1_74cce9c2c6068eb778e79ec6d0080b4758979df8\\classes.dex

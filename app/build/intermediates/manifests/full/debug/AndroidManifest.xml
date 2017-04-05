@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="expmanager.idea.spark.in.expensemanager.SplashScreen"
+            android:name="expmanager.idea.spark.in.expensemanager.MainActivity"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
             android:name="expmanager.idea.spark.in.expensemanager.StaffActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="expmanager.idea.spark.in.expensemanager.MainActivity"
+            android:name="expmanager.idea.spark.in.expensemanager.SplashScreen"
             android:screenOrientation="landscape" />
         <activity
             android:name="expmanager.idea.spark.in.expensemanager.SignUpActivity"
