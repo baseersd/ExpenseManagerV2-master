@@ -93,17 +93,24 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/product"
                 android:textSize="18sp"
                 />
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/editTextBackgroundWhite"
+                >
+            </android.support.v7.widget.RecyclerView>
             <EditText
                 android:id="@+id/exp_descrip"
                 style="@style/editTextClassic"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@color/greytext"
-                android:hint="Description"
+                android:hint="@string/product"
                 android:imeOptions="actionNext"
                 android:maxLength="26"
                 android:maxLines="1"
@@ -282,7 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Description"
+                    android:text="@string/product"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 

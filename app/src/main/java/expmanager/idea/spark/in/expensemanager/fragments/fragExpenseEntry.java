@@ -42,8 +42,8 @@ import expmanager.idea.spark.in.expensemanager.adapters.CategoriesAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseListAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
-import expmanager.idea.spark.in.expensemanager.model.CategoryList;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
+import expmanager.idea.spark.in.expensemanager.model.Item;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
 
@@ -107,7 +107,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     LinearLayout.LayoutParams mainLayParams;
     private RecyclerView mRecyleViewCategories;
     private RecyclerView.LayoutManager mLayoutManager;
-    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.Adapter mAdapterCategories;
+
+    private RecyclerView mRecyleViewProducts;
+    private RecyclerView.Adapter mAdapterProducts;
 
     public fragExpenseEntry() {
         // Required empty public constructor
@@ -211,63 +214,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         btnExpAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0
-                        && expAmt.getText().length() > 0 && expDate.getText().length() > 0
-                        && expProductName.getText().length() > 0) {
-
-                    myDbHelper.openConnection();
-                    int catId = myDbHelper.getCatId(autoCatId.getText().toString());
-                    if (catId == 0) {
-                        myDbHelper.insetCategory(autoCatId.getText().toString(), 0,0);//ToDO: Replace 2nd Parameter with CategoryId
-                        catId = myDbHelper.getCatId(autoCatId.getText().toString());
-                    }
-                    int invId=0;
-                    invId = Integer.parseInt(autoInvId.getText().toString());
-                   /* invId = myDbHelper.getInvId(autoInvId.getText().toString());
-                    if (invId == 0) {
-                        Toast.makeText(getContext(), "Invalid Invoice No", Toast.LENGTH_SHORT).show();
-                        return;
-                    }*/
-
-                    expAmtSofar = expAmtSofar + Double.parseDouble(expAmt.getText().toString());
-                    weekindex = Utils.getCurrentWeekofYear();
-                    try {
-                        if (!isEditFlag) {
-                            myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0
-                                    expProductName.getText().toString(),
-                                    catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
-                                    Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, 0));
-                        } else {
-                            myDbHelper.updateExpense(new Expense(expDate.getText().toString(), 0, //ToDO: ProductId to be passed instead of 0
-                                    expProductName.getText().toString(),
-                                    catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
-                                    Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, editedExpId));
-                            isEditFlag = false;
-                        }
-                    }catch (Exception ex){
-                        ex.printStackTrace();
-                    }finally {
-                        myDbHelper.closeConnection();
-                    }
-
-                    /*if (chkexpIsRecursive.isChecked()) {
-                        myDbHelper.insetRecursiveExpense(myDbHelper.getMaxExpenseId(), spnrecursivetype.getSelectedItem().toString(), Util.getCurrentDate(), "", Util.getCurrentDate(), SharedPref.getCurUserId(getContext()));
-                    }*/
-
-
-                    refreshAdapter();
-                    loadExpenseItems();
-
-                    btnExpAdd.setText("Add");
-                    expProductName.setText("");
-                    expAmt.setText("");
-                    expUnit.setText("");
-                    autoCatId.setText("");
-
-                    Toast.makeText(getContext(), "Expense Details Added Successfully", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getContext(), "Please enter expense details", Toast.LENGTH_SHORT).show();
-                }
+                addExpenseToList();
             }
         });
 
@@ -348,8 +295,13 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         return v;
     }
 
-    private void initUI(View v){
-        mRecyleViewCategories = (RecyclerView)v.findViewById(R.id.recycler_view_categories);
+    private void initUI(View view){
+        initCategories(view);
+        initProducts(view);
+    }
+
+    private void initCategories(View view){
+        mRecyleViewCategories = (RecyclerView)view.findViewById(R.id.recycler_view_categories);
         mLayoutManager = new LinearLayoutManager(
                 this.getContext(),
                 LinearLayoutManager.HORIZONTAL,
@@ -357,16 +309,40 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         );
         mRecyleViewCategories.setLayoutManager(mLayoutManager);
         // Initialize a new Adapter for RecyclerView
-        List<CategoryList> categoryList = new ArrayList<>();
-        categoryList.add(new CategoryList("Milk","http://clipart-library.com/images/8iAb8xKjT.jpg"));
-        categoryList.add(new CategoryList("Meat","http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
-        categoryList.add(new CategoryList("Eggs","http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
-        categoryList.add(new CategoryList("Bread","http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
-        mAdapter = new CategoriesAdapter(this.getContext(),categoryList,this);
+        List<Item> categoryList = new ArrayList<>();
+        categoryList.add(new Item(1,Item.ITEM_CATEGORY,"Milk",
+                "http://clipart-library.com/images/8iAb8xKjT.jpg"));
+        categoryList.add(new Item(2,Item.ITEM_CATEGORY,"Meat",
+                "http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
+        categoryList.add(new Item(3,Item.ITEM_CATEGORY,"Eggs",
+                "http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
+        categoryList.add(new Item(4,Item.ITEM_CATEGORY,"Bread",
+                "http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
+        mAdapterCategories = new CategoriesAdapter(this.getContext(),categoryList,this);
 
         // Set an adapter for RecyclerView
-        mRecyleViewCategories.setAdapter(mAdapter);
+        mRecyleViewCategories.setAdapter(mAdapterCategories);
+    }
 
+    private void initProducts(View view){
+        mRecyleViewProducts = (RecyclerView)view.findViewById(R.id.recycler_view_products);
+        mLayoutManager = new LinearLayoutManager(
+                this.getContext(),
+                LinearLayoutManager.HORIZONTAL,
+                false
+        );
+        mRecyleViewProducts.setLayoutManager(mLayoutManager);
+        // Initialize a new Adapter for RecyclerView
+        List<Item> productList = new ArrayList<>();
+        productList.add(new Item(1,Item.ITEM_PRODUCT,"Milk","http://clipart-library.com/images/8iAb8xKjT.jpg"));
+        productList.add(new Item(2,Item.ITEM_PRODUCT,"Meat","http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
+        productList.add(new Item(3,Item.ITEM_PRODUCT,"Eggs","http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
+        productList.add(new Item(4,Item.ITEM_PRODUCT,"Bread","http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
+        mAdapterProducts = new CategoriesAdapter(this.getContext(),productList,this);
+
+        // Set an adapter for RecyclerView
+        mRecyleViewProducts.setAdapter(mAdapterProducts);
+        mRecyleViewProducts.setVisibility(View.VISIBLE);
     }
     private void loadPreview(double disc){
         // custom dialog
@@ -431,6 +407,65 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         dialog.show();
     }
 
+    private void addExpenseToList(){
+        if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0
+                && expAmt.getText().length() > 0 && expDate.getText().length() > 0
+                && expProductName.getText().length() > 0) {
+
+            myDbHelper.openConnection();
+            int catId = myDbHelper.getCatId(autoCatId.getText().toString());
+            if (catId == 0) {
+                myDbHelper.insetCategory(autoCatId.getText().toString(), 0,0);//ToDO: Replace 2nd Parameter with CategoryId
+                catId = myDbHelper.getCatId(autoCatId.getText().toString());
+            }
+            int invId=0;
+            invId = Integer.parseInt(autoInvId.getText().toString());
+                   /* invId = myDbHelper.getInvId(autoInvId.getText().toString());
+                    if (invId == 0) {
+                        Toast.makeText(getContext(), "Invalid Invoice No", Toast.LENGTH_SHORT).show();
+                        return;
+                    }*/
+
+            expAmtSofar = expAmtSofar + Double.parseDouble(expAmt.getText().toString());
+            weekindex = Utils.getCurrentWeekofYear();
+            try {
+                if (!isEditFlag) {
+                    myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0
+                            expProductName.getText().toString(),
+                            catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                            Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, 0));
+                } else {
+                    myDbHelper.updateExpense(new Expense(expDate.getText().toString(), 0, //ToDO: ProductId to be passed instead of 0
+                            expProductName.getText().toString(),
+                            catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                            Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, editedExpId));
+                    isEditFlag = false;
+                }
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }finally {
+                myDbHelper.closeConnection();
+            }
+
+                    /*if (chkexpIsRecursive.isChecked()) {
+                        myDbHelper.insetRecursiveExpense(myDbHelper.getMaxExpenseId(), spnrecursivetype.getSelectedItem().toString(), Util.getCurrentDate(), "", Util.getCurrentDate(), SharedPref.getCurUserId(getContext()));
+                    }*/
+
+
+            refreshAdapter();
+            loadExpenseItems();
+
+            btnExpAdd.setText("Add");
+            expProductName.setText("");
+            expAmt.setText("");
+            expUnit.setText("");
+            autoCatId.setText("");
+
+            Toast.makeText(getContext(), "Expense Details Added Successfully", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getContext(), "Please enter expense details", Toast.LENGTH_SHORT).show();
+        }
+    }
     private void initializeControls() {
         myDbHelper.openConnection();
         int[] catIdArray = myDbHelper.getExpCatId();
@@ -644,8 +679,14 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     }
 
     @Override
-    public void onItemClick(CategoryList item) {
-        autoCatId.setText(item.getCategoryName());
+    public void onItemClick(Item item, int position) {
+        if(item.getType() == Item.ITEM_CATEGORY) {
+            autoCatId.setText(item.getItemName());
+            mRecyleViewProducts.setVisibility(View.VISIBLE);
+        }else{
+            expProductName.setText(item.getItemName());
+            //addExpenseToList();
+        }
     }
 
     /**

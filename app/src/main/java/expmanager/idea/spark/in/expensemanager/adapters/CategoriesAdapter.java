@@ -1,10 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.adapters;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry;
-import expmanager.idea.spark.in.expensemanager.model.CategoryList;
+import expmanager.idea.spark.in.expensemanager.model.Item;
 
 /**
  * Created by Baseer on 4/6/2017.
@@ -27,16 +22,16 @@ import expmanager.idea.spark.in.expensemanager.model.CategoryList;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.ViewHolder> {
     private Context mContext;
-    private List<CategoryList> mCategoryList;
+    private List<Item> mItemList;
     private OnItemClickListener mCallback;
 
     public interface OnItemClickListener {
-        void onItemClick(CategoryList item);
+        void onItemClick(Item item, int position);
     }
 
-    public CategoriesAdapter(Context context, List<CategoryList> list, OnItemClickListener callback){
+    public CategoriesAdapter(Context context, List<Item> list, OnItemClickListener callback){
         this.mContext = context;
-        this.mCategoryList = list;
+        this.mItemList = list;
         this.mCallback = callback;
     }
     @Override
@@ -50,17 +45,17 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.mTextView.setText(mCategoryList.get(position).getCategoryName());
+        holder.mTextView.setText(mItemList.get(position).getItemName());
         Picasso.with(mContext)
-                .load(mCategoryList.get(position).getCategoryURL())
+                .load(mItemList.get(position).getItemURL())
                 .placeholder(R.mipmap.ic_launcher)
                 .into(holder.mImageView);
-        holder.bind(mCategoryList.get(position),mCallback);
+        holder.bind(mItemList.get(position),mCallback, position);
     }
 
     @Override
     public int getItemCount() {
-        return mCategoryList.size();
+        return mItemList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -75,10 +70,10 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
             mImageView = (ImageView) v.findViewById(R.id.imv_category_icon);
             mTextView = (TextView) v.findViewById(R.id.tv_category_name);
         }
-        public void bind(final CategoryList item, final OnItemClickListener listener) {
+        public void bind(final Item item, final OnItemClickListener listener, final int position) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    listener.onItemClick(item);
+                    listener.onItemClick(item, position);
                 }
             });
         }
