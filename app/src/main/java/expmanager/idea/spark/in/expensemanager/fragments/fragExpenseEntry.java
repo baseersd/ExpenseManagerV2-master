@@ -404,9 +404,6 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
                 expAmtSofar =0.0;
 
-                /*Intent intent = new Intent(getContext(),CreateInvoiceService.class);
-                intent.putExtra("INVOICE_NUMBER",mInvoiceID);
-                getContext().startService(intent);*/
                 //Toast.makeText(getContext(), "All Expense Saved Successfully", Toast.LENGTH_SHORT).show();
                 //mListener.openWeekView();
                 handleCreateInvoiceService();
