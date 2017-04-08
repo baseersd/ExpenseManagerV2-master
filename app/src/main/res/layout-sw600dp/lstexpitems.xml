@@ -25,7 +25,7 @@
         android:gravity="center"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <EditText
         android:id="@+id/lblunit"
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -33,7 +33,7 @@
         android:gravity="center"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <EditText
         android:id="@+id/lblamt"
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -47,7 +47,7 @@
         android:layout_weight="1"
         android:textSize="18sp"
         android:gravity="center"
-        android:text="Edit"
+        android:text="Update"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content" />
 

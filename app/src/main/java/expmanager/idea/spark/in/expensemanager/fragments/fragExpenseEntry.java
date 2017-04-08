@@ -64,7 +64,7 @@ import retrofit2.Response;
  * create an instance of this fragment.
  */
 public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSelectedListener,
-        AdapterView.OnItemClickListener, CategoriesAdapter.OnItemClickListener {
+        AdapterView.OnItemClickListener, CategoriesAdapter.OnItemClickListener, expenseListAdapter.OnCustomItemClick{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -119,6 +119,8 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
     private RecyclerView mRecyleViewProducts;
     private RecyclerView.Adapter mAdapterProducts;
+
+    private int mCategoryIndex, mProductIndex;
 
     public fragExpenseEntry() {
         // Required empty public constructor
@@ -457,8 +459,8 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         });
     }
     private void addExpenseToList(){
-        if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0
-                && expAmt.getText().length() > 0 && expDate.getText().length() > 0
+        if (autoCatId.getText().toString().length() > 0 /*&& expUnit.getText().length() > 0
+                && expAmt.getText().length() > 0 */&& expDate.getText().length() > 0
                 && expProductName.getText().length() > 0) {
 
             myDbHelper.openConnection();
@@ -625,7 +627,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         editedExpId = 0;
         lblExpTotAmt.setText("Expense:" + expAmtSofar);
         myDbHelper.openConnection();
-        expenseListAdapter adapter=new expenseListAdapter(getActivity(), myDbHelper.getExpenses(mInvoiceID),lstExpItems);
+        expenseListAdapter adapter=new expenseListAdapter(getActivity(), myDbHelper.getExpenses(mInvoiceID),lstExpItems,this);
         lstExpItems.setAdapter(adapter);
         if(adapter.getCount()>0){
             lnrExpHeader.setVisibility(View.VISIBLE);
@@ -633,6 +635,30 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         myDbHelper.closeConnection();
     }
 
+    public void updateExpense(Expense item, int id){
+        if(id<=0){
+            return;
+        }
+        /*myDbHelper.openConnection();
+        ArrayList<Expense> lv= new ArrayList<Expense>();
+        lv=myDbHelper.getExpensesEdit(id);
+        myDbHelper.closeConnection();*/
+
+        if(item != null){
+            expProductName.setText(item.getExpProductName());
+            expAmt.setText("" + item.getExpAmt());
+            expAmtSofar = expAmtSofar - item.getExpAmt();
+            expUnit.setText("" + item.getExpUnit());
+            //myDbHelper.openConnection();
+            //autoCatId.setText(myDbHelper.getCatName(item.getExpCatId()));
+            autoCatId.setText(item.getCategory_name());
+            //myDbHelper.closeConnection();
+            //btnExpAdd.setText("Update");
+            isEditFlag =true;
+            editedExpId = id;
+            addExpenseToList();
+        }
+    }
     public void editExpense(int id){
         if(id<=0){
             return;
@@ -717,9 +743,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if(view.getId()==R.id.btnexpedit){
-            editExpense((int) id);
-        }else if (view.getId()==R.id.btnexpdelete){
+        /*if(view.getId()==R.id.btnexpedit){
+            //editExpense((int) id);
+            updateExpense((int) id);
+        }else*/ if (view.getId()==R.id.btnexpdelete){
             deleteExpense((int) id);
         }
     }
@@ -729,9 +756,13 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         if(item.getType() == Item.ITEM_CATEGORY) {
             autoCatId.setText(item.getItemName());
             mRecyleViewProducts.setVisibility(View.VISIBLE);
+            mCategoryIndex = position;
         }else{
             expProductName.setText(item.getItemName());
-            //addExpenseToList();
+            mProductIndex = position;
+            expAmt.setText("0.00");
+            expUnit.setText("0");
+            addExpenseToList();
         }
     }
 
@@ -746,6 +777,20 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
     private void onInvoiceCreateFailure() {
         Toast.makeText(getContext(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemClick(View view, ArrayList<Expense> itemList, int position, long id) {
+        if(view.getId()==R.id.btnexpedit){
+            //editExpense((int) id);
+            expAmtSofar = 0.0;
+            for(Expense expense: itemList) {
+                expAmtSofar += expense.getExpAmt();
+            }
+            updateExpense(itemList.get(position),(int) id);
+        }/*else if (view.getId()==R.id.btnexpdelete){
+            deleteExpense((int) id);
+        }*/
     }
 
     /**

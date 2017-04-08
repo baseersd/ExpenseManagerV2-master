@@ -23,18 +23,20 @@ import expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry;
  */
 
 
-public class AdminActivity extends AppCompatActivity implements View.OnClickListener, InvoiceEntryFragment.OnFragmentInteractionListener, fragExpenseEntry.OnFragmentInteractionListener {
-    ImageButton btnexpense,btntanexpense,btnhistory,btndashboard,btnstaff,btnprofile,btnsales;
-
+public class AdminActivity extends AppCompatActivity implements View.OnClickListener,
+        InvoiceEntryFragment.OnFragmentInteractionListener, fragExpenseEntry.OnFragmentInteractionListener {
+    private ImageButton btnexpense,btntanexpense,btnhistory,btndashboard,btnstaff,btnprofile,btnsales;
+    private static View oldSelectedView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_layout);
 
         initializeControls();
-        ExpenseFragment fragmentorg = new ExpenseFragment();
+        /*ExpenseFragment fragmentorg = new ExpenseFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
-
+*/
+        btnexpense.callOnClick();
     }
 
     private void initializeControls() {
@@ -64,6 +66,11 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        if(oldSelectedView != null){
+            oldSelectedView.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+        }
+        v.setBackgroundColor(getResources().getColor(R.color.blue1));
+        oldSelectedView = v;
 
         switch (v.getId()) {
             case R.id.btnexpense:
