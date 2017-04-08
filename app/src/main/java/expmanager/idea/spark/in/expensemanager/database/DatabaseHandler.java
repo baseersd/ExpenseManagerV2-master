@@ -395,12 +395,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return contactList;
     }
 
-    public ArrayList<Expense> getExpensesforToday(int invoiceId){
+    public ArrayList<Expense> getExpensesforToday(String invoiceId){
         ArrayList<Expense> expList=new ArrayList<Expense>();
         Cursor expListCursor;
         try{
 
-            if(invoiceId==0){
+            if(Integer.valueOf(invoiceId)==0){
                 expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved =0  and date =? order by created_at DESC",
                         new String[]{Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY)});
             }else {
@@ -408,7 +408,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 //                expListCursor = db.rawQuery("SELECT * FROM expenses where invoice_id=? and date =? order by created_at DESC",
 //                        new String[]{String.valueOf(invoiceId),Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY)});
                 expListCursor = db.rawQuery("SELECT * FROM expenses where invoice_id=? order by created_at DESC",
-                        new String[]{String.valueOf(invoiceId)});
+                        new String[]{invoiceId});
 
             }
 
@@ -443,11 +443,34 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return expList;
     }
 
+    public ArrayList<Expense> getExpenses(String expId){
+        ArrayList<Expense> expList=new ArrayList<Expense>();
+        Cursor expListCursor;
+        try{
+
+            /*if(expId==0){
+                expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved =0  order by created_at DESC", null);
+            }else {*/
+                //expListCursor = db.rawQuery("SELECT * FROM expenses where is_saved >0 and id=? order by created_at DESC", new String[]{String.valueOf(expId)});
+            expListCursor = db.rawQuery("SELECT * FROM expenses where invoice_id=? order by created_at DESC", new String[]{expId});
+            //}
+
+
+            while(expListCursor.moveToNext()){
+                expList.add(getExpenseObjectFromCursor(expListCursor));
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }
+        return expList;
+    }
+
     private Invoice getInvoiceFromCursor(Cursor cursor){
-        String invNo, invDate, invDesc,  invImgPath, invPayMode, invCreatedAt;
-        int invBillNumber,invCreateBy;
+        if(cursor == null)
+            return null;
+        String invNo, invDate, invDesc, invBillNumber, invImgPath, invPayMode, invCreatedAt;
+        int invCreateBy;
         double invAmt, invDisc;
-        Invoice invoice = null;
 
         invNo = cursor.getString(0);
         invDate = cursor.getString(1);
@@ -456,7 +479,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         invAmt = cursor.getDouble(4);
         invDisc = cursor.getDouble(5);
         invPayMode = cursor.getString(6);
-        invBillNumber = cursor.getInt(7);
+        invBillNumber = cursor.getString(7);
         invCreatedAt = cursor.getString(8);
         invCreateBy = cursor.getInt(9);
 
@@ -481,6 +504,70 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return invoiceList;
     }
 
+    public ArrayList<Invoice> getAllInvoices(){
+        ArrayList<Invoice> invoiceList=new ArrayList<Invoice>();
+        Cursor cursor;
+        try{
+
+            cursor = db.rawQuery("SELECT * FROM invoices order by created_at DESC",
+                    null);
+
+            while(cursor != null && cursor.moveToNext()){
+                invoiceList.add(getInvoiceFromCursor(cursor));
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Categories:" + e.getMessage());
+        }
+        return invoiceList;
+    }
+
+    public String getUniqueInvoice(String invoiceId){
+        int nCount = 0;
+        nCount = getCountofSameInvoices(invoiceId);
+        int index = 0;
+        while(nCount >0){
+            index++;
+            nCount = getCountofSameInvoices(invoiceId+"_"+index);
+        }
+        if(index > 0) {
+            return invoiceId + "_" + index;
+        }else{
+            return invoiceId;
+        }
+    }
+    public int getCountofSameInvoices(String invoiceId){
+        int nCount = 0;
+        Cursor cursor = null;
+        try{
+
+            cursor = getReadableDatabase().rawQuery("SELECT * FROM invoices where bill_number = ? order by created_at DESC",
+                    new String[]{invoiceId});
+
+            if(cursor != null && cursor.moveToFirst()){
+               nCount = cursor.getCount();
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While Get Invoices:" + e.getMessage());
+        }
+        return nCount;
+    }
+    public Invoice getInvoiceObjectForInvoiceId(String invoiceId){
+        Invoice invoiceObj = null;
+        Cursor cursor = null;
+        try{
+
+            cursor = getReadableDatabase().rawQuery("SELECT * FROM invoices where bill_number = ?",
+                    new String[]{invoiceId});
+
+            if(cursor != null && cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                invoiceObj = getInvoiceFromCursor(cursor);
+            }
+        }catch(Exception e){
+            Log.i("DB", "Exception While getInvoiceObjectForInvoiceId:" + e.getMessage());
+        }
+        return invoiceObj;
+    }
     public ArrayList<Invoice> getAllInvoicesForWeek(int weekIndex){
         ArrayList<Invoice> invoiceList=new ArrayList<Invoice>();
         Cursor cursor = null;
@@ -494,7 +581,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             while(cursor != null && cursor.moveToNext()){
                 Invoice invoice = new Invoice();
                 invoice.setInvAmt(cursor.getDouble(cursor.getColumnIndex("amount")));
-                invoice.setInvBillNumber(cursor.getInt(cursor.getColumnIndex("bill_number")));
+                invoice.setInvBillNumber(cursor.getString(cursor.getColumnIndex("bill_number")));
                 invoice.setInvDesc(cursor.getString(cursor.getColumnIndex("description")));
                 invoiceList.add(invoice);
             }
@@ -662,15 +749,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int expUnit = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_UNIT));
         String expcreatedAt = expListCursor.getString(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_CREATED_AT));
         int expcatId = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_CATEGORY_ID));
-        int expInvId = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_INVOICE_ID));
+        String expInvId = expListCursor.getString(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_INVOICE_ID));
         int expIsApproved = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_APPROVED));
         int expIsRecursive = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_RECURSSIVE));
         double expAmt = expListCursor.getDouble(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_AMOUNT));
         int isSaved = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_IS_SAVED));
         int weekindex1 = expListCursor.getInt(expListCursor.getColumnIndex(EXPENSE_TBL_COLUMN_WEEK_INDEX));
         int id =  expListCursor.getInt(expListCursor.getColumnIndex(KEY_ID));
+        String expcategoryName = getCatName(expcatId);
 
-        return new Expense(expDate,expProdId,expProdName,expcatId, expInvId,expUnit,expIsApproved,
+        return new Expense(expDate,expProdId,expProdName,expcatId, expcategoryName, expInvId,expUnit,expIsApproved,
                 expIsRecursive,expAmt,expcreatedby,expcreatedAt,isSaved,weekindex1,id);
 
     }

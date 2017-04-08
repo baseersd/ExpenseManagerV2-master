@@ -14,7 +14,7 @@ public class DatabaseConstants {
     public static final String CREATE_EXPENSE_TABLE = "CREATE TABLE " + TableNames.TABLE_EXPENSES + "("
             + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + ExpenseTableColumns.EXPENSE_TBL_COLUMN_CATEGORY_ID + " INTEGER,"
-            + ExpenseTableColumns.EXPENSE_TBL_COLUMN_INVOICE_ID + " INTEGER,"
+            + ExpenseTableColumns.EXPENSE_TBL_COLUMN_INVOICE_ID + " TEXT,"
             + ExpenseTableColumns.EXPENSE_TBL_COLUMN_DATE + " TEXT,"
             + ExpenseTableColumns.EXPENSE_TBL_COLUMN_PRODUCT_ID + " INTEGER,"
             + ExpenseTableColumns.EXPENSE_TBL_COLUMN_PRODUCT_NAME + " TEXT,"

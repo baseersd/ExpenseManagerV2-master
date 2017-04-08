@@ -3,33 +3,32 @@ package expmanager.idea.spark.in.expensemanager.model;
 
 
 public class Invoice {
-    private String invNo, invDate, invDesc,  invImgPath, invPayMode, invCreatedAt;
-    private int invBillNumber,invCreateBy;
+    private String invNo, date, description, bill_number, invImgPath, payment_mode, invCreatedAt;
+    private int invCreateBy;
+    private double amount, discount;
 
     public void setInvAmt(double invAmt) {
-        this.invAmt = invAmt;
+        this.amount = invAmt;
     }
 
     public void setInvDesc(String invDesc) {
-        this.invDesc = invDesc;
+        this.description = invDesc;
     }
-
-    private double invAmt, invDisc;
 
     public Invoice(){
     }
-    public Invoice(String invNo, String invDate, String invDesc, String invImgPath, String invPayMode, int invBillNumber, int invCreateBy, String invCreatedAt, double invAmt, double invDisc) {
+    public Invoice(String invNo, String invDate, String invDesc, String invImgPath, String invPayMode, String invBillNumber, int invCreateBy, String invCreatedAt, double invAmt, double invDisc) {
         super();
         this.invNo = invNo;
-        this.invDate=invDate;
-        this.invDesc= invDesc;
+        this.date=invDate;
+        this.description= invDesc;
         this.invImgPath=invImgPath;
-        this.invPayMode=invPayMode;
-        this.invBillNumber = invBillNumber;
+        this.payment_mode=invPayMode;
+        this.bill_number = invBillNumber;
         this.invCreateBy=invCreateBy;
         this.invCreatedAt=invCreatedAt;
-        this.invAmt=invAmt;
-        this.invDisc=invDisc;
+        this.amount=invAmt;
+        this.discount=invDisc;
     }
 
     public String getInvNo() {
@@ -37,11 +36,11 @@ public class Invoice {
     }
 
     public String getInvDate() {
-        return invDate;
+        return date;
     }
 
     public String getInvDesc() {
-        return invDesc;
+        return description;
     }
 
     public String getInvImgPath() {
@@ -49,7 +48,7 @@ public class Invoice {
     }
 
     public String getInvPayMode() {
-        return invPayMode;
+        return payment_mode;
     }
 
     public int getInvCreateBy() {
@@ -61,19 +60,19 @@ public class Invoice {
     }
 
     public double getInvAmt() {
-        return invAmt;
+        return amount;
     }
 
     public double getInvDisc() {
-        return invDisc;
+        return discount;
     }
 
-    public int getInvBillNumber() {
-        return invBillNumber;
+    public String getInvBillNumber() {
+        return bill_number;
     }
 
-    public void setInvBillNumber(int invBillNumber) {
-        this.invBillNumber = invBillNumber;
+    public void setInvBillNumber(String invBillNumber) {
+        this.bill_number = invBillNumber;
     }
 
 }

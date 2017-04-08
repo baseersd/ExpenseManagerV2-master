@@ -9,14 +9,18 @@ import java.util.List;
 public class ExpenseSyncRequest {
 
     private Invoice invoice;
-    private List<Expense> expenseList;
+    private List<Expense> expenses;
 
+    public ExpenseSyncRequest(Invoice invoice, List<Expense> expenseList){
+        this.invoice = invoice;
+        this.expenses = expenseList;
+    }
     public List<Expense> getExpenseList() {
-        return expenseList;
+        return expenses;
     }
 
     public void setExpenseList(List<Expense> expenseList) {
-        this.expenseList = expenseList;
+        this.expenses = expenseList;
     }
 
     public Invoice getInvoice() {

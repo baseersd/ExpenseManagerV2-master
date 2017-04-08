@@ -1,5 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -25,6 +26,7 @@ import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
+import expmanager.idea.spark.in.expensemanager.services.CreateInvoiceService;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 
 /**
@@ -214,7 +216,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         return new ExpenseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
     }
 
-    public ExpenseGroup makeExpenseGroup(String expenseName, int invoiceId, double invoiceAmount){
+    public ExpenseGroup makeExpenseGroup(String expenseName, String invoiceId, double invoiceAmount){
 
         StringBuilder expenseCost = new StringBuilder();
         expenseCost.append(getString(R.string.currencysymbol));
