@@ -19,6 +19,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Created by Ramana.Reddy on 3/13/2017.
@@ -138,8 +139,15 @@ public class RetrofitApi {
           /*
            * GET_DASHBOARD
            */
-        @POST(ServerURLModel.GET_DASHBOARD)
-        Call<ResponseBody> GetDashboard(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
+        @GET(ServerURLModel.GET_DASHBOARD)
+        Call<ResponseBody> GetDashboard(@Header("Authtoken") String auth, @Query("date") String date);
+
+
+        /*
+        * GET_DASHBOARD_GRAPH
+        */
+        @GET(ServerURLModel.GET_DASHBOARD_GRAPH)
+        Call<ResponseBody> GetDashboardGraph(@Header("Authtoken") String auth, @Query("date") String date);
 
 
 

@@ -70,7 +70,7 @@
                 android:orientation="vertical">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8ttdd1"
+                    android:id="@+id/txt_prev_month1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -99,7 +99,7 @@
                 android:orientation="vertical">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8ttaass1"
+                    android:id="@+id/txt_prev_month2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -128,7 +128,7 @@
                 android:orientation="vertical">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textViewfffs8ttaass1"
+                    android:id="@+id/txt_prev_month3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -139,7 +139,7 @@
                     android:textSize="20sp" />
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8tjff1hhdd"
+                    android:id="@+id/txt12345"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -166,7 +166,7 @@
                 android:paddingBottom="20dp">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8taat1"
+                    android:id="@+id/txt_current_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -177,7 +177,7 @@
                     android:textSize="20sp" />
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8lltj1"
+                    android:id="@+id/txt_current_month_profit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -196,7 +196,7 @@
                 android:paddingBottom="20dp">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8ttjjdd1"
+                    android:id="@+id/txt_prev_month1_profit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -217,7 +217,7 @@
                 android:paddingBottom="20dp">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textView8ttddss1"
+                    android:id="@+id/txt_prev_month2_profit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
@@ -238,7 +238,7 @@
                 android:paddingBottom="20dp">
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/textViertw8ttddss1"
+                    android:id="@+id/txt_prev_month3_profit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"

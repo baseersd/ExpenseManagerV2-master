@@ -29,7 +29,8 @@ public class ServerURLModel {
 //    public static final String UPDATE_SALE = "update_sale";
 //    public static final String GET_SALE = "get_sales";
 
-    public static final String GET_DASHBOARD = " ";
+    public static final String GET_DASHBOARD = "dashboard_summary";
+    public static final String GET_DASHBOARD_GRAPH = "dashboard_graph";
 
     public static final String LOGOUT = "logout";
 

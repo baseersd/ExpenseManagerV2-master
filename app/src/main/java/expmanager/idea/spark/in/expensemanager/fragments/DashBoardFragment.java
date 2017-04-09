@@ -12,7 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
@@ -23,7 +27,12 @@ import org.achartengine.renderer.BasicStroke;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
+
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.model.DashboardModel;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import okhttp3.ResponseBody;
@@ -43,6 +52,12 @@ public class DashBoardFragment extends Fragment {
             "Jan", "Feb" , "Mar", "Apr", "May", "Jun",
             "Jul", "Aug" , "Sep", "Oct", "Nov", "Dec"
     };
+
+    //txt_current_month,txt_current_month_profit,txt_prev_month1
+    private TextView txtCurrentMonth,txtCurrentMonthProfit,txtPrevMonth1;
+
+    //txt_prev_month1_profit,txt_prev_month2,txt_prev_month2_profit,txt_prev_month3,txt_prev_month3_profit
+    private TextView txtPrevMonth1Profit,txtPrevMonth2,txtPrevMonth2Profit,txtPrevMonth3,txtPrevMonth3Profit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,52 +82,131 @@ public class DashBoardFragment extends Fragment {
                 container, false);
         chartContainer = (LinearLayout) rootView.findViewById(R.id.chart);
         mothspinner = (Spinner) rootView.findViewById(R.id.mothspinner);
+
+        txtCurrentMonth = (TextView) rootView.findViewById(R.id.txt_current_month);
+        txtCurrentMonthProfit = (TextView) rootView.findViewById(R.id.txt_current_month_profit);
+        txtPrevMonth1 = (TextView) rootView.findViewById(R.id.txt_prev_month1);
+
+        txtPrevMonth1Profit = (TextView) rootView.findViewById(R.id.txt_prev_month1_profit);
+        txtPrevMonth2 = (TextView) rootView.findViewById(R.id.txt_prev_month2);
+        txtPrevMonth2Profit = (TextView) rootView.findViewById(R.id.txt_prev_month2_profit);
+        txtPrevMonth3 = (TextView) rootView.findViewById(R.id.txt_prev_month3);
+        txtPrevMonth3Profit = (TextView) rootView.findViewById(R.id.txt_prev_month3_profit);
+
+
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.months, R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         mothspinner.setAdapter(adapter);
         openChart();
 
-        callServiceApi();
+        //callServiceApi();
 
         return rootView;
     }
 
     private void callServiceApi() {
 
-//        SessionManager sessionManager = new SessionManager(getActivity());
-//        RetrofitApi.getApi().GetDashboard(sessionManager.getAuthToken(), " ").enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//
-//                if (response.isSuccessful()) {
-//
-////                    db.addStaff(insertstaff);
-////                    StaffFragment.adapt.add(insertstaff);
-////                    StaffFragment.adapt.notifyDataSetChanged();
-////
-////                    Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-//
-//
-//
-//                } else {
-//
-//                    Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//
-//                Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
+        SessionManager sessionManager = new SessionManager(getActivity());
+        RetrofitApi.getApi().GetDashboard(sessionManager.getAuthToken(), " ").enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+
+                    try {
+                        Gson gson = new Gson();
+                        Type listType = new TypeToken<List<DashboardModel>>(){}.getType();
+                        List<DashboardModel> myModelList = gson.fromJson(response.body().string(), listType);
+
+                        setData(myModelList);
+
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+
+                    Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+                Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
     }
 
+
+    private void setData(List<DashboardModel> myModelList ){
+
+
+        for (int i = 0; i < myModelList.size(); i++) {
+
+            switch (i){
+
+                case 0 :
+                    txtCurrentMonth.setText(myModelList.get(i).getMonth());
+
+                    long income = Long.parseLong(myModelList.get(i).getIncome());
+                    long tangible = Long.parseLong(myModelList.get(i).getTangible());
+                    long intangible = Long.parseLong(myModelList.get(i).getIntangible());
+
+                    long profit = income - (tangible+intangible);
+
+                    txtCurrentMonthProfit.setText(profit+"");
+                    break;
+
+                case 1 :
+                    txtPrevMonth1.setText(myModelList.get(i).getMonth());
+
+                    long income1 = Long.parseLong(myModelList.get(i).getIncome());
+                    long tangible1 = Long.parseLong(myModelList.get(i).getTangible());
+                    long intangible1 = Long.parseLong(myModelList.get(i).getIntangible());
+
+                    long profit1 = income1 - (tangible1+intangible1);
+
+                    txtPrevMonth1Profit.setText(profit1+"");
+                    break;
+
+                case 2 :
+                    txtCurrentMonth.setText(myModelList.get(i).getMonth());
+
+                    long income2 = Long.parseLong(myModelList.get(i).getIncome());
+                    long tangible2 = Long.parseLong(myModelList.get(i).getTangible());
+                    long intangible2 = Long.parseLong(myModelList.get(i).getIntangible());
+
+                    long profit2 = income2 - (tangible2+intangible2);
+
+                    txtCurrentMonthProfit.setText(profit2+"");
+                    break;
+
+                case 3 :
+                    txtPrevMonth1.setText(myModelList.get(i).getMonth());
+
+                    long income3 = Long.parseLong(myModelList.get(i).getIncome());
+                    long tangible3 = Long.parseLong(myModelList.get(i).getTangible());
+                    long intangible3 = Long.parseLong(myModelList.get(i).getIntangible());
+
+                    long profit3 = income3 - (tangible3+intangible3);
+
+                    txtPrevMonth1Profit.setText(profit3+"");
+                    break;
+
+            }
+
+        }
+
+
+    }
 
     private void openChart(){
         int[] x = { 0,1,2,3,4,5,6,7, 8, 9, 10, 11 };

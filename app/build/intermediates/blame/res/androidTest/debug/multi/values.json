@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\74676d151a1aee036501fc7ae158d26727becd0d\\output\\res\\values\\values.xml",
+                    "file": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\74676d151a1aee036501fc7ae158d26727becd0d\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 45,
+                        "endOffset": 270
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/Users/RamanaRedddy/.android/build-cache/7a2dd8329475982a28828934c4065690c25cdefb/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
