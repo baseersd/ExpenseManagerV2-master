@@ -35,7 +35,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/expense" />
+                    android:src="@drawable/expense"
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/btnhistory"
@@ -43,7 +44,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/history" />
+                    android:src="@drawable/history"
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/btndashboard"
@@ -51,7 +53,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/dashboard" />
+                    android:src="@drawable/dashboard"
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/btntanexpense"
@@ -59,7 +62,8 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/tanexpense" />
+                    android:src="@drawable/tanexpense"
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/btnstaff"
@@ -67,14 +71,16 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/profile" />
+                    android:src="@drawable/profile"
+                    android:background="@android:color/transparent"/>
                 <ImageButton
                     android:id="@+id/btnsales"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/sales" />
+                    android:src="@drawable/sales"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <ImageButton
@@ -85,7 +91,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:background="@drawable/staff" />
+                android:src="@drawable/staff"
+                android:background="@android:color/transparent"/>
         </RelativeLayout>
     </LinearLayout>
 

@@ -11,273 +11,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92809587-dcbb-4c58-9ff7-bed35fa71deb" name="Default" comment="">
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/android_android_25.xml" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/compat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/coreui/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/coreutils/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$animator.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/design/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/fragment/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/graphics/drawable/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/mediacompat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/multidex/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/transition/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/transition/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v4/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/googlecode/tesseract/android/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$raw.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/instabug/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/com/thoughtbot/expandablerecyclerview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/AdminActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ApplicationController.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPasswordActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPasswordActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPasswordActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPasswordActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPinActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPinActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPinActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/ForgotPinActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/LoginActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$animator.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$mipmap.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$raw.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/R.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/SignUpActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/SignUpActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/SplashScreen$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/SplashScreen.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/StaffActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/UsePinActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/UsePinActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/UsePinActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/UsePinActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/UsePinActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/MyStaffDetailsAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/MyTanExpAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/SalesListAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/TodayExpenseAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/expenseAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/expenseListAdapter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/expenseListAdapter$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/adapters/expenseListAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/common/AppConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseConstants$CategoriesTableColumns.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseConstants$ExpenseTableColumns.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseConstants$ProductsTableColumns.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseConstants$TableNames.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/database/DatabaseHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AddExpenseFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AddExpenseFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AddExpenseManualFragment$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AddExpenseManualFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AddExpenseManualFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminAddStaffFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminProfileFragment$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminProfileFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminProfileFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$5.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$6$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$6.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$7.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$8$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses$8.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/AdminTangibleExpenses.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseHistoryFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseHistoryFragment$MyPagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseHistoryFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/ExpenseHistoryViewPagerFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/InvoiceEntryFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/InvoiceEntryFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/InvoiceEntryFragment$OnFragmentInteractionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/InvoiceEntryFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/OrganizationFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/OrganizationFragment$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/OrganizationFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/OrganizationFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/SalesFragment$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/SalesFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/SalesFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffProfileFragment$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffProfileFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/StaffProfileFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/TangibleExpenseFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$3$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$3$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$3.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$4$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$4$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$4.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$5.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$6.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$7.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry$OnFragmentInteractionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/fragments/fragExpenseEntry.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/AddExpenseRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/AddSaleRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/AddStaffRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/AddTangibleExpenseRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/CreateOrganisationRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/CreateOrganisationResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/ExpanseGroup.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/ExpanseItem$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/ExpanseItem.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/Expense.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/ForgotPassword.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/GetExpenseRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/Invoice.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/LoginRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/LoginResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/Sales.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/SignUpRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/Staff.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/TanExpenses.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/UpdateTangibleExpense.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/model/User.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/network/RetrofitApi$GitHubService.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/CustomFonts.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/ExpenseChildViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/ExpenseTitleViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/FontManager.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/NetworkUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/PagerContainer.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsTool.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl$ConfirmationDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl$ConfirmationDialog$2.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl$ConfirmationDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl$ErrorDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl$ErrorDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/RequestPermissionsToolImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/SessionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/expmanager/idea/spark/in/expensemanager/utils/Utils.class" afterPath="" />
-      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/classes/debug/rx/android/R.class" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/zip-cache/GPmenMIZ44Kv21kXcoEr_qaYxZU=" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/zip-cache/dOAlWASW8I1IDyapvHRPzOFYVVs=" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/1/debug_a214f2ac45af08ae69a27610123860a936252e09/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/achartengine-1.2.0_3299c8c86f4fe0ce4e7d901ea1520f17c16c337b/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0545367ce655d5f014c6e33cd357150559011d99/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1a71aec1eccb91f34560c5bcff88d42da86f130d/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2656989ac43c044d3789f6e995d291661047f91e/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_46a4c63919dc8aeb7a1b053d7ab889bdb3b7f644/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4b472c67486a7640a01230f7f21e9b74e48355be/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7058e1d1fb7e0a7c2cd2bbf5c522a284937b7f86/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_70f20e7b83f9de28ab39e67415b641a630458083/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_86a2d2a5722b8b6802bc7528c4fb8528fd230afe/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_91228736199faf178298e529071782b35679241a/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a8be07f6392658dcf4a6eb34e723facfb994966d/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a984a054e1cf43859066be35621b768708f3c298/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c1bc667380284a6b596bf9124049af1bf06bd882/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cc5c3f132ff4bebff37eb7b6a24b69bec931a4ca/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dbf5e900538acffe21d0120bd13c187247ca539b/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_df757114bc2279bb572509641f5515ad05e53af9/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ee706b2d643822a83cb1ca36fdc43e9be35e11ed/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f96c2ec09608f637016434eaac8442a0ace796a2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.1_74cce9c2c6068eb778e79ec6d0080b4758979df8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_04a7d19936c5c4f2526dbd341b8944c0db86fde0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/jcodec-0.1.9_2c9e8d463bae242fe2fc5745bc04e4b77db13cef/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/jcodec-android-0.1.9_b52e38a507fb14d53e8a345a0f7f1d6208615023/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.2.0_db6dbf8684076b4415274b0c4460ca3662c89e5d/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/mimecraft-1.1.1_af99626cdce82e75b36d666fbcf966daf8ee763b/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_7ba7acbccbda89cf4ac07ddcec308cc88edac3b8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_1249f2ca4feb1a3860e803b87c6622fe47fdcc1c/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.1_eec2426eb908bc636d5122ef2e1c94efa8476987/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.9_a5a1d2c6462628c795e8e5406ca4211d7b950159/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_ec562ebf025abe0822eeed69fd5e35d354c3008c/classes.dex" afterPath="" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/font_icons.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/font_icons.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Bold.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-BoldItalic.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-BoldItalic.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-ExtraBold.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-ExtraBold.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-ExtraBoldItalic.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-ExtraBoldItalic.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Italic.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Italic.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Light.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Light.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-LightItalic.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-LightItalic.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Regular.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Regular.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Semibold.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-Semibold.ttf" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-SemiboldItalic.ttf" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/assets/debug/fonts/OpenSans-SemiboldItalic.ttf" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/resources-debug.ap_" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/gradle.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/arm64-v8a/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/armeabi-v7a/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/mips64/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/liblept.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/liblept.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libpngt.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libpngt.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libtess.so" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/transforms/stripDebugSymbol/debug/folders/2000/1f/main/lib/x86_64/libtess.so" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/outputs/apk/app-debug.apk" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/animated_vector_drawable_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/animated_vector_drawable_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/appcompat_v7_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/appcompat_v7_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/design_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/design_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/espresso_core_2_2_2.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/espresso_core_2_2_2.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/espresso_idling_resource_2_2_2.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/espresso_idling_resource_2_2_2.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/expandablerecyclerview_1_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/expandablerecyclerview_1_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/instabug_4_0_2.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/instabug_4_0_2.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/multidex_1_0_1.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/multidex_1_0_1.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/multidex_instrumentation_1_0_1.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/multidex_instrumentation_1_0_1.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/recyclerview_v7_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/recyclerview_v7_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/rules_0_5.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/rules_0_5.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/runner_0_5.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/runner_0_5.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/rxandroid_1_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/rxandroid_1_2_0.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_annotations_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_annotations_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_compat_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_compat_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_core_ui_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_core_ui_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_core_utils_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_core_utils_25_2_0.xml" />
@@ -285,181 +101,38 @@
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_media_compat_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_media_compat_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_v4_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_v4_25_2_0.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_vector_drawable_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/support_vector_drawable_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/tess_two_5_4_1.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/tess_two_5_4_1.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/transition_25_2_0.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/libraries/transition_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/misc.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/modules.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/vcs.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/workspace.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/ExpenseManagerV2-master.iml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/ExpenseManagerV2-master.iml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/app.iml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/app.iml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/android/support/design/R.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/com/instabug/library/R.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/com/instabug/library/R.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/com/thoughtbot/expandablerecyclerview/R.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/com/thoughtbot/expandablerecyclerview/R.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/expmanager/idea/spark/in/expensemanager/R.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/generated/source/r/debug/expmanager/idea/spark/in/expensemanager/R.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-af.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-am.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-am.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-b+sr+Latn.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-b+sr+Latn.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-be-rBY.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-be-rBY.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bg.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bg.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bs-rBA.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-bs-rBA.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ca.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-cs.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-da.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-da.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-el.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-el.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rAU.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rAU.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rGB.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rGB.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-en-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-es-rUS.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-es-rUS.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-et-rEE.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-et-rEE.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-eu-rES.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-eu-rES.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fa.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fa.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-gl-rES.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-gl-rES.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-h720dp-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-h720dp-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hr.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hr.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hu.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hu.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-in.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-in.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-is-rIS.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-is-rIS.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-iw.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-iw.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ja.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-km-rKH.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-km-rKH.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-land.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-land.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-large-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-large-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldltr-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldltr-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldltr-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldltr-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldrtl-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ldrtl-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lt.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lt.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lv.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-lv.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-my-rMM.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-my-rMM.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-nb.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-nb.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-night-v8.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-night-v8.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-nl.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-port.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-port.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ro.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ro.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-si-rLK.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-si-rLK.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sk.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sk.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sl.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sl.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sr.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sr.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sv.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sv.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw320dp-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw320dp-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-te-rIN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-te-rIN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-th.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-th.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-tl.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-tl.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-tr.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-tr.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-uk.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-uk.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v12.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v12.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v14.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v16.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v16.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v18.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v18.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v22.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v22.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v23.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v23.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v24.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v24.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v25.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-v25.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-vi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-vi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-xlarge-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zu.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values-zu.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/anim-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/anim-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/anim.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/anim.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/animator-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/animator-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color-v11.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color-v11.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color-v23.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color-v23.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-anydpi-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-hdpi-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-hdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-mdpi-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-mdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xhdpi-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxhdpi-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxxhdpi-v17.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-v21.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-v23.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-v23.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi.json" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-land.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-land.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v11.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v11.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v16.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v16.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v21.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout-v21.json" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-hdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-hdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-mdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-mdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi.json" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/raw.json" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/blame/res/debug/single/raw.json" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/admin_sidebar.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/admin_sidebar.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/dashboard_layout.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/dashboard_layout.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/fragment_frag_expense_entry.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/fragment_frag_expense_entry.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/fragment_frag_invoice_entry.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/fragment_frag_invoice_entry.xml" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/lstexpitems.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/lstexpitems.xml" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/symbols/debug/R.txt" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.java" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.java" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java" />
       <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml" />
-      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/local.properties" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/local.properties" />
+      <change type="MODIFICATION" beforePath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/build.gradle" afterPath="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/build.gradle" />
     </list>
     <ignored path="ExpenseManagerV2-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -491,13 +164,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DashBoardFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DashBoardFragment.java" pinned="false" current-in-tab="true">
         <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="-1620">
+              <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6522#6530#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -516,174 +190,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoriesAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/adapters/CategoriesAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerURLModel.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetrofitApi.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardModel.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java">
+      <file leaf-file-name="DashboardMonthModel.java" pinned="false" current-in-tab="false">
+        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardMonthModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardDayModel.java" pinned="false" current-in-tab="false">
+        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardDayModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding>
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
                 <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#748#749#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#844#845#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Expense.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/Expense.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding>
-                <element signature="e#1125#1126#0" expanded="false" />
-                <element signature="e#1153#1154#0" expanded="false" />
-                <element signature="e#1187#1188#0" expanded="false" />
-                <element signature="e#1217#1218#0" expanded="false" />
-                <element signature="e#1253#1254#0" expanded="false" />
-                <element signature="e#1285#1286#0" expanded="false" />
-                <element signature="e#1326#1327#0" expanded="false" />
-                <element signature="e#1360#1361#0" expanded="false" />
-                <element signature="e#1392#1393#0" expanded="false" />
-                <element signature="e#1423#1424#0" expanded="false" />
-                <element signature="e#1458#1459#0" expanded="false" />
-                <element signature="e#1492#1493#0" expanded="false" />
-                <element signature="e#1523#1524#0" expanded="false" />
-                <element signature="e#1553#1554#0" expanded="false" />
-                <element signature="e#1592#1593#0" expanded="false" />
-                <element signature="e#1627#1628#0" expanded="false" />
-                <element signature="e#1660#1661#0" expanded="false" />
-                <element signature="e#1689#1690#0" expanded="false" />
-                <element signature="e#1721#1722#0" expanded="false" />
-                <element signature="e#1752#1753#0" expanded="false" />
-                <element signature="e#1789#1790#0" expanded="false" />
-                <element signature="e#1825#1826#0" expanded="false" />
-                <element signature="e#1863#1864#0" expanded="false" />
-                <element signature="e#1900#1901#0" expanded="false" />
-                <element signature="e#1931#1932#0" expanded="false" />
-                <element signature="e#1961#1962#0" expanded="false" />
-                <element signature="e#1997#1998#0" expanded="false" />
-                <element signature="e#2032#2033#0" expanded="false" />
-                <element signature="e#2078#2079#0" expanded="false" />
-                <element signature="e#2116#2117#0" expanded="false" />
-                <element signature="e#2176#2177#0" expanded="false" />
-                <element signature="e#2225#2226#0" expanded="false" />
-                <element signature="e#2281#2282#0" expanded="false" />
-                <element signature="e#2329#2330#0" expanded="false" />
-                <element signature="e#2374#2375#0" expanded="false" />
-                <element signature="e#2414#2415#0" expanded="false" />
-                <element signature="e#2461#2462#0" expanded="false" />
-                <element signature="e#2503#2504#0" expanded="false" />
-                <element signature="e#2548#2549#0" expanded="false" />
-                <element signature="e#2588#2589#0" expanded="false" />
-                <element signature="e#2643#2644#0" expanded="false" />
-                <element signature="e#2693#2694#0" expanded="false" />
-                <element signature="e#2750#2751#0" expanded="false" />
-                <element signature="e#2802#2803#0" expanded="false" />
-                <element signature="e#2853#2854#0" expanded="false" />
-                <element signature="e#2899#2900#0" expanded="false" />
-                <element signature="e#2942#2943#0" expanded="false" />
-                <element signature="e#2980#2981#0" expanded="false" />
-                <element signature="e#3023#3024#0" expanded="false" />
-                <element signature="e#3061#3062#0" expanded="false" />
-                <element signature="e#3114#3115#0" expanded="false" />
-                <element signature="e#3162#3163#0" expanded="false" />
-                <element signature="e#3201#3202#0" expanded="false" />
-                <element signature="e#3235#3236#0" expanded="false" />
-                <element signature="e#3279#3280#0" expanded="false" />
-                <element signature="e#3315#3316#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Invoice.java" pinned="false" current-in-tab="false">
-        <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/Invoice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#249#250#0" expanded="false" />
-                <element signature="e#285#286#0" expanded="false" />
-                <element signature="e#331#332#0" expanded="false" />
-                <element signature="e#369#370#0" expanded="false" />
-                <element signature="e#1024#1025#0" expanded="false" />
-                <element signature="e#1052#1053#0" expanded="false" />
-                <element signature="e#1086#1087#0" expanded="false" />
-                <element signature="e#1116#1117#0" expanded="false" />
-                <element signature="e#1150#1151#0" expanded="false" />
-                <element signature="e#1180#1181#0" expanded="false" />
-                <element signature="e#1217#1218#0" expanded="false" />
-                <element signature="e#1250#1251#0" expanded="false" />
-                <element signature="e#1287#1288#0" expanded="false" />
-                <element signature="e#1320#1321#0" expanded="false" />
-                <element signature="e#1355#1356#0" expanded="false" />
-                <element signature="e#1389#1390#0" expanded="false" />
-                <element signature="e#1428#1429#0" expanded="false" />
-                <element signature="e#1463#1464#0" expanded="false" />
-                <element signature="e#1496#1497#0" expanded="false" />
-                <element signature="e#1525#1526#0" expanded="false" />
-                <element signature="e#1559#1560#0" expanded="false" />
-                <element signature="e#1589#1590#0" expanded="false" />
-                <element signature="e#1626#1627#0" expanded="false" />
-                <element signature="e#1662#1663#0" expanded="false" />
-                <element signature="e#1717#1718#0" expanded="false" />
-                <element signature="e#1767#1768#0" expanded="false" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#740#741#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -695,8 +251,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3600">
-              <caret line="240" column="59" selection-start-line="240" selection-start-column="59" selection-end-line="240" selection-end-column="59" />
+            <state relative-caret-position="146">
+              <caret line="535" column="53" selection-start-line="535" selection-start-column="45" selection-end-line="535" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -3134,7 +2690,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4474307973000" />
+        <entry key="$PROJECT_DIR$" value="4475105923000" />
         <entry key="C:\Ramana\ExpenseManagerV2-master" value="4472818258489" />
       </map>
     </option>
@@ -3593,11 +3149,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/SplashScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/OrganizationFragment.java" />
-        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java" />
-        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml" />
-        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java" />
         <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.java" />
         <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.java" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardDayModel.java" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardMonthModel.java" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/build.gradle" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml" />
+        <option value="/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java" />
       </list>
     </option>
   </component>
@@ -3632,8 +3192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3642,190 +3200,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expensemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expensemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expensemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExpenseManagerV2-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expensemanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="AndroidView">
         <subPane />
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4163,24 +3545,25 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20067453" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23809524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1905565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44654605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2598684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19078948" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26298702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28836426" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4188,7 +3571,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -4213,70 +3595,18 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java</url>
+          <line>231</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/utils/CustomFonts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/ExpenseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/adapters/TodayExpenseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/expmanager/idea/spark/in/expensemanager/utils/ExpenseChildViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/expense_group.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/expense_child.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw600dp/expense1.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -4562,101 +3892,15 @@
     </entry>
     <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/Expense.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#1125#1126#0" expanded="false" />
-            <element signature="e#1153#1154#0" expanded="false" />
-            <element signature="e#1187#1188#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-            <element signature="e#1253#1254#0" expanded="false" />
-            <element signature="e#1285#1286#0" expanded="false" />
-            <element signature="e#1326#1327#0" expanded="false" />
-            <element signature="e#1360#1361#0" expanded="false" />
-            <element signature="e#1392#1393#0" expanded="false" />
-            <element signature="e#1423#1424#0" expanded="false" />
-            <element signature="e#1458#1459#0" expanded="false" />
-            <element signature="e#1492#1493#0" expanded="false" />
-            <element signature="e#1523#1524#0" expanded="false" />
-            <element signature="e#1553#1554#0" expanded="false" />
-            <element signature="e#1592#1593#0" expanded="false" />
-            <element signature="e#1627#1628#0" expanded="false" />
-            <element signature="e#1660#1661#0" expanded="false" />
-            <element signature="e#1689#1690#0" expanded="false" />
-            <element signature="e#1721#1722#0" expanded="false" />
-            <element signature="e#1752#1753#0" expanded="false" />
-            <element signature="e#1789#1790#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1900#1901#0" expanded="false" />
-            <element signature="e#1931#1932#0" expanded="false" />
-            <element signature="e#1961#1962#0" expanded="false" />
-            <element signature="e#1997#1998#0" expanded="false" />
-            <element signature="e#2032#2033#0" expanded="false" />
-            <element signature="e#2078#2079#0" expanded="false" />
-            <element signature="e#2116#2117#0" expanded="false" />
-            <element signature="e#2176#2177#0" expanded="false" />
-            <element signature="e#2225#2226#0" expanded="false" />
-            <element signature="e#2281#2282#0" expanded="false" />
-            <element signature="e#2329#2330#0" expanded="false" />
-            <element signature="e#2374#2375#0" expanded="false" />
-            <element signature="e#2414#2415#0" expanded="false" />
-            <element signature="e#2461#2462#0" expanded="false" />
-            <element signature="e#2503#2504#0" expanded="false" />
-            <element signature="e#2548#2549#0" expanded="false" />
-            <element signature="e#2588#2589#0" expanded="false" />
-            <element signature="e#2643#2644#0" expanded="false" />
-            <element signature="e#2693#2694#0" expanded="false" />
-            <element signature="e#2750#2751#0" expanded="false" />
-            <element signature="e#2802#2803#0" expanded="false" />
-            <element signature="e#2853#2854#0" expanded="false" />
-            <element signature="e#2899#2900#0" expanded="false" />
-            <element signature="e#2942#2943#0" expanded="false" />
-            <element signature="e#2980#2981#0" expanded="false" />
-            <element signature="e#3023#3024#0" expanded="false" />
-            <element signature="e#3061#3062#0" expanded="false" />
-            <element signature="e#3114#3115#0" expanded="false" />
-            <element signature="e#3162#3163#0" expanded="false" />
-            <element signature="e#3201#3202#0" expanded="false" />
-            <element signature="e#3235#3236#0" expanded="false" />
-            <element signature="e#3279#3280#0" expanded="false" />
-            <element signature="e#3315#3316#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#249#250#0" expanded="false" />
-            <element signature="e#285#286#0" expanded="false" />
-            <element signature="e#331#332#0" expanded="false" />
-            <element signature="e#369#370#0" expanded="false" />
-            <element signature="e#1024#1025#0" expanded="false" />
-            <element signature="e#1052#1053#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1150#1151#0" expanded="false" />
-            <element signature="e#1180#1181#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-            <element signature="e#1250#1251#0" expanded="false" />
-            <element signature="e#1287#1288#0" expanded="false" />
-            <element signature="e#1320#1321#0" expanded="false" />
-            <element signature="e#1355#1356#0" expanded="false" />
-            <element signature="e#1389#1390#0" expanded="false" />
-            <element signature="e#1428#1429#0" expanded="false" />
-            <element signature="e#1463#1464#0" expanded="false" />
-            <element signature="e#1496#1497#0" expanded="false" />
-            <element signature="e#1525#1526#0" expanded="false" />
-            <element signature="e#1559#1560#0" expanded="false" />
-            <element signature="e#1589#1590#0" expanded="false" />
-            <element signature="e#1626#1627#0" expanded="false" />
-            <element signature="e#1662#1663#0" expanded="false" />
-            <element signature="e#1717#1718#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-          </folding>
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -4664,7 +3908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4672,70 +3915,142 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="240" column="59" selection-start-line="240" selection-start-column="59" selection-end-line="240" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/ServerURLModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/adapters/expenseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#800#801#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/AdminActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/network/RetrofitApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+        <state relative-caret-position="59">
+          <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java">
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardDayModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/adapters/CategoriesAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/model/DashboardMonthModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4751,19 +4066,49 @@
         <state />
       </provider>
     </entry>
-    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/adapters/CategoriesAdapter.java">
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="168">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build.gradle">
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout-sw600dp/dashboard_layout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="535" column="53" selection-start-line="535" selection-start-column="45" selection-end-line="535" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.2.4/e6c8ef80bd335ce8fa2ce11239b3b26500dc7930/MPAndroidChart-v2.2.4-sources.jar!/com/github/mikephil/charting/utils/ColorTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/java/expmanager/idea/spark/in/expensemanager/fragments/DashBoardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1620">
+          <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6522#6530#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

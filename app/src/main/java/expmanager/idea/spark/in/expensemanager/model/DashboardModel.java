@@ -8,9 +8,9 @@ public class DashboardModel {
 
 
     private String month;
-    private String income;
-    private String tangible;
-    private String intangible;
+    private double sale;
+    private double tangible;
+    private double intangible;
 
     public String getMonth() {
         return month;
@@ -20,27 +20,27 @@ public class DashboardModel {
         this.month = month;
     }
 
-    public String getIncome() {
-        return income;
+    public double getSale() {
+        return sale;
     }
 
-    public void setIncome(String income) {
-        this.income = income;
+    public void setSale(double sale) {
+        this.sale = sale;
     }
 
-    public String getTangible() {
+    public double getTangible() {
         return tangible;
     }
 
-    public void setTangible(String tangible) {
+    public void setTangible(double tangible) {
         this.tangible = tangible;
     }
 
-    public String getIntangible() {
+    public double getIntangible() {
         return intangible;
     }
 
-    public void setIntangible(String intangible) {
+    public void setIntangible(double intangible) {
         this.intangible = intangible;
     }
 }

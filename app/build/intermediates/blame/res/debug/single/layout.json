@@ -604,6 +604,10 @@
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/category_list_item.xml",
+        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout/category_list_item.xml"
+    },
+    {
         "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\instabug_message_list_item_voice_me.xml",
         "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\layout\\instabug_message_list_item_voice_me.xml"
     },
