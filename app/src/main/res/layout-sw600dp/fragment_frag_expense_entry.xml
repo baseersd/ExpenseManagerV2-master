@@ -81,6 +81,7 @@
                 android:maxLines="1"
                 android:padding="10dp"
                 android:singleLine="true"
+                android:visibility="gone"
                 android:textColorHint="@android:color/darker_gray" />
 
             <android.support.v7.widget.RecyclerView
@@ -111,6 +112,7 @@
                 android:layout_height="45dp"
                 android:background="@color/greytext"
                 android:hint="@string/product"
+                android:visibility="gone"
                 android:imeOptions="actionNext"
                 android:maxLength="26"
                 android:maxLines="1"
@@ -122,6 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Unit"
+                android:visibility="gone"
                 android:textSize="18sp"/>
 
             <EditText
@@ -137,12 +140,14 @@
                 android:maxLines="1"
                 android:padding="10dp"
                 android:singleLine="true"
+                android:visibility="gone"
                 android:textColorHint="@android:color/darker_gray" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Amount"
+                android:visibility="gone"
                 android:textSize="18sp"/>
 
             <EditText
@@ -157,6 +162,7 @@
                 android:maxLength="26"
                 android:maxLines="1"
                 android:padding="10dp"
+                android:visibility="gone"
                 android:singleLine="true"
                 android:textColorHint="@android:color/darker_gray" />
 
@@ -188,14 +194,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:weightSum="1">
 
                 <Button
                     android:id="@+id/btnexpCancel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/colorPrimary"
                     android:padding="5dp"
                     android:text="Cancel"
@@ -206,10 +212,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0"
                     android:background="@color/colorPrimary"
                     android:padding="5dp"
                     android:text="Add"
+                    android:visibility="gone"
                     android:textColor="@android:color/white" />
 
                 <Button
@@ -217,7 +224,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/colorPrimary"
                     android:padding="5dp"
                     android:text="Save"

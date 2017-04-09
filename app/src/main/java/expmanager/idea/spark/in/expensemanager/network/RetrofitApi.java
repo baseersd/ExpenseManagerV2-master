@@ -5,6 +5,7 @@ import expmanager.idea.spark.in.expensemanager.model.AddSaleRequest;
 import expmanager.idea.spark.in.expensemanager.model.AddStaffRequest;
 import expmanager.idea.spark.in.expensemanager.model.AddTangibleExpenseRequest;
 import expmanager.idea.spark.in.expensemanager.model.CreateOrganisationRequest;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.ForgotPassword;
 import expmanager.idea.spark.in.expensemanager.model.LoginRequest;
 import expmanager.idea.spark.in.expensemanager.model.SignUpRequest;
@@ -177,6 +178,12 @@ public class RetrofitApi {
         @POST(ServerURLModel.ADD_STAFF)
         Call<ResponseBody> AddStaff(@Header("Authtoken") String auth, @Body AddStaffRequest requestModel);
 
+
+        /*
+       * LOGOUT
+       */
+        @POST(ServerURLModel.CREATE_INVOICE)
+        Call<ResponseBody> CreateInvoice(@Header("Authtoken") String auth, @Body ExpenseSyncRequest requestModel);
 
         /*
        * LOGOUT

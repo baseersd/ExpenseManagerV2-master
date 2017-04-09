@@ -43,8 +43,16 @@ import expmanager.idea.spark.in.expensemanager.adapters.expenseAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseListAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
+import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.model.Item;
+import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
+import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -56,7 +64,7 @@ import expmanager.idea.spark.in.expensemanager.utils.Utils;
  * create an instance of this fragment.
  */
 public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSelectedListener,
-        AdapterView.OnItemClickListener, CategoriesAdapter.OnItemClickListener {
+        AdapterView.OnItemClickListener, CategoriesAdapter.OnItemClickListener, expenseListAdapter.OnCustomItemClick{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -68,7 +76,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     // TODO: Rename and change types of parameters
     private int mParam1;
     private double mParam2;
-    private String mParam3;
+    private String mInvoiceID;
     private String mParam4;
     private String mParam5;
 
@@ -112,6 +120,8 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private RecyclerView mRecyleViewProducts;
     private RecyclerView.Adapter mAdapterProducts;
 
+    private int mCategoryIndex, mProductIndex;
+
     public fragExpenseEntry() {
         // Required empty public constructor
     }
@@ -143,7 +153,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         if (getArguments() != null) {
             mParam1 = getArguments().getInt(ARG_PARAM1);
             mParam2 = getArguments().getDouble(ARG_PARAM2);
-            mParam3 = getArguments().getString(ARG_PARAM3);
+            mInvoiceID = getArguments().getString(ARG_PARAM3);
             mParam4 = getArguments().getString(ARG_PARAM4);
             mParam5 = getArguments().getString(ARG_PARAM5);
         }
@@ -173,7 +183,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
         invAmt = mParam2;
         autoInvId.setInputType(InputType.TYPE_NULL);
-        autoInvId.setText(mParam3);
+        autoInvId.setText(mInvoiceID);
 
         expUnit = (EditText) v.findViewById(R.id.exp_unit);
         expAmt = (EditText) v.findViewById(R.id.exp_amount);
@@ -365,7 +375,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
         Button btnsave = (Button)dialog.findViewById(R.id.btnsubmit);
         TextView lblinvid = (TextView)dialog.findViewById(R.id.lblinvid);
-        lblinvid.setText("Invoice Name: " + mParam3);
+        lblinvid.setText("Invoice Name: " + mInvoiceID);
         TextView lblinvdate = (TextView)dialog.findViewById(R.id.lblinvdate);
         lblinvdate.setText("Invoice Date: " + mParam4);
         TextView lblinvdisc = (TextView)dialog.findViewById(R.id.lblinvdisc);
@@ -395,21 +405,62 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 myDbHelper.closeConnection();
 
                 expAmtSofar =0.0;
-                Toast.makeText(getContext(), "All Expense Saved Successfully", Toast.LENGTH_SHORT).show();
-                //mListener.openWeekView();
-                dialog.cancel();
 
-                ExpenseFragment fragmentorg = new ExpenseFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
+                //Toast.makeText(getContext(), "All Expense Saved Successfully", Toast.LENGTH_SHORT).show();
+                //mListener.openWeekView();
+                handleCreateInvoiceService();
             }
         });
 
         dialog.show();
     }
 
+    private void handleCreateInvoiceService(){
+
+        List<Expense> expenseList = null;
+        Invoice invoice = null;
+        try{
+            myDbHelper = new DatabaseHandler(getContext());
+            myDbHelper.openConnection();
+            invoice = myDbHelper.getInvoiceObjectForInvoiceId(mInvoiceID);
+            expenseList = myDbHelper.getExpenses(mInvoiceID);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            myDbHelper.closeConnection();
+        }
+        ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
+        SessionManager sessionManager = new SessionManager(getContext());
+        RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    onInvoiceCreateSuccess();
+                        /*Log.d(TAG,response.toString());
+                        Gson gson = new Gson();
+                        try {
+                            ExpenseSyncResponse expenseSyncResponse = gson.fromJson(response.body().string(), ExpenseSyncResponse.class);
+                            Log.d(TAG,response.body().string());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }*/
+
+                } else {
+
+                    onInvoiceCreateFailure();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                onInvoiceCreateFailure();
+            }
+        });
+    }
     private void addExpenseToList(){
-        if (autoCatId.getText().toString().length() > 0 && expUnit.getText().length() > 0
-                && expAmt.getText().length() > 0 && expDate.getText().length() > 0
+        if (autoCatId.getText().toString().length() > 0 /*&& expUnit.getText().length() > 0
+                && expAmt.getText().length() > 0 */&& expDate.getText().length() > 0
                 && expProductName.getText().length() > 0) {
 
             myDbHelper.openConnection();
@@ -418,8 +469,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 myDbHelper.insetCategory(autoCatId.getText().toString(), 0,0);//ToDO: Replace 2nd Parameter with CategoryId
                 catId = myDbHelper.getCatId(autoCatId.getText().toString());
             }
-            int invId=0;
-            invId = Integer.parseInt(autoInvId.getText().toString());
+            String invId = autoInvId.getText().toString();
                    /* invId = myDbHelper.getInvId(autoInvId.getText().toString());
                     if (invId == 0) {
                         Toast.makeText(getContext(), "Invalid Invoice No", Toast.LENGTH_SHORT).show();
@@ -431,13 +481,11 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             try {
                 if (!isEditFlag) {
                     myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0
-                            expProductName.getText().toString(),
-                            catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                            expProductName.getText().toString(),catId,autoCatId.getText().toString(), invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
                             Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, 0));
                 } else {
                     myDbHelper.updateExpense(new Expense(expDate.getText().toString(), 0, //ToDO: ProductId to be passed instead of 0
-                            expProductName.getText().toString(),
-                            catId, invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                            expProductName.getText().toString(),catId,autoCatId.getText().toString(), invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
                             Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, editedExpId));
                     isEditFlag = false;
                 }
@@ -579,7 +627,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         editedExpId = 0;
         lblExpTotAmt.setText("Expense:" + expAmtSofar);
         myDbHelper.openConnection();
-        expenseListAdapter adapter=new expenseListAdapter(getActivity(), myDbHelper.getExpenses(0),lstExpItems);
+        expenseListAdapter adapter=new expenseListAdapter(getActivity(), myDbHelper.getExpenses(mInvoiceID),lstExpItems,this);
         lstExpItems.setAdapter(adapter);
         if(adapter.getCount()>0){
             lnrExpHeader.setVisibility(View.VISIBLE);
@@ -587,6 +635,30 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         myDbHelper.closeConnection();
     }
 
+    public void updateExpense(Expense item, int id){
+        if(id<=0){
+            return;
+        }
+        /*myDbHelper.openConnection();
+        ArrayList<Expense> lv= new ArrayList<Expense>();
+        lv=myDbHelper.getExpensesEdit(id);
+        myDbHelper.closeConnection();*/
+
+        if(item != null){
+            expProductName.setText(item.getExpProductName());
+            expAmt.setText("" + item.getExpAmt());
+            expAmtSofar = expAmtSofar - item.getExpAmt();
+            expUnit.setText("" + item.getExpUnit());
+            //myDbHelper.openConnection();
+            //autoCatId.setText(myDbHelper.getCatName(item.getExpCatId()));
+            autoCatId.setText(item.getCategory_name());
+            //myDbHelper.closeConnection();
+            //btnExpAdd.setText("Update");
+            isEditFlag =true;
+            editedExpId = id;
+            addExpenseToList();
+        }
+    }
     public void editExpense(int id){
         if(id<=0){
             return;
@@ -671,9 +743,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if(view.getId()==R.id.btnexpedit){
-            editExpense((int) id);
-        }else if (view.getId()==R.id.btnexpdelete){
+        /*if(view.getId()==R.id.btnexpedit){
+            //editExpense((int) id);
+            updateExpense((int) id);
+        }else*/ if (view.getId()==R.id.btnexpdelete){
             deleteExpense((int) id);
         }
     }
@@ -683,10 +756,41 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         if(item.getType() == Item.ITEM_CATEGORY) {
             autoCatId.setText(item.getItemName());
             mRecyleViewProducts.setVisibility(View.VISIBLE);
+            mCategoryIndex = position;
         }else{
             expProductName.setText(item.getItemName());
-            //addExpenseToList();
+            mProductIndex = position;
+            expAmt.setText("0.00");
+            expUnit.setText("0");
+            addExpenseToList();
         }
+    }
+
+
+    private void onInvoiceCreateSuccess() {
+        dialog.cancel();
+
+        ExpenseFragment fragmentorg = new ExpenseFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
+
+    }
+
+    private void onInvoiceCreateFailure() {
+        Toast.makeText(getContext(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemClick(View view, ArrayList<Expense> itemList, int position, long id) {
+        if(view.getId()==R.id.btnexpedit){
+            //editExpense((int) id);
+            expAmtSofar = 0.0;
+            for(Expense expense: itemList) {
+                expAmtSofar += expense.getExpAmt();
+            }
+            updateExpense(itemList.get(position),(int) id);
+        }/*else if (view.getId()==R.id.btnexpdelete){
+            deleteExpense((int) id);
+        }*/
     }
 
     /**

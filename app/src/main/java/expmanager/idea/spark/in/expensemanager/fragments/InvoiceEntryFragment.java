@@ -160,15 +160,15 @@ public class InvoiceEntryFragment extends Fragment implements View.OnClickListen
             public void onClick(View view) {
                 if(txtinvno.getText().length()>0 && txtinvDate.getText().length()>0 && txtinvdesc.getText().length()>0 && txtamt.getText().length()>0 ){
 
-
-                    myDbHelper.insetInvoice(new Invoice(txtinvno.getText().toString(),txtinvDate.getText().toString(),
+                    String generatedInvoice = myDbHelper.getUniqueInvoice(txtinvno.getText().toString());
+                    myDbHelper.insetInvoice(new Invoice(generatedInvoice,txtinvDate.getText().toString(),
                             txtinvdesc.getText().toString(),filePath,spnPaymentMode.getSelectedItem().toString(),
-                            Integer.parseInt(txtinvno.getText().toString()),
+                            generatedInvoice,
                             3,filePath, Double.parseDouble(txtamt.getText().toString()),0.0));
 
 
 
-                    mListener.openExpenseEntry(txtinvno.getText().toString(),txtinvDate.getText().toString(), Double.parseDouble(txtamt.getText().toString()),weekindex,filePath);
+                    mListener.openExpenseEntry(generatedInvoice,txtinvDate.getText().toString(), Double.parseDouble(txtamt.getText().toString()),weekindex,filePath);
 
                 }else{
                     Toast.makeText(getContext(),"Please Enter Invoice Details", Toast.LENGTH_SHORT).show();

@@ -24,6 +24,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     private Context mContext;
     private List<Item> mItemList;
     private OnItemClickListener mCallback;
+    private static View olderSelectedViewCategory;
+    private static View olderSelectedViewProduct;
 
     public interface OnItemClickListener {
         void onItemClick(Item item, int position);
@@ -73,6 +75,18 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         public void bind(final Item item, final OnItemClickListener listener, final int position) {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
+                    if(item.getType() == Item.ITEM_CATEGORY){
+                        if(olderSelectedViewCategory != null) {
+                            olderSelectedViewCategory.setSelected(false);
+                        }
+                        olderSelectedViewCategory = v;
+                    }else{
+                        if(olderSelectedViewProduct != null) {
+                            olderSelectedViewProduct.setSelected(false);
+                        }
+                        olderSelectedViewProduct = v;
+                    }
+                    v.setSelected(true);
                     listener.onItemClick(item, position);
                 }
             });

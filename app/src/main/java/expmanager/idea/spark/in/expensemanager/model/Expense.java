@@ -2,17 +2,20 @@ package expmanager.idea.spark.in.expensemanager.model;
 
 
 public class Expense {
-    private String expDate, expProdName, expCreatedAt;
-    private int expCatId, expProdId, expInvId,expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
+    private String expDate;
+    private String category_name;
+    private String product_name;
+    private String expCreatedAt, expInvId;
+    private int expCatId, expProdId, expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
     private double expAmt;
 
-    public Expense(String expDate, int expProdId, String expProductName, int expCatId, int expInvId, int expUnit,
-                   int expIsApproved, int expIsRecursive, double expAmt, int expCreateBy,
-                   String expCreatedAt, int isSaved, int expWeekIndex, int expid) {
+    public Expense(String expDate, int expProdId, String expProductName, int expCatId, String expCategoryName,
+                   String expInvId, int expUnit,int expIsApproved, int expIsRecursive, double expAmt,
+                   int expCreateBy,String expCreatedAt, int isSaved, int expWeekIndex, int expid) {
         super();
         this.expDate = expDate;
         this.expProdId = expProdId;
-        this.expProdName = expProductName;
+        this.product_name = expProductName;
         this.expCatId= expCatId;
         this.expInvId=expInvId;
         this.expUnit = expUnit;
@@ -24,8 +27,17 @@ public class Expense {
         this.isSaved=isSaved;
         this.expWeekIndex =expWeekIndex;
         this.expid = expid;
+        this.category_name = expCategoryName;
     }
 
+
+    public String getCategory_name() {
+        return category_name;
+    }
+
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
+    }
     public int getExpid() {
         return expid;
     }
@@ -39,7 +51,7 @@ public class Expense {
     }
 
     public String getExpProductName() {
-        return expProdName;
+        return product_name;
     }
 
     public int getExpCatId() {
@@ -62,7 +74,7 @@ public class Expense {
         return expAmt;
     }
 
-    public int getExpInvId() {
+    public String getExpInvId() {
         return expInvId;
     }
 
@@ -87,7 +99,7 @@ public class Expense {
     }
 
     public void setExpProductName(String expProductName) {
-        this.expProdName = expProductName;
+        this.product_name = expProductName;
     }
 
     public void setExpCreatedAt(String expCreatedAt) {
@@ -102,7 +114,7 @@ public class Expense {
         this.expProdId = expProdId;
     }
 
-    public void setExpInvId(int expInvId) {
+    public void setExpInvId(String expInvId) {
         this.expInvId = expInvId;
     }
 
