@@ -10,20 +10,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
+//import com.github.mikephil.charting.charts.BarChart;
+//import com.github.mikephil.charting.data.BarData;
+//import com.github.mikephil.charting.data.BarDataSet;
+//import com.github.mikephil.charting.data.BarEntry;
+//import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.achartengine.ChartFactory;
+
 import org.achartengine.GraphicalView;
+import org.achartengine.chart.BarChart;
 import org.achartengine.chart.PointStyle;
 import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
@@ -40,6 +43,7 @@ import java.util.Date;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.model.DashboardDayModel;
 import expmanager.idea.spark.in.expensemanager.model.DashboardModel;
 import expmanager.idea.spark.in.expensemanager.model.DashboardMonthModel;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
@@ -54,7 +58,7 @@ import retrofit2.Response;
  */
 
 public class DashBoardFragment extends Fragment {
-    private BarChart chartContainer;
+    private LinearLayout chartContainer;
     private GraphicalView mChart;
     private Spinner mothspinner;
     private String[] mMonth = new String[] {
@@ -92,7 +96,7 @@ public class DashBoardFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.dashboard_layout,
                 container, false);
-        chartContainer = (BarChart) rootView.findViewById(R.id.chart);
+        chartContainer = (LinearLayout) rootView.findViewById(R.id.chart);
         mothspinner = (Spinner) rootView.findViewById(R.id.mothspinner);
 
         txtCurrentMonth = (TextView) rootView.findViewById(R.id.txt_current_month);
@@ -113,14 +117,14 @@ public class DashBoardFragment extends Fragment {
         txtSelectedMonthProfit=(TextView) rootView.findViewById(R.id.txt_selected_month_profit);
         txtSelectedMonthIncome=(TextView) rootView.findViewById(R.id.txt_selected_month_income);
         txtSelectedMonthTangible=(TextView) rootView.findViewById(R.id.txt_selected_month_tangible);
-        txtSelectedMonthInTangible =(TextView) rootView.findViewById(R.id.txt_current_month_intangible);
+        txtSelectedMonthInTangible =(TextView) rootView.findViewById(R.id.txt_selected_month_intangible);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.months, R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         mothspinner.setAdapter(adapter);
        // openChart();
-        openBarChart();
+      //  openBarChart();
 
         callServiceApis();
         callServiceApiForDasboardGraph();
@@ -128,71 +132,71 @@ public class DashBoardFragment extends Fragment {
         return rootView;
     }
 
-    private void openBarChart() {
-
+//    private void openBarChart() {
+//
+////        ArrayList<String> labels = new ArrayList<String>();
+////        labels.add("1");
+////        labels.add("2");
+////        labels.add("3");
+////        labels.add("4");
+////        labels.add("5");
+////        labels.add("6");
+////        labels.add("7");
+////        labels.add("8");
+////        labels.add("9");
+////        labels.add("10");
+////        labels.add("11");
+////        labels.add("12");
+////        labels.add("13");
+////        labels.add("14");
+////        labels.add("15");
+////        labels.add("16");
+////        labels.add("17");
+////        labels.add("18");
+////        labels.add("19");
+////        labels.add("20");
+////        labels.add("21");
+////        labels.add("22");
+////        labels.add("23");
+////        labels.add("24");
+////        labels.add("25");
+////        labels.add("26");
+////        labels.add("27");
+////        labels.add("28");
+////        labels.add("29");
+////        labels.add("30");
+//
+//
+//        ArrayList<BarEntry> entries = new ArrayList<>();
+//        entries.add(new BarEntry(8f, 0));
+//        entries.add(new BarEntry(2f, 1));
+//        entries.add(new BarEntry(5f, 2));
+//        entries.add(new BarEntry(20f, 3));
+//        entries.add(new BarEntry(15f, 4));
+//        entries.add(new BarEntry(19f, 5));
+//        entries.add(new BarEntry(9f, 6));
+//
+//        BarDataSet bardataset = new BarDataSet(entries, "Cells");
+//
 //        ArrayList<String> labels = new ArrayList<String>();
-//        labels.add("1");
-//        labels.add("2");
-//        labels.add("3");
-//        labels.add("4");
-//        labels.add("5");
-//        labels.add("6");
-//        labels.add("7");
-//        labels.add("8");
-//        labels.add("9");
-//        labels.add("10");
-//        labels.add("11");
-//        labels.add("12");
-//        labels.add("13");
-//        labels.add("14");
-//        labels.add("15");
-//        labels.add("16");
-//        labels.add("17");
-//        labels.add("18");
-//        labels.add("19");
-//        labels.add("20");
-//        labels.add("21");
-//        labels.add("22");
-//        labels.add("23");
-//        labels.add("24");
-//        labels.add("25");
-//        labels.add("26");
-//        labels.add("27");
-//        labels.add("28");
-//        labels.add("29");
-//        labels.add("30");
-
-
-        ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(8f, 0));
-        entries.add(new BarEntry(2f, 1));
-        entries.add(new BarEntry(5f, 2));
-        entries.add(new BarEntry(20f, 3));
-        entries.add(new BarEntry(15f, 4));
-        entries.add(new BarEntry(19f, 5));
-        entries.add(new BarEntry(9f, 6));
-
-        BarDataSet bardataset = new BarDataSet(entries, "Cells");
-
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("2017");
-        labels.add("2016");
-        labels.add("2015");
-        labels.add("2014");
-        labels.add("2013");
-        labels.add("2012");
-        labels.add("2011");
-
-        BarData data = new BarData(labels, bardataset);
-        chartContainer.setData(data); // set the data and list of lables into chart
-
-        chartContainer.setDescription("Set Bar Chart Description");  // set the description
-
-        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
-
-        chartContainer.animateY(5000);
-
-    }
+//        labels.add("2017");
+//        labels.add("2016");
+//        labels.add("2015");
+//        labels.add("2014");
+//        labels.add("2013");
+//        labels.add("2012");
+//        labels.add("2011");
+//
+//        BarData data = new BarData(labels, bardataset);
+//        chartContainer.setData(data); // set the data and list of lables into chart
+//
+//        chartContainer.setDescription("Set Bar Chart Description");  // set the description
+//
+//        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+//
+//        chartContainer.animateY(5000);
+//
+//    }
 
     private void callServiceApis() {
 
@@ -260,6 +264,8 @@ public class DashBoardFragment extends Fragment {
                         txtSelectedMonthIncome.setText((int)dashboardMonthModel.getSale()+"");
                         txtSelectedMonthTangible.setText((int)dashboardMonthModel.getTangible()+"");
                         txtSelectedMonthInTangible.setText((int)dashboardMonthModel.getIntangible()+"");
+
+                        openChart(dashboardMonthModel.getDashboardDayModels());
 
 
 
@@ -354,26 +360,30 @@ public class DashBoardFragment extends Fragment {
 
     }
 
-    private void openChart(){
-        int[] x = { 0,1,2,3,4,5,6,7, 8, 9, 10, 11 };
-        int[] income = { 2000,2500,2700,3000,2800,3500,3700,3800, 0,0,0,0};
-        int[] expense = {2200, 2700, 2900, 2800, 2600, 3000, 3300, 3400, 0, 0, 0, 0 };
+    private void openChart(List<DashboardDayModel> list){
+//        int[] x = { "0","1","2",3,4,5,6,7, 8, 9, 10, 11 };
+//        int[] income = { 2000,2500,2700,3000,2800,3500,3700,3800, 0,0,0,0};
+//        int[] expense = {2200, 2700, 2900, 2800, 2600, 3000, 3300, 3400, 0, 0, 0, 0 };
 
 // Creating an XYSeries for Income
         XYSeries incomeSeries = new XYSeries("Income");
-// Creating an XYSeries for Expense
-        XYSeries expenseSeries = new XYSeries("Expense");
+// Creating an XYSeries for Tangible
+        XYSeries tangibleSeries = new XYSeries("Tangible");
+        // Creating an XYSeries for InTangible
+        XYSeries inTangibleSeries = new XYSeries("InTangible");
 // Adding data to Income and Expense Series
-        for(int i=0;i<x.length;i++){
-            incomeSeries.add(i,income[i]);
-            expenseSeries.add(i,expense[i]);
+        for(int i=0;i<list.size();i++){
+            incomeSeries.add(i,list.get(i).getIncome());
+            tangibleSeries.add(i,list.get(i).getTangible());
+            inTangibleSeries.add(i,list.get(i).getIntangible());
         }
         // Creating a dataset to hold each series
         XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 // Adding Income Series to the dataset
         dataset.addSeries(incomeSeries);
 // Adding Expense Series to dataset
-        dataset.addSeries(expenseSeries);
+        dataset.addSeries(tangibleSeries);
+        dataset.addSeries(inTangibleSeries);
 
 // Creating XYSeriesRenderer to customize incomeSeries
         XYSeriesRenderer incomeRenderer = new XYSeriesRenderer();
@@ -383,11 +393,11 @@ public class DashBoardFragment extends Fragment {
         incomeRenderer.setLineWidth(2f);
         incomeRenderer.setDisplayChartValues(true);
 //setting chart value distance
-        incomeRenderer.setDisplayChartValuesDistance(10);
+       // incomeRenderer.setDisplayChartValuesDistance(10);
 //setting line graph point style to circle
-        incomeRenderer.setPointStyle(PointStyle.CIRCLE);
+       // incomeRenderer.setPointStyle(PointStyle.CIRCLE);
 //setting stroke of the line chart to solid
-        incomeRenderer.setStroke(BasicStroke.SOLID);
+       // incomeRenderer.setStroke(BasicStroke.SOLID);
 
 // Creating XYSeriesRenderer to customize expenseSeries
         XYSeriesRenderer expenseRenderer = new XYSeriesRenderer();
@@ -396,16 +406,28 @@ public class DashBoardFragment extends Fragment {
         expenseRenderer.setLineWidth(2f);
         expenseRenderer.setDisplayChartValues(true);
 //setting line graph point style to circle
-        expenseRenderer.setPointStyle(PointStyle.SQUARE);
+        //expenseRenderer.setPointStyle(PointStyle.SQUARE);
 //setting stroke of the line chart to solid
-        expenseRenderer.setStroke(BasicStroke.SOLID);
+       // expenseRenderer.setStroke(BasicStroke.SOLID);
+
+        // Creating XYSeriesRenderer to customize expenseSeries
+        XYSeriesRenderer inTangibleRenderer = new XYSeriesRenderer();
+        inTangibleRenderer.setColor(Color.RED);
+        inTangibleRenderer.setFillPoints(true);
+        inTangibleRenderer.setLineWidth(2f);
+        inTangibleRenderer.setDisplayChartValues(true);
+//setting line graph point style to circle
+        //expenseRenderer.setPointStyle(PointStyle.SQUARE);
+//setting stroke of the line chart to solid
+        // expenseRenderer.setStroke(BasicStroke.SOLID);
 
 // Creating a XYMultipleSeriesRenderer to customize the whole chart
         XYMultipleSeriesRenderer multiRenderer = new XYMultipleSeriesRenderer();
+        multiRenderer.setOrientation(XYMultipleSeriesRenderer.Orientation.HORIZONTAL);
         multiRenderer.setXLabels(0);
-        //multiRenderer.setChartTitle("Income vs Expense Chart");
-        multiRenderer.setXTitle("Payment");
-        multiRenderer.setYTitle("Pending Amount");
+               // multiRenderer.setChartTitle(&quot;Expense Chart&quot;);
+                multiRenderer.setXTitle("Year 2016");
+                multiRenderer.setYTitle("Amount in Dollars");
 
 /***
  * Customizing graphs
@@ -425,13 +447,13 @@ public class DashBoardFragment extends Fragment {
 //setting zoom to false on both axis
         multiRenderer.setZoomEnabled(false, false);
 //setting lines to display on y axis
-        multiRenderer.setShowGridY(true);
+        multiRenderer.setShowGridY(false);
 //setting lines to display on x axis
-        multiRenderer.setShowGridX(true);
+        multiRenderer.setShowGridX(false);
 //setting legend to fit the screen size
         multiRenderer.setFitLegend(true);
 //setting displaying line on grid
-        multiRenderer.setShowGrid(true);
+        multiRenderer.setShowGrid(false);
 //setting zoom to false
         multiRenderer.setZoomEnabled(false);
 //setting external zoom functions to false
@@ -456,22 +478,22 @@ public class DashBoardFragment extends Fragment {
 //setting used to move the graph on xaxiz to .5 to the right
         multiRenderer.setXAxisMin(-0.5);
 //setting used to move the graph on xaxiz to .5 to the right
-        multiRenderer.setXAxisMax(11);
+        multiRenderer.setXAxisMax(31);
 //setting bar size or space between two bars
-//multiRenderer.setBarSpacing(0.5);
+       multiRenderer.setBarSpacing(0.5);
 //Setting background color of the graph to transparent
         multiRenderer.setBackgroundColor(Color.TRANSPARENT);
 //Setting margin color of the graph to transparent
         multiRenderer.setMarginsColor(getResources().getColor(R.color.transparent_background));
         multiRenderer.setApplyBackgroundColor(true);
-        multiRenderer.setScale(2f);
+       // multiRenderer.setScale(2f);
 //setting x axis point size
-        multiRenderer.setPointSize(4f);
+       // multiRenderer.setPointSize(4f);
 //setting the margin size for the graph in the order top, left, bottom, right
         multiRenderer.setMargins(new int[]{30, 30, 30, 30});
-
-        for(int i=0; i< x.length;i++){
-            multiRenderer.addXTextLabel(i, mMonth[i]);
+       // multiRenderer.addSeriesRenderer(expenseRenderer);
+        for(int i=0; i< list.size();i++){
+            multiRenderer.addXTextLabel(i, i+1+"");
         }
 
 // Adding incomeRenderer and expenseRenderer to multipleRenderer
@@ -479,13 +501,14 @@ public class DashBoardFragment extends Fragment {
 // should be same
         multiRenderer.addSeriesRenderer(incomeRenderer);
         multiRenderer.addSeriesRenderer(expenseRenderer);
+        multiRenderer.addSeriesRenderer(inTangibleRenderer);
 
 //this part is used to display graph on the xml
 
 //remove any views before u paint the chart
         chartContainer.removeAllViews();
 //drawing bar chart
-        mChart = ChartFactory.getLineChartView(getActivity(), dataset, multiRenderer);
+        mChart = ChartFactory.getBarChartView(getActivity(), dataset, multiRenderer,BarChart.Type.DEFAULT);
 //adding the view to the linearlayout
         chartContainer.addView(mChart);
 

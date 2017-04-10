@@ -12,7 +12,7 @@ public class DashboardMonthModel {
     private double tangible;
     private double intangible;
     private double sale;
-    private List<DashboardDayModel> dashboardDayModels = null;
+    private List<DashboardDayModel> details = null;
 
     public String getMonth() {
         return month;
@@ -47,10 +47,10 @@ public class DashboardMonthModel {
     }
 
     public List<DashboardDayModel> getDashboardDayModels() {
-        return dashboardDayModels;
+        return details;
     }
 
-    public void setDashboardDayModels(List<DashboardDayModel> dashboardDayModels) {
-        this.dashboardDayModels = dashboardDayModels;
+    public void setDashboardDayModels(List<DashboardDayModel> details) {
+        this.details = details;
     }
 }
