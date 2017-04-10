@@ -1,29 +1,5 @@
 [
     {
-        "outputFile": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 61,
-                    "endOffset": 112
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 61,
-                        "endOffset": 112
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
         "map": [
             {
@@ -36,6 +12,30 @@
                 },
                 "from": {
                     "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 61,
+                        "endOffset": 112
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 61,
+                    "endOffset": 112
+                },
+                "from": {
+                    "file": "C:\\Users\\Baseer Ahmed\\.android\\build-cache\\e59f38b678ba6eab1b4c0a546651ba99d26171de\\output\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

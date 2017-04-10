@@ -4,119 +4,159 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_plus.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_plus.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_plus.png"
     },
     {
         "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
         "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
     },
     {
         "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
         "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
     },
     {
         "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
         "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_plus.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_plus.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
     },
     {
         "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_plus.png",
         "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_plus.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_plus.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_plus.png"
     },
     {
         "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
         "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
     },
     {
         "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
         "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
+    },
+    {
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_person_add.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_person_add.png"
+    },
+    {
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_tick.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_tick.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_down.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_arrow_down.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
+    },
+    {
+        "merged": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_attach_money.png",
+        "source": "D:\\Baseer\\Project Work\\Others\\Sanjeev\\ExpenseManager\\code\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_money.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_clear_green.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_clear_green.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_close.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_close.png"
+    },
+    {
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_check_green.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_check_green.png"
+    },
+    {
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_greater_arrow.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_greater_arrow.png"
+    },
+    {
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_add.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add.png"
     }
 ]

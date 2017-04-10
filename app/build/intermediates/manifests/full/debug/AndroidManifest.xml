@@ -50,7 +50,16 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name="expmanager.idea.spark.in.expensemanager.AdminActivity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape" >
+
+            <!--
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+            -->
+        </activity>
         <activity
             android:name="expmanager.idea.spark.in.expensemanager.UsePinActivity"
             android:screenOrientation="landscape" />
