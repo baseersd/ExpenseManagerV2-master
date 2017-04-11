@@ -12,6 +12,8 @@ import com.instabug.library.invocation.InstabugInvocationEvent;
 
 public class ApplicationController extends MultiDexApplication {
 
+    public static  String ocrText="";
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -1,195 +1,63 @@
 [
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\adminprofile_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\adminprofile_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sign_up_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sign_up_activity.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_sidebar.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_sidebar.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_expense.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_expense.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\login_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\login_activity.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_sidebar.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_tanexpense_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_tanexpense_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_group.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_group.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_pin_activity.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_pin_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_expense.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_expense.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_pin_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_pin_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_password_activity.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_password_activity.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_addstaff_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_addstaff_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_list.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_list.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\main_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\main_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_list_item.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_list_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_password_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_password_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\tagibleexpense_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\tagibleexpense_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\adminprofile_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\adminprofile_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\adminprofile_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\adminprofile_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense1.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense1.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_sidebar.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_group.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_group.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_tanexp_item.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_tanexp_item.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_sidebar.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_tanexpense_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_tanexpense_layout.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_child.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_child.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\dashboard_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\dashboard_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\organization_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\organization_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\stafffragment_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\stafffragment_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_addstaff_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_addstaff_layout.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_staff_item.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_staff_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\tagibleexpense_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\tagibleexpense_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\side_bar_list.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\side_bar_list.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_sidebar.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_child.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_child.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\fragment_frag_expense_entry.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_expense_entry.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\spash_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\spash_activity.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_tanexpense_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_tanexpense_layout.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_layout.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\organization_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\organization_layout.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lay_cat_wise_expense.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lay_cat_wise_expense.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_sidebar.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_sidebar.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_password_activity.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_password_activity.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\main_activity.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\listadapter.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\listadapter.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\use_pin_activity.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\use_pin_activity.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addstaffdialog_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addstaffdialog_layout.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lstexpitems.xml",
@@ -200,12 +68,8 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staffprofile_layout.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history_viewpager.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history_viewpager.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staffprofile_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staffprofile_layout.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addstaffdialog_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addstaffdialog_layout.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addtanexpensedailog_layout.xml",
@@ -216,279 +80,99 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_invoice_entry.xml"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\spash_activity.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\spash_activity.xml"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\stafffragment_layout.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\stafffragment_layout.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_manual_expense_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_manual_expense_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\use_pin_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\use_pin_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\login_activity.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\login_activity.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense1.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense1.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addtanexpensedailog_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addtanexpensedailog_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_tanexp_item.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_tanexp_item.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sign_up_activity.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sign_up_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_tanexp_item.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_tanexp_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_child.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_child.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\organization_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\organization_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lay_cat_wise_expense.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lay_cat_wise_expense.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\organization_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\organization_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\fragment_frag_expense_entry.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_expense_entry.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_list_item.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_list_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_sidebar.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addstaffdialog_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addstaffdialog_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history_viewpager.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history_viewpager.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\capture.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\capture.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_layout.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_layout.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\exp_preview.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\exp_preview.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\login_activity.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\login_activity.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\side_bar_list.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\side_bar_list.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_manual_expense_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_manual_expense_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\use_pin_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\use_pin_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history_viewpager.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history_viewpager.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_staff_item.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_staff_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lstexpitems.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lstexpitems.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\30b487f2ab5edb55c67aa3eaa77f8e00c957e002\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_staff_item.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_staff_item.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\stafffragment_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\stafffragment_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_list.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_list.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_list_item.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_list_item.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_addstaff_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_addstaff_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addtanexpensedailog_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addtanexpensedailog_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\fragment_frag_expense_entry.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_expense_entry.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\spash_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\spash_activity.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lay_cat_wise_expense.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lay_cat_wise_expense.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\addstaffdialog_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\addstaffdialog_layout.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staffprofile_layout.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staffprofile_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_pin_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_pin_activity.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sign_up_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sign_up_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_tanexpense_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_tanexpense_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lay_cat_wise_expense.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lay_cat_wise_expense.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_expense.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_expense.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\exp_preview.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\exp_preview.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_sidebar.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_sidebar.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\main_activity.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\main_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\lstexpitems.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\lstexpitems.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\tagibleexpense_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\tagibleexpense_layout.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_group.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_group.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\forgot_password_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\forgot_password_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\spash_activity.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\spash_activity.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\side_bar_list.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\side_bar_list.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\staff_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\staff_layout.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\tagibleexpense_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\tagibleexpense_layout.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_manual_expense_layout.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_manual_expense_layout.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\exp_preview.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\exp_preview.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\exp_preview.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\exp_preview.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\help.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\help.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\side_bar_list.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\side_bar_list.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history_viewpager.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history_viewpager.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_list.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_list.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\fragment_frag_invoice_entry.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_invoice_entry.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_staff_item.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_staff_item.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\login_activity.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\login_activity.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_layout.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\fragment_frag_invoice_entry.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\fragment_frag_invoice_entry.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\list_tanexp_item.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\list_tanexp_item.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\adminprofile_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\adminprofile_layout.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_layout.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense1.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense1.xml"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_history.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_history.xml"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\dashboard_layout.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\dashboard_layout.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\main_activity.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\main_activity.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sales_list_item.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sales_list_item.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\dashboard_layout.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\dashboard_layout.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\expense_group.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\expense_group.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\admin_addstaff_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\admin_addstaff_layout.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\sign_up_activity.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\sign_up_activity.xml"
     }
 ]

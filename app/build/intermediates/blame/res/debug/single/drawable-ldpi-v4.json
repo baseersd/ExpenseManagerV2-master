@@ -1,275 +1,75 @@
 [
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_back.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_back.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_send.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_report_bug.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_report_bug.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send_feedback.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_send_feedback.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_pause.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_pause.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_plus.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_plus.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_next.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_next.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_erase.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_erase.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_audio.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_audio.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_floating_btn.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_floating_btn.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_video.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_video.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_avatar.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_avatar.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video_received.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_video_received.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_close.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_close.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_next.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_next.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_mic.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_mic.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_remove.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_remove.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send_feedback.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_send_feedback.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_mic.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_mic.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_video.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_video.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_next.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_next.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_mic.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_mic.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_stop.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_stop.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_stop.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_stop.png"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_play.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_play.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_avatar.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_avatar.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_remove.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_remove.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_play.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_play.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send_feedback.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_send_feedback.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_close.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_close.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_capture_screenshot.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_video.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_plus.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_plus.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_stop.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_stop.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_remove.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_remove.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_check.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_check.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_video.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_video.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_avatar.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_avatar.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_play.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_play.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_floating_btn.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_floating_btn.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_report_bug.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_report_bug.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_report_bug.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_report_bug.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_audio.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_audio.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_floating_btn.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_floating_btn.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_close.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_close.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_send.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video_received.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_video_received.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_send.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_send.png"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach_gallery_image.png"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_back.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_back.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_floating_btn.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_floating_btn.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video_received.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_video_received.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_pause.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_pause.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_audio.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_audio.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_check.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_check.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_check.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_check.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_pause.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_pause.png"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_erase.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_erase.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_back.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_back.png"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video.png",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\drawable-ldpi-v4\\instabug_ic_video.png"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_plus.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_plus.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_record_video.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_record_video.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_attach.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_attach.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_next.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_next.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_erase.png",
@@ -280,11 +80,19 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_video.png"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_mic.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_mic.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_stop.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_stop.png"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_talk_to_us.png"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_video_received.png",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_video_received.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\instabug_ic_play.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-ldpi-v4\\instabug_ic_play.png"
     }
 ]

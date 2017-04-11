@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -29,8 +30,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.adapters.ListAdapter;
+import expmanager.idea.spark.in.expensemanager.ocr_usage.CaptureActivity;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsTool;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsToolImpl;
 
@@ -41,7 +45,10 @@ import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsToolImpl;
 
 public class AddExpenseFragment extends Fragment implements ActivityCompat.OnRequestPermissionsResultCallback {
 
+    ArrayList<String> filterdataamount=null;
+    ArrayList<String> filterdataname=null;
     private ImageView imageRescan;
+    ListView list;
     private Uri outputFileUri;
     private TessBaseAPI tessBaseApi;
     private static final int PHOTO_REQUEST_CODE = 1;
@@ -65,7 +72,7 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
         View rootView = inflater.inflate(R.layout.add_expense,
                 container, false);
 
-
+        list=(ListView)rootView.findViewById(R.id.list);
         imageRescan = (ImageView) rootView.findViewById(R.id.img_rescan);
 
         imageRescan.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +94,7 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
      */
     private void startCameraActivity() {
        // verifyStoragePermissions(getActivity());
-        try {
+      /*  try {
             String IMGS_PATH = Environment.getExternalStorageDirectory().toString() + "/ExpenseManager/imgs";
             prepareDirectory(IMGS_PATH);
 
@@ -103,6 +110,14 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
             }
         } catch (Exception e) {
             Log.e("Add Expense", e.getMessage());
+        } */
+
+        try {
+            Intent myIntent = new Intent(getActivity(), CaptureActivity.class);
+            startActivityForResult(myIntent,1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -123,21 +138,108 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
     public void onActivityResult(int requestCode, int resultCode,
                                  Intent data) {
         //making photo
-        if (requestCode == PHOTO_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+       /*  if (requestCode == PHOTO_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             doOCR();
         } else {
             Toast.makeText(getActivity(), "ERROR: Image was not obtained.", Toast.LENGTH_SHORT).show();
+        } */
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String result=data.getStringExtra("result");
+
+
+                ArrayList<String> datas=new ArrayList<>();
+                ArrayList<ArrayList<String>> dd=new ArrayList<ArrayList<String>>();
+                String[] separated = result.split("\n");
+
+                for(int k=0;k<separated.length;k++)
+                {
+                    datas=splitString(separated[k]);
+
+
+                    dd.add(datas);
+
+
+
+
+                }
+
+
+                filterdataamount=new ArrayList<>();
+                filterdataname=new ArrayList<>();
+
+
+                for (int i=0;i<dd.size();i++)
+                {
+
+
+                    // ArrayList<String> filterdataname=new ArrayList<>();
+
+                    for(int k=0;k<dd.get(i).size();k++)
+                    {
+
+
+                        if(k==0)
+                        {
+                            if(dd.get(i).get(0).equals(""))
+                            {
+
+                            }else
+                            {
+                                filterdataname.add(dd.get(i).get(0));
+                                Log.i("product name","product name"+ filterdataname);
+
+                            }
+
+                        }
+
+
+
+                        // Log.i("Hash map","Hash map"+dd.get(i).get(k)) ;
+                        // Log.i("Hash map","Hash map"+hashMap.get(String.valueOf(i)).get(i)) ;
+                        if(isFloat(dd.get(i).get(k)))
+                        {
+
+                        }
+                        if(isDouble(dd.get(i).get(k)))
+                        {
+                            filterdataamount.add(dd.get(i).get(k));
+                            Log.i("product amount","product amount"+ filterdataamount);
+
+                            // Log.i("total","total"+datas.get(i));
+
+                        } if(isValidInteger(dd.get(i).get(k)))
+                    {
+
+                    }
+
+                    }
+
+                }
+
+
+                ListAdapter adapter=new ListAdapter(getActivity(),filterdataname,filterdataamount);
+                list.setAdapter(adapter);
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
         }
+
+
     }
 
     private void doOCR() {
         prepareTesseract();
-        startOCR(outputFileUri);
+
     }
 
     private void prepareTesseract() {
         try {
             prepareDirectory(DATA_PATH + TESSDATA);
+
+            startOCR(outputFileUri);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -212,6 +314,8 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
             }
         }
 
+        Toast.makeText(getActivity(),"",Toast.LENGTH_SHORT).show();
+        tessBaseApi.setDebug(true);
         tessBaseApi.init(DATA_PATH, lang);
 
 //       //EXTRA SETTINGS
@@ -250,7 +354,7 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
 //    }
 
     private void requestPermissions() {
-        String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.CAMERA};
         requestTool = new RequestPermissionsToolImpl();
         requestTool.requestPermissions(getActivity(), permissions);
     }
@@ -272,6 +376,58 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+    }
+
+    public ArrayList<String> splitString(String dataline)
+    {
+        ArrayList<String> words=new ArrayList<String>();
+        String[] separated = dataline.split(" ");
+        for (String item : separated)
+        {
+            System.out.println("itemssssssssssssssss = " + item);
+            words.add(item);
+        }
+
+        return words;
+    }
+
+    public static boolean isValidInteger(String value) {
+        try {
+            Integer val = Integer.valueOf(value);
+            if (val != null)
+                return true;
+            else
+                return false;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    boolean isDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    boolean isString(String str) {
+        try {
+            boolean atleastOneAlpha = str.matches(".*[a-zA-Z]+.*");
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    boolean isFloat(String str) {
+        try {
+            Float.parseFloat(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
 }

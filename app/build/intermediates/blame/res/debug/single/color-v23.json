@@ -1,131 +1,43 @@
 [
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_default.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\color-v23\\design_tint_password_toggle.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\30b487f2ab5edb55c67aa3eaa77f8e00c957e002\\output\\res\\color-v23\\design_tint_password_toggle.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_default.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_spinner.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_edittext.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_default.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",

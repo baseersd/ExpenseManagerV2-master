@@ -1,17 +1,5 @@
 [
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_add.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_add.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_add.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
     },
@@ -20,64 +8,20 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check_green.xml"
     },
     {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\30b487f2ab5edb55c67aa3eaa77f8e00c957e002\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_attach_money.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_attach_money.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\30b487f2ab5edb55c67aa3eaa77f8e00c957e002\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_arrow_down.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_check_green.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check_green.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_attach_money.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_attach_money.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_attach_money.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_attach_money.xml"
-    },
-    {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_clear_green.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_clear_green.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
     {
-        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_check_green.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_check_green.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
-    },
-    {
-        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_clear_green.xml",
-        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_clear_green.xml"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_clear_green.xml",
