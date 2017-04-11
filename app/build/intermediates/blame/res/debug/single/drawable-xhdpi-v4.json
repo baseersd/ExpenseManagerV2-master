@@ -544,12 +544,12 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xhdpi-v4\\instabug_ic_sound_dark.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\instabug_img_shake_frame_7.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xhdpi-v4\\instabug_img_shake_frame_7.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\instabug_ic_attach_gallery_image.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xhdpi-v4\\instabug_ic_attach_gallery_image.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\instabug_img_shake_frame_7.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xhdpi-v4\\instabug_img_shake_frame_7.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",

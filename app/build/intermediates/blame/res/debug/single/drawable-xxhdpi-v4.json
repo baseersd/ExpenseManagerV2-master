@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xxhdpi-v4\\instabug_ic_plus.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png",
@@ -308,12 +308,12 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xxhdpi-v4\\instabug_ic_talk_to_us.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\instabug_img_shake_frame_30.png",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xxhdpi-v4\\instabug_img_shake_frame_30.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\setup_bg_full_withlogo.jpg",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\setup_bg_full_withlogo.jpg"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\instabug_img_shake_frame_30.png",
+        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xxhdpi-v4\\instabug_img_shake_frame_30.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\instabug_img_shake_frame_17.png",
@@ -460,12 +460,12 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\drawable-xxhdpi-v4\\instabug_ic_play.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\login_bg_large.jpg",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\login_bg_large.jpg"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\design_ic_visibility_off.png",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\drawable-xxhdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\login_bg_large.jpg",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\login_bg_large.jpg"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\instabug_img_shake_frame_19.png",

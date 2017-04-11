@@ -44,12 +44,12 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_add.png"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\shutter_pressed.png",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\shutter_pressed.png"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\profile.png",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\profile.png"
+    },
+    {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\shutter_pressed.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\shutter_pressed.png"
     },
     {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_visibility_off_white_24dp.png",
