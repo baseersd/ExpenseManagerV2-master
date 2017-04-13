@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <TextView
+       android:id="@+id/txt_title_reports"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="40dp"
+       android:text="@string/reports"
+       android:textColor="@color/greenTextColor"
+       android:textSize="18dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txt_title_reports"
+        android:layout_alignStart="@id/txt_title_reports"
+        android:background="@color/instabug_annotation_color_gray"
+        android:layout_marginRight="40dp">
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>

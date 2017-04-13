@@ -25,7 +25,7 @@ import expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry;
 
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener,
         InvoiceEntryFragment.OnFragmentInteractionListener, fragExpenseEntry.OnFragmentInteractionListener {
-    private ImageButton btnexpense,btntanexpense,btnhistory,btndashboard,btnstaff,btnprofile,btnsales;
+    private ImageButton btnexpense,btntanexpense,btnhistory,btndashboard,btnstaff,btnprofile,btnsales,btnReports;
     private static View oldSelectedView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,8 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         btnsales = (ImageButton) findViewById(R.id.btnsales);
         btnsales.setOnClickListener(this);
 
-
+        btnReports = (ImageButton) findViewById(R.id.btnreports);
+        btnReports.setOnClickListener(this);
     }
 
     @Override
@@ -107,6 +108,9 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
                 getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragsales).commit();
 
                 break;
+
+            case R.id.btnreports:
+
 
         }
 

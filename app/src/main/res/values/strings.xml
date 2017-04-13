@@ -45,6 +45,7 @@
     <string name="no_expenses_recored">No expenses are recored for today</string>
     <string name="no_expenses_recored_forweek">No expenses recorded for this week</string>
     <string name="product">Product</string>
+    <string name="reports">Reports</string>
 
 
 </resources>
