@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\layout\\select_dialog_item_material.xml"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\reports_layout.xml",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout\\reports_layout.xml"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\layout\\notification_template_media_custom.xml"
     },

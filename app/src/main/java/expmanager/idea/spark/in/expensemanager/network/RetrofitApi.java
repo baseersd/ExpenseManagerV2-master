@@ -151,6 +151,11 @@ public class RetrofitApi {
         Call<ResponseBody> GetDashboardGraph(@Header("Authtoken") String auth, @Query("date") String date);
 
 
+        /*
+        * GET_REPORTS
+        */
+        @GET(ServerURLModel.GET_REPORTS)
+        Call<ResponseBody> GetReports(@Header("Authtoken") String auth,@Query("from") String fromDate,@Query("to") String toDate);
 
 
         /*

@@ -81,6 +81,15 @@
                     android:layout_marginTop="15dp"
                     android:src="@drawable/sales"
                     android:background="@android:color/transparent"/>
+
+                <ImageButton
+                    android:id="@+id/btnreports"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <ImageButton

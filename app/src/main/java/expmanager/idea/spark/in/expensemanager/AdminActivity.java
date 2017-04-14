@@ -14,6 +14,7 @@ import expmanager.idea.spark.in.expensemanager.fragments.DashBoardFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.ExpenseFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.ExpenseHistoryFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.InvoiceEntryFragment;
+import expmanager.idea.spark.in.expensemanager.fragments.ReportsFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.SalesFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry;
 
@@ -110,6 +111,11 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.btnreports:
+
+                ReportsFragment reportsFragment = new ReportsFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, reportsFragment).commit();
+
+                break;
 
 
         }
