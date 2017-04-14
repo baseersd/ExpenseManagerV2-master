@@ -33,6 +33,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,10 +45,14 @@ import expmanager.idea.spark.in.expensemanager.adapters.CategoriesAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseListAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
+import expmanager.idea.spark.in.expensemanager.model.Category;
+import expmanager.idea.spark.in.expensemanager.model.CategoryItem;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.model.Item;
+import expmanager.idea.spark.in.expensemanager.model.Product;
+import expmanager.idea.spark.in.expensemanager.model.ProductListResponse;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
@@ -80,7 +87,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private String mParam4;
     private String mParam5;
 
-
+    public static ProductListResponse productListResponse = null;
     private OnFragmentInteractionListener mListener;
 
     //Add Expense Form
@@ -121,6 +128,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private RecyclerView.Adapter mAdapterProducts;
 
     private int mCategoryIndex, mProductIndex;
+    private LinearLayout mLLProductManualEntry;
+    private Button mBtnProductAdd;
+
 
     public fragExpenseEntry() {
         // Required empty public constructor
@@ -192,6 +202,16 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         expDate.setInputType(InputType.TYPE_NULL);
         expDate.setText(mParam4);
 
+        mLLProductManualEntry = (LinearLayout)v.findViewById(R.id.ll_product_manual_entry);
+        mBtnProductAdd = (Button)v.findViewById(R.id.btnProductAdd);
+        mBtnProductAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                expAmt.setText("0.00");
+                expUnit.setText("0");
+                addExpenseToList();
+            }
+        });
         expProductName = (EditText) v.findViewById(R.id.exp_descrip);
         lnrRecursiveLayout = (LinearLayout) v.findViewById(R.id.lnrRecursiveLayout);
 
@@ -299,7 +319,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
             }
         });
-
+        if(productListResponse == null) {
+            getCategoryProductList();
+        }
         initUI(v);
         // Inflate the layout for this fragment
         return v;
@@ -310,6 +332,37 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         initProducts(view);
     }
 
+    private void initCategoriesList(){
+        if(productListResponse == null)
+            return;
+        List<Item> categoryList = new ArrayList<>();
+        for(CategoryItem categoryItem: productListResponse.getProductList()) {
+            // Initialize a new Adapter for RecyclerView
+            Category category = categoryItem.getCategory();
+            categoryList.add(new Item(category.getId(), Item.ITEM_CATEGORY, category.getCategoryName(),
+                    category.getCategoryIconUrl()));
+            /*categoryList.add(new Item(2, Item.ITEM_CATEGORY, "Meat",
+                    "http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
+            categoryList.add(new Item(3, Item.ITEM_CATEGORY, "Eggs",
+                    "http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
+            categoryList.add(new Item(4, Item.ITEM_CATEGORY, "Bread",
+                    "http://content.mycutegraphics.com/graphics/food/italian-bread.png"));*/
+        }
+        mAdapterCategories = new CategoriesAdapter(this.getContext(), categoryList, this);
+        // Set an adapter for RecyclerView
+        mRecyleViewCategories.setAdapter(mAdapterCategories);
+
+        if(categoryList == null){
+            autoCatId.setVisibility(View.VISIBLE);
+            //expProductName.setVisibility(View.VISIBLE);
+            mLLProductManualEntry.setVisibility(View.VISIBLE);
+        }else{
+            autoCatId.setVisibility(View.GONE);
+            //expProductName.setVisibility(View.GONE);
+            mLLProductManualEntry.setVisibility(View.GONE);
+        }
+    }
+
     private void initCategories(View view){
         mRecyleViewCategories = (RecyclerView)view.findViewById(R.id.recycler_view_categories);
         mLayoutManager = new LinearLayoutManager(
@@ -318,22 +371,40 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 false
         );
         mRecyleViewCategories.setLayoutManager(mLayoutManager);
-        // Initialize a new Adapter for RecyclerView
-        List<Item> categoryList = new ArrayList<>();
-        categoryList.add(new Item(1,Item.ITEM_CATEGORY,"Milk",
-                "http://clipart-library.com/images/8iAb8xKjT.jpg"));
-        categoryList.add(new Item(2,Item.ITEM_CATEGORY,"Meat",
-                "http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
-        categoryList.add(new Item(3,Item.ITEM_CATEGORY,"Eggs",
-                "http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
-        categoryList.add(new Item(4,Item.ITEM_CATEGORY,"Bread",
-                "http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
-        mAdapterCategories = new CategoriesAdapter(this.getContext(),categoryList,this);
-
-        // Set an adapter for RecyclerView
-        mRecyleViewCategories.setAdapter(mAdapterCategories);
+        initCategoriesList();
     }
 
+    private void initProductsList(int categoryId){
+        if(categoryId != -1) {
+            // Initialize a new Adapter for RecyclerView
+            List<Item> productList = new ArrayList<>();
+            for(CategoryItem categoryItem: productListResponse.getProductList()) {
+                if(categoryId != categoryItem.getCategory().getId())
+                    continue;
+                List<Product> productsItemList = categoryItem.getProducts();
+                for(Product product: productsItemList) {
+                    productList.add(new Item(product.getId(), Item.ITEM_PRODUCT, product.getProductName(),
+                            product.getProductImageUrl()));
+                   /* productList.add(new Item(1, Item.ITEM_PRODUCT, "Milk", "http://clipart-library.com/images/8iAb8xKjT.jpg"));
+                    productList.add(new Item(2, Item.ITEM_PRODUCT, "Meat", "http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
+                    productList.add(new Item(3, Item.ITEM_PRODUCT, "Eggs", "http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
+                    productList.add(new Item(4, Item.ITEM_PRODUCT, "Bread", "http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
+*/                }
+            }
+            mAdapterProducts = new CategoriesAdapter(this.getContext(), productList, this);
+
+            // Set an adapter for RecyclerView
+            mRecyleViewProducts.setAdapter(mAdapterProducts);
+            mRecyleViewProducts.setVisibility(View.VISIBLE);
+            if(productList == null || productList.size() == 0){
+                mLLProductManualEntry.setVisibility(View.VISIBLE);
+                //expProductName.setVisibility(View.VISIBLE);
+            }else{
+                mLLProductManualEntry.setVisibility(View.GONE);
+                //expProductName.setVisibility(View.GONE);
+            }
+        }
+    }
     private void initProducts(View view){
         mRecyleViewProducts = (RecyclerView)view.findViewById(R.id.recycler_view_products);
         mLayoutManager = new LinearLayoutManager(
@@ -342,17 +413,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 false
         );
         mRecyleViewProducts.setLayoutManager(mLayoutManager);
-        // Initialize a new Adapter for RecyclerView
-        List<Item> productList = new ArrayList<>();
-        productList.add(new Item(1,Item.ITEM_PRODUCT,"Milk","http://clipart-library.com/images/8iAb8xKjT.jpg"));
-        productList.add(new Item(2,Item.ITEM_PRODUCT,"Meat","http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
-        productList.add(new Item(3,Item.ITEM_PRODUCT,"Eggs","http://cdn.xl.thumbs.canstockphoto.com/canstock11768870.jpg"));
-        productList.add(new Item(4,Item.ITEM_PRODUCT,"Bread","http://content.mycutegraphics.com/graphics/food/italian-bread.png"));
-        mAdapterProducts = new CategoriesAdapter(this.getContext(),productList,this);
-
-        // Set an adapter for RecyclerView
-        mRecyleViewProducts.setAdapter(mAdapterProducts);
-        mRecyleViewProducts.setVisibility(View.VISIBLE);
+        initProductsList(-1);
     }
     private void loadPreview(double disc){
         // custom dialog
@@ -507,7 +568,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             expProductName.setText("");
             expAmt.setText("");
             expUnit.setText("");
-            autoCatId.setText("");
+            //autoCatId.setText("");
 
             Toast.makeText(getContext(), "Expense Details Added Successfully", Toast.LENGTH_SHORT).show();
         } else {
@@ -757,6 +818,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             autoCatId.setText(item.getItemName());
             mRecyleViewProducts.setVisibility(View.VISIBLE);
             mCategoryIndex = position;
+            initProductsList(item.getItemId());
         }else{
             expProductName.setText(item.getItemName());
             mProductIndex = position;
@@ -806,5 +868,31 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
        // void openWeekView();
+    }
+
+    private void getCategoryProductList(){
+        SessionManager sessionManager = new SessionManager(getActivity());
+        RetrofitApi.getApi().GetProducts(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(),response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        String jsonString = "{\"productList\" :"+response.body().string()+"}";
+                        productListResponse = gson.fromJson(jsonString, ProductListResponse.class);
+                        Log.d(getClass().getName(),productListResponse.toString());
+                        initCategoriesList();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -105,21 +105,35 @@
                 android:background="@color/editTextBackgroundWhite"
                 >
             </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:id="@+id/ll_product_manual_entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="horizontal">
             <EditText
                 android:id="@+id/exp_descrip"
                 style="@style/editTextClassic"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
                 android:layout_height="45dp"
                 android:background="@color/greytext"
                 android:hint="@string/product"
-                android:visibility="gone"
                 android:imeOptions="actionNext"
                 android:maxLength="26"
                 android:maxLines="1"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColorHint="@android:color/darker_gray" />
-
+                <Button
+                    android:id="@+id/btnProductAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:padding="@dimen/margin_medium"
+                    android:text="Add Product"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

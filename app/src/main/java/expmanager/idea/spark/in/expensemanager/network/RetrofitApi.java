@@ -185,10 +185,16 @@ public class RetrofitApi {
 
 
         /*
-       * LOGOUT
+       * CREATE INVOICE
        */
         @POST(ServerURLModel.CREATE_INVOICE)
         Call<ResponseBody> CreateInvoice(@Header("Authtoken") String auth, @Body ExpenseSyncRequest requestModel);
+
+        /*
+         * GET_PRODUCTS
+        */
+        @GET(ServerURLModel.GET_PRODUCTS)
+        Call<ResponseBody> GetProducts(@Header("Authtoken") String auth);
 
         /*
        * LOGOUT
