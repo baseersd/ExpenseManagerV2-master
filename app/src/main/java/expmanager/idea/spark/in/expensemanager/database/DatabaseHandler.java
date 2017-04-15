@@ -783,7 +783,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         query.append(CATEGORIES_TBL_COLUMN_CATEGORY_NAME);
         query.append(" FROM ");
         query.append(TABLE_CATEGORIES);
-        query.append(" where id =");
+        query.append(" where category_id =");
         query.append(id);
         Cursor catCursor = db.rawQuery(query.toString(), null);
 
@@ -868,6 +868,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Cursor catCursor = db.rawQuery(query, new String[]{String.valueOf(id)});
         catCursor.moveToFirst();
         catCursor.close();
+    }
+
+    public void deleteExpenseEntries(String invoiceId){
+        String query = "delete from expenses where invoice_id=?";
+        Cursor cursor = db.rawQuery(query, new String[]{invoiceId});
+        Log.d(getClass().getName(),""+cursor.getCount());
+        cursor = db.rawQuery("delete from invoices where bill_number = ?", new String[]{invoiceId});
+        Log.d(getClass().getName(),""+cursor.getCount());
     }
 
     public ArrayList<String> getExpenseNameforDate(String date){

@@ -88,6 +88,8 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private String mParam5;
 
     public static ProductListResponse productListResponse = null;
+    private Item mCategory;
+    private Item mProduct;
     private OnFragmentInteractionListener mListener;
 
     //Add Expense Form
@@ -108,6 +110,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     Double invAmt,expAmtSofar;
     int weekindex;
     int editedExpId;
+    private Expense mEditedExpense;
     LinearLayout lnrExpHeader;
     private String[] recursiveType = {"Daily", "Weekly", "Monthly", "Monthly - First day", "Monthly - Last day"};
 
@@ -207,6 +210,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         mBtnProductAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mProduct.setItemId(-1);
                 expAmt.setText("0.00");
                 expUnit.setText("0");
                 addExpenseToList();
@@ -498,17 +502,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
                 if (response.isSuccessful()) {
                     onInvoiceCreateSuccess();
-                        /*Log.d(TAG,response.toString());
-                        Gson gson = new Gson();
-                        try {
-                            ExpenseSyncResponse expenseSyncResponse = gson.fromJson(response.body().string(), ExpenseSyncResponse.class);
-                            Log.d(TAG,response.body().string());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }*/
-
                 } else {
-
                     onInvoiceCreateFailure();
                 }
             }
@@ -527,8 +521,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             myDbHelper.openConnection();
             int catId = myDbHelper.getCatId(autoCatId.getText().toString());
             if (catId == 0) {
-                myDbHelper.insetCategory(autoCatId.getText().toString(), 0,0);//ToDO: Replace 2nd Parameter with CategoryId
-                catId = myDbHelper.getCatId(autoCatId.getText().toString());
+                if(mCategory != null) {
+                    myDbHelper.insetCategory(autoCatId.getText().toString(), mCategory.getItemId(), 0);//ToDO: Replace 2nd Parameter with CategoryId
+                    catId = myDbHelper.getCatId(autoCatId.getText().toString());
+                }
             }
             String invId = autoInvId.getText().toString();
                    /* invId = myDbHelper.getInvId(autoInvId.getText().toString());
@@ -541,13 +537,15 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             weekindex = Utils.getCurrentWeekofYear();
             try {
                 if (!isEditFlag) {
-                    myDbHelper.insetExpense(new Expense(expDate.getText().toString(), 0,//ToDO: ProductId to be passed instead of 0
-                            expProductName.getText().toString(),catId,autoCatId.getText().toString(), invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
+                    myDbHelper.insetExpense(new Expense(expDate.getText().toString(), mProduct.getItemId(),
+                            mProduct.getItemName(),mCategory.getItemId(),mCategory.getItemName(),
+                            invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
                             Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, 0));
                 } else {
-                    myDbHelper.updateExpense(new Expense(expDate.getText().toString(), 0, //ToDO: ProductId to be passed instead of 0
-                            expProductName.getText().toString(),catId,autoCatId.getText().toString(), invId, Integer.parseInt(expUnit.getText().toString()), 0, 0,
-                            Double.parseDouble(expAmt.getText().toString()), 0, "", 0, weekindex, editedExpId));
+                    myDbHelper.updateExpense(new Expense(mEditedExpense.getExpDate(), mEditedExpense.getExpProductId(),
+                            mEditedExpense.getExpProductName(),mEditedExpense.getExpCatId(),mEditedExpense.getCategory_name(),
+                            invId, mEditedExpense.getExpUnit(), 0, 0,
+                            mEditedExpense.getExpAmt(), 0, "", 0, weekindex, editedExpId));
                     isEditFlag = false;
                 }
             }catch (Exception ex){
@@ -717,6 +715,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             //btnExpAdd.setText("Update");
             isEditFlag =true;
             editedExpId = id;
+            mEditedExpense = item;
             addExpenseToList();
         }
     }
@@ -819,17 +818,23 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             mRecyleViewProducts.setVisibility(View.VISIBLE);
             mCategoryIndex = position;
             initProductsList(item.getItemId());
+            mCategory = item;
         }else{
             expProductName.setText(item.getItemName());
             mProductIndex = position;
             expAmt.setText("0.00");
             expUnit.setText("0");
+            mProduct = item;
             addExpenseToList();
         }
     }
 
 
     private void onInvoiceCreateSuccess() {
+
+        /*myDbHelper = new DatabaseHandler(getContext());
+        myDbHelper.openConnection();
+        myDbHelper.deleteExpenseEntries(mInvoiceID);*/
         dialog.cancel();
 
         ExpenseFragment fragmentorg = new ExpenseFragment();
@@ -838,7 +843,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     }
 
     private void onInvoiceCreateFailure() {
-        Toast.makeText(getContext(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Oops something went wrong. Please Save again", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -113,7 +113,8 @@ public class expenseListAdapter extends BaseAdapter {
         });
 
         mDbhelper.openConnection();
-        lblcat.setText(mDbhelper.getCatName(listItem.get(position).getExpCatId()));
+        //lblcat.setText(mDbhelper.getCatName(listItem.get(position).getExpCatId()));
+        lblcat.setText(listItem.get(position).getCategory_name());
         mDbhelper.closeConnection();
         lbldesc.setText(listItem.get(position).getExpProductName());
         lblunit.setText("" + listItem.get(position).getExpUnit());
