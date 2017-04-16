@@ -1,13 +1,56 @@
 package expmanager.idea.spark.in.expensemanager.model;
 
+import com.google.gson.annotations.SerializedName;
 
 public class Expense {
+
+    @SerializedName("id")
+    private String expInvId;
+
+    @SerializedName("invoice")
     private String expDate;
+
+    @SerializedName("category_id")
+    private int expCatId;
+
+    @SerializedName("category_name")
     private String category_name;
+
+    @SerializedName("product_id")
+    private int expProdId;
+
+    @SerializedName("product_name")
     private String product_name;
-    private String expCreatedAt, expInvId;
-    private int expCatId, expProdId, expIsApproved, expIsRecursive,expCreateBy,expUnit,isSaved, expWeekIndex,expid;
+
+    @SerializedName("created_at")
+    private String expCreatedAt;
+
+    @SerializedName("is_approved")
+    private boolean expIsApproved;
+
+    @SerializedName("is_recurssive")
+    private boolean expIsRecursive;
+
+    @SerializedName("created_by")
+    private int expCreateBy;
+
+    @SerializedName("unit")
+    private int expUnit;
+
+    @SerializedName("isSaved")
+    private int isSaved;
+
+    @SerializedName("weekIndex")
+    private int expWeekIndex;
+
+    @SerializedName("expid")
+    private int expid;
+
+    @SerializedName("amount")
     private double expAmt;
+
+    @SerializedName("company_invoice_id")
+    private int expCompanyInvoiceId;
 
     public Expense(String expDate, int expProdId, String expProductName, int expCatId, String expCategoryName,
                    String expInvId, int expUnit,int expIsApproved, int expIsRecursive, double expAmt,
@@ -19,8 +62,8 @@ public class Expense {
         this.expCatId= expCatId;
         this.expInvId=expInvId;
         this.expUnit = expUnit;
-        this.expIsApproved=expIsApproved;
-        this.expIsRecursive=expIsRecursive;
+        this.expIsApproved=Boolean.valueOf(""+expIsApproved);
+        this.expIsRecursive=Boolean.valueOf(""+expIsRecursive);
         this.expAmt=expAmt;
         this.expCreateBy=expCreateBy;
         this.expCreatedAt=expCreatedAt;
@@ -78,11 +121,11 @@ public class Expense {
         return expInvId;
     }
 
-    public int getExpIsApproved() {
+    public boolean getExpIsApproved() {
         return expIsApproved;
     }
 
-    public int getExpIsRecursive() {
+    public boolean getExpIsRecursive() {
         return expIsRecursive;
     }
 
@@ -118,11 +161,11 @@ public class Expense {
         this.expInvId = expInvId;
     }
 
-    public void setExpIsApproved(int expIsApproved) {
+    public void setExpIsApproved(boolean expIsApproved) {
         this.expIsApproved = expIsApproved;
     }
 
-    public void setExpIsRecursive(int expIsRecursive) {
+    public void setExpIsRecursive(boolean expIsRecursive) {
         this.expIsRecursive = expIsRecursive;
     }
 

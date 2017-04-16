@@ -197,6 +197,13 @@ public class RetrofitApi {
         Call<ResponseBody> GetProducts(@Header("Authtoken") String auth);
 
         /*
+        * EXPENSE_HISTORY
+        */
+        @GET(ServerURLModel.EXPENSE_HISTORY)
+        Call<ResponseBody> GetExpenseHistory(@Header("Authtoken") String auth, @Query("from") String fromDate,@Query("to") String toDate);
+
+
+        /*
        * LOGOUT
        */
         @POST(ServerURLModel.LOGOUT)

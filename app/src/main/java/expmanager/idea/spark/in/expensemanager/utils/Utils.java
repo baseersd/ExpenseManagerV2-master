@@ -13,6 +13,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 
 /**
@@ -88,5 +90,54 @@ public class Utils {
 
     public static int getCurrentWeekofYear() {
         return Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
+    }
+
+    public static String getStartDateofCurrentWeek(){
+        Calendar c = Calendar.getInstance();
+
+        System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
+
+        // Set the calendar to monday of the current week
+        c.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+        c.setFirstDayOfWeek(Calendar.SUNDAY);
+        System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
+
+        // Print dates of the current week starting on Monday
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        String startDate = "", endDate = "";
+
+        c.add(Calendar.DATE, -6);
+        startDate = df.format(c.getTime());
+        c.add(Calendar.DATE, 6);
+        endDate = df.format(c.getTime());
+
+        System.out.println("Start Date = " + startDate);
+        System.out.println("End Date = " + endDate);
+
+        return startDate;
+    }
+
+    public static String getEndDateofCurrentWeek(){
+       Calendar c = GregorianCalendar.getInstance();
+
+        System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
+
+        // Set the calendar to monday of the current week
+        c.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+        c.setFirstDayOfWeek(Calendar.SUNDAY);
+        System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
+
+        // Print dates of the current week starting on Monday
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        String startDate = "", endDate = "";
+        c.add(Calendar.DATE, -6);
+        startDate = df.format(c.getTime());
+        c.add(Calendar.DATE, +6);
+        endDate = df.format(c.getTime());
+
+        System.out.println("Start Date = " + startDate);
+        System.out.println("End Date = " + endDate);
+
+        return endDate;
     }
 }

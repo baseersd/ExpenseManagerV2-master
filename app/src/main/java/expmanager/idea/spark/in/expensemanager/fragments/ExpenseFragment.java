@@ -1,6 +1,5 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -18,33 +17,21 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
-import org.json.JSONArray;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import expmanager.idea.spark.in.expensemanager.AdminActivity;
-import expmanager.idea.spark.in.expensemanager.LoginActivity;
-import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
-import expmanager.idea.spark.in.expensemanager.model.Category;
-import expmanager.idea.spark.in.expensemanager.model.CategoryItem;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseHistoryResponse;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
-import expmanager.idea.spark.in.expensemanager.model.LoginResponse;
-import expmanager.idea.spark.in.expensemanager.model.ProductListResponse;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
@@ -66,6 +53,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout main_layout;
     private DatabaseHandler myDbHelper;
     private TextView mEmptyTodayExpense, mEmptyWeekExpense;
+    private ExpenseHistoryResponse mExpenseHistoryTodaysResponse;
+    private ExpenseHistoryResponse mExpenseHistoryWeeklyResponse;
+    private RecyclerView mRecyclerViewToday;
+    private LinearLayoutManager mLayoutManager;
+    private RecyclerView mRecyclerViewWeek;
+    private LinearLayoutManager mLayoutManagerWeek;
+    private boolean isWeeklyExpense = false;
 
     int flag;
 
@@ -116,40 +110,64 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        RecyclerView recyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
+        mLayoutManager = new LinearLayoutManager(getActivity());
 
         mEmptyTodayExpense = (TextView) rootView.findViewById(R.id.tv_empty_list_today);
         mEmptyWeekExpense = (TextView) rootView.findViewById(R.id.tv_empty_list_week_expense);
 
-        RecyclerView recyclerViewWeek = (RecyclerView) rootView.findViewById(R.id.recycler_view_week);
-        LinearLayoutManager layoutManagerWeek = new LinearLayoutManager(getActivity());
+        mRecyclerViewWeek = (RecyclerView) rootView.findViewById(R.id.recycler_view_week);
+        mLayoutManagerWeek = new LinearLayoutManager(getActivity());
 
         // RecyclerView has some built in animations to it, using the DefaultItemAnimator.
         // Specifically when you call notifyItemChanged() it does a fade animation for the changing
         // of the data in the ViewHolder. If you would like to disable this you can use the following:
-        RecyclerView.ItemAnimator animator = recyclerViewToday.getItemAnimator();
+        RecyclerView.ItemAnimator animator = mRecyclerViewToday.getItemAnimator();
         if (animator instanceof DefaultItemAnimator) {
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
-        List<ExpenseGroup> todaysExpenseList = makeExpansesList();
-        adapter = new TodayExpenseAdapter(todaysExpenseList);
-        recyclerViewToday.setLayoutManager(layoutManager);
-        recyclerViewToday.setAdapter(adapter);
-        mEmptyTodayExpense.setVisibility(todaysExpenseList.size() == 0? View.VISIBLE : View.GONE);
+        initTodayExpenses();
 
-
-        List<ExpenseGroup> weeksExpenseList = makeWeekExpensesList(Utils.getCurrentWeekofYear());
-        weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
-        recyclerViewWeek.setLayoutManager(layoutManagerWeek);
-        recyclerViewWeek.setAdapter(weekAdapter);
-        mEmptyWeekExpense.setVisibility(weeksExpenseList.size() == 0? View.VISIBLE : View.GONE);
+        initCurrentWeekExpenses();
 
         return rootView;
     }
 
-//    private void drawableInitialasation(View rootView) {
+    private void initTodayExpenses(){
+        if(mExpenseHistoryTodaysResponse == null){
+            mEmptyTodayExpense.setVisibility(View.VISIBLE);
+            return;
+        }
+
+        List<ExpenseGroup> todaysExpenseList = makeExpenseList(mExpenseHistoryTodaysResponse.getExpenseHistoryList());
+        adapter = new TodayExpenseAdapter(todaysExpenseList);
+        mRecyclerViewToday.setLayoutManager(mLayoutManager);
+        mRecyclerViewToday.setAdapter(adapter);
+        mEmptyTodayExpense.setVisibility(View.GONE);
+    }
+
+    private void initCurrentWeekExpenses(){
+
+        if(mExpenseHistoryWeeklyResponse == null){
+            mEmptyWeekExpense.setVisibility(View.VISIBLE);
+            return;
+        }
+        List<ExpenseGroup> weeksExpenseList = makeExpenseList(mExpenseHistoryWeeklyResponse.getExpenseHistoryList());
+        weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
+        mRecyclerViewWeek.setLayoutManager(mLayoutManagerWeek);
+        mRecyclerViewWeek.setAdapter(weekAdapter);
+        mEmptyWeekExpense.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        String todaydate = Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_YYYY_MM_DD);
+        getExpenseHistoryForDates(todaydate, todaydate);
+    }
+
+    //    private void drawableInitialasation(View rootView) {
 //
 //
 //        TextView textView = (TextView) rootView.findViewById(R.id.doller_img);
@@ -188,6 +206,16 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
             myDbHelper.closeConnection();
         }
         return expenseList;
+    }
+
+    private List<ExpenseGroup> makeExpenseList(List<ExpenseSyncRequest> expensesList){
+        List<ExpenseGroup> expenseGroupList = new ArrayList<>();
+
+        for(ExpenseSyncRequest expenseObj: expensesList){
+            ExpenseGroup expenseGroup = makeExpenseGroup(expenseObj);
+            expenseGroupList.add(expenseGroup);
+        }
+        return expenseGroupList;
     }
     private List<ExpenseGroup> makeExpansesList() {
 
@@ -236,6 +264,11 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         return expenseGroupList;
     }
 
+    public ExpenseGroup makeExpenseGroup(ExpenseSyncRequest expenseObj){
+        List<Expense> expenseList = expenseObj.getExpenseList();
+        return new ExpenseGroup(expenseObj.getInvoice().getInvDesc(),makeExpenseItems(expenseList),
+                ""+expenseList.size()+"item(s)","$"+expenseObj.getInvoice().getInvAmt());
+    }
     public ExpenseGroup makeExpanseGroup() {
         return new ExpenseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
     }
@@ -276,5 +309,40 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
             InvoiceEntryFragment fragmentorg = new InvoiceEntryFragment();
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
         }
+    }
+
+    private void getExpenseHistoryForDates(final String from, final String to){
+        SessionManager sessionManager = new SessionManager(getActivity());
+        isWeeklyExpense = !from.equals(to);
+
+        RetrofitApi.getApi().GetExpenseHistory(sessionManager.getAuthToken(), from,to).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(),response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        String jsonString = "{\"expenseHistoryList\" :"+response.body().string()+"}";
+                        if(isWeeklyExpense){
+                            mExpenseHistoryWeeklyResponse = gson.fromJson(jsonString, ExpenseHistoryResponse.class);
+                            Log.d(getClass().getName(),mExpenseHistoryWeeklyResponse.toString());
+                            initCurrentWeekExpenses();
+                        }else{
+                            mExpenseHistoryTodaysResponse = gson.fromJson(jsonString, ExpenseHistoryResponse.class);
+                            Log.d(getClass().getName(),mExpenseHistoryTodaysResponse.toString());
+                            initTodayExpenses();
+                            getExpenseHistoryForDates(Utils.getStartDateofCurrentWeek(),Utils.getEndDateofCurrentWeek());
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

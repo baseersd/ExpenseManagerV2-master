@@ -15,6 +15,7 @@ import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.model.Item;
+import expmanager.idea.spark.in.expensemanager.network.ServerURLModel;
 
 /**
  * Created by Baseer on 4/6/2017.
@@ -49,7 +50,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mTextView.setText(mItemList.get(position).getItemName());
         Picasso.with(mContext)
-                .load(mItemList.get(position).getItemURL())
+                .load(ServerURLModel.DOMAIN_URL+mItemList.get(position).getItemURL())
                 .placeholder(R.mipmap.ic_launcher)
                 .into(holder.mImageView);
         holder.bind(mItemList.get(position),mCallback, position);
