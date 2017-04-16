@@ -1,14 +1,13 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
 import android.app.DatePickerDialog;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -16,12 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.Calendar;
+import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.model.CreateOrganisationResponse;
+import expmanager.idea.spark.in.expensemanager.adapters.ReportsAdapter;
+import expmanager.idea.spark.in.expensemanager.model.ReportResponse;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.NetworkUtils;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
@@ -58,6 +60,9 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
         imgRefresh = (ImageView) rootView.findViewById(R.id.img_refresh);
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_reports);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+
+        mRecyclerView.setLayoutManager(layoutManager);
 
         imgCalendarFrom.setOnClickListener(this);
         imgCalendarTo.setOnClickListener(this);
@@ -136,18 +141,14 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
                     Toast.makeText(getActivity(), response.body().toString(), Toast.LENGTH_SHORT).show();
 
 
-//                    Gson gson = new Gson();
-//                    try {
-//                        CreateOrganisationResponse createOrganisationResponse = gson.fromJson(response.body().string(), CreateOrganisationResponse.class);
-////                                    SessionManager sessionManager = new SessionManager(getActivity());
-////                                    sessionManager.createLoginSession(loginResponse.getToken());
-//
-//                        TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
-//                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
-//
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
+                    Gson gson = new Gson();
+                    String jsonArray = response.body().toString();
+                    Type listType = new TypeToken<List<ReportResponse>>(){}.getType();
+                    List<ReportResponse> myModelList = gson.fromJson(jsonArray, listType);
+
+                    ReportsAdapter reportsAdapter = new ReportsAdapter(getActivity(),myModelList);
+                    mRecyclerView.setAdapter(reportsAdapter);
+
 
                 } else {
 
