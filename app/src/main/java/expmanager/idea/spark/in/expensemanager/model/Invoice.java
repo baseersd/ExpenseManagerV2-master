@@ -1,11 +1,44 @@
 package expmanager.idea.spark.in.expensemanager.model;
 
 
+import com.google.gson.annotations.SerializedName;
 
-public class Invoice {
-    private String invNo, date, description, bill_number, invImgPath, payment_mode, invCreatedAt;
+import java.io.Serializable;
+
+public class Invoice implements Serializable{
+
+    @SerializedName("id")
+    private String invNo;
+
+    @SerializedName("date")
+    private String date;
+
+    @SerializedName("description")
+    private String description;
+
+    @SerializedName("bill_number")
+    private String bill_number;
+
+    @SerializedName("image_path")
+    private String invImgPath;
+
+    @SerializedName("payment_mode")
+    private String payment_mode;
+
+    @SerializedName("created_at")
+    private String invCreatedAt;
+
+    @SerializedName("created_by")
     private int invCreateBy;
-    private double amount, discount;
+
+    @SerializedName("amount")
+    private double amount;
+
+    @SerializedName("discount")
+    private double  discount;
+
+    @SerializedName("is_approved")
+    private boolean expIsApproved;
 
     public void setInvAmt(double invAmt) {
         this.amount = invAmt;
@@ -75,4 +108,12 @@ public class Invoice {
         this.bill_number = invBillNumber;
     }
 
+
+    public boolean isExpIsApproved() {
+        return expIsApproved;
+    }
+
+    public void setExpIsApproved(boolean expIsApproved) {
+        this.expIsApproved = expIsApproved;
+    }
 }

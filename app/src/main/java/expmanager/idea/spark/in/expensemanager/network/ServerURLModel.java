@@ -6,7 +6,7 @@ package expmanager.idea.spark.in.expensemanager.network;
 
 public class ServerURLModel {
 
-
+    public static final String DOMAIN_URL = "https://expensemanagerapi.herokuapp.com";
     public static final String SERVER_BASE_IP = "https://expensemanagerapi.herokuapp.com/api/v1/";
 
     public static final String USER_SIGN_UP = "users/signup";
@@ -26,6 +26,7 @@ public class ServerURLModel {
     public static final String GET_SALE = "get_sales";
     public static final String CREATE_INVOICE = "create_invoice";
     public static final String GET_PRODUCTS = "get_products";
+    public static final String EXPENSE_HISTORY = "expense_history";
 
     public static final String ADD_STAFF = "add_staff";
 //    public static final String UPDATE_SALE = "update_sale";

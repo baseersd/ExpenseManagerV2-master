@@ -1,14 +1,20 @@
 package expmanager.idea.spark.in.expensemanager.model;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Baseer on 4/5/2017.
  */
 
-public class ExpenseSyncRequest {
+public class ExpenseSyncRequest implements Serializable{
 
+    @SerializedName("invoice")
     private Invoice invoice;
+
+    @SerializedName("expenses")
     private List<Expense> expenses;
 
     public ExpenseSyncRequest(Invoice invoice, List<Expense> expenseList){
