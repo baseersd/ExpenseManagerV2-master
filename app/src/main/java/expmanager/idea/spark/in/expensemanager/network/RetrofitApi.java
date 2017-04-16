@@ -155,7 +155,7 @@ public class RetrofitApi {
         * GET_REPORTS
         */
         @GET(ServerURLModel.GET_REPORTS)
-        Call<ResponseBody> GetReports(@Header("Authtoken") String auth,@Query("from") String fromDate,@Query("to") String toDate);
+        Call<ResponseBody> GetReports(@Header("Authtoken") String auth,@Query("from") String fromDate,@Query("to") String toDate,@Query("category_id") String categoryId);
 
 
         /*
