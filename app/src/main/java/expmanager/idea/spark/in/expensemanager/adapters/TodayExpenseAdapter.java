@@ -1,5 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,15 +22,20 @@ import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
 
 public class TodayExpenseAdapter extends ExpandableRecyclerViewAdapter<ExpenseTitleViewHolder, ExpenseChildViewHolder> {
 
-    public TodayExpenseAdapter(List<? extends ExpandableGroup> groups) {
+    private Context mContext;
+    private ExpenseTitleViewHolder.OnApprovePress mCallback;
+    public TodayExpenseAdapter(Context context, List<? extends ExpandableGroup> groups, ExpenseTitleViewHolder.OnApprovePress callback) {
         super(groups);
+        this.mContext = context;
+        this.mCallback = callback;
+
     }
 
     @Override
     public ExpenseTitleViewHolder onCreateGroupViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.expense_group, parent, false);
-        return new ExpenseTitleViewHolder(view);
+        return new ExpenseTitleViewHolder(view, mCallback);
     }
 
     @Override
@@ -43,16 +49,16 @@ public class TodayExpenseAdapter extends ExpandableRecyclerViewAdapter<ExpenseTi
     public void onBindChildViewHolder(ExpenseChildViewHolder holder, int flatPosition,
                                       ExpandableGroup group, int childIndex) {
 
-        final ExpenseItem artist = ((ExpenseItem) group.getItems().get(childIndex));
-        holder.setDetails(artist.getName(),artist.getQuantity(),artist.getCost());
+        final ExpenseItem expenseItem = ((ExpenseItem) group.getItems().get(childIndex));
+        holder.setDetails(mContext,expenseItem.getName(),expenseItem.getQuantity(),expenseItem.getCost(),expenseItem.isApproved());
     }
 
     @Override
     public void onBindGroupViewHolder(ExpenseTitleViewHolder holder, int flatPosition,
                                       ExpandableGroup group) {
 
-        ExpenseGroup expanseGroup = (ExpenseGroup) group;
+        ExpenseGroup expenseGroup = (ExpenseGroup) group;
 
-        holder.setDetails(group.getTitle(),expanseGroup.getCount(),expanseGroup.getTotalCost());
+        holder.setDetails(mContext, expenseGroup,expenseGroup.getTitle(),expenseGroup.getCount(),expenseGroup.getTotalCost(), expenseGroup.isApproved());
     }
 }

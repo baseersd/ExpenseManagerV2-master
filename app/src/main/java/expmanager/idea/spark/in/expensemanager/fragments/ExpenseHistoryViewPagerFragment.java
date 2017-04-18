@@ -80,7 +80,7 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
-        adapter = new TodayExpenseAdapter(makeExpansesList());
+        adapter = new TodayExpenseAdapter(getContext(),makeExpansesList(),null);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
@@ -90,9 +90,9 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
     }
 
     public static List<ExpenseItem> makeExpanseItems() {
-        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt","$10.00");
-        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg","$20.00");
-        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg","$10.00");
+        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt","$10.00",true);
+        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg","$20.00",true);
+        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg","$10.00",true);
 
 
         return Arrays.asList(item1, item2, item3);
@@ -103,6 +103,6 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
                 makeExpanseGroup());
     }
     public static ExpenseGroup makeExpanseGroup() {
-        return new ExpenseGroup("Grocery Today",makeExpanseItems(),"3 items","$40.00");
+        return new ExpenseGroup(null, "Grocery Today",makeExpanseItems(),"3 items","$40.00",false);
     }
 }

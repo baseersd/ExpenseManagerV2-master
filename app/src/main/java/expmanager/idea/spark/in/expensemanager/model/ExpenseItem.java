@@ -12,6 +12,7 @@ public class ExpenseItem implements Parcelable {
     private String name;
     private String quantity;
     private String cost;
+    private boolean isApproved;
 
     public String getName() {
         return name;
@@ -37,10 +38,11 @@ public class ExpenseItem implements Parcelable {
         this.cost = cost;
     }
 
-    public ExpenseItem(String name,String quantity,String cost) {
+    public ExpenseItem(String name,String quantity,String cost, boolean isApproved) {
         this.name = name;
         this.quantity = quantity;
         this.cost = cost;
+        this.isApproved = isApproved;
     }
 
     protected ExpenseItem(Parcel in) {
@@ -72,4 +74,13 @@ public class ExpenseItem implements Parcelable {
             return new ExpenseItem[size];
         }
     };
+
+
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setApproved(boolean approved) {
+        isApproved = approved;
+    }
 }

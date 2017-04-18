@@ -258,7 +258,7 @@ public class UsePinActivity extends AppCompatActivity implements View.OnClickLis
                             LoginResponse loginResponse = gson.fromJson(response.body().string(), LoginResponse.class);
 
                             sessionManager.createLoginSession(loginResponse.getToken(),loginResponse.getUser().getUsername(),
-                                    loginResponse.getUser().getEmail(),loginResponse.getUser().getCompany_id());
+                                    loginResponse.getUser().getEmail(),loginResponse.getUser().getCompany_id(),loginResponse.getUser().is_admin());
 
                             if((loginResponse.getUser().getCompany_id()!=null)&&(!loginResponse.getUser().getCompany_id().isEmpty())) {
 

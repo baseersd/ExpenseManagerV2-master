@@ -85,7 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                                     LoginResponse loginResponse = gson.fromJson(response.body().string(), LoginResponse.class);
                                     SessionManager sessionManager = new SessionManager(LoginActivity.this);
                                     sessionManager.createLoginSession(loginResponse.getToken(),loginResponse.getUser().getUsername(),
-                                                                  loginResponse.getUser().getEmail(),loginResponse.getUser().getCompany_id());
+                                                                  loginResponse.getUser().getEmail(),loginResponse.getUser().getCompany_id(),
+                                                                    loginResponse.getUser().is_admin());
 
                                     if((loginResponse.getUser().getCompany_id()!=null)&&(!loginResponse.getUser().getCompany_id().isEmpty())) {
 

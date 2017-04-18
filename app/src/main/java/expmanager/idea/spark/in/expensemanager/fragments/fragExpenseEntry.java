@@ -9,11 +9,13 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -36,7 +38,10 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -494,8 +499,13 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         }finally {
             myDbHelper.closeConnection();
         }
-        ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
         SessionManager sessionManager = new SessionManager(getContext());
+
+        invoice.setCompany_id(Integer.valueOf(sessionManager.getCompanyId()));
+        invoice.setExpIsApproved(sessionManager.isApproved());
+        //invoice.setInvImgPath(getBase64ImageString(invoice.getInvImgPath()));
+        ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
+
         RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -512,6 +522,21 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 onInvoiceCreateFailure();
             }
         });
+    }
+
+    private String getBase64ImageString(String filepath){
+        String base64Image = null;
+        Bitmap bitmap = null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), Uri.parse(filepath));
+            ByteArrayOutputStream bao = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);
+            byte[] ba = bao.toByteArray();
+            base64Image = Base64.encodeToString(ba, Base64.DEFAULT);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return base64Image;
     }
     private void addExpenseToList(){
         if (autoCatId.getText().toString().length() > 0 /*&& expUnit.getText().length() > 0

@@ -25,11 +25,11 @@ public class Expense {
     @SerializedName("created_at")
     private String expCreatedAt;
 
-    @SerializedName("is_approved")
+/*    @SerializedName("is_approved")
     private boolean expIsApproved;
 
     @SerializedName("is_recurssive")
-    private boolean expIsRecursive;
+    private boolean expIsRecursive;*/
 
     @SerializedName("created_by")
     private int expCreateBy;
@@ -49,6 +49,9 @@ public class Expense {
     @SerializedName("amount")
     private double expAmt;
 
+    @SerializedName("company_id")
+    private int company_id;
+
     @SerializedName("company_invoice_id")
     private int expCompanyInvoiceId;
 
@@ -62,8 +65,8 @@ public class Expense {
         this.expCatId= expCatId;
         this.expInvId=expInvId;
         this.expUnit = expUnit;
-        this.expIsApproved=Boolean.valueOf(""+expIsApproved);
-        this.expIsRecursive=Boolean.valueOf(""+expIsRecursive);
+        /*this.expIsApproved=Boolean.valueOf(""+expIsApproved);
+        this.expIsRecursive=Boolean.valueOf(""+expIsRecursive);*/
         this.expAmt=expAmt;
         this.expCreateBy=expCreateBy;
         this.expCreatedAt=expCreatedAt;
@@ -121,13 +124,13 @@ public class Expense {
         return expInvId;
     }
 
-    public boolean getExpIsApproved() {
+/*    public boolean getExpIsApproved() {
         return expIsApproved;
     }
 
     public boolean getExpIsRecursive() {
         return expIsRecursive;
-    }
+    }*/
 
     public int getIsSaved() {
         return isSaved;
@@ -161,13 +164,13 @@ public class Expense {
         this.expInvId = expInvId;
     }
 
-    public void setExpIsApproved(boolean expIsApproved) {
+/*    public void setExpIsApproved(boolean expIsApproved) {
         this.expIsApproved = expIsApproved;
     }
 
     public void setExpIsRecursive(boolean expIsRecursive) {
         this.expIsRecursive = expIsRecursive;
-    }
+    }*/
 
     public void setExpCreateBy(int expCreateBy) {
         this.expCreateBy = expCreateBy;
@@ -193,4 +196,11 @@ public class Expense {
         this.expAmt = expAmt;
     }
 
+    public int getCompany_id() {
+        return company_id;
+    }
+
+    public void setCompany_id(int company_id) {
+        this.company_id = company_id;
+    }
 }

@@ -40,6 +40,12 @@ public class Invoice implements Serializable{
     @SerializedName("is_approved")
     private boolean expIsApproved;
 
+    @SerializedName("is_tangible")
+    private boolean expIsTangible;
+
+    @SerializedName("company_id")
+    private int company_id;
+
     public void setInvAmt(double invAmt) {
         this.amount = invAmt;
     }
@@ -80,6 +86,10 @@ public class Invoice implements Serializable{
         return invImgPath;
     }
 
+    public void setInvImgPath(String imgPath){
+        this.invImgPath = imgPath;
+    }
+
     public String getInvPayMode() {
         return payment_mode;
     }
@@ -116,4 +126,20 @@ public class Invoice implements Serializable{
     public void setExpIsApproved(boolean expIsApproved) {
         this.expIsApproved = expIsApproved;
     }
+    public boolean isExpIsTangible() {
+        return expIsTangible;
+    }
+
+    public void setExpIsTangible(boolean expIsTangible) {
+        this.expIsTangible = expIsTangible;
+    }
+
+    public int getCompany_id() {
+        return company_id;
+    }
+
+    public void setCompany_id(int company_id) {
+        this.company_id = company_id;
+    }
+
 }
