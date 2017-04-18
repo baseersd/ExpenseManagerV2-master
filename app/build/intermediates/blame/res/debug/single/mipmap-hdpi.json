@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
-        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
-        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

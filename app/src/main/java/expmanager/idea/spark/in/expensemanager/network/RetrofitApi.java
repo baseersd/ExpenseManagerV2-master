@@ -8,6 +8,7 @@ import expmanager.idea.spark.in.expensemanager.model.CreateOrganisationRequest;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.ForgotPassword;
 import expmanager.idea.spark.in.expensemanager.model.LoginRequest;
+import expmanager.idea.spark.in.expensemanager.model.LoginRequestUsePin;
 import expmanager.idea.spark.in.expensemanager.model.SignUpRequest;
 import expmanager.idea.spark.in.expensemanager.model.UpdateTangibleExpense;
 import okhttp3.OkHttpClient;
@@ -69,6 +70,12 @@ public class RetrofitApi {
          */
         @POST(ServerURLModel.USER_LOGIN)
         Call<ResponseBody> loginExpenseManager(@Body LoginRequest requestModel);
+
+        /*
+       * USE_PIN
+       */
+        @POST(ServerURLModel.USER_LOGIN)
+        Call<ResponseBody> loginExpenseManagerUsingPin(@Body LoginRequestUsePin loginRequestUsePin);
 
          /*
          * USER_SIGN_UP

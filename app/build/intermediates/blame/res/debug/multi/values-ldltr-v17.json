@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v17/values-ldltr-v17.xml",
+        "outputFile": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v17\\values-ldltr-v17.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 110
                 },
                 "from": {
-                    "file": "/Users/RamanaRedddy/.android/build-cache/3e6be819385afa731d99ef072820728fb6ef82f5/output/res/values-ldltr-v17/values-ldltr-v17.xml",
+                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\values-ldltr-v17\\values-ldltr-v17.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "outputFile": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v17\\values-ldltr-v17.xml",
+        "outputFile": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v17\\values-ldltr-v17.xml",
         "map": [
             {
                 "to": {
@@ -35,7 +35,31 @@
                     "endOffset": 110
                 },
                 "from": {
-                    "file": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-ldltr-v17\\values-ldltr-v17.xml",
+                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-ldltr-v17\\values-ldltr-v17.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 59,
+                        "endOffset": 110
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v17\\values-ldltr-v17.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 59,
+                    "endOffset": 110
+                },
+                "from": {
+                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-ldltr-v17\\values-ldltr-v17.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

@@ -8,9 +8,29 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import expmanager.idea.spark.in.expensemanager.model.LoginRequest;
+import expmanager.idea.spark.in.expensemanager.model.LoginRequestUsePin;
+import expmanager.idea.spark.in.expensemanager.model.LoginResponse;
+import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.CustomFonts;
+import expmanager.idea.spark.in.expensemanager.utils.NetworkUtils;
+import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
+import expmanager.idea.spark.in.expensemanager.utils.Utils;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Ramana.Reddy on 2/22/2017.
@@ -23,6 +43,7 @@ public class UsePinActivity extends AppCompatActivity implements View.OnClickLis
     private Button signUp;
     private Button usePassword;
     private Button forgotPin;
+    private ProgressBar progressBar;
 
 
     @Override
@@ -34,6 +55,7 @@ public class UsePinActivity extends AppCompatActivity implements View.OnClickLis
         tvPin = (CustomFonts) findViewById(R.id.tv_enter_pin);
         usePassword = (Button) findViewById(R.id.use_password);
         forgotPin = (Button) findViewById(R.id.forgot_pin);
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         KeyboardInitUI();
 
@@ -187,6 +209,8 @@ public class UsePinActivity extends AppCompatActivity implements View.OnClickLis
 //                    finish();
 //                }
 
+                serviceCallForLogin();
+
                 break;
 
             case R.id.btn_clear :
@@ -199,5 +223,93 @@ public class UsePinActivity extends AppCompatActivity implements View.OnClickLis
             default :
 
         }
+    }
+
+    private void serviceCallForLogin() {
+
+        if (!NetworkUtils.getInstance().isNetworkAvailable(UsePinActivity.this)) {
+
+            Toast.makeText(UsePinActivity.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        final SessionManager sessionManager = new SessionManager(UsePinActivity.this);
+        String email = sessionManager.getEmailId();
+
+        if (email.isEmpty()) {
+
+            Toast.makeText(UsePinActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if ((!email.isEmpty()) && (!tvPin.getText().toString().isEmpty())) {
+            Utils.hideKeyboard(UsePinActivity.this);
+            progressBar.setVisibility(View.VISIBLE);
+            LoginRequestUsePin loginRequest = new LoginRequestUsePin(email, tvPin.getText().toString(), Utils.getDeviceId(UsePinActivity.this));
+            RetrofitApi.getApi().loginExpenseManagerUsingPin(loginRequest).enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                    progressBar.setVisibility(View.GONE);
+
+                    if (response.isSuccessful()) {
+
+                        Gson gson = new Gson();
+                        try {
+                            LoginResponse loginResponse = gson.fromJson(response.body().string(), LoginResponse.class);
+
+                            sessionManager.createLoginSession(loginResponse.getToken(),loginResponse.getUser().getUsername(),
+                                    loginResponse.getUser().getEmail(),loginResponse.getUser().getCompany_id());
+
+                            if((loginResponse.getUser().getCompany_id()!=null)&&(!loginResponse.getUser().getCompany_id().isEmpty())) {
+
+                                Intent intent = new Intent(UsePinActivity.this, AdminActivity.class);
+                                startActivity(intent);
+
+                            }else {
+
+                                Intent i = new Intent(UsePinActivity.this, MainActivity.class);
+                                startActivity(i);
+
+                            }
+
+                            finish();
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+                    } else {
+
+                        try {
+                            String errorBody = response.errorBody().string();
+                            JSONObject jsonObject = new JSONObject(errorBody);
+                            Toast.makeText(UsePinActivity.this, jsonObject.optString("message"), Toast.LENGTH_SHORT).show();
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+                    progressBar.setVisibility(View.GONE);
+
+                    Toast.makeText(UsePinActivity.this, "Oops something went wrong", Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+        } else {
+
+            Toast.makeText(UsePinActivity.this, "Enter all the fields", Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 }
