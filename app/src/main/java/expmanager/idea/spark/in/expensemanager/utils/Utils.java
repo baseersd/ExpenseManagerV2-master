@@ -98,15 +98,14 @@ public class Utils {
         System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
 
         // Set the calendar to monday of the current week
-        c.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-        c.setFirstDayOfWeek(Calendar.SUNDAY);
+        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        c.setFirstDayOfWeek(Calendar.MONDAY);
         System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
 
         // Print dates of the current week starting on Monday
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String startDate = "", endDate = "";
 
-        c.add(Calendar.DATE, -6);
         startDate = df.format(c.getTime());
         c.add(Calendar.DATE, 6);
         endDate = df.format(c.getTime());
@@ -123,14 +122,13 @@ public class Utils {
         System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
 
         // Set the calendar to monday of the current week
-        c.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-        c.setFirstDayOfWeek(Calendar.SUNDAY);
+        c.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        c.setFirstDayOfWeek(Calendar.MONDAY);
         System.out.println("Current week = " + Calendar.DAY_OF_WEEK);
 
         // Print dates of the current week starting on Monday
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         String startDate = "", endDate = "";
-        c.add(Calendar.DATE, -6);
         startDate = df.format(c.getTime());
         c.add(Calendar.DATE, +6);
         endDate = df.format(c.getTime());

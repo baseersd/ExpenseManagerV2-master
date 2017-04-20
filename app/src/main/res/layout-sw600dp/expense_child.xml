@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_expense_child"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="5dp"
+    android:weightSum="6"
     android:background="@color/blue">
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
         android:id="@+id/name"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/margin_medium"
         android:paddingTop="@dimen/margin_small"
         android:paddingBottom="@dimen/margin_small"
-        android:layout_weight="0.7"
+        android:layout_weight="2"
         android:textStyle="bold"
         android:textColor="@color/editTextBackgroundWhite"
         android:textSize="20dp" />
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
         android:id="@+id/quantity"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="@color/editTextBackgroundWhite"
@@ -28,14 +30,21 @@
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
         android:id="@+id/cost"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="@color/editTextBackgroundWhite"
         android:textSize="18dp" />
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/editTextBackgroundWhite"
+        android:textSize="18dp" />
+
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="@color/editTextBackgroundWhite"

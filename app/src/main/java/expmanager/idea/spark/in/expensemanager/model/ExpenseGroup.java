@@ -13,11 +13,15 @@ public class ExpenseGroup extends ExpandableGroup<ExpenseItem> {
     private String name;
     private String count;
     private String totalCost;
+    private boolean isApproved;
+    private ExpenseSyncRequest mExpObj;
 
-    public ExpenseGroup(String title, List<ExpenseItem> items, String count,String totalCost) {
+    public ExpenseGroup(ExpenseSyncRequest expenseObj, String title, List<ExpenseItem> items, String count,String totalCost, boolean isApproved) {
         super(title, items);
         this.count = count;
         this.totalCost = totalCost;
+        this.isApproved = isApproved;
+        mExpObj = expenseObj;
 
     }
 
@@ -45,6 +49,21 @@ public class ExpenseGroup extends ExpandableGroup<ExpenseItem> {
         this.totalCost = totalCost;
     }
 
+    public boolean isApproved() {
+        return isApproved;
+    }
+
+    public void setApproved(boolean approved) {
+        isApproved = approved;
+    }
+
+    public ExpenseSyncRequest getExpObj() {
+        return mExpObj;
+    }
+
+    public void setExpObj(ExpenseSyncRequest mExpObj) {
+        this.mExpObj = mExpObj;
+    }
     //    @Override
 //    public boolean equals(Object o) {
 //        if (this == o) return true;

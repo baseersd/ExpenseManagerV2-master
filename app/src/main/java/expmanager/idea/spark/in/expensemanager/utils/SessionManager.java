@@ -40,6 +40,8 @@ public class SessionManager {
 
     public static final String KEY_TOKEN = "token";
 
+    public static final String KEY_IS_ADMIN = "isAdmin";
+
     // Constructor
     public SessionManager(Context context){
         this._context = context;
@@ -50,7 +52,7 @@ public class SessionManager {
     /**
      * Create login session
      * */
-    public void createLoginSession(String token,String name,String email,String companyId){
+    public void createLoginSession(String token,String name,String email,String companyId, boolean isAdmin){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -65,6 +67,9 @@ public class SessionManager {
 
         // Storing name in pref
         editor.putString(KEY_COMPANY_ID, companyId);
+
+        //Store Type of User
+        editor.putBoolean(KEY_IS_ADMIN, isAdmin);
         // commit changes
         editor.commit();
     }
@@ -144,6 +149,10 @@ public class SessionManager {
 
     public String getCompanyId(){
         return pref.getString(KEY_COMPANY_ID, "");
+    }
+
+    public boolean isApproved(){
+        return pref.getBoolean(KEY_IS_ADMIN,false);
     }
 
 }

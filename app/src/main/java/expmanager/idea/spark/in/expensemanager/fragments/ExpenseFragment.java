@@ -33,6 +33,7 @@ import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
+import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 import okhttp3.ResponseBody;
@@ -44,7 +45,7 @@ import retrofit2.Response;
  * Created by Ramana.Reddy on 2/24/2017.
  */
 
-public class ExpenseFragment extends Fragment implements View.OnClickListener {
+public class ExpenseFragment extends Fragment implements View.OnClickListener, ExpenseTitleViewHolder.OnApprovePress {
 
     public TodayExpenseAdapter adapter;
     public TodayExpenseAdapter weekAdapter;
@@ -135,13 +136,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initTodayExpenses(){
-        if(mExpenseHistoryTodaysResponse == null){
+        if(mExpenseHistoryTodaysResponse == null || mExpenseHistoryTodaysResponse.getExpenseHistoryList().size() == 0){
             mEmptyTodayExpense.setVisibility(View.VISIBLE);
             return;
         }
 
         List<ExpenseGroup> todaysExpenseList = makeExpenseList(mExpenseHistoryTodaysResponse.getExpenseHistoryList());
-        adapter = new TodayExpenseAdapter(todaysExpenseList);
+        adapter = new TodayExpenseAdapter(getContext(),todaysExpenseList,ExpenseFragment.this);
         mRecyclerViewToday.setLayoutManager(mLayoutManager);
         mRecyclerViewToday.setAdapter(adapter);
         mEmptyTodayExpense.setVisibility(View.GONE);
@@ -149,12 +150,12 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 
     private void initCurrentWeekExpenses(){
 
-        if(mExpenseHistoryWeeklyResponse == null){
+        if(mExpenseHistoryWeeklyResponse == null || mExpenseHistoryWeeklyResponse.getExpenseHistoryList().size() == 0){
             mEmptyWeekExpense.setVisibility(View.VISIBLE);
             return;
         }
         List<ExpenseGroup> weeksExpenseList = makeExpenseList(mExpenseHistoryWeeklyResponse.getExpenseHistoryList());
-        weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
+        weekAdapter = new TodayExpenseAdapter(getContext(),weeksExpenseList,ExpenseFragment.this);
         mRecyclerViewWeek.setLayoutManager(mLayoutManagerWeek);
         mRecyclerViewWeek.setAdapter(weekAdapter);
         mEmptyWeekExpense.setVisibility(View.GONE);
@@ -175,21 +176,12 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
 //       textView.setTypeface(FontManager.getTypeface(getActivity(),FontManager.FONTAWESOME));
 //    }
 
-    public List<ExpenseItem> makeExpanseItems() {
-        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt", "$10.00");
-        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg", "$20.00");
-        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg", "$10.00");
-
-        getExpenseListforDate(Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));
-        return Arrays.asList(item1, item2, item3);
-    }
-
-    public List<ExpenseItem> makeExpenseItems(List<Expense> expensesList){
+    public List<ExpenseItem> makeExpenseItems(List<Expense> expensesList, boolean isExpenseApproved){
         List<ExpenseItem> expenseList = new ArrayList<>();
         for(Expense expense : expensesList){
             String productCost = getString(R.string.currencysymbol) + expense.getExpAmt();
             ExpenseItem expenseItem = new ExpenseItem(expense.getExpProductName(),
-                    String.valueOf(expense.getExpUnit()),productCost);
+                    String.valueOf(expense.getExpUnit()),productCost, isExpenseApproved);
             expenseList.add(expenseItem);
         }
         return expenseList;
@@ -217,81 +209,11 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
         }
         return expenseGroupList;
     }
-    private List<ExpenseGroup> makeExpansesList() {
-
-        List<ExpenseGroup> expenseGroupList = new ArrayList<>();
-        myDbHelper.openConnection();
-        List<Invoice> invoicesListForToday = null;
-        try {
-            /*categoriesForToday = myDbHelper.getExpenseNameforDate(
-                    Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));*/
-            invoicesListForToday = myDbHelper.getAllInvoicesForToday();
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }finally {
-            myDbHelper.closeConnection();
-        }
-
-        for(Invoice invoice: invoicesListForToday){
-            ExpenseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
-                    invoice.getInvBillNumber(), invoice.getInvAmt());
-            expenseGroupList.add(expenseGroup);
-        }
-
-        return expenseGroupList;
-    }
-
-    private List<ExpenseGroup> makeWeekExpensesList(int weekIndex){
-        List<ExpenseGroup> expenseGroupList = new ArrayList<>();
-        myDbHelper.openConnection();
-        List<Invoice> invoicesListForWeek = null;
-        try {
-            /*categoriesForToday = myDbHelper.getExpenseNameforDate(
-                    Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_DD_MM_YYYY));*/
-            invoicesListForWeek = myDbHelper.getAllInvoicesForWeek(weekIndex);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }finally {
-            myDbHelper.closeConnection();
-        }
-
-        for(Invoice invoice: invoicesListForWeek){
-            ExpenseGroup expenseGroup = makeExpenseGroup(invoice.getInvDesc(),
-                    invoice.getInvBillNumber(), invoice.getInvAmt());
-            expenseGroupList.add(expenseGroup);
-        }
-
-        return expenseGroupList;
-    }
 
     public ExpenseGroup makeExpenseGroup(ExpenseSyncRequest expenseObj){
         List<Expense> expenseList = expenseObj.getExpenseList();
-        return new ExpenseGroup(expenseObj.getInvoice().getInvDesc(),makeExpenseItems(expenseList),
-                ""+expenseList.size()+"item(s)","$"+expenseObj.getInvoice().getInvAmt());
-    }
-    public ExpenseGroup makeExpanseGroup() {
-        return new ExpenseGroup("Grocery Today", makeExpanseItems(), "3 items", "$40.00");
-    }
-
-    public ExpenseGroup makeExpenseGroup(String expenseName, String invoiceId, double invoiceAmount){
-
-        StringBuilder expenseCost = new StringBuilder();
-        expenseCost.append(getString(R.string.currencysymbol));
-        expenseCost.append(invoiceAmount);
-        myDbHelper.openConnection();
-        List<Expense> expenseProduct = null;
-        try {
-            expenseProduct = myDbHelper.getExpensesforToday(invoiceId);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }finally {
-            myDbHelper.closeConnection();
-        }
-
-        StringBuilder itemsString = new StringBuilder();
-        itemsString.append(expenseProduct.size());
-        itemsString.append(" item(s)");
-        return new ExpenseGroup(expenseName, makeExpenseItems(expenseProduct), itemsString.toString(), expenseCost.toString());
+        return new ExpenseGroup(expenseObj,expenseObj.getInvoice().getInvDesc(),makeExpenseItems(expenseList,expenseObj.getInvoice().isExpIsApproved()),
+                ""+expenseList.size()+"item(s)","$"+expenseObj.getInvoice().getInvAmt(),expenseObj.getInvoice().isExpIsApproved());
     }
 
     @Override
@@ -344,5 +266,36 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onApproveBtnClick(ExpenseSyncRequest expenseObject) {
+        Toast.makeText(getContext(),"Approved button Clicked",Toast.LENGTH_SHORT).show();
+        expenseObject.getInvoice().setExpIsApproved(true);
+        updateInvoiceService(expenseObject);
+    }
+
+    public void updateInvoiceService(ExpenseSyncRequest expenseSyncRequest){
+        SessionManager sessionManager = new SessionManager(getContext());
+
+        RetrofitApi.getApi().UpdateInvoice(sessionManager.getAuthToken(),expenseSyncRequest).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    Toast.makeText(getContext(),"Expense Updated",Toast.LENGTH_SHORT).show();
+                    String todaydate = Utils.getDateTimeforFormat(AppConstants.DATE_FORMAT_YYYY_MM_DD);
+                    getExpenseHistoryForDates(todaydate, todaydate);
+                } else {
+                    Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

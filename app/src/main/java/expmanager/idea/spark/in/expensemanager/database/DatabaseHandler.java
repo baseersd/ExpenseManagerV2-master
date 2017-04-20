@@ -684,8 +684,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cv.put(EXPENSE_TBL_COLUMN_PRODUCT_NAME, exp.getExpProductName());
         cv.put(EXPENSE_TBL_COLUMN_UNIT, exp.getExpUnit());
         cv.put(EXPENSE_TBL_COLUMN_AMOUNT, exp.getExpAmt());
-        cv.put(EXPENSE_TBL_COLUMN_IS_APPROVED, exp.getExpIsApproved());
-        cv.put(EXPENSE_TBL_COLUMN_IS_RECURSSIVE, exp.getExpIsRecursive());
+        /*cv.put(EXPENSE_TBL_COLUMN_IS_APPROVED, exp.getExpIsApproved());
+        cv.put(EXPENSE_TBL_COLUMN_IS_RECURSSIVE, exp.getExpIsRecursive());*/
         cv.put(EXPENSE_TBL_COLUMN_CREATED_AT, Utils.getDateTime());
         cv.put(EXPENSE_TBL_COLUMN_CREATED_BY, exp.getExpCreateBy());
         cv.put(EXPENSE_TBL_COLUMN_IS_SAVED, exp.getIsSaved());

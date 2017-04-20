@@ -25,6 +25,7 @@ public class ServerURLModel {
     public static final String UPDATE_SALE = "update_sale";
     public static final String GET_SALE = "get_sales";
     public static final String CREATE_INVOICE = "create_invoice";
+    public static final String UPDATE_INVOICE = "update_invoice";
     public static final String GET_PRODUCTS = "get_products";
     public static final String EXPENSE_HISTORY = "expense_history";
 

@@ -46,6 +46,7 @@
     <string name="no_expenses_recored_forweek">No expenses recorded for this week</string>
     <string name="product">Product</string>
     <string name="reports">Reports</string>
+    <string name="approve">Approve</string>
 
 
 </resources>

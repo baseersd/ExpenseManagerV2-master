@@ -30,6 +30,7 @@ import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.CustomFonts;
+import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
 import okhttp3.ResponseBody;
@@ -41,7 +42,7 @@ import retrofit2.Response;
  * Created by Ramana.Reddy on 3/9/2017.
  */
 
-public class ExpenseHistoryViewPagerFragment extends Fragment {
+public class ExpenseHistoryViewPagerFragment extends Fragment implements ExpenseTitleViewHolder.OnApprovePress{
 
     public TodayExpenseAdapter adapter;
     private ImageView imgAddExpense;
@@ -85,13 +86,10 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
         imgAddExpense = (ImageView) rootView.findViewById(R.id.img_add_expense);
         txtTitleWeek = (CustomFonts) rootView.findViewById(R.id.title_week);
 
-
         txtTitleWeek.setText("Week "+getStartDate()+"to "+getEndDate());
 
          recyclerView = (RecyclerView)rootView.findViewById(R.id.recycler_view);
          layoutManager = new LinearLayoutManager(getActivity());
-
-
 
 
         // RecyclerView has some built in animations to it, using the DefaultItemAnimator.
@@ -114,9 +112,9 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
     }
 
     public static List<ExpenseItem> makeExpanseItems() {
-        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt","$10.00");
-        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg","$20.00");
-        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg","$10.00");
+        ExpenseItem item1 = new ExpenseItem("Olive oil", "2 lt","$10.00",true);
+        ExpenseItem item2 = new ExpenseItem("Sugar", "5 kg","$20.00",true);
+        ExpenseItem item3 = new ExpenseItem("Carrots", "5 kg","$10.00",true);
 
 
         return Arrays.asList(item1, item2, item3);
@@ -127,7 +125,7 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
                 makeExpanseGroup());
     }
     public static ExpenseGroup makeExpanseGroup() {
-        return new ExpenseGroup("Grocery Today",makeExpanseItems(),"3 items","$40.00");
+        return new ExpenseGroup(null, "Grocery Today",makeExpanseItems(),"3 items","$40.00",false);
     }
 
     private void getExpenseHistoryForDates(final String from, final String to){
@@ -167,15 +165,16 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
 
     private void initCurrentWeekExpenses(){
 
-        if(mExpenseHistoryWeeklyResponse == null){
+        if(mExpenseHistoryWeeklyResponse == null || mExpenseHistoryWeeklyResponse.getExpenseHistoryList().size() == 0){
            // mEmptyWeekExpense.setVisibility(View.VISIBLE);
             return;
         }
         List<ExpenseGroup> weeksExpenseList = makeExpenseList(mExpenseHistoryWeeklyResponse.getExpenseHistoryList());
-        weekAdapter = new TodayExpenseAdapter(weeksExpenseList);
+        weekAdapter = new TodayExpenseAdapter(getContext(),weeksExpenseList,ExpenseHistoryViewPagerFragment.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(weekAdapter);
         //mEmptyWeekExpense.setVisibility(View.GONE);
+
     }
 
     private List<ExpenseGroup> makeExpenseList(List<ExpenseSyncRequest> expensesList){
@@ -189,18 +188,23 @@ public class ExpenseHistoryViewPagerFragment extends Fragment {
     }
     public ExpenseGroup makeExpenseGroup(ExpenseSyncRequest expenseObj){
         List<Expense> expenseList = expenseObj.getExpenseList();
-        return new ExpenseGroup(expenseObj.getInvoice().getInvDesc(),makeExpenseItems(expenseList),
-                ""+expenseList.size()+"item(s)","$"+expenseObj.getInvoice().getInvAmt());
+        return new ExpenseGroup(expenseObj,expenseObj.getInvoice().getInvDesc(),makeExpenseItems(expenseList,expenseObj.getInvoice().isExpIsApproved()),
+                ""+expenseList.size()+"item(s)","$"+expenseObj.getInvoice().getInvAmt(),expenseObj.getInvoice().isExpIsApproved());
     }
 
-    public List<ExpenseItem> makeExpenseItems(List<Expense> expensesList){
+    public List<ExpenseItem> makeExpenseItems(List<Expense> expensesList, boolean isExpenseApproved){
         List<ExpenseItem> expenseList = new ArrayList<>();
         for(Expense expense : expensesList){
             String productCost = getString(R.string.currencysymbol) + expense.getExpAmt();
             ExpenseItem expenseItem = new ExpenseItem(expense.getExpProductName(),
-                    String.valueOf(expense.getExpUnit()),productCost);
+                    String.valueOf(expense.getExpUnit()),productCost, isExpenseApproved);
             expenseList.add(expenseItem);
         }
         return expenseList;
+    }
+
+    @Override
+    public void onApproveBtnClick(ExpenseSyncRequest syncRequest) {
+
     }
 }

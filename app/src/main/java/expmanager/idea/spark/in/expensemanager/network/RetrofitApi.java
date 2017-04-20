@@ -198,6 +198,12 @@ public class RetrofitApi {
         Call<ResponseBody> CreateInvoice(@Header("Authtoken") String auth, @Body ExpenseSyncRequest requestModel);
 
         /*
+       * UPDATE INVOICE
+       */
+        @POST(ServerURLModel.UPDATE_INVOICE)
+        Call<ResponseBody> UpdateInvoice(@Header("Authtoken") String auth, @Body ExpenseSyncRequest requestModel);
+
+        /*
          * GET_PRODUCTS
         */
         @GET(ServerURLModel.GET_PRODUCTS)
