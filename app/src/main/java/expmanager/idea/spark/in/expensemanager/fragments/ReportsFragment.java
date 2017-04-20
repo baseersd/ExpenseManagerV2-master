@@ -54,6 +54,7 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
     private DatePickerDialog datePickerDialog;
     private Spinner spinner;
     private String categoryName;
+    private int categoryId;
     private int i = 0;
 
 
@@ -149,6 +150,7 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 
                 categoryName = categoryList.get(position);
+                categoryId = productListResponse.getProductList().get(position).getCategory().getCategoryId();
             }
 
             @Override
@@ -191,9 +193,10 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
         month = month+1;
 
         if(i==0){
-            txtDateFrom.setText(day+"-"+month+"-"+year);
+            //txtDateFrom.setText(day+"-"+month+"-"+year);
+            txtDateFrom.setText(year+"-"+month+"-"+day);
         }else {
-            txtDateTo.setText(day+"-"+month+"-"+year);
+            txtDateTo.setText(year+"-"+month+"-"+day);
         }
     }
 
@@ -206,7 +209,7 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
         }
 
         SessionManager sessionManager = new SessionManager(getActivity());
-        RetrofitApi.getApi().GetReports(sessionManager.getAuthToken(), txtDateFrom.getText().toString(),txtDateTo.getText().toString(),categoryName).enqueue(new Callback<ResponseBody>() {
+        RetrofitApi.getApi().GetReports(sessionManager.getAuthToken(), txtDateFrom.getText().toString(),txtDateTo.getText().toString(),categoryId).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 

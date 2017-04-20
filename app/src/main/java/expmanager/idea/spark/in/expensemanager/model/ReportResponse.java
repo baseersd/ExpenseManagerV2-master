@@ -1,15 +1,26 @@
 package expmanager.idea.spark.in.expensemanager.model;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Created by RamanaRedddy on 4/16/17.
  */
 
-public class ReportResponse {
+public class ReportResponse implements Serializable{
 
+    @SerializedName("id")
     private int id;
+
+    @SerializedName("category_name")
     private String categoryName;
+
+    @SerializedName("product_name")
     private String productName;
-    private int sum;
+
+    @SerializedName("sum")
+    private double sum;
 
     public int getId() {
         return id;
@@ -35,11 +46,11 @@ public class ReportResponse {
         this.productName = productName;
     }
 
-    public int getSum() {
+    public double getSum() {
         return sum;
     }
 
-    public void setSum(int sum) {
+    public void setSum(double sum) {
         this.sum = sum;
     }
 }

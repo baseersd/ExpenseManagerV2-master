@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -25,13 +26,18 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyTanExpAdapter;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.AddTangibleExpenseRequest;
 import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
+import expmanager.idea.spark.in.expensemanager.model.TangibleExpensesList;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.NetworkUtils;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
@@ -117,11 +123,7 @@ public class AdminTangibleExpenses extends Fragment {
 
         progressBar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
 
-        list = db.getAllTanExpenses();
-        if (list != null) {
-            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list);
-            tanexplist.setAdapter(adapt);
-        }
+
         addtanexpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,9 +139,22 @@ public class AdminTangibleExpenses extends Fragment {
                 return true;
             }
         });
+        getTangibleExpenses();
         return rootView;
     }
 
+    private void initTangibleList(){
+        //list = db.getAllTanExpenses();
+        if(RuntimeData.mTagibleExpenseList == null){
+            return;
+        }
+
+        List<TanExpenses> list = RuntimeData.mTagibleExpenseList.getTangibleExpensesList();
+        if (list != null) {
+            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list);
+            tanexplist.setAdapter(adapt);
+        }
+    }
 
     public void openAddtagibleExpDialog() {
         final Dialog dialog = new Dialog(getActivity());
@@ -359,5 +374,31 @@ public class AdminTangibleExpenses extends Fragment {
 
     }
 
+    private void getTangibleExpenses(){
+        SessionManager sessionManager = new SessionManager(getActivity());
+
+        RetrofitApi.getApi().GetTangibleExpense(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(),response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        String jsonString = "{\"tangibleExpensesList\" :"+response.body().string()+"}";
+                        Log.i(getClass().getName(),jsonString);
+                        RuntimeData.mTagibleExpenseList = gson.fromJson(jsonString, TangibleExpensesList.class);
+                        initTangibleList();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 }

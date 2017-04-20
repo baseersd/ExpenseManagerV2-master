@@ -28,11 +28,11 @@ public class Category implements Serializable{
     @SerializedName("updated_at")
     private String updatedAt;
 
-    public int getId() {
+    public int getCategoryId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setCategoryId(int id) {
         this.id = id;
     }
 

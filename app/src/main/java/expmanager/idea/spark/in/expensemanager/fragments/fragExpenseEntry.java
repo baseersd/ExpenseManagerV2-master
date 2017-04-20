@@ -348,7 +348,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         for(CategoryItem categoryItem: productListResponse.getProductList()) {
             // Initialize a new Adapter for RecyclerView
             Category category = categoryItem.getCategory();
-            categoryList.add(new Item(category.getId(), Item.ITEM_CATEGORY, category.getCategoryName(),
+            categoryList.add(new Item(category.getCategoryId(), Item.ITEM_CATEGORY, category.getCategoryName(),
                     category.getCategoryIconUrl()));
             /*categoryList.add(new Item(2, Item.ITEM_CATEGORY, "Meat",
                     "http://www.clipartkid.com/images/170/chicken-for-roasting-food-meat-chicken-chicken-for-roasting-png-YEAOZM-clipart.png"));
@@ -388,7 +388,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             // Initialize a new Adapter for RecyclerView
             List<Item> productList = new ArrayList<>();
             for(CategoryItem categoryItem: productListResponse.getProductList()) {
-                if(categoryId != categoryItem.getCategory().getId())
+                if(categoryId != categoryItem.getCategory().getCategoryId())
                     continue;
                 List<Product> productsItemList = categoryItem.getProducts();
                 for(Product product: productsItemList) {

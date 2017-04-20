@@ -37,10 +37,10 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.txtSno.setText(position+1);
+        holder.txtSno.setText(""+position+1);
         holder.txtCategoryName.setText(mItemList.get(position).getCategoryName());
         holder.txtProductName.setText(mItemList.get(position).getProductName());
-        holder.txtSum.setText(mItemList.get(position).getSum());
+        holder.txtSum.setText(""+mItemList.get(position).getSum());
         //holder.bind(mItemList.get(position),mCallback, position);
     }
 
@@ -61,8 +61,8 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
             // Get the widget reference from the custom layout
             txtSno = (TextView)v.findViewById(R.id.txt_s_no);
             txtCategoryName = (TextView) v.findViewById(R.id.tv_category_name);
-            txtSum = (TextView) v.findViewById(R.id.tv_product_name);
-            txtProductName = (TextView) v.findViewById(R.id.tv_sum);
+            txtSum = (TextView) v.findViewById(R.id.tv_sum);
+            txtProductName = (TextView) v.findViewById(R.id.tv_product_name);
         }
 //        public void bind(final Item item, final OnItemClickListener listener, final int position) {
 //            itemView.setOnClickListener(new View.OnClickListener() {

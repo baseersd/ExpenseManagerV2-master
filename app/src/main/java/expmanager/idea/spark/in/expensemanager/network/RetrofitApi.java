@@ -162,7 +162,7 @@ public class RetrofitApi {
         * GET_REPORTS
         */
         @GET(ServerURLModel.GET_REPORTS)
-        Call<ResponseBody> GetReports(@Header("Authtoken") String auth,@Query("from") String fromDate,@Query("to") String toDate,@Query("category_id") String categoryId);
+        Call<ResponseBody> GetReports(@Header("Authtoken") String auth,@Query("from") String fromDate,@Query("to") String toDate,@Query("category_id") int categoryId);
 
 
         /*
@@ -215,6 +215,12 @@ public class RetrofitApi {
         @GET(ServerURLModel.EXPENSE_HISTORY)
         Call<ResponseBody> GetExpenseHistory(@Header("Authtoken") String auth, @Query("from") String fromDate,@Query("to") String toDate);
 
+
+        /*
+         * GET_BROADCAST
+        */
+        @GET(ServerURLModel.GET_BROADCAST)
+        Call<ResponseBody> GetBroadcast(@Header("Authtoken") String auth);
 
         /*
        * LOGOUT

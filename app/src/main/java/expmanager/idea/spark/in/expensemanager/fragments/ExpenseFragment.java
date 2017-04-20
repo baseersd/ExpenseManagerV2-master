@@ -132,6 +132,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         initCurrentWeekExpenses();
 
+        getTangibleExpenses();
+
         return rootView;
     }
 
@@ -159,6 +161,31 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         mRecyclerViewWeek.setLayoutManager(mLayoutManagerWeek);
         mRecyclerViewWeek.setAdapter(weekAdapter);
         mEmptyWeekExpense.setVisibility(View.GONE);
+    }
+
+    private void getTangibleExpenses(){
+        SessionManager sessionManager = new SessionManager(getActivity());
+
+        RetrofitApi.getApi().GetBroadcast(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(),response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        //String jsonString = "{\"expenseHistoryList\" :"+response.body().string()+"}";
+                        Log.i(getClass().getName(),response.body().string());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
