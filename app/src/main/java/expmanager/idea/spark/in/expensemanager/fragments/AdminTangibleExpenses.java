@@ -63,6 +63,7 @@ public class AdminTangibleExpenses extends Fragment {
     private ImageView imgArrow;
     RelativeLayout main_layout;
     int flag;
+    private AlertDialog mDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -377,6 +378,7 @@ public class AdminTangibleExpenses extends Fragment {
     private void getTangibleExpenses(){
         SessionManager sessionManager = new SessionManager(getActivity());
 
+        mDialog = Utils.showProgressBar(getActivity(),getString(R.string.fetch_tangible_expenses));
         RetrofitApi.getApi().GetTangibleExpense(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -388,15 +390,18 @@ public class AdminTangibleExpenses extends Fragment {
                         Log.i(getClass().getName(),jsonString);
                         RuntimeData.mTagibleExpenseList = gson.fromJson(jsonString, TangibleExpensesList.class);
                         initTangibleList();
+                        Utils.dismissProgressBar(mDialog);
                     } catch (Exception e) {
                         e.printStackTrace();
+                        Utils.dismissProgressBar(mDialog);
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
             }
         });
     }

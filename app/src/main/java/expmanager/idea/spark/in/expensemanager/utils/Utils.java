@@ -1,20 +1,32 @@
 package expmanager.idea.spark.in.expensemanager.utils;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Build;
 import android.provider.Settings;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ProgressBar;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+
+import expmanager.idea.spark.in.expensemanager.R;
 
 
 /**
@@ -137,5 +149,72 @@ public class Utils {
         System.out.println("End Date = " + endDate);
 
         return endDate;
+    }
+
+    public static Dialog showDialog(final Context context, final String message, final String pBtnStr, final String nBtnStr,
+                                    final DialogInterface.OnClickListener pBtnListener, final DialogInterface.OnClickListener nBtnListener){
+         return new AlertDialog.Builder(context)
+                .setMessage(message)
+                .setPositiveButton(pBtnStr,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                pBtnListener.onClick(dialog,whichButton);
+                            }
+                        }
+                )
+                .setNegativeButton(nBtnStr, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        nBtnListener.onClick(dialog,whichButton);
+                    }
+                })
+                .create();
+    }
+
+    public static void dismissDialog(Dialog dialog){
+        if(dialog != null){
+            dialog.dismiss();
+        }
+    }
+
+    public static AlertDialog showProgressBar(final Context context, final String message){
+
+        ProgressDialog dialog = new ProgressDialog(context);
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setMessage(message);
+        dialog.setCancelable(false);
+        dialog.show();
+
+        return dialog;
+    }
+
+    public static void setProgressBarMessage(ProgressDialog progressDialog, String message){
+        if(progressDialog != null){
+            progressDialog.setMessage(message);
+        }
+    }
+
+    public static void dismissProgressBar(Dialog progressBar){
+        if(progressBar != null){
+            progressBar.dismiss();
+        }
+    }
+
+    public static String encodeFileToBase64Binary(String filePath){
+        String encodedfile = null;
+        File file =  new File(filePath);
+        try {
+            FileInputStream fileInputStreamReader = new FileInputStream(file);
+            byte[] bytes = new byte[(int)file.length()];
+            fileInputStreamReader.read(bytes);
+            encodedfile = Base64.encodeToString(bytes, Base64.DEFAULT);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return encodedfile;
     }
 }

@@ -158,7 +158,7 @@ public class ExpenseHistoryViewPagerFragment extends Fragment implements Expense
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -170,7 +170,7 @@ public class ExpenseHistoryViewPagerFragment extends Fragment implements Expense
             return;
         }
         List<ExpenseGroup> weeksExpenseList = makeExpenseList(mExpenseHistoryWeeklyResponse.getExpenseHistoryList());
-        weekAdapter = new TodayExpenseAdapter(getContext(),weeksExpenseList,ExpenseHistoryViewPagerFragment.this);
+        weekAdapter = new TodayExpenseAdapter(getActivity(),weeksExpenseList,ExpenseHistoryViewPagerFragment.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(weekAdapter);
         //mEmptyWeekExpense.setVisibility(View.GONE);
@@ -205,6 +205,11 @@ public class ExpenseHistoryViewPagerFragment extends Fragment implements Expense
 
     @Override
     public void onApproveBtnClick(ExpenseSyncRequest syncRequest) {
+
+    }
+
+    @Override
+    public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest) {
 
     }
 }

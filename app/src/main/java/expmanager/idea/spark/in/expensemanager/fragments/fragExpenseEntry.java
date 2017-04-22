@@ -504,6 +504,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         invoice.setCompany_id(Integer.valueOf(sessionManager.getCompanyId()));
         invoice.setExpIsApproved(sessionManager.isApproved());
         //invoice.setInvImgPath(getBase64ImageString(invoice.getInvImgPath()));
+        invoice.setInvImgPath(Utils.encodeFileToBase64Binary(invoice.getInvImgPath()));
         ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
 
         RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {

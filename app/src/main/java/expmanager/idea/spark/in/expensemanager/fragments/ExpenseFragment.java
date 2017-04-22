@@ -1,5 +1,7 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -23,6 +25,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
@@ -61,8 +64,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private RecyclerView mRecyclerViewWeek;
     private LinearLayoutManager mLayoutManagerWeek;
     private boolean isWeeklyExpense = false;
-
-    int flag;
+    private int flag;
+    private Dialog mDialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -128,6 +131,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
+        mDialog = Utils.showProgressBar(getActivity(),getString(R.string.fetching_expenses));
         initTodayExpenses();
 
         initCurrentWeekExpenses();
@@ -165,7 +169,6 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
     private void getTangibleExpenses(){
         SessionManager sessionManager = new SessionManager(getActivity());
-
         RetrofitApi.getApi().GetBroadcast(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -179,11 +182,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                         e.printStackTrace();
                     }
                 }
+                Utils.dismissProgressBar(mDialog);
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
             }
         });
     }
@@ -264,6 +269,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         SessionManager sessionManager = new SessionManager(getActivity());
         isWeeklyExpense = !from.equals(to);
 
+        showProgressBar(getString(R.string.fetching_expenses_for_today));
         RetrofitApi.getApi().GetExpenseHistory(sessionManager.getAuthToken(), from,to).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -286,11 +292,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                         e.printStackTrace();
                     }
                 }
+                Utils.dismissProgressBar(mDialog);
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
             }
         });
     }
@@ -300,6 +308,16 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         Toast.makeText(getContext(),"Approved button Clicked",Toast.LENGTH_SHORT).show();
         expenseObject.getInvoice().setExpIsApproved(true);
         updateInvoiceService(expenseObject);
+    }
+
+    @Override
+    public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest) {
+        if(syncRequest.getInvoice().getInvImgPath() == null){
+            return;
+        }
+        Intent viewImageIntent = new Intent(getActivity(),ViewInvoiceActivity.class);
+        viewImageIntent.putExtra("path",syncRequest.getInvoice().getInvImgPath());
+        startActivity(viewImageIntent);
     }
 
     public void updateInvoiceService(ExpenseSyncRequest expenseSyncRequest){
@@ -321,8 +339,14 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
             }
         });
 
+    }
+
+    private void showProgressBar(String message){
+        Utils.dismissProgressBar(mDialog);
+        mDialog = Utils.showProgressBar(getActivity(),message);
     }
 }

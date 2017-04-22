@@ -47,6 +47,10 @@
     <string name="product">Product</string>
     <string name="reports">Reports</string>
     <string name="approve">Approve</string>
+    <string name="fetching_expenses">Fetching expenses from Server. Please wait...</string>
+    <string name="fetch_tangible_expenses">Fetching tangible expenses from server...</string>
+    <string name="view_invoice">View Invoice</string>
+    <string name="fetching_expenses_for_today">Fetching expenses for Today...</string>
 
 
 </resources>

@@ -38,16 +38,30 @@
         android:textColor="@color/editTextBackgroundWhite"
         android:textSize="18dp" />
 
-    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-        android:id="@+id/approve"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:visibility="visible"
+        android:orientation="vertical">
+    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+        android:id="@+id/approve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
         android:text="@string/approve"
         android:textColor="@color/blue1"
         android:textSize="18dp" />
+        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+            android:id="@+id/view_invoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:text="@string/view_invoice"
+            android:textColor="@color/blue1"
+            android:textSize="18dp" />
+    </LinearLayout>
     <ImageView
         android:id="@+id/list_item_genre_arrow"
         android:layout_width="0dp"

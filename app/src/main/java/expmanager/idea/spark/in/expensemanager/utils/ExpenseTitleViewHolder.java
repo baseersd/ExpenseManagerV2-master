@@ -27,12 +27,14 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
     private TextView childItems;
     private TextView childCost;
     private TextView approve;
+    private TextView viewInvoice;
     private ImageView arrow;
     private OnApprovePress mCallback;
     private ExpenseGroup mGroupObj;
 
     public interface OnApprovePress{
         public void onApproveBtnClick(ExpenseSyncRequest syncRequest);
+        public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest);
     }
     public ExpenseTitleViewHolder(View itemView, OnApprovePress callback) {
         super(itemView);
@@ -42,6 +44,15 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
         childItems = (TextView) itemView.findViewById(R.id.items);
         childCost = (TextView) itemView.findViewById(R.id.cost);
         approve = (TextView) itemView.findViewById(R.id.approve);
+        viewInvoice = (TextView) itemView.findViewById(R.id.view_invoice);
+        viewInvoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mCallback != null){
+                    mCallback.onViewInvoiceBtnClick(mGroupObj.getExpObj());
+                }
+            }
+        });
         approve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +75,12 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
         }else{
             approve.setVisibility(View.VISIBLE);
             llExpenseGroup.setBackgroundColor(context.getResources().getColor(R.color.grey05));
+        }
+
+        if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
+            viewInvoice.setVisibility(View.VISIBLE);
+        }else{
+            viewInvoice.setVisibility(View.GONE);
         }
     }
 
