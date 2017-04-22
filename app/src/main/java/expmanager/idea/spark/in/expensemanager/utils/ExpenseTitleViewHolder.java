@@ -1,6 +1,7 @@
 package expmanager.idea.spark.in.expensemanager.utils;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.View;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -27,24 +28,31 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
     private TextView childItems;
     private TextView childCost;
     private TextView approve;
+    private TextView reject;
     private TextView viewInvoice;
-    private ImageView arrow;
+    private TextView arrow;
     private OnApprovePress mCallback;
     private ExpenseGroup mGroupObj;
+    private boolean isExpanded = true;
 
     public interface OnApprovePress{
         public void onApproveBtnClick(ExpenseSyncRequest syncRequest);
         public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest);
     }
-    public ExpenseTitleViewHolder(View itemView, OnApprovePress callback) {
+    public ExpenseTitleViewHolder(Context context, View itemView, OnApprovePress callback) {
         super(itemView);
         mCallback = callback;
+        Typeface fontAwesomeFont = Typeface.createFromAsset(context.getAssets(), "fontawesome.ttf");
         llExpenseGroup = (LinearLayout)itemView.findViewById(R.id.ll_expense_group);
         childTitle = (TextView) itemView.findViewById(R.id.title);
         childItems = (TextView) itemView.findViewById(R.id.items);
         childCost = (TextView) itemView.findViewById(R.id.cost);
         approve = (TextView) itemView.findViewById(R.id.approve);
+        approve.setTypeface(fontAwesomeFont);
+        reject = (TextView) itemView.findViewById(R.id.reject);
+        reject.setTypeface(fontAwesomeFont);
         viewInvoice = (TextView) itemView.findViewById(R.id.view_invoice);
+        viewInvoice.setTypeface(fontAwesomeFont);
         viewInvoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +69,8 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
                 }
             }
         });
-        arrow = (ImageView) itemView.findViewById(R.id.list_item_genre_arrow);
+        arrow = (TextView) itemView.findViewById(R.id.list_item_genre_arrow);
+        arrow.setTypeface(fontAwesomeFont);
     }
 
     public void setDetails(Context context, ExpenseGroup groupObj, String name, String quantity, String cost, boolean isApproved) {
@@ -71,27 +80,33 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
         mGroupObj = groupObj;
         if(isApproved){
             approve.setVisibility(View.INVISIBLE);
+            reject.setVisibility(View.INVISIBLE);
             llExpenseGroup.setBackgroundColor(context.getResources().getColor(R.color.blue));
         }else{
             approve.setVisibility(View.VISIBLE);
+            reject.setVisibility(View.VISIBLE);
             llExpenseGroup.setBackgroundColor(context.getResources().getColor(R.color.grey05));
         }
 
-        if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
+        /*if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
             viewInvoice.setVisibility(View.VISIBLE);
         }else{
             viewInvoice.setVisibility(View.GONE);
-        }
+        }*/
     }
 
     @Override
     public void expand() {
-        animateExpand();
+        //animateExpand();
+        isExpanded = true;
+        arrow.setText(R.string.fa_arrow_down);
     }
 
     @Override
     public void collapse() {
-        animateCollapse();
+        //animateCollapse();
+        isExpanded = false;
+        arrow.setText(R.string.fa_arrow_up);
     }
 
     private void animateExpand() {

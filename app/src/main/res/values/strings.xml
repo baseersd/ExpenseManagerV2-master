@@ -52,5 +52,25 @@
     <string name="view_invoice">View Invoice</string>
     <string name="fetching_expenses_for_today">Fetching expenses for Today...</string>
 
+    <!-- Font awesome Icon list -->
+    <string name="fa_dollar">&#xf1fe;</string>
+    <string name="fa_calendar">&#xf073;</string>
+    <string name="fa_dashboard">&#xf0e4;</string>
+    <string name="fa_card">&#xf09d;</string>
+    <string name="fa_users">&#xf0c0;</string>
+    <string name="fa_chart">&#xf080;</string>
+    <string name="fa_calendar_o">&#xf133;</string>
+    <string name="fa_camera">&#xf030;</string>
+    <string name="fa_refresh">&#xf021;</string>
+    <string name="fa_user_add">&#xf234;</string>
+    <string name="fa_trash">&#xf1f8;</string>
+    <string name="fa_cross">&#xf00d;</string> //X mark
+    <string name="fa_plus">&#xf067;</string>
+    <string name="fa_arrow_down">&#xf078;</string>
+    <string name="fa_arrow_up">&#xf077;</string>
+    <string name="fa_arrow_right">&#xf054;</string>
+    <string name="fa_arrow_left">&#xf053;</string>
+    <string name="fa_file_photo">&#xf1c5;</string>
+    <string name="fa_check">&#xf00c;</string> //Tick mark
 
 </resources>

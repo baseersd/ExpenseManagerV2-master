@@ -35,7 +35,7 @@ public class TodayExpenseAdapter extends ExpandableRecyclerViewAdapter<ExpenseTi
     public ExpenseTitleViewHolder onCreateGroupViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.expense_group, parent, false);
-        return new ExpenseTitleViewHolder(view, mCallback);
+        return new ExpenseTitleViewHolder(mContext,view, mCallback);
     }
 
     @Override
