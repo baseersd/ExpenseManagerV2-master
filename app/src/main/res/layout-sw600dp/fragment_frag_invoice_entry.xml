@@ -131,15 +131,10 @@
 
             <Button
                 android:id="@+id/btnsubmit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                style="@style/button_style"
                 android:layout_marginBottom="25dp"
                 android:layout_marginTop="25dp"
-                android:background="@color/colorPrimary"
-                android:padding="@dimen/margin_medium"
-                android:text="Add Expenses"
-                android:textColor="@android:color/white" />
+                android:text="Add Expenses"/>
 
         </LinearLayout>
 

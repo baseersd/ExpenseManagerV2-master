@@ -41,7 +41,6 @@ import com.google.gson.GsonBuilder;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,6 +119,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private String[] recursiveType = {"Daily", "Weekly", "Monthly", "Monthly - First day", "Monthly - Last day"};
 
     Dialog dialog;
+    private android.app.AlertDialog mProgressDialog;
     //Expense Listing
     LinearLayout lnrexplistingTotlay, lnrexplistinglay, lnrTotExpLay, lnrRecursiveLayout, lnrweekviewmain;
     LinearLayout[] lnrCatWiseExpLay;
@@ -506,7 +506,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         //invoice.setInvImgPath(getBase64ImageString(invoice.getInvImgPath()));
         invoice.setInvImgPath(Utils.encodeFileToBase64Binary(invoice.getInvImgPath()));
         ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
-
+        mProgressDialog = Utils.showProgressBar(getActivity(),getString(R.string.saving_expenses));
         RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -516,11 +516,13 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 } else {
                     onInvoiceCreateFailure();
                 }
+                Utils.dismissProgressBar(mProgressDialog);
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 onInvoiceCreateFailure();
+                Utils.dismissProgressBar(mProgressDialog);
             }
         });
     }

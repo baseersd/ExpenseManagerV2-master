@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -34,6 +36,7 @@ import java.util.List;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyTanExpAdapter;
 import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
+import expmanager.idea.spark.in.expensemanager.customview.FontAwesome;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.AddTangibleExpenseRequest;
 import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
@@ -60,7 +63,7 @@ public class AdminTangibleExpenses extends Fragment {
     List<TanExpenses> list, invoice_list;
     public static MyTanExpAdapter adapt;
     private ProgressBar progressBar;
-    private ImageView imgArrow;
+    private TextView imgArrow;
     RelativeLayout main_layout;
     int flag;
     private AlertDialog mDialog;
@@ -95,7 +98,10 @@ public class AdminTangibleExpenses extends Fragment {
 
         final int convertWidth = (int) (width * 0.65);
 
-        imgArrow = (ImageView) rootView.findViewById(R.id.img_arrow);
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+                "fontawesome.ttf");
+        imgArrow = (TextView) rootView.findViewById(R.id.img_arrow);
+        imgArrow.setTypeface(typeface);
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.main_layout);
 
@@ -104,12 +110,12 @@ public class AdminTangibleExpenses extends Fragment {
             public void onClick(View view) {
 
                 if (flag == 0) {
-                    imgArrow.setImageResource(R.drawable.right_arrow);
+                    imgArrow.setText(getString(R.string.fa_arrow_right));
                     main_layout.getLayoutParams().width = convertWidth;
                     main_layout.requestLayout();
                     flag = 1;
                 } else {
-                    imgArrow.setImageResource(R.drawable.left_arrow);
+                    imgArrow.setText(getString(R.string.fa_arrow_left));
                     main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
                     main_layout.requestLayout();
                     flag = 0;

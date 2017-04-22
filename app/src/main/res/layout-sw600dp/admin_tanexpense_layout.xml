@@ -70,25 +70,19 @@
                 android:layout_toEndOf="@id/first"
                 android:orientation="horizontal">
 
-                <ImageView
+                <TextView
                     android:id="@+id/img_arrow"
-                    android:layout_width="@dimen/arrow_width"
-                    android:layout_height="@dimen/arrow_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="@dimen/margin_medium"
+                    android:padding="@dimen/text_size_medium"
                     android:background="@color/yellow"
-                    android:src="@drawable/left_arrow" />
+                    android:text="@string/fa_arrow_left"
+                    android:textSize="@dimen/text_size_xlarge"/>
             </RelativeLayout>
-
-
-
-
         </RelativeLayout>
-
-
-
-
 
         <RelativeLayout
             android:id="@+id/second"

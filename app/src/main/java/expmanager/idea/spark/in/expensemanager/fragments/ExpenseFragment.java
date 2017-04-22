@@ -2,6 +2,7 @@ package expmanager.idea.spark.in.expensemanager.fragments;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,8 +54,11 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
     public TodayExpenseAdapter adapter;
     public TodayExpenseAdapter weekAdapter;
-    private ImageView imgAddocrExpense, addexpbtn;
-    private ImageView imgArrow;
+    private ImageView addexpbtn;
+    private TextView imgAddocrExpense;
+    private TextView imgArrow;
+    private TextView imgExpenseList;
+    private TextView imgReports;
     private RelativeLayout main_layout;
     private DatabaseHandler myDbHelper;
     private TextView mEmptyTodayExpense, mEmptyWeekExpense;
@@ -66,6 +71,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private boolean isWeeklyExpense = false;
     private int flag;
     private Dialog mDialog;
+    private  Typeface typeface;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -81,15 +87,24 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         myDbHelper = new DatabaseHandler(getContext());
 
-        imgAddocrExpense = (ImageView) rootView.findViewById(R.id.img_ocr_expense);
+        typeface = Typeface.createFromAsset(getContext().getAssets(),
+                "fontawesome.ttf");
+
+        imgAddocrExpense = (TextView) rootView.findViewById(R.id.img_ocr_expense);
+        imgAddocrExpense.setTypeface(typeface);
         imgAddocrExpense.setOnClickListener(this);
 
+        imgExpenseList = (TextView) rootView.findViewById(R.id.tv_expense_list);
+        imgExpenseList.setTypeface(typeface);
+        imgReports = (TextView) rootView.findViewById(R.id.tv_reports);
+        imgReports.setTypeface(typeface);
         //drawableInitialasation(rootView);
 
         addexpbtn = (ImageView) rootView.findViewById(R.id.img_add_expense);
         addexpbtn.setOnClickListener(this);
 
-        imgArrow = (ImageView) rootView.findViewById(R.id.img_arrow);
+        imgArrow = (TextView) rootView.findViewById(R.id.img_arrow);
+        imgArrow.setTypeface(typeface);
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.parent_main_layout);
 
@@ -98,13 +113,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
             public void onClick(View view) {
 
                 if (flag == 0) {
-                    imgArrow.setImageResource(R.drawable.right_arrow);
+                    imgArrow.setText(getString(R.string.fa_arrow_right));
                     main_layout.getLayoutParams().width = convertWidth;
                     main_layout.requestLayout();
                     flag = 1;
 
                 } else {
-                    imgArrow.setImageResource(R.drawable.left_arrow);
+                    imgArrow.setText(getString(R.string.fa_arrow_left));
                     main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
                     main_layout.requestLayout();
                     flag = 0;

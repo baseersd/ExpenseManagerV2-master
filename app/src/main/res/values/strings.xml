@@ -66,11 +66,13 @@
     <string name="fa_trash">&#xf1f8;</string>
     <string name="fa_cross">&#xf00d;</string> //X mark
     <string name="fa_plus">&#xf067;</string>
-    <string name="fa_arrow_down">&#xf078;</string>
-    <string name="fa_arrow_up">&#xf077;</string>
-    <string name="fa_arrow_right">&#xf054;</string>
-    <string name="fa_arrow_left">&#xf053;</string>
+    <string name="fa_arrow_down">&#xf107;</string>
+    <string name="fa_arrow_up">&#xf106;</string>
+    <string name="fa_arrow_right">&#xf105;</string>
+    <string name="fa_arrow_left">&#xf104;</string>
     <string name="fa_file_photo">&#xf1c5;</string>
-    <string name="fa_check">&#xf00c;</string> //Tick mark
+    <string name="fa_check">&#xf00c;</string>
+    <string name="saving_expenses">Saving expenses...</string>
+    //Tick mark
 
 </resources>

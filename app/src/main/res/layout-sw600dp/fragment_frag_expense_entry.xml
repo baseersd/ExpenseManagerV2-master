@@ -256,34 +256,28 @@
 
                 <Button
                     android:id="@+id/lblpreview"
+                    style="@style/button_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:background="@android:color/white"
-                    android:padding="5dp"
-                    android:text="Image Preview"
-                    android:textColor="@color/colorAccent" />
+                    android:text="Image Preview"/>
 
                 <Button
                     android:id="@+id/lblinvTotAmt"
+                    style="@style/button_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/white"
-                    android:padding="5dp"
-                    android:textColor="@color/colorAccent" />
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/lblExpTotAmt"
+                    style="@style/button_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/white"
-                    android:padding="5dp"
-                    android:textColor="@color/colorAccent" />
+                    android:layout_weight="1"/>
 
 
             </LinearLayout>
