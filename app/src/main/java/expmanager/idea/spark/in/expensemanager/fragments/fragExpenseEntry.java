@@ -746,6 +746,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             mEditedExpense = item;
             addExpenseToList();
         }
+        Utils.hideKeyboard(getActivity());
     }
     public void editExpense(int id){
         if(id<=0){
@@ -785,6 +786,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             loadDetails();
             Toast.makeText(getContext(), "Expense deleted Successfully", Toast.LENGTH_SHORT).show();
         }
+        Utils.hideKeyboard(getActivity());
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -42,7 +42,7 @@
     <string name="ion_gear_b">&#xf13e;</string>
     <string name="expense_name">Expense Name</string>
     <string name="currencysymbol">$</string>
-    <string name="no_expenses_recored">No expenses are recored for today</string>
+    <string name="no_expenses_recored">No expenses recorded for today</string>
     <string name="no_expenses_recored_forweek">No expenses recorded for this week</string>
     <string name="product">Product</string>
     <string name="reports">Reports</string>

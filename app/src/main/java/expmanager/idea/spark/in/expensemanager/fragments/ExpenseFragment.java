@@ -1,18 +1,27 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -72,6 +81,8 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private int flag;
     private Dialog mDialog;
     private  Typeface typeface;
+    private Button cancelDialog;
+    private ImageView invoiceImage;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -159,6 +170,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private void initTodayExpenses(){
         if(mExpenseHistoryTodaysResponse == null || mExpenseHistoryTodaysResponse.getExpenseHistoryList().size() == 0){
             mEmptyTodayExpense.setVisibility(View.VISIBLE);
+            mRecyclerViewToday.setVisibility(View.GONE);
             return;
         }
 
@@ -166,6 +178,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         adapter = new TodayExpenseAdapter(getContext(),todaysExpenseList,ExpenseFragment.this);
         mRecyclerViewToday.setLayoutManager(mLayoutManager);
         mRecyclerViewToday.setAdapter(adapter);
+        mRecyclerViewToday.setVisibility(View.VISIBLE);
         mEmptyTodayExpense.setVisibility(View.GONE);
     }
 
@@ -330,9 +343,43 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         if(syncRequest.getInvoice().getInvImgPath() == null){
             return;
         }
-        Intent viewImageIntent = new Intent(getActivity(),ViewInvoiceActivity.class);
-        viewImageIntent.putExtra("path",syncRequest.getInvoice().getInvImgPath());
-        startActivity(viewImageIntent);
+
+        showInvoiceImageDialog(syncRequest);
+    }
+
+    private void showInvoiceImageDialog(ExpenseSyncRequest syncRequest){
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.view_invoice_dailog_layout, null);
+        alertDialog.setView(dialogView);
+        final AlertDialog dialog = alertDialog.create();
+
+
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        cancelDialog = (Button) dialogView.findViewById(R.id.canceltandialog);
+
+        invoiceImage = (ImageView)dialogView.findViewById(R.id.imgView_invoice);
+
+        String base64Data = syncRequest.getInvoice().getInvImgPath();
+        byte[] byteArrayData = Base64.decode(base64Data, Base64.DEFAULT);
+        Bitmap bmp = BitmapFactory.decodeByteArray(byteArrayData, 0, byteArrayData.length);
+        invoiceImage.setImageBitmap(Bitmap.createScaledBitmap(bmp, 500,
+                500, false));
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.gravity = Gravity.CENTER;
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+        dialog.getWindow().setAttributes(lp);
+        cancelDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.getWindow().getAttributes().width = (int) (Utils.getDeviceMetrics(getActivity()).widthPixels * 0.55);
+        dialog.show();
     }
 
     public void updateInvoiceService(ExpenseSyncRequest expenseSyncRequest){
