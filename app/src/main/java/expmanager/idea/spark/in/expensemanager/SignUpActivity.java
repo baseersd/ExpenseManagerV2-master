@@ -1,13 +1,16 @@
 package expmanager.idea.spark.in.expensemanager;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -37,6 +40,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private Button btnBack,btnSignUp;
     private EditText email,password,confirmPassword;//userName
     private ProgressBar progressBar;
+    private TextView mTvShowPassword;
+    private boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +54,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         password = (EditText) findViewById(R.id.password_sign_up);
         btnSignUp = (Button) findViewById(R.id.btn_sign_up);
         confirmPassword = (EditText)findViewById(R.id.confirm_password_sign_up);
+        Typeface typeface = Typeface.createFromAsset(getAssets(),
+                "fontawesome.ttf");
+        mTvShowPassword = (TextView)findViewById(R.id.tv_show_password);
+        mTvShowPassword.setTypeface(typeface);
+        mTvShowPassword.setOnClickListener(this);
 
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
@@ -66,9 +76,21 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 break;
 
+            case R.id.tv_show_password:
+                isPasswordVisible = !isPasswordVisible;
+                if(isPasswordVisible){
+                    mTvShowPassword.setText(getString(R.string.fa_hidepwd));
+                    password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                }else{
+                    mTvShowPassword.setText(getString(R.string.fa_showpwd));
+                    password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+                password.setSelection(password.length());
+                break;
+
             case R.id.btn_sign_up:
 
-                if(password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())){
+                if(!password.getText().toString().equals(confirmPassword.getText().toString())){
                     Toast.makeText(SignUpActivity.this, "Please Enter Same Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
