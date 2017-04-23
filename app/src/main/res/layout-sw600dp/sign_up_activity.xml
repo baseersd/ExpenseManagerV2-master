@@ -10,42 +10,45 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/button_style"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:text="@string/back"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="52dip"
+        android:layout_marginStart="52dip"
         android:layout_toRightOf="@id/view"
+        android:gravity="center_vertical"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="30dip"
-            android:layout_marginRight="30dip"
-            android:layout_marginTop="40dip"
-            android:background="@drawable/button_background"
-            android:text="@string/back"
-            android:textColor="@color/editTextBackgroundWhite"
-            android:textStyle="bold" />
 
         <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/sign_up"
+            android:textSize="@dimen/text_size_large"
             android:textColor="@color/yellow"
             android:textStyle="normal" />
 
         <EditText
             android:id="@+id/user_name_sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="30dip"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
             android:background="@drawable/edit_text_background"
-            android:ems="12"
+            android:ems="23"
             android:hint="@string/username"
             android:inputType="text"
             android:maxLines="1"
@@ -57,36 +60,54 @@
         <EditText
             android:id="@+id/email_sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/edit_text_height"
             android:layout_marginTop="20dip"
             android:background="@drawable/edit_text_background"
-            android:ems="12"
+            android:ems="23"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:hint="@string/email"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
             android:paddingRight="10dp"
             android:paddingLeft="10dp" />
 
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
         <EditText
             android:id="@+id/password_sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dip"
-            android:background="@drawable/edit_text_background"
-            android:ems="12"
+            android:layout_height="@dimen/edit_text_height"
+            android:ems="20"
+            android:background="@android:color/transparent"
             android:inputType="textPassword"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
             android:hint="@string/password"
             android:paddingRight="10dp"
             android:paddingLeft="10dp" />
+            <TextView
+                android:id="@+id/tv_show_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_large"
+                android:padding="@dimen/margin_extra_small"
+                android:text="@string/fa_showpwd"/>
+        </LinearLayout>
 
         <EditText
             android:id="@+id/confirm_password_sign_up"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/edit_text_height"
             android:layout_marginTop="20dip"
             android:background="@drawable/edit_text_background"
-            android:ems="12"
+            android:ems="23"
             android:inputType="textPassword"
             android:hint="@string/confirm_password"
             android:paddingRight="10dp"
@@ -95,16 +116,10 @@
 
         <Button
             android:id="@+id/btn_sign_up"
-            android:layout_width="150dip"
-            android:layout_height="wrap_content"
+            style="@style/button_style"
             android:layout_marginTop="20dip"
-            android:background="@drawable/button_background"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:text="@string/sign_up"
-            android:textAllCaps="true"
-            android:textColor="@color/editTextBackgroundWhite"
-            android:textSize="18dp" />
+            android:textColor="@color/editTextBackgroundWhite"/>
 
 
     </LinearLayout>

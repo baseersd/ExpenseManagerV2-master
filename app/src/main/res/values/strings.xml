@@ -4,7 +4,8 @@
     <string name="forgot_password_ques">Forgot Password ?</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="back">back</string>
-    <string name="please_enter_your_username_and_mail">Please enter your username and mail</string>
+    <string name="please_enter_your_mail">Please enter your email\nwe will send you new Pin</string>
+    <string name="please_enter_your_username_and_mail">Please enter your username and mail\nWe will send you new password</string>
     <string name="send_new_password">Send new password</string>
     <string name="sign_up">Sign up</string>
     <string name="password">Password</string>
@@ -74,6 +75,8 @@
     <string name="fa_arrow_left">&#xf104;</string>
     <string name="fa_file_photo">&#xf1c5;</string>
     <string name="fa_check">&#xf00c;</string>
+    <string name="fa_showpwd">&#xf06e;</string>
+    <string name="fa_hidepwd">&#xf070;</string>
     <string name="saving_expenses">Saving expenses...</string>
     //Tick mark
 
