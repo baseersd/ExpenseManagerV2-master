@@ -11,15 +11,12 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 
-import expmanager.idea.spark.in.expensemanager.fragments.ExpenseHistoryFragment;
-import expmanager.idea.spark.in.expensemanager.fragments.StaffProfileFragment;
 import expmanager.idea.spark.in.expensemanager.model.LoginResponse;
 import expmanager.idea.spark.in.expensemanager.model.SignUpRequest;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
@@ -38,7 +35,7 @@ import retrofit2.Response;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnBack,btnSignUp;
-    private EditText email,password;//userName
+    private EditText email,password,confirmPassword;//userName
     private ProgressBar progressBar;
 
     @Override
@@ -51,6 +48,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         email = (EditText) findViewById(R.id.email_sign_up);
         password = (EditText) findViewById(R.id.password_sign_up);
         btnSignUp = (Button) findViewById(R.id.btn_sign_up);
+        confirmPassword = (EditText)findViewById(R.id.confirm_password_sign_up);
 
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
@@ -69,6 +67,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.btn_sign_up:
+
+                if(password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())){
+                    Toast.makeText(SignUpActivity.this, "Please Enter Same Password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (!NetworkUtils.getInstance().isNetworkAvailable(SignUpActivity.this)) {
 

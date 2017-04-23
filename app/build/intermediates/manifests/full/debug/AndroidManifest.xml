@@ -28,9 +28,6 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.screen.landscape" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-
     <application
         android:name="expmanager.idea.spark.in.expensemanager.ApplicationController"
         android:allowBackup="true"
@@ -78,25 +75,7 @@
         <activity
             android:name="expmanager.idea.spark.in.expensemanager.ocr_usage.HelpActivity"
             android:screenOrientation="landscape" />
-        <activity
-            android:name="com.instabug.library.InstabugFeedbackActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/InstabugSdkTheme"
-            android:windowSoftInputMode="adjustResize" />
-
-        <service android:name="com.instabug.library.network.worker.uploader.InstabugSessionUploaderService" />
-        <service android:name="com.instabug.library.bugreporting.network.InstabugBugsUploaderService" />
-        <service android:name="com.instabug.library.crashreporting.network.InstabugCrashesUploaderService" />
-        <service android:name="com.instabug.library.messaging.InstabugMessageUploaderService" />
-        <service android:name="com.instabug.library.network.worker.fetcher.InstabugFeaturesFetcherService" />
-        <service android:name="com.instabug.library.surveys.network.service.InstabugSurveysSubmitterService" />
-        <service android:name="com.instabug.library.internal.video.VideoProcessingService" />
-
-        <receiver android:name="com.instabug.library.network.InstabugNetworkReceiver" >
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
+        <activity android:name="expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity" />
     </application>
 
 </manifest>

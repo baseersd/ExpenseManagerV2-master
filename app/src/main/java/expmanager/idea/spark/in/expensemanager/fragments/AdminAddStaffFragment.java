@@ -109,7 +109,7 @@ public class AdminAddStaffFragment extends Fragment {
         spinnertime2 = (Spinner) dialog.findViewById(R.id.spinnertime2);
         spinnersal = (Spinner) dialog.findViewById(R.id.spinnersal);
         addstafftoDb  = (Button) dialog.findViewById(R.id.addstafftodb);
-        staffname = (EditText) dialog.findViewById(R.id.staffname);
+        staffname = (EditText) dialog.findViewById(R.id.staff_name);
         started = (EditText) dialog.findViewById(R.id.started);
         salary = (EditText) dialog.findViewById(R.id.salary);
         staffemail = (EditText) dialog.findViewById(R.id.staffemail);

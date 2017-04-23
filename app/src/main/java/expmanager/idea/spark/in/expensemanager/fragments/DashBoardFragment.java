@@ -15,22 +15,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.github.mikephil.charting.charts.BarChart;
-//import com.github.mikephil.charting.data.BarData;
-//import com.github.mikephil.charting.data.BarDataSet;
-//import com.github.mikephil.charting.data.BarEntry;
-//import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.achartengine.ChartFactory;
-
 import org.achartengine.GraphicalView;
 import org.achartengine.chart.BarChart;
-import org.achartengine.chart.PointStyle;
 import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
-import org.achartengine.renderer.BasicStroke;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
@@ -38,7 +30,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -53,6 +44,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+//import com.github.mikephil.charting.charts.BarChart;
+//import com.github.mikephil.charting.data.BarData;
+//import com.github.mikephil.charting.data.BarDataSet;
+//import com.github.mikephil.charting.data.BarEntry;
+//import com.github.mikephil.charting.utils.ColorTemplate;
+
 /**
  * Created by Haresh.Veldurty on 3/7/2017.
  */
@@ -61,23 +58,22 @@ public class DashBoardFragment extends Fragment {
     private LinearLayout chartContainer;
     private GraphicalView mChart;
     private Spinner mothspinner;
-    private String[] mMonth = new String[] {
-            "Jan", "Feb" , "Mar", "Apr", "May", "Jun",
-            "Jul", "Aug" , "Sep", "Oct", "Nov", "Dec"
+    private String[] mMonth = new String[]{
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     };
 
 
+    private TextView txtCurrentMonth, txtCurrentMonthProfit, txtPrevMonth1;
+    private TextView txtPrevMonth1Profit, txtPrevMonth2, txtPrevMonth2Profit, txtPrevMonth3, txtPrevMonth3Profit;
+    private TextView txtCurrentMonthYear, txtPrevMonth1Year, txtPrevMonth2Year, txtPrevMonth3Year;
+    private TextView txtCurrentMonthIncome, txtCurrentMonthTangible, txtCurrentMonthIntangible;
 
-    private TextView txtCurrentMonth,txtCurrentMonthProfit,txtPrevMonth1;
-    private TextView txtPrevMonth1Profit,txtPrevMonth2,txtPrevMonth2Profit,txtPrevMonth3,txtPrevMonth3Profit;
-    private TextView txtCurrentMonthIncome,txtCurrentMonthTangible,txtCurrentMonthIntangible;
-
-    private TextView txtSelectedMonthProfit,txtSelectedMonthIncome,txtSelectedMonthTangible,txtSelectedMonthInTangible;
+    private TextView txtSelectedMonthProfit, txtSelectedMonthIncome, txtSelectedMonthTangible, txtSelectedMonthInTangible;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }
@@ -86,6 +82,7 @@ public class DashBoardFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
     }
+
     public DashBoardFragment() {
         // Required empty public constructor
     }
@@ -109,22 +106,27 @@ public class DashBoardFragment extends Fragment {
         txtPrevMonth3 = (TextView) rootView.findViewById(R.id.txt_prev_month3);
         txtPrevMonth3Profit = (TextView) rootView.findViewById(R.id.txt_prev_month3_profit);
 
+        txtCurrentMonthYear = (TextView) rootView.findViewById(R.id.txt_current_year);
+        txtPrevMonth1Year = (TextView) rootView.findViewById(R.id.txt_prev_month1_year);
+        txtPrevMonth2Year = (TextView) rootView.findViewById(R.id.txt_prev_month2_year);
+        txtPrevMonth3Year = (TextView) rootView.findViewById(R.id.txt_prev_month3_year);
+
 
         txtCurrentMonthIncome = (TextView) rootView.findViewById(R.id.txt_current_month_income);
         txtCurrentMonthTangible = (TextView) rootView.findViewById(R.id.txt_current_month_tangible);
         txtCurrentMonthIntangible = (TextView) rootView.findViewById(R.id.txt_current_month_intangible);
 
-        txtSelectedMonthProfit=(TextView) rootView.findViewById(R.id.txt_selected_month_profit);
-        txtSelectedMonthIncome=(TextView) rootView.findViewById(R.id.txt_selected_month_income);
-        txtSelectedMonthTangible=(TextView) rootView.findViewById(R.id.txt_selected_month_tangible);
-        txtSelectedMonthInTangible =(TextView) rootView.findViewById(R.id.txt_selected_month_intangible);
+        txtSelectedMonthProfit = (TextView) rootView.findViewById(R.id.txt_selected_month_profit);
+        txtSelectedMonthIncome = (TextView) rootView.findViewById(R.id.txt_selected_month_income);
+        txtSelectedMonthTangible = (TextView) rootView.findViewById(R.id.txt_selected_month_tangible);
+        txtSelectedMonthInTangible = (TextView) rootView.findViewById(R.id.txt_selected_month_intangible);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.months, R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         mothspinner.setAdapter(adapter);
-       // openChart();
-      //  openBarChart();
+        // openChart();
+        //  openBarChart();
 
         callServiceApis();
         callServiceApiForDasboardGraph();
@@ -201,27 +203,28 @@ public class DashBoardFragment extends Fragment {
     private void callServiceApis() {
 
         SessionManager sessionManager = new SessionManager(getActivity());
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = new Date();
+       final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        final Date date = new Date();
         RetrofitApi.getApi().GetDashboard(sessionManager.getAuthToken(), dateFormat.format(date).toString()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
                 try {
-                if (response.isSuccessful()) {
+                    if (response.isSuccessful()) {
 
 
                         Gson gson = new Gson();
-                        Type listType = new TypeToken<List<DashboardModel>>(){}.getType();
+                        Type listType = new TypeToken<List<DashboardModel>>() {
+                        }.getType();
                         List<DashboardModel> myModelList = gson.fromJson(response.body().string(), listType);
 
-                        setData(myModelList);
+                        setData(myModelList, dateFormat.format(date).toString().substring(0,4));
 
 
-                } else {
+                    } else {
 
-                    Toast.makeText(getActivity(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
-                }
+                        Toast.makeText(getActivity(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
+                    }
 
 
                 } catch (IOException e) {
@@ -241,7 +244,7 @@ public class DashBoardFragment extends Fragment {
     }
 
 
-    private void callServiceApiForDasboardGraph(){
+    private void callServiceApiForDasboardGraph() {
 
         SessionManager sessionManager = new SessionManager(getActivity());
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -255,18 +258,17 @@ public class DashBoardFragment extends Fragment {
                     if (response.isSuccessful()) {
 
 
-                          Gson gson = new Gson();
+                        Gson gson = new Gson();
                         DashboardMonthModel dashboardMonthModel = gson.fromJson(response.body().string(), DashboardMonthModel.class);
 
-                        int profit = (int)(dashboardMonthModel.getSale()- (dashboardMonthModel.getTangible()+dashboardMonthModel.getIntangible()));
+                        int profit = (int) (dashboardMonthModel.getSale() - (dashboardMonthModel.getTangible() + dashboardMonthModel.getIntangible()));
 
-                        txtSelectedMonthProfit.setText((profit)+"");
-                        txtSelectedMonthIncome.setText((int)dashboardMonthModel.getSale()+"");
-                        txtSelectedMonthTangible.setText((int)dashboardMonthModel.getTangible()+"");
-                        txtSelectedMonthInTangible.setText((int)dashboardMonthModel.getIntangible()+"");
+                        txtSelectedMonthProfit.setText((profit) + "");
+                        txtSelectedMonthIncome.setText((int) dashboardMonthModel.getSale() + "");
+                        txtSelectedMonthTangible.setText((int) dashboardMonthModel.getTangible() + "");
+                        txtSelectedMonthInTangible.setText((int) dashboardMonthModel.getIntangible() + "");
 
                         openChart(dashboardMonthModel.getDashboardDayModels());
-
 
 
                     } else {
@@ -293,64 +295,69 @@ public class DashBoardFragment extends Fragment {
     }
 
 
-    private void setData(List<DashboardModel> myModelList ){
+    private void setData(List<DashboardModel> myModelList,String year) {
+
+        txtCurrentMonthYear.setText(year);
+        txtPrevMonth1Year.setText(year);
+        txtPrevMonth2Year.setText(year);
+        txtPrevMonth3Year.setText(year);
 
 
         for (int i = 0; i < myModelList.size(); i++) {
 
-            switch (i){
+            switch (i) {
 
-                case 0 :
-                    txtCurrentMonth.setText(myModelList.get(i).getMonth());
+                case 0:
+                    txtCurrentMonth.setText(myModelList.get(i).getMonth().substring(0,3));
 
                     double income = myModelList.get(i).getSale();
                     double tangible = myModelList.get(i).getTangible();
                     double intangible = myModelList.get(i).getIntangible();
 
-                    long profit = (long)(income - (tangible+intangible));
+                    long profit = (long) (income - (tangible + intangible));
 
-                    txtCurrentMonthProfit.setText(profit+"");
+                    txtCurrentMonthProfit.setText("$"+profit);
 
-                    txtCurrentMonthIncome.setText((long)income+"");
-                    txtCurrentMonthTangible.setText((long)tangible+"");
-                    txtCurrentMonthIntangible.setText((long)intangible+"");
+                    txtCurrentMonthIncome.setText("$"+(long) income);
+                    txtCurrentMonthTangible.setText("$"+(long) tangible);
+                    txtCurrentMonthIntangible.setText("$"+(long) intangible);
 
                     break;
 
-                case 1 :
-                    txtPrevMonth1.setText(myModelList.get(i).getMonth());
+                case 1:
+                    txtPrevMonth1.setText(myModelList.get(i).getMonth().substring(0,3));
 
                     double income1 = myModelList.get(i).getSale();
                     double tangible1 = myModelList.get(i).getTangible();
                     double intangible1 = myModelList.get(i).getIntangible();
 
-                    long profit1 = (long)(income1 - (tangible1+intangible1));
+                    long profit1 = (long) (income1 - (tangible1 + intangible1));
 
-                    txtPrevMonth1Profit.setText(profit1+"");
+                    txtPrevMonth1Profit.setText("$"+profit1);
                     break;
 
-                case 2 :
-                    txtPrevMonth2.setText(myModelList.get(i).getMonth());
+                case 2:
+                    txtPrevMonth2.setText(myModelList.get(i).getMonth().substring(0,3));
 
                     double income2 = myModelList.get(i).getSale();
                     double tangible2 = myModelList.get(i).getTangible();
                     double intangible2 = myModelList.get(i).getIntangible();
 
-                    long profit2 = (long)(income2 - (tangible2+intangible2));
+                    long profit2 = (long) (income2 - (tangible2 + intangible2));
 
-                    txtPrevMonth2Profit.setText(profit2+"");
+                    txtPrevMonth2Profit.setText("$"+profit2);
                     break;
 
-                case 3 :
-                    txtPrevMonth3.setText(myModelList.get(i).getMonth());
+                case 3:
+                    txtPrevMonth3.setText(myModelList.get(i).getMonth().substring(0,3));
 
                     double income3 = myModelList.get(i).getSale();
                     double tangible3 = myModelList.get(i).getTangible();
                     double intangible3 = myModelList.get(i).getIntangible();
 
-                    long profit3 = (long)(income3 - (tangible3+intangible3));
+                    long profit3 = (long) (income3 - (tangible3 + intangible3));
 
-                    txtPrevMonth3Profit.setText(profit3+"");
+                    txtPrevMonth3Profit.setText("$"+profit3);
                     break;
 
             }
@@ -360,22 +367,23 @@ public class DashBoardFragment extends Fragment {
 
     }
 
-    private void openChart(List<DashboardDayModel> list){
+    private void openChart(List<DashboardDayModel> list) {
 //        int[] x = { "0","1","2",3,4,5,6,7, 8, 9, 10, 11 };
 //        int[] income = { 2000,2500,2700,3000,2800,3500,3700,3800, 0,0,0,0};
 //        int[] expense = {2200, 2700, 2900, 2800, 2600, 3000, 3300, 3400, 0, 0, 0, 0 };
 
 // Creating an XYSeries for Income
         XYSeries incomeSeries = new XYSeries("Income");
+
 // Creating an XYSeries for Tangible
         XYSeries tangibleSeries = new XYSeries("Tangible");
         // Creating an XYSeries for InTangible
         XYSeries inTangibleSeries = new XYSeries("InTangible");
 // Adding data to Income and Expense Series
-        for(int i=0;i<list.size();i++){
-            incomeSeries.add(i,list.get(i).getIncome());
-            tangibleSeries.add(i,list.get(i).getTangible());
-            inTangibleSeries.add(i,list.get(i).getIntangible());
+        for (int i = 0; i < list.size(); i++) {
+            incomeSeries.add(i, list.get(i).getIncome());
+            tangibleSeries.add(i, list.get(i).getTangible());
+            inTangibleSeries.add(i, list.get(i).getIntangible());
         }
         // Creating a dataset to hold each series
         XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
@@ -393,11 +401,11 @@ public class DashBoardFragment extends Fragment {
         incomeRenderer.setLineWidth(2f);
         incomeRenderer.setDisplayChartValues(true);
 //setting chart value distance
-       // incomeRenderer.setDisplayChartValuesDistance(10);
+        // incomeRenderer.setDisplayChartValuesDistance(10);
 //setting line graph point style to circle
-       // incomeRenderer.setPointStyle(PointStyle.CIRCLE);
+        // incomeRenderer.setPointStyle(PointStyle.CIRCLE);
 //setting stroke of the line chart to solid
-       // incomeRenderer.setStroke(BasicStroke.SOLID);
+        // incomeRenderer.setStroke(BasicStroke.SOLID);
 
 // Creating XYSeriesRenderer to customize expenseSeries
         XYSeriesRenderer expenseRenderer = new XYSeriesRenderer();
@@ -408,7 +416,7 @@ public class DashBoardFragment extends Fragment {
 //setting line graph point style to circle
         //expenseRenderer.setPointStyle(PointStyle.SQUARE);
 //setting stroke of the line chart to solid
-       // expenseRenderer.setStroke(BasicStroke.SOLID);
+        // expenseRenderer.setStroke(BasicStroke.SOLID);
 
         // Creating XYSeriesRenderer to customize expenseSeries
         XYSeriesRenderer inTangibleRenderer = new XYSeriesRenderer();
@@ -425,9 +433,9 @@ public class DashBoardFragment extends Fragment {
         XYMultipleSeriesRenderer multiRenderer = new XYMultipleSeriesRenderer();
         multiRenderer.setOrientation(XYMultipleSeriesRenderer.Orientation.HORIZONTAL);
         multiRenderer.setXLabels(0);
-               // multiRenderer.setChartTitle(&quot;Expense Chart&quot;);
-                multiRenderer.setXTitle("Year 2016");
-                multiRenderer.setYTitle("Amount in Dollars");
+        // multiRenderer.setChartTitle(&quot;Expense Chart&quot;);
+        multiRenderer.setXTitle("Year 2017");
+        multiRenderer.setYTitle("Amount in Dollars");
 
 /***
  * Customizing graphs
@@ -480,20 +488,20 @@ public class DashBoardFragment extends Fragment {
 //setting used to move the graph on xaxiz to .5 to the right
         multiRenderer.setXAxisMax(31);
 //setting bar size or space between two bars
-       multiRenderer.setBarSpacing(0.5);
+        multiRenderer.setBarSpacing(0.5);
 //Setting background color of the graph to transparent
         multiRenderer.setBackgroundColor(Color.TRANSPARENT);
 //Setting margin color of the graph to transparent
         multiRenderer.setMarginsColor(getResources().getColor(R.color.transparent_background));
         multiRenderer.setApplyBackgroundColor(true);
-       // multiRenderer.setScale(2f);
+        // multiRenderer.setScale(2f);
 //setting x axis point size
-       // multiRenderer.setPointSize(4f);
+        // multiRenderer.setPointSize(4f);
 //setting the margin size for the graph in the order top, left, bottom, right
         multiRenderer.setMargins(new int[]{30, 30, 30, 30});
-       // multiRenderer.addSeriesRenderer(expenseRenderer);
-        for(int i=0; i< list.size();i++){
-            multiRenderer.addXTextLabel(i, i+1+"");
+        // multiRenderer.addSeriesRenderer(expenseRenderer);
+        for (int i = 0; i < list.size(); i++) {
+            multiRenderer.addXTextLabel(i, i + 1 + "");
         }
 
 // Adding incomeRenderer and expenseRenderer to multipleRenderer
@@ -508,7 +516,7 @@ public class DashBoardFragment extends Fragment {
 //remove any views before u paint the chart
         chartContainer.removeAllViews();
 //drawing bar chart
-        mChart = ChartFactory.getBarChartView(getActivity(), dataset, multiRenderer,BarChart.Type.DEFAULT);
+        mChart = ChartFactory.getBarChartView(getActivity(), dataset, multiRenderer, BarChart.Type.DEFAULT);
 //adding the view to the linearlayout
         chartContainer.addView(mChart);
 

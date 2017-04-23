@@ -51,6 +51,8 @@
     <string name="fetch_tangible_expenses">Fetching tangible expenses from server...</string>
     <string name="view_invoice">View Invoice</string>
     <string name="fetching_expenses_for_today">Fetching expenses for Today...</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="expense_history_for_last_6_weeks">Expense History For Last 6 weeks</string>
 
 
 </resources>

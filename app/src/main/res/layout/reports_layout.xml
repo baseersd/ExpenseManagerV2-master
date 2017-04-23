@@ -25,7 +25,7 @@
             android:layout_below="@+id/txt_title_reports"
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
-            android:background="@color/instabug_annotation_color_gray"
+            android:background="@color/ashcolor"
             android:orientation="horizontal">
 
             <RelativeLayout
@@ -153,7 +153,7 @@
             android:layout_below="@+id/linear_reports_filter"
             android:layout_marginRight="40dp"
             android:layout_marginTop="@dimen/margin_small"
-            android:background="@color/instabug_annotation_color_gray"
+            android:background="@color/ashcolor"
             android:orientation="horizontal">
 
             <TextView

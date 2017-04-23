@@ -78,14 +78,6 @@
     </style>
     <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="android:Widget.Holo.ProgressBar.Horizontal">
     </style>
-    <style name="InstabugSdkTheme.Base.Dark" parent="@android:style/Theme.Holo">
-        <item name="android:editTextStyle">@android:style/Widget.Holo.EditText</item>
-        <item name="android:editTextBackground">@drawable/instabug_bg_edit_text</item>
-    </style>
-    <style name="InstabugSdkTheme.Base.Light" parent="@android:style/Theme.Holo.Light">
-        <item name="android:editTextStyle">@android:style/Widget.Holo.Light.EditText</item>
-        <item name="android:editTextBackground">@drawable/instabug_bg_edit_text</item>
-    </style>
     <style name="Platform.AppCompat" parent="Platform.V11.AppCompat"/>
     <style name="Platform.AppCompat.Light" parent="Platform.V11.AppCompat.Light"/>
     <style name="Platform.V11.AppCompat" parent="android:Theme.Holo">

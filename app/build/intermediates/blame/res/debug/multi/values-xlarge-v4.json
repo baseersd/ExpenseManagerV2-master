@@ -1,36 +1,17 @@
 [
     {
-        "outputFile": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+        "outputFile": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 37,
-                    "endOffset": 88
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 37,
-                        "endOffset": 88
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 93,
                     "endColumn": 70,
-                    "endOffset": 159
+                    "endOffset": 121
                 },
                 "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -42,152 +23,14 @@
             },
             {
                 "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 164,
-                    "endColumn": 70,
-                    "endOffset": 230
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 126,
-                        "endColumn": 70,
-                        "endOffset": 192
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 235,
-                    "endColumn": 69,
-                    "endOffset": 300
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 197,
-                        "endColumn": 69,
-                        "endOffset": 262
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 305,
-                    "endColumn": 69,
-                    "endOffset": 370
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 267,
-                        "endColumn": 69,
-                        "endOffset": 332
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 375,
-                    "endColumn": 67,
-                    "endOffset": 438
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 337,
-                        "endColumn": 67,
-                        "endOffset": 400
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 443,
-                    "endColumn": 67,
-                    "endOffset": 506
-                },
-                "from": {
-                    "file": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 405,
-                        "endColumn": 67,
-                        "endOffset": 468
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 37,
-                    "endOffset": 88
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\0d1cf411764dd4455327e29d1e3a236228fcc6ea\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 37,
-                        "endOffset": 88
-                    }
-                }
-            },
-            {
-                "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 93,
+                    "startOffset": 126,
                     "endColumn": 70,
-                    "endOffset": 159
+                    "endOffset": 192
                 },
                 "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 70,
-                        "endOffset": 121
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 164,
-                    "endColumn": 70,
-                    "endOffset": 230
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -199,152 +42,14 @@
             },
             {
                 "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 235,
-                    "endColumn": 69,
-                    "endOffset": 300
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 197,
-                        "endColumn": 69,
-                        "endOffset": 262
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 305,
-                    "endColumn": 69,
-                    "endOffset": 370
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 267,
-                        "endColumn": 69,
-                        "endOffset": 332
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 375,
-                    "endColumn": 67,
-                    "endOffset": 438
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 337,
-                        "endColumn": 67,
-                        "endOffset": 400
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 443,
-                    "endColumn": 67,
-                    "endOffset": 506
-                },
-                "from": {
-                    "file": "C:\\Volumes\\Macintosh_HD\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 405,
-                        "endColumn": 67,
-                        "endOffset": 468
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Ramana\\OtherAndroidProjects\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 37,
-                    "endOffset": 88
-                },
-                "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\3e6be819385afa731d99ef072820728fb6ef82f5\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 37,
-                        "endOffset": 88
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 93,
-                    "endColumn": 70,
-                    "endOffset": 159
-                },
-                "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 70,
-                        "endOffset": 121
-                    }
-                }
-            },
-            {
-                "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 164,
-                    "endColumn": 70,
-                    "endOffset": 230
-                },
-                "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 126,
-                        "endColumn": 70,
-                        "endOffset": 192
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 235,
+                    "startOffset": 197,
                     "endColumn": 69,
-                    "endOffset": 300
+                    "endOffset": 262
                 },
                 "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -356,14 +61,14 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 305,
+                    "startOffset": 267,
                     "endColumn": 69,
-                    "endOffset": 370
+                    "endOffset": 332
                 },
                 "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -375,14 +80,14 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 375,
+                    "startOffset": 337,
                     "endColumn": 67,
-                    "endOffset": 438
+                    "endOffset": 400
                 },
                 "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -394,14 +99,14 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 443,
+                    "startOffset": 405,
                     "endColumn": 67,
-                    "endOffset": 506
+                    "endOffset": 468
                 },
                 "from": {
-                    "file": "C:\\Users\\RamanaRedddy\\.android\\build-cache\\4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "file": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
