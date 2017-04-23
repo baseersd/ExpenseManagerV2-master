@@ -1,12 +1,17 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
-
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -16,11 +21,18 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
@@ -36,17 +48,25 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by Haresh.Veldurty on 3/9/2017.
  */
 
-public class AdminAddStaffFragment extends Fragment {
+public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog.OnDateSetListener{
     Button addstaffbtn,cancelstaffdialog,addstafftoDb;
-    EditText staffname,started,salary,staffemail,designation,staffaddress,staffphonenumber;
+    EditText staffname,salary,staffemail,designation,staffaddress,staffphonenumber;
+    private TextView started;
     Spinner spinnershift1,spinnershift2,spinnertime1,spinnertime2,spinnersal;
     DatabaseHandler db;
+    ImageButton imageButtonProfilePic;
+    private ImageView imgCalender;
     ListView stafflist;
     List<Staff> list,staff_list;
+    private int PICK_IMAGE_REQUEST = 1;
+    private String base64Image="";
+    private DatePickerDialog datePickerDialog;
     public static MyStaffDetailsAdapter adapt;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -103,6 +123,7 @@ public class AdminAddStaffFragment extends Fragment {
         dialog.setCanceledOnTouchOutside(false);
         dialog.getWindow().getAttributes().width = (int) (Utils.getDeviceMetrics(getActivity()).widthPixels*0.55);
 
+        imgCalender = (ImageView)dialog.findViewById(R.id.img_calendar);
         spinnershift1 = (Spinner) dialog.findViewById(R.id.spinnershift1);
         spinnershift2 = (Spinner) dialog.findViewById(R.id.spinnershift2);
         spinnertime1 = (Spinner) dialog.findViewById(R.id.spinnertime1);
@@ -110,12 +131,13 @@ public class AdminAddStaffFragment extends Fragment {
         spinnersal = (Spinner) dialog.findViewById(R.id.spinnersal);
         addstafftoDb  = (Button) dialog.findViewById(R.id.addstafftodb);
         staffname = (EditText) dialog.findViewById(R.id.staff_name);
-        started = (EditText) dialog.findViewById(R.id.started);
+        started = (TextView) dialog.findViewById(R.id.started);
         salary = (EditText) dialog.findViewById(R.id.salary);
         staffemail = (EditText) dialog.findViewById(R.id.staffemail);
         designation = (EditText) dialog.findViewById(R.id.designation);
         staffaddress = (EditText) dialog.findViewById(R.id.staffaddress);
         staffphonenumber = (EditText) dialog.findViewById(R.id.staffphonenumber);
+        imageButtonProfilePic = (ImageButton) dialog.findViewById(R.id.btn_staff_pic);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.weekArray, R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
@@ -133,6 +155,14 @@ public class AdminAddStaffFragment extends Fragment {
         adapterper.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         spinnersal.setAdapter(adapterper);
 
+        final Calendar c = Calendar.getInstance();
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int day = c.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialog = new DatePickerDialog(
+                getContext(), this, year, month, day);
+
 
         dialog.show();
 
@@ -147,6 +177,26 @@ public class AdminAddStaffFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+            }
+        });
+
+        imgCalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                datePickerDialog.show();
+            }
+        });
+
+        imageButtonProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                // Show only images, no videos or anything else
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                // Always show the chooser (if there are multiple options available)
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
             }
         });
 
@@ -168,6 +218,7 @@ public class AdminAddStaffFragment extends Fragment {
                     insertstaff.setStaff_designation(designation.getText().toString());
                     insertstaff.setStaff_address(staffaddress.getText().toString());
                     insertstaff.setStaff_phonenumber(staffphonenumber.getText().toString());
+                    insertstaff.setStaff_photo(base64Image);
                     AddStaffRequest addStaffRequest = new AddStaffRequest();
 
                     addStaffRequest.setName(staffname.getText().toString());
@@ -182,6 +233,7 @@ public class AdminAddStaffFragment extends Fragment {
                     addStaffRequest.setStaff_designation(designation.getText().toString());
                     addStaffRequest.setStaff_address(staffaddress.getText().toString());
                     addStaffRequest.setStaff_phonenumber(staffphonenumber.getText().toString());
+                    addStaffRequest.setStaff_photo(base64Image);
 
                     dialog.dismiss();
 
@@ -229,6 +281,39 @@ public class AdminAddStaffFragment extends Fragment {
                 }
             }
         });
+
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+            Uri uri = data.getData();
+
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                imageButtonProfilePic.setImageBitmap(bitmap);
+                ByteArrayOutputStream bao = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);
+                byte[] ba = bao.toByteArray();
+                base64Image = Base64.encodeToString(ba, Base64.DEFAULT);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+        month = month+1;
+
+
+            started.setText(year+"-"+month+"-"+dayOfMonth);
 
     }
 }

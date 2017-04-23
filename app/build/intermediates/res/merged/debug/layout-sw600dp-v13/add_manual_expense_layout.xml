@@ -187,12 +187,7 @@
 
         <Button
             android:id="@+id/btnexpAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@color/grey05"
-            android:padding="5dp"
+            style="@style/button_style"
             android:text="Add" />
 
 

@@ -26,6 +26,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.AdminActivity;
+import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyStaffDetailsAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
@@ -69,6 +70,20 @@ public class StaffFragment extends Fragment {
     }
     public StaffFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
+
+        if(getActivity() instanceof MainActivity){
+
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.changeStaffTextColor();
+
+        }
     }
 
 

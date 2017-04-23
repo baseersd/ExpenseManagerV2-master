@@ -16,12 +16,12 @@
         "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout/simple_list_item.xml"
     },
     {
-        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/abc_popup_menu_header_item_layout.xml"
-    },
-    {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
@@ -36,12 +36,16 @@
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/simple_spinner_item.xml",
+        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout/simple_spinner_item.xml"
+    },
+    {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/simple_spinner_item.xml",
-        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout/simple_spinner_item.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/view_invoice_dailog_layout.xml",
+        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/layout/view_invoice_dailog_layout.xml"
     },
     {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",

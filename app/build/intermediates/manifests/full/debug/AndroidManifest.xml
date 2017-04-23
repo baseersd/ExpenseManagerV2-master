@@ -76,6 +76,8 @@
             android:name="expmanager.idea.spark.in.expensemanager.ocr_usage.HelpActivity"
             android:screenOrientation="landscape" />
         <activity android:name="expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity" />
+
+        <service android:name="expmanager.idea.spark.in.expensemanager.service.CatlogService" />
     </application>
 
 </manifest>

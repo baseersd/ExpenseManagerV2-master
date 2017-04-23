@@ -10,5 +10,6 @@
         android:layout_height="wrap_content"
         android:gravity="center|center_vertical"
         android:padding="12dp"
+        android:textSize="@dimen/sp_18"
         android:text="TextView" />
 </LinearLayout>

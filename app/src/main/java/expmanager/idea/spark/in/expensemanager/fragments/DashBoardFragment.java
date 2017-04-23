@@ -263,10 +263,10 @@ public class DashBoardFragment extends Fragment {
 
                         int profit = (int) (dashboardMonthModel.getSale() - (dashboardMonthModel.getTangible() + dashboardMonthModel.getIntangible()));
 
-                        txtSelectedMonthProfit.setText((profit) + "");
-                        txtSelectedMonthIncome.setText((int) dashboardMonthModel.getSale() + "");
-                        txtSelectedMonthTangible.setText((int) dashboardMonthModel.getTangible() + "");
-                        txtSelectedMonthInTangible.setText((int) dashboardMonthModel.getIntangible() + "");
+                        txtSelectedMonthProfit.setText("$"+profit);
+                        txtSelectedMonthIncome.setText("$"+(int) dashboardMonthModel.getSale());
+                        txtSelectedMonthTangible.setText("$"+(int) dashboardMonthModel.getTangible());
+                        txtSelectedMonthInTangible.setText("$"+(int) dashboardMonthModel.getIntangible());
 
                         openChart(dashboardMonthModel.getDashboardDayModels());
 

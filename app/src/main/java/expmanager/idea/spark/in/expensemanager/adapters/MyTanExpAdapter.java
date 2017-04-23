@@ -48,7 +48,7 @@ public class MyTanExpAdapter extends ArrayAdapter<TanExpenses> {
 
         textView1.setText(qList.get(position).getCategory());
         textView2.setText(qList.get(position).getWhen());
-        textView3.setText(qList.get(position).getPrice());
+        textView3.setText("$"+qList.get(position).getPrice());
 
         return v;
 

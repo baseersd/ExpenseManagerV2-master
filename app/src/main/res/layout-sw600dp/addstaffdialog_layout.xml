@@ -64,7 +64,7 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/btnMore"
+                    android:id="@+id/btn_staff_pic"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignParentEnd="true"
@@ -93,7 +93,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
                 android:text=""
                 android:layout_weight="0.20" />
 
@@ -155,9 +155,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="5dp"
+                android:maxLength="14"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 android:text=""
                 android:layout_weight="0.20" />
 
@@ -272,15 +274,35 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/started"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="" />
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/started"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_text_border"
+                    android:ems="13"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/img_calendar"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/started"
+                    android:layout_alignEnd="@id/started"
+                    android:layout_alignTop="@id/started"
+                    android:src="@drawable/ic_date_range" />
+
+
+            </RelativeLayout>
+
+
+
+
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
                 android:id="@+id/ggghg"
@@ -307,7 +329,7 @@
                     android:layout_weight="0.3"
                     android:background="@drawable/edit_text_border"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
 
                 <Spinner
                     android:id="@+id/spinnersal"

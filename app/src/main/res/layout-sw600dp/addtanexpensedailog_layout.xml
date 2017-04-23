@@ -96,18 +96,34 @@
                 android:inputType="textPersonName"
                 android:text="" />
 
+
+
             <Button
                 android:id="@+id/addtanexptoDb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/priceval"
                 android:layout_marginTop="25dp"
+                android:layout_marginLeft="@dimen/dp_40"
                 android:background="#1fb598"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="Add"
+                android:text="ADD"
                 android:textColor="#fff"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/add_img_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/addtanexptoDb"
+                android:layout_alignTop="@id/addtanexptoDb"
+                android:layout_marginLeft="15dp"
+                android:background="#1fb598"
+                android:gravity="center"
+                android:text="@string/fa_plus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large"/>
         </RelativeLayout>
 
         <Button

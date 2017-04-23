@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -22,16 +21,11 @@ import com.google.gson.Gson;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import expmanager.idea.spark.in.expensemanager.LoginActivity;
 import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.SignUpActivity;
 import expmanager.idea.spark.in.expensemanager.model.CreateOrganisationRequest;
 import expmanager.idea.spark.in.expensemanager.model.CreateOrganisationResponse;
-import expmanager.idea.spark.in.expensemanager.model.LoginResponse;
-import expmanager.idea.spark.in.expensemanager.model.SignUpRequest;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
-import expmanager.idea.spark.in.expensemanager.utils.FontManager;
 import expmanager.idea.spark.in.expensemanager.utils.NetworkUtils;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
@@ -107,6 +101,8 @@ public class OrganizationFragment extends Fragment {
 
             }
         });
+
+
 
 //        TextView  textView = (TextView) rootView.findViewById(R.id.textView5);
 //
@@ -190,6 +186,20 @@ public class OrganizationFragment extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
+
+        if(getActivity() instanceof MainActivity){
+
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.changeOrganizationTextColor();
+
+        }
     }
 
     @Override

@@ -1,62 +1,79 @@
 package expmanager.idea.spark.in.expensemanager;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import expmanager.idea.spark.in.expensemanager.fragments.OrganizationFragment;
-import expmanager.idea.spark.in.expensemanager.fragments.StaffFragment;
-import expmanager.idea.spark.in.expensemanager.fragments.TangibleExpenseFragment;
 
 public class MainActivity extends AppCompatActivity {
-ListView navigation_list;
+    private TextView txtOrganization,txtTangibleExpenses,txtStaff;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        String[] values = new String[] { "ORGANIZATION",
-                "TANGIBLE EXPENSES",
-                "STAFF"
-
-        };
-
         OrganizationFragment fragmentorg = new OrganizationFragment();
         getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentorg).commit();
 
-        navigation_list = (ListView)findViewById(R.id.navigation_list);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.simple_list_item, R.id.listtxtitem, values);
+        txtOrganization = (TextView)findViewById(R.id.txt_organization);
+        txtTangibleExpenses = (TextView)findViewById(R.id.txt_tangible);
+        txtStaff = (TextView)findViewById(R.id.txt_staff);
 
 
-        // Assign adapter to ListView
-        navigation_list.setAdapter(adapter);
 
-        // ListView Item Click Listener
-        navigation_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i) {
-
-                    case 0:
-                        OrganizationFragment fragmentorg = new OrganizationFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentorg).commit();
-                        break;
-                    case 1:
-                        TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
-
-                        break;
-                    case 2:
-                        StaffFragment fragmentstaff = new StaffFragment();
-                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentstaff).commit();
-                        break;
-
-                }
-            }
-        });
+//        // Assign adapter to ListView
+//        navigation_list.setAdapter(adapter);
+//
+//        // ListView Item Click Listener
+//        navigation_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                switch (i) {
+//
+//                    case 0:
+//                        OrganizationFragment fragmentorg = new OrganizationFragment();
+//                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentorg).commit();
+//                        break;
+//                    case 1:
+//                        TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
+//                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
+//
+//                        break;
+//                    case 2:
+//                        StaffFragment fragmentstaff = new StaffFragment();
+//                        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentstaff).commit();
+//                        break;
+//
+//                }
+//            }
+//        });
     }
+
+    public void changeOrganizationTextColor(){
+
+        txtOrganization.setTextColor(ContextCompat.getColor(this,R.color.blue));
+        txtTangibleExpenses.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+        txtStaff.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+
+    }
+
+    public void changeTangibleExpensesTextColor(){
+
+        txtTangibleExpenses.setTextColor(ContextCompat.getColor(this,R.color.blue));
+        txtStaff.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+        txtOrganization.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+
+    }
+
+    public void changeStaffTextColor(){
+
+        txtStaff.setTextColor(ContextCompat.getColor(this,R.color.blue));
+        txtOrganization.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+        txtTangibleExpenses.setTextColor(ContextCompat.getColor(this,R.color.ashcolor));
+
+    }
+
 }

@@ -20,7 +20,6 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -36,7 +35,6 @@ import java.util.List;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyTanExpAdapter;
 import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
-import expmanager.idea.spark.in.expensemanager.customview.FontAwesome;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.AddTangibleExpenseRequest;
 import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
@@ -170,6 +168,12 @@ public class AdminTangibleExpenses extends Fragment {
         dialog.setContentView(R.layout.addtanexpensedailog_layout);
         canceltandialog = (Button) dialog.findViewById(R.id.canceltandialog);
         addtanexptoDb = (Button) dialog.findViewById(R.id.addtanexptoDb);
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+                "fontawesome.ttf");
+
+        TextView textView = (TextView) dialog.findViewById(R.id.add_img_plus);
+        textView.setTypeface(typeface);
 
         categoryval = (EditText) dialog.findViewById(R.id.categoryval);
         whenval = (Spinner) dialog.findViewById(R.id.whenval);

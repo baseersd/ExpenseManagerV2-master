@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyTanExpAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
@@ -65,6 +66,19 @@ public class TangibleExpenseFragment extends Fragment {
 
     public TangibleExpenseFragment() {
         // Required empty public constructor
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
+
+        if(getActivity() instanceof MainActivity){
+
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.changeTangibleExpensesTextColor();
+
+        }
     }
 
 

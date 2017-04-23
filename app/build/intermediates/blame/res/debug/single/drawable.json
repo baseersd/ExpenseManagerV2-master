@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/circular_view_white.xml",
+        "source": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/drawable/circular_view_white.xml"
+    },
+    {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
@@ -48,12 +52,12 @@
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/drawable/abc_ic_clear_material.xml"
     },
     {
-        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
-        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/drawable/abc_dialog_material_background.xml"
-    },
-    {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/drawable/abc_dialog_material_background.xml"
     },
     {
         "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/drawable/ic_expand_more_white_24dp.png",

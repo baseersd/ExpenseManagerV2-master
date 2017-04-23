@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingLeft="30dp"
+    android:layout_marginBottom="@dimen/dp_30"
+    android:layout_marginLeft="@dimen/dp_100"
     android:paddingRight="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/dp_40"
         android:text="Setup Organization"
         android:textColor="#1fb598"
         android:textSize="22sp"
@@ -19,112 +24,121 @@
     <EditText
     android:id="@+id/et_organization"
     android:layout_width="wrap_content"
-    android:layout_height="40dp"
+    android:layout_height="@dimen/dp_50"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:layout_below="@+id/textView3"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="@dimen/dp_30"
     android:background="@drawable/edit_text_border"
-    android:ems="10"
+    android:ems="12"
     android:hint="organization name"
     android:inputType="textPersonName"
+        android:textSize="@dimen/sp_18"
     android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_activation_code"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_organization"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="Activation Code"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_address_line1"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_activation_code"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="Address Line1"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_address_line2"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_address_line1"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="Address Line2"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_suburb"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_address_line2"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="suburb"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_city_id"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_suburb"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="City Id"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_abn"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_city_id"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="Abn"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
     <EditText
         android:id="@+id/et_acn"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dp_50"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/et_abn"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/dp_30"
         android:background="@drawable/edit_text_border"
-        android:ems="10"
+        android:ems="12"
         android:hint="Acn"
+        android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
 
@@ -154,9 +168,9 @@
 
     <ImageView
         android:id="@+id/setupexp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_above="@+id/textView8"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignBottom="@id/et_acn"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="29dp"
@@ -165,10 +179,10 @@
         android:src="@drawable/right_arrow" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/dp_100"
         android:id="@+id/img_company_logo"
         android:src="@drawable/header_logo"/>
 
@@ -178,4 +192,5 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_centerInParent="true"/>
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

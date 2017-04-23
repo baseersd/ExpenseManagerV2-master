@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:2:1-75:12
+ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:2:1-76:12
 	package
 		ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:3:5-54
 		INJECTED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml
@@ -66,7 +66,7 @@ ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/And
 	android:name
 		ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:23:19-67
 application
-ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:25:5-73:19
+ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:25:5-74:19
 MERGED from [com.android.support:design:25.2.0] /Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:transition:25.2.0] /Users/RamanaRedddy/.android/build-cache/d9fce686c9c8fd5ffde6901894769a5b1a99ba46/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/AndroidManifest.xml:25:5-20
@@ -172,6 +172,10 @@ activity#expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity
 ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:72:9-56
 	android:name
 		ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:72:19-54
+service#expmanager.idea.spark.in.expensemanager.service.CatlogService
+ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:73:9-57
+	android:name
+		ADDED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml:73:18-55
 uses-sdk
 INJECTED from /Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.2.0] /Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/AndroidManifest.xml:21:5-23:62

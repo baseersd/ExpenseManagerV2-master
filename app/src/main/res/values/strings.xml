@@ -75,6 +75,9 @@
     <string name="fa_file_photo">&#xf1c5;</string>
     <string name="fa_check">&#xf00c;</string>
     <string name="saving_expenses">Saving expenses...</string>
+    <string name="organization">ORGANIZATION</string>
+    <string name="tangible_expenses">TANGIBLE EXPENSES</string>
+    <string name="staff">STAFF</string>
     //Tick mark
 
 </resources>
