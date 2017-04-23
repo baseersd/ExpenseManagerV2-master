@@ -47,6 +47,7 @@ import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
+import expmanager.idea.spark.in.expensemanager.service.CatlogService;
 import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
@@ -164,6 +165,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         getTangibleExpenses();
 
+        startCatlogService();
         return rootView;
     }
 
@@ -410,5 +412,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private void showProgressBar(String message){
         Utils.dismissProgressBar(mDialog);
         mDialog = Utils.showProgressBar(getActivity(),message);
+    }
+
+    private void startCatlogService(){
+        Intent intent = new Intent(getActivity(), CatlogService.class);
+        getActivity().startService(intent);
     }
 }

@@ -152,11 +152,11 @@ public class AdminTangibleExpenses extends Fragment {
 
     private void initTangibleList(){
         //list = db.getAllTanExpenses();
-        if(RuntimeData.mTagibleExpenseList == null){
+        if(RuntimeData.getTagibleExpenseList()== null){
             return;
         }
 
-        List<TanExpenses> list = RuntimeData.mTagibleExpenseList.getTangibleExpensesList();
+        List<TanExpenses> list = RuntimeData.getTagibleExpenseList();
         if (list != null) {
             adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list);
             tanexplist.setAdapter(adapt);
@@ -394,7 +394,7 @@ public class AdminTangibleExpenses extends Fragment {
                     try {
                         String jsonString = "{\"tangibleExpensesList\" :"+response.body().string()+"}";
                         Log.i(getClass().getName(),jsonString);
-                        RuntimeData.mTagibleExpenseList = gson.fromJson(jsonString, TangibleExpensesList.class);
+                        RuntimeData.setTagibleExpenseList(gson.fromJson(jsonString, TangibleExpensesList.class));
                         initTangibleList();
                         Utils.dismissProgressBar(mDialog);
                     } catch (Exception e) {

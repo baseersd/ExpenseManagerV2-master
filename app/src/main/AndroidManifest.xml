@@ -70,6 +70,7 @@
             android:name=".ocr_usage.HelpActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".ViewInvoiceActivity"/>
+        <service android:name=".service.CatlogService"/>
     </application>
 
 </manifest>
