@@ -94,8 +94,7 @@ public class Utils {
         InputMethodManager inputManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
 
         if(context.getCurrentFocus() != null) {
-            inputManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(),
-                    InputMethodManager.HIDE_NOT_ALWAYS);
+            inputManager.hideSoftInputFromWindow(context.getCurrentFocus().getWindowToken(),0);
         }
     }
 

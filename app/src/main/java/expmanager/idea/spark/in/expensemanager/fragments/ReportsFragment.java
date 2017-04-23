@@ -29,6 +29,7 @@ import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.ReportsAdapter;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.model.CategoryItem;
 import expmanager.idea.spark.in.expensemanager.model.ProductListResponse;
 import expmanager.idea.spark.in.expensemanager.model.ReportResponse;
@@ -39,8 +40,6 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry.productListResponse;
 
 /**
  * Created by Ramana.Reddy on 4/13/2017.
@@ -96,44 +95,17 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
          datePickerDialog = new DatePickerDialog(
                 getContext(), this, year, month, day);
 
-        getCategoryProductList();
 
-
+        initCategoriesList();
 
         return rootView;
     }
 
-    private void getCategoryProductList(){
-        SessionManager sessionManager = new SessionManager(getActivity());
-        RetrofitApi.getApi().GetProducts(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.i(getClass().getName(),response.message());
-                if (response.isSuccessful()) {
-                    Gson gson = new GsonBuilder().serializeNulls().create();
-                    try {
-                        String jsonString = "{\"productList\" :"+response.body().string()+"}";
-                        productListResponse = gson.fromJson(jsonString, ProductListResponse.class);
-                        Log.d(getClass().getName(),productListResponse.toString());
-                        initCategoriesList();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
     private void initCategoriesList(){
-        if(productListResponse == null)
+        if(RuntimeData.getCatelogList() == null)
             return;
         final List<String> categoryList = new ArrayList<>();
-        for(CategoryItem categoryItem: productListResponse.getProductList()) {
+        for(CategoryItem categoryItem: RuntimeData.getCatelogList()) {
             // Initialize a new Adapter for RecyclerView
 
             categoryList.add(categoryItem.getCategory().getCategoryName());
@@ -150,7 +122,7 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
 
                 categoryName = categoryList.get(position);
-                categoryId = productListResponse.getProductList().get(position).getCategory().getCategoryId();
+                categoryId = RuntimeData.getCatelogList().get(position).getCategory().getCategoryId();
             }
 
             @Override

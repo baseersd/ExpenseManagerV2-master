@@ -158,7 +158,7 @@ public class ExpenseHistoryViewPagerFragment extends Fragment implements Expense
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getActivity(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
             }
         });
     }

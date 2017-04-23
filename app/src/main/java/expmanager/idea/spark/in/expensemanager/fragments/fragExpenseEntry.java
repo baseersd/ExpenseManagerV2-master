@@ -41,7 +41,6 @@ import com.google.gson.GsonBuilder;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +48,7 @@ import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.CategoriesAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.expenseListAdapter;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.Category;
 import expmanager.idea.spark.in.expensemanager.model.CategoryItem;
@@ -92,7 +92,6 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private String mParam4;
     private String mParam5;
 
-    public static ProductListResponse productListResponse = null;
     private Item mCategory;
     private Item mProduct;
     private OnFragmentInteractionListener mListener;
@@ -120,6 +119,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     private String[] recursiveType = {"Daily", "Weekly", "Monthly", "Monthly - First day", "Monthly - Last day"};
 
     Dialog dialog;
+    private android.app.AlertDialog mProgressDialog;
     //Expense Listing
     LinearLayout lnrexplistingTotlay, lnrexplistinglay, lnrTotExpLay, lnrRecursiveLayout, lnrweekviewmain;
     LinearLayout[] lnrCatWiseExpLay;
@@ -328,9 +328,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
             }
         });
-        if(productListResponse == null) {
-            getCategoryProductList();
-        }
+        initCategoriesList();
         initUI(v);
         // Inflate the layout for this fragment
         return v;
@@ -342,10 +340,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     }
 
     private void initCategoriesList(){
-        if(productListResponse == null)
+        if(RuntimeData.getCatelogList() == null)
             return;
         List<Item> categoryList = new ArrayList<>();
-        for(CategoryItem categoryItem: productListResponse.getProductList()) {
+        for(CategoryItem categoryItem: RuntimeData.getCatelogList()) {
             // Initialize a new Adapter for RecyclerView
             Category category = categoryItem.getCategory();
             categoryList.add(new Item(category.getCategoryId(), Item.ITEM_CATEGORY, category.getCategoryName(),
@@ -387,7 +385,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         if(categoryId != -1) {
             // Initialize a new Adapter for RecyclerView
             List<Item> productList = new ArrayList<>();
-            for(CategoryItem categoryItem: productListResponse.getProductList()) {
+            for(CategoryItem categoryItem: RuntimeData.getCatelogList()) {
                 if(categoryId != categoryItem.getCategory().getCategoryId())
                     continue;
                 List<Product> productsItemList = categoryItem.getProducts();
@@ -506,7 +504,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         //invoice.setInvImgPath(getBase64ImageString(invoice.getInvImgPath()));
         invoice.setInvImgPath(Utils.encodeFileToBase64Binary(invoice.getInvImgPath()));
         ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
-
+        mProgressDialog = Utils.showProgressBar(getActivity(),getString(R.string.saving_expenses));
         RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -516,11 +514,13 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
                 } else {
                     onInvoiceCreateFailure();
                 }
+                Utils.dismissProgressBar(mProgressDialog);
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 onInvoiceCreateFailure();
+                Utils.dismissProgressBar(mProgressDialog);
             }
         });
     }
@@ -744,6 +744,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             mEditedExpense = item;
             addExpenseToList();
         }
+        Utils.hideKeyboard(getActivity());
     }
     public void editExpense(int id){
         if(id<=0){
@@ -783,6 +784,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             loadDetails();
             Toast.makeText(getContext(), "Expense deleted Successfully", Toast.LENGTH_SHORT).show();
         }
+        Utils.hideKeyboard(getActivity());
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -899,31 +901,5 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
        // void openWeekView();
-    }
-
-    private void getCategoryProductList(){
-        SessionManager sessionManager = new SessionManager(getActivity());
-        RetrofitApi.getApi().GetProducts(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.i(getClass().getName(),response.message());
-                if (response.isSuccessful()) {
-                    Gson gson = new GsonBuilder().serializeNulls().create();
-                    try {
-                        String jsonString = "{\"productList\" :"+response.body().string()+"}";
-                        productListResponse = gson.fromJson(jsonString, ProductListResponse.class);
-                        Log.d(getClass().getName(),productListResponse.toString());
-                        initCategoriesList();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }
