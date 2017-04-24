@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
+import expmanager.idea.spark.in.expensemanager.fragments.ExpenseFragment;
 import expmanager.idea.spark.in.expensemanager.model.ProductListResponse;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.NetworkUtils;
@@ -57,15 +58,18 @@ public class CatlogService extends Service {
                         ProductListResponse productListResponse = gson.fromJson(jsonString, ProductListResponse.class);
                         RuntimeData.setCatelogList(productListResponse.getProductList());
                         Log.d(getClass().getName(),productListResponse.toString());
+                        ExpenseFragment.hideProgressbar();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
+                ExpenseFragment.hideProgressbar();
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(CatlogService.this,"Oops something went wrong",Toast.LENGTH_SHORT).show();
+                ExpenseFragment.hideProgressbar();
             }
         });
     }

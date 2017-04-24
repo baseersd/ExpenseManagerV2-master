@@ -192,9 +192,9 @@ public class Utils {
         }
     }
 
-    public static void dismissProgressBar(Dialog progressBar){
-        if(progressBar != null){
-            progressBar.dismiss();
+    public static void dismissProgressBar(Dialog progressDialog){
+        if(progressDialog != null){
+            progressDialog.dismiss();
         }
     }
 
