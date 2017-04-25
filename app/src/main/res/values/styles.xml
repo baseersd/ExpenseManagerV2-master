@@ -13,11 +13,15 @@
     </style>
 
     <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
-
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:checkMark">@drawable/ic_arrow_down</item>
     </style>
 
     <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
-
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
     </style>
     <style name="editTextClassic" parent="@android:style/Widget.EditText">
         <item name="android:textColor">@android:color/primary_text_light</item>
@@ -35,7 +39,7 @@
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="pin_key_style">
@@ -47,5 +51,30 @@
         <item name="android:paddingRight">@dimen/margin_large</item>
         <item name="android:background">@color/transparentGray</item>
         <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="add_staff_label_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+    </style>
+
+    <style name="add_staff_edittext_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_text_height</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:text">""</item>
+        <item name="android:ems">10</item>
+        <item name="android:padding">@dimen/margin_small</item>
+    </style>
+
+    <style name="spinneritemstyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/blue</item>
     </style>
 </resources>

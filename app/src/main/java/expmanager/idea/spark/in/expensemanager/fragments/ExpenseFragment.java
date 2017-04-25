@@ -80,7 +80,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private LinearLayoutManager mLayoutManagerWeek;
     private boolean isWeeklyExpense = false;
     private int flag;
-    private Dialog mDialog;
+    private static Dialog mDialog;
     private  Typeface typeface;
     private Button cancelDialog;
     private ImageView invoiceImage;
@@ -165,7 +165,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         getTangibleExpenses();
 
-        startCatlogService();
+        //startCatlogService();
         return rootView;
     }
 
@@ -199,6 +199,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
     private void getTangibleExpenses(){
         SessionManager sessionManager = new SessionManager(getActivity());
+        showProgressBar(getString(R.string.fetch_tangible_expenses));
         RetrofitApi.getApi().GetBroadcast(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -210,15 +211,19 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                         Log.i(getClass().getName(),response.body().string());
                     } catch (Exception e) {
                         e.printStackTrace();
+                    }finally {
+                        Utils.dismissProgressBar(mDialog);
                     }
                 }
                 Utils.dismissProgressBar(mDialog);
+                startCatlogService();
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(getActivity(),"Oops something went wrong",Toast.LENGTH_SHORT).show();
                 Utils.dismissProgressBar(mDialog);
+                startCatlogService();
             }
         });
     }
@@ -415,7 +420,12 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     }
 
     private void startCatlogService(){
+        mDialog = Utils.showProgressBar(getActivity(),getString(R.string.fetching_categories));
         Intent intent = new Intent(getActivity(), CatlogService.class);
         getActivity().startService(intent);
+    }
+
+    public static void hideProgressbar(){
+        Utils.dismissProgressBar(mDialog);
     }
 }

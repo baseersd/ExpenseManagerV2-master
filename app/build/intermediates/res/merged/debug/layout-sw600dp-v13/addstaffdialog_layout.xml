@@ -28,7 +28,7 @@
                 android:layout_marginTop="40dp"
                 android:text="Add Staff"
                 android:textColor="#1fb598"
-                android:textSize="20sp"
+                android:textSize="@dimen/margin_large"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -37,30 +37,244 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="120dp"
                     android:orientation="vertical">
 
                     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                        android:id="@+id/ssddsd"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:text="Name"
-                        android:textColor="#1fb598"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:id="@+id/tv_staff_name_label"
+                        style="@style/add_staff_label_style"
+                        android:text="Name"/>
 
                     <EditText
                         android:id="@+id/staff_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        style="@style/add_staff_edittext_style"
+                        android:inputType="textPersonName"/>
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/tv_staffemail_label"
+                        style="@style/add_staff_label_style"
+                        android:text="E-mail" />
+
+                    <EditText
+                        android:id="@+id/staffemail"
+                        style="@style/add_staff_edittext_style"
+                        android:layout_weight="0.20"
+                        android:inputType="textEmailAddress"/>
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/tv_designation_label"
+                        style="@style/add_staff_label_style"
+                        android:text="Designation"/>
+
+                    <EditText
+                        android:id="@+id/designation"
+                        style="@style/add_staff_edittext_style"
+                        android:layout_weight="0.20"
+                        android:inputType="textPersonName"/>
+
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/ggggdddgg"
+                        style="@style/add_staff_label_style"
+                        android:text="Address"/>
+
+                    <EditText
+                        android:id="@+id/staffaddress"
+                        style="@style/add_staff_edittext_style"
+                        android:layout_weight="0.20"
+                        android:inputType="textPersonName"/>
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/gddggggg"
+                        style="@style/add_staff_label_style"
+                        android:text="Phone no" />
+
+                    <EditText
+                        android:id="@+id/staffphonenumber"
+                        style="@style/add_staff_edittext_style"
+                        android:layout_weight="0.20"
+                        android:inputType="phone"
+                        android:maxLength="14"
+                        android:paddingLeft="5dp"/>
+
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/textView5"
+                        style="@style/add_staff_label_style"
+                        android:text="Shift Days"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_weight="0.12"
-                        android:background="@drawable/edit_text_border"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="" />
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Spinner
+                            android:id="@+id/spinnershift1"
+                            style="@style/spinneritemstyle"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_weight="0.45"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                        <!--android:background="@drawable/edit_text_border"-->
+
+                        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                            android:id="@+id/texfftView6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="to"
+                            android:textColor="#1fb598"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnershift2"
+                            style="@style/spinneritemstyle"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_weight="0.45"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                        <!--android:background="@drawable/edit_text_border"-->
+                    </LinearLayout>
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/textView6"
+                        style="@style/add_staff_label_style"
+                        android:text="Shift time"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Spinner
+                            android:id="@+id/spinnertime1"
+                            style="@style/spinneritemstyle"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_weight="0.45"
+                            android:ems="10"
+                            android:background="@drawable/edit_text_border"
+                            android:inputType="textPersonName" />
+
+                        <!--android:background="@drawable/edit_text_border"-->
+
+                        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                            android:id="@+id/texfftkoView6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:text="to"
+                            android:textColor="#1fb598"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinnertime2"
+                            style="@style/spinneritemstyle"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_weight="0.45"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                        <!--android:background="@drawable/edit_text_border"-->
+                    </LinearLayout>
+
+
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/ggg"
+                        style="@style/add_staff_label_style"
+                        android:text="Started"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edit_text_height"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/started"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="true"
+                            android:background="@drawable/edit_text_border"
+                            android:ems="13"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_size_medium"
+                            android:inputType="textPersonName"
+                            android:gravity="center_vertical"
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/img_calendar"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/started"
+                            android:layout_alignEnd="@id/started"
+                            android:layout_alignTop="@id/started"
+                            android:src="@drawable/ic_date_range" />
+
+
+                    </RelativeLayout>
+
+                    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                        android:id="@+id/ggghg"
+                        style="@style/add_staff_label_style"
+                        android:text="Current Salary"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/salary"
+                            style="@style/add_staff_edittext_style"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.5"
+                            android:inputType="number" />
+
+                        <Spinner
+                            android:id="@+id/spinnersal"
+                            style="@style/spinneritemstyle"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edit_text_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/edit_text_border"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/addstafftodb"
+                        style="@style/button_style"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="25dp"
+                        android:drawableLeft="@drawable/ic_add"
+                        android:drawablePadding="@dimen/margin_small"
+                        android:text="Add"
+                        android:textSize="@dimen/text_size_xlarge" />
                 </LinearLayout>
 
                 <ImageButton
@@ -74,288 +288,61 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/adduser" />
             </RelativeLayout>
+<!--<<<<<<< HEAD-->
 
+            <!--<expmanager.idea.spark.in.expensemanager.utils.CustomFonts-->
+                <!--android:id="@+id/ggghg"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="Current Salary"-->
+                <!--android:textColor="#1fb598"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
 
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/ggfffg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="E-mail"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
 
-            <EditText
-                android:id="@+id/staffemail"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:text=""
-                android:layout_weight="0.20" />
+                <!--<EditText-->
+                    <!--android:id="@+id/salary"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_weight="0.3"-->
+                    <!--android:background="@drawable/edit_text_border"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="number" />-->
 
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/gggggg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Designation"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <!--<Spinner-->
+                    <!--android:id="@+id/spinnersal"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_weight="0.3"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="textPersonName" />-->
 
-            <EditText
-                android:id="@+id/designation"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text=""
-                android:layout_weight="0.20" />
+                <!--&lt;!&ndash;android:background="@drawable/edit_text_border"&ndash;&gt;-->
+            <!--</LinearLayout>-->
 
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/ggggdddgg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Address"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/staffaddress"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text=""
-                android:layout_weight="0.20" />
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/gddggggg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Phone no"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/staffphonenumber"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="5dp"
-                android:maxLength="14"
-                android:background="@drawable/edit_text_border"
-                android:ems="10"
-                android:inputType="phone"
-                android:text=""
-                android:layout_weight="0.20" />
-
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Shift Days"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <Spinner
-                    android:id="@+id/spinnershift1"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-                <!--android:background="@drawable/edit_text_border"-->
-
-                <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/texfftView6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="0.05"
-                    android:gravity="center"
-                    android:text="to"
-                    android:textColor="#1fb598"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Spinner
-                    android:id="@+id/spinnershift2"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-                <!--android:background="@drawable/edit_text_border"-->
-            </LinearLayout>
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Shift time"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <Spinner
-                    android:id="@+id/spinnertime1"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-
-                <!--android:background="@drawable/edit_text_border"-->
-
-                <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                    android:id="@+id/texfftkoView6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="0.05"
-                    android:gravity="center"
-                    android:text="to"
-                    android:textColor="#1fb598"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Spinner
-                    android:id="@+id/spinnertime2"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-                <!--android:background="@drawable/edit_text_border"-->
-            </LinearLayout>
-
-
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/ggg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Started"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:id="@+id/started"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:background="@drawable/edit_text_border"
-                    android:ems="13"
-                    android:inputType="textPersonName"
-                    android:text="" />
-
-                <ImageView
-                    android:id="@+id/img_calendar"
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/started"
-                    android:layout_alignEnd="@id/started"
-                    android:layout_alignTop="@id/started"
-                    android:src="@drawable/ic_date_range" />
-
-
-            </RelativeLayout>
-
-
-
-
-
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/ggghg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Current Salary"
-                android:textColor="#1fb598"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <EditText
-                    android:id="@+id/salary"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="0.3"
-                    android:background="@drawable/edit_text_border"
-                    android:ems="10"
-                    android:inputType="number" />
-
-                <Spinner
-                    android:id="@+id/spinnersal"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="0.3"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-
-                <!--android:background="@drawable/edit_text_border"-->
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/addstafftodb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="25dp"
-                android:background="#1fb598"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="Add"
-                android:textColor="#fff"
-                android:textStyle="bold" />
+            <!--<Button-->
+                <!--android:id="@+id/addstafftodb"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginTop="25dp"-->
+                <!--android:background="#1fb598"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:text="Add"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textStyle="bold" />-->
+<!--=======-->
+<!--&gt;>>>>>> 94c8a7ca3620e8fb843dcade1917efc5fbf47b63-->
         </LinearLayout>
 
         <Button

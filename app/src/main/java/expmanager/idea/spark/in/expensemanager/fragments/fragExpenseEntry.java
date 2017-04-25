@@ -328,8 +328,8 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
 
             }
         });
-        initCategoriesList();
         initUI(v);
+        initCategoriesList();
         // Inflate the layout for this fragment
         return v;
     }
@@ -340,7 +340,7 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
     }
 
     private void initCategoriesList(){
-        if(RuntimeData.getCatelogList() == null)
+        if(RuntimeData.getCatelogList() == null || RuntimeData.getCatelogList().isEmpty())
             return;
         List<Item> categoryList = new ArrayList<>();
         for(CategoryItem categoryItem: RuntimeData.getCatelogList()) {

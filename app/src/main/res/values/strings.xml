@@ -78,6 +78,7 @@
     <string name="fa_showpwd">&#xf06e;</string>
     <string name="fa_hidepwd">&#xf070;</string>
     <string name="saving_expenses">Saving expenses...</string>
+    <string name="fetching_categories">Fetching Categories from Server...</string>
     <string name="organization">ORGANIZATION</string>
     <string name="tangible_expenses">TANGIBLE EXPENSES</string>
     <string name="staff">STAFF</string>
