@@ -95,7 +95,7 @@ public class TangibleExpenseFragment extends Fragment {
 
         list = db.getAllTanExpenses();
         if (list != null) {
-            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list);
+            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list,null);
             tanexplist.setAdapter(adapt);
         }
         addtanexpense.setOnClickListener(new View.OnClickListener() {

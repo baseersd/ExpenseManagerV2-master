@@ -160,12 +160,11 @@
 
                         <Spinner
                             android:id="@+id/spinnertime1"
-                            style="@style/spinneritemstyle"
+                            style="@style/Widget.AppCompat.DropDownItem.Spinner"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/edit_text_height"
                             android:layout_weight="0.45"
                             android:ems="10"
-                            android:background="@drawable/edit_text_border"
                             android:inputType="textPersonName" />
 
                         <!--android:background="@drawable/edit_text_border"-->

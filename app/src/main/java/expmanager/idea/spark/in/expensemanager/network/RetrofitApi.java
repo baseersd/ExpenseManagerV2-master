@@ -10,7 +10,7 @@ import expmanager.idea.spark.in.expensemanager.model.ForgotPassword;
 import expmanager.idea.spark.in.expensemanager.model.LoginRequest;
 import expmanager.idea.spark.in.expensemanager.model.LoginRequestUsePin;
 import expmanager.idea.spark.in.expensemanager.model.SignUpRequest;
-import expmanager.idea.spark.in.expensemanager.model.UpdateTangibleExpense;
+import expmanager.idea.spark.in.expensemanager.model.UpdateTangibleExpenseRequest;
 import okhttp3.OkHttpClient;
 import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -118,7 +118,7 @@ public class RetrofitApi {
          * UPDATE_TANGIBLE_EXPENSE
          */
         @POST(ServerURLModel.UPDATE_TANGIBLE_EXPENSE)
-        Call<ResponseBody> UpdateTangibleExpense(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
+        Call<ResponseBody> UpdateTangibleExpense(@Header("Authtoken") String auth, @Body UpdateTangibleExpenseRequest updateTangibleExpenseRequest);
 
 
 
@@ -131,17 +131,17 @@ public class RetrofitApi {
         Call<ResponseBody> AddExpense(@Header("Authtoken") String auth, @Body AddExpenseRequest requestModel);
 
 
-        /*
-         * GET_EXPENSE
-        */
-        @GET(ServerURLModel.GET_EXPENSE)
-        Call<ResponseBody> GetExpense(@Header("Authtoken") String auth,@Body UpdateTangibleExpense requestModel);
-
-        /*
-         * UPDATE_EXPENSE
-         */
-        @POST(ServerURLModel.UPDATE_EXPENSE)
-        Call<ResponseBody> UpdateExpense(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
+//        /*
+//         * GET_EXPENSE
+//        */
+//        @GET(ServerURLModel.GET_EXPENSE)
+//        Call<ResponseBody> GetExpense(@Header("Authtoken") String auth,@Body UpdateTangibleExpense requestModel);
+//
+//        /*
+//         * UPDATE_EXPENSE
+//         */
+//        @POST(ServerURLModel.UPDATE_EXPENSE)
+//        Call<ResponseBody> UpdateExpense(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
 
 
           /*
@@ -178,11 +178,11 @@ public class RetrofitApi {
         @GET(ServerURLModel.GET_SALE)
         Call<ResponseBody> GetSale(@Header("Authtoken") String auth);
 
-        /*
-         * UPDATE_SALE
-         */
-        @POST(ServerURLModel.UPDATE_SALE)
-        Call<ResponseBody> UpdateSale(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
+//        /*
+//         * UPDATE_SALE
+//         */
+//        @POST(ServerURLModel.UPDATE_SALE)
+//        Call<ResponseBody> UpdateSale(@Header("Authtoken") String auth, @Body UpdateTangibleExpense requestModel);
 
         /*
          * ADD_STAFF
