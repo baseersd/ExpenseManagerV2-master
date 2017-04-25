@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -204,6 +205,10 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
             @Override
             public void onClick(View v) {
 
+                if(!isValidEmail(staffemail.getText().toString()))
+                    Toast.makeText(getActivity(),"Please enter valid email",Toast.LENGTH_SHORT).show();
+                if(!isValidMobile(staffphonenumber.getText().toString()))
+                    Toast.makeText(getActivity(),"Please enter valid phone number",Toast.LENGTH_SHORT).show();
                 if(!staffname.getText().toString().isEmpty() ) {
                    final  Staff insertstaff = new Staff();
                     insertstaff.setStaff_name(staffname.getText().toString());
@@ -243,8 +248,6 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
                         @Override
                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
-
-
                             if (response.isSuccessful()) {
 
                                 db.addStaff(insertstaff);
@@ -269,15 +272,6 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
 
                         }
                     });
-
-
-
-
-
-
-
-
-
                 }
             }
         });
@@ -315,5 +309,13 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
 
             started.setText(year+"-"+month+"-"+dayOfMonth);
 
+    }
+
+    public final static boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    }
+
+    private boolean isValidMobile(String phone) {
+        return android.util.Patterns.PHONE.matcher(phone).matches();
     }
 }

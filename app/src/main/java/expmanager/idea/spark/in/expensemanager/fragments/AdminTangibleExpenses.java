@@ -17,7 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -30,6 +32,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
@@ -54,7 +57,8 @@ import retrofit2.Response;
 
 public class AdminTangibleExpenses extends Fragment {
     Button addtanexpense, canceltandialog, addtanexptoDb;
-    EditText priceval, categoryval;
+    EditText priceval;
+    AutoCompleteTextView categoryval;
     Spinner whenval;
     DatabaseHandler db;
     ListView tanexplist;
@@ -137,13 +141,13 @@ public class AdminTangibleExpenses extends Fragment {
         });
 
 
-        addtanexpense.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                openAddtagibleExpDialog();
-                return true;
-            }
-        });
+//        addtanexpense.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View view) {
+//                openAddtagibleExpDialog();
+//                return true;
+//            }
+//        });
         getTangibleExpenses();
         return rootView;
     }
@@ -175,7 +179,7 @@ public class AdminTangibleExpenses extends Fragment {
         TextView textView = (TextView) dialog.findViewById(R.id.add_img_plus);
         textView.setTypeface(typeface);
 
-        categoryval = (EditText) dialog.findViewById(R.id.categoryval);
+        categoryval = (AutoCompleteTextView) dialog.findViewById(R.id.categoryval);
         whenval = (Spinner) dialog.findViewById(R.id.whenval);
         priceval = (EditText) dialog.findViewById(R.id.priceval);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
@@ -290,7 +294,7 @@ public class AdminTangibleExpenses extends Fragment {
         canceltandialog = (Button) dialogView.findViewById(R.id.canceltandialog);
         addtanexptoDb = (Button) dialogView.findViewById(R.id.addtanexptoDb);
 
-        categoryval = (EditText) dialogView.findViewById(R.id.categoryval);
+        categoryval = (AutoCompleteTextView) dialogView.findViewById(R.id.categoryval);
         whenval = (Spinner) dialogView.findViewById(R.id.whenval);
         priceval = (EditText) dialogView.findViewById(R.id.priceval);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
@@ -305,6 +309,26 @@ public class AdminTangibleExpenses extends Fragment {
                 R.array.perWhen, R.layout.simple_spinner_item);
         adapterper.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         whenval.setAdapter(adapterper);
+
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        for (int i = 0; i <RuntimeData.getCatelogList().size() ; i++) {
+
+            arrayList.add(RuntimeData.getCatelogList().get(i).getCategory().getCategoryName());
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, arrayList);
+
+        categoryval.setAdapter(adapter);
+
+        categoryval.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                categoryval.setText((String)adapterView.getItemAtPosition(i));
+            }
+        });
 
 
         canceltandialog.setOnClickListener(new View.OnClickListener() {
