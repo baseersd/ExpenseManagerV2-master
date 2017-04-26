@@ -38,5 +38,6 @@
     <color name="viewfinder_corners">#ffffffff</color> <!-- four corner elements for viewfinder -->
     <color name="viewfinder_frame">#ffd6d6d6</color> <!-- viewfinder rectangle -->
     <color name="viewfinder_mask">#60000000</color>
-    <color name="white">#FFFFFF</color>  <!-- viewfinder exterior darkened area -->
+    <color name="white">#FFFFFF</color>
+    <color name="reports_header">#133852</color>  <!-- viewfinder exterior darkened area -->
 </resources>

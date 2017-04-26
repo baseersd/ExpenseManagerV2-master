@@ -1,6 +1,7 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
 import android.app.DatePickerDialog;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,13 +49,15 @@ import retrofit2.Response;
 public class ReportsFragment extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener{
 
     private TextView txtDateFrom,txtDateTo;
-    private ImageView imgCalendarFrom,imgCalendarTo,imgRefresh;
+    private ImageView imgCalendarFrom,imgCalendarTo;
+    private TextView imgRefresh;
     private RecyclerView mRecyclerView;
     private DatePickerDialog datePickerDialog;
     private Spinner spinner;
     private String categoryName;
     private int categoryId;
     private int i = 0;
+    private Typeface typeface;
 
 
     @Override
@@ -68,7 +71,10 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
         txtDateTo = (TextView) rootView.findViewById(R.id.txt_to_date);
         imgCalendarFrom = (ImageView) rootView.findViewById(R.id.img_calendar);
         imgCalendarTo = (ImageView) rootView.findViewById(R.id.img_to_calendar);
-        imgRefresh = (ImageView) rootView.findViewById(R.id.img_refresh);
+        typeface = Typeface.createFromAsset(getContext().getAssets(),
+                "fontawesome.ttf");
+        imgRefresh = (TextView) rootView.findViewById(R.id.img_refresh);
+        imgRefresh.setTypeface(typeface);
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_reports);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -112,8 +118,8 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
 
                   }
 
-        ArrayAdapter<String> adapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, categoryList);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(getActivity(),R.layout.simple_spinner_item, categoryList);
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setSelection(2);
 
@@ -164,11 +170,28 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
 
         month = month+1;
 
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(year);
+        stringBuilder.append("-");
+        if(month >0 && month < 10){
+            stringBuilder.append("0");
+            stringBuilder.append(month);
+        }else{
+            stringBuilder.append(month);
+        }
+        stringBuilder.append("-");
+        if(day >0 && day < 10){
+            stringBuilder.append("0");
+            stringBuilder.append(day);
+        }else{
+            stringBuilder.append(day);
+        }
+
         if(i==0){
             //txtDateFrom.setText(day+"-"+month+"-"+year);
-            txtDateFrom.setText(year+"-"+month+"-"+day);
+            txtDateFrom.setText(stringBuilder.toString());
         }else {
-            txtDateTo.setText(year+"-"+month+"-"+day);
+            txtDateTo.setText(stringBuilder.toString());
         }
     }
 

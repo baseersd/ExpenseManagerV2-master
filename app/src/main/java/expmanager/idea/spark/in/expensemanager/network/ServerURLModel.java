@@ -8,6 +8,7 @@ public class ServerURLModel {
 
     public static final String DOMAIN_URL = "https://expensemanagerapi.herokuapp.com";
     public static final String SERVER_BASE_IP = "https://expensemanagerapi.herokuapp.com/api/v1/";
+    public static final String DEFAULT_IMAGE = "/assets/default.png";
 
     public static final String USER_SIGN_UP = "users/signup";
     public static final String USER_LOGIN = "login";
