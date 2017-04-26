@@ -199,7 +199,7 @@
             android:id="@+id/setupstaff"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_above="@+id/textView7"
+            android:layout_above="@+id/txt_setup_staff"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="25dp"

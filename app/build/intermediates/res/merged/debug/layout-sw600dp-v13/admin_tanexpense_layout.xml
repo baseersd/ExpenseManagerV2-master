@@ -177,6 +177,36 @@
             android:layout_centerInParent="true"
             android:visibility="gone" />
 
+
+        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+            android:id="@+id/txt_setup_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/setupstaff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/setupstaff"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Setup Staff"
+            android:textColor="#1fb598"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/setupstaff"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/textView7"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/circular_view"
+            android:src="@drawable/right_arrow" />
+
     </RelativeLayout>
 
 </LinearLayout>

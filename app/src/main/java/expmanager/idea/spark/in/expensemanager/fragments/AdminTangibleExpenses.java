@@ -184,118 +184,6 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
         }
     }
 
-//    public void openAddtagibleExpDialog() {
-//        final Dialog dialog = new Dialog(getActivity());
-//
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog.setContentView(R.layout.addtanexpensedailog_layout);
-//        canceltandialog = (Button) dialog.findViewById(R.id.canceltandialog);
-//        addtanexptoDb = (Button) dialog.findViewById(R.id.addtanexptoDb);
-//
-//        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
-//                "fontawesome.ttf");
-//
-//        TextView textView = (TextView) dialog.findViewById(R.id.add_img_plus);
-//        textView.setTypeface(typeface);
-//
-//        categoryval = (AutoCompleteTextView) dialog.findViewById(R.id.categoryval);
-//        whenval = (Spinner) dialog.findViewById(R.id.whenval);
-//        priceval = (EditText) dialog.findViewById(R.id.priceval);
-//        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-//        lp.copyFrom(dialog.getWindow().getAttributes());
-//        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-//        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-//        lp.gravity = Gravity.CENTER;
-//        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-//
-//        dialog.getWindow().setAttributes(lp);
-//        dialog.setCanceledOnTouchOutside(false);
-//        dialog.getWindow().getAttributes().width = (int) (Utils.getDeviceMetrics(getActivity()).widthPixels * 0.55);
-//        ArrayAdapter<CharSequence> adapterper = ArrayAdapter.createFromResource(getActivity(),
-//                R.array.perWhen, R.layout.simple_spinner_item);
-//        adapterper.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
-//        whenval.setAdapter(adapterper);
-//        dialog.show();
-//
-//        dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-//            @Override
-//            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-//                // Prevent dialog close on back press button
-//                return keyCode == KeyEvent.KEYCODE_BACK;
-//            }
-//        });
-//        canceltandialog.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dialog.dismiss();
-//            }
-//        });
-//
-//
-//        addtanexptoDb.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//               /* if(!categoryval.getText().toString().isEmpty() && !whenval.getSelectedItem().toString().isEmpty() && !priceval.getText().toString().isEmpty()) {
-//                    TanExpenses insertall = new TanExpenses(categoryval.getText().toString(), whenval.getSelectedItem().toString(), priceval.getText().toString());
-//                    db.addTanExpenses(insertall);
-//                    AdminTangibleExpenses.adapt.add(insertall);
-//                    AdminTangibleExpenses.adapt.notifyDataSetChanged();
-//                    dialog.dismiss();
-//                }*/
-//
-//                if (!NetworkUtils.getInstance().isNetworkAvailable(getActivity())) {
-//
-//                    Toast.makeText(getActivity(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                if (!categoryval.getText().toString().isEmpty() && !whenval.getSelectedItem().toString().isEmpty() && !priceval.getText().toString().isEmpty()) {
-//                    final TanExpenses insertall = new TanExpenses(categoryval.getText().toString(), whenval.getSelectedItem().toString(), priceval.getText().toString());
-//                    dialog.dismiss();
-//
-//                    progressBar.setVisibility(View.VISIBLE);
-//
-//
-//                    AddTangibleExpenseRequest addTangibleExpenseRequest = new AddTangibleExpenseRequest(insertall.getCategory(), insertall.getWhen(), insertall.getPrice());
-//                    SessionManager sessionManager = new SessionManager(getActivity());
-//                    RetrofitApi.getApi().AddTangibleExpense(sessionManager.getAuthToken(), addTangibleExpenseRequest).enqueue(new Callback<ResponseBody>() {
-//                        @Override
-//                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//
-//                            progressBar.setVisibility(View.GONE);
-//
-//                            if (response.isSuccessful()) {
-//
-//                                db.addTanExpenses(insertall);
-//                                AdminTangibleExpenses.adapt.add(insertall);
-//                                AdminTangibleExpenses.adapt.notifyDataSetChanged();
-//
-//                            } else {
-//
-//                                Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
-//                            }
-//
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-//
-//                            progressBar.setVisibility(View.GONE);
-//
-//                            Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
-//
-//                        }
-//                    });
-//
-//
-//                }
-//
-//
-//            }
-//        });
-//    }
 
 
     private void openAddtagibleExpDialog1() {
@@ -362,13 +250,6 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
             @Override
             public void onClick(View v) {
 
-               /* if(!categoryval.getText().toString().isEmpty() && !whenval.getSelectedItem().toString().isEmpty() && !priceval.getText().toString().isEmpty()) {
-                    TanExpenses insertall = new TanExpenses(categoryval.getText().toString(), whenval.getSelectedItem().toString(), priceval.getText().toString());
-                    db.addTanExpenses(insertall);
-                    AdminTangibleExpenses.adapt.add(insertall);
-                    AdminTangibleExpenses.adapt.notifyDataSetChanged();
-                    dialog.dismiss();
-                }*/
 
                 if (!NetworkUtils.getInstance().isNetworkAvailable(getActivity())) {
 
@@ -444,12 +325,20 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
     public void onResume() {
         super.onResume();
 
-
-
         if(getActivity() instanceof MainActivity){
 
             MainActivity mainActivity = (MainActivity) getActivity();
             mainActivity.changeTangibleExpensesTextColor();
+
+            setupstaff.setVisibility(View.VISIBLE);
+            txtSetupsaff.setVisibility(View.VISIBLE);
+            imgArrow.setVisibility(View.GONE);
+
+        }else {
+
+            setupstaff.setVisibility(View.GONE);
+            txtSetupsaff.setVisibility(View.GONE);
+            imgArrow.setVisibility(View.VISIBLE);
 
         }
     }
