@@ -52,6 +52,14 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
         approve.setTypeface(fontAwesomeFont);
         reject = (TextView) itemView.findViewById(R.id.reject);
         reject.setTypeface(fontAwesomeFont);
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mCallback != null){
+                    mCallback.onRejectBtnClick(mGroupObj.getExpObj());
+                }
+            }
+        });
         viewInvoice = (TextView) itemView.findViewById(R.id.view_invoice);
         viewInvoice.setTypeface(fontAwesomeFont);
         viewInvoice.setOnClickListener(new View.OnClickListener() {
