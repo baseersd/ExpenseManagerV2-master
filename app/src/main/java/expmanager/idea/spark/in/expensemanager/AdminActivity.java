@@ -17,6 +17,7 @@ import expmanager.idea.spark.in.expensemanager.fragments.InvoiceEntryFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.ReportsFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.SalesFragment;
 import expmanager.idea.spark.in.expensemanager.fragments.fragExpenseEntry;
+import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 
 
 /**
@@ -64,6 +65,23 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
         btnReports = (ImageButton) findViewById(R.id.btnreports);
         btnReports.setOnClickListener(this);
+
+        SessionManager sessionManager = new SessionManager(AdminActivity.this);
+
+        if(sessionManager.isApproved()){
+
+            btnReports.setVisibility(View.GONE);
+            btnsales.setVisibility(View.GONE);
+            btnstaff.setVisibility(View.GONE);
+
+        }else {
+
+            btnReports.setVisibility(View.VISIBLE);
+            btnsales.setVisibility(View.VISIBLE);
+            btnstaff.setVisibility(View.VISIBLE);
+
+        }
+
     }
 
     @Override

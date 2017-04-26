@@ -109,6 +109,7 @@ public class SessionManager {
         editor.remove(KEY_TOKEN);
         editor.remove(KEY_NAME);
         editor.remove(KEY_COMPANY_ID);
+        editor.remove(KEY_IS_ADMIN);
         editor.commit();
 
         // After logout redirect user to Loing Activity
