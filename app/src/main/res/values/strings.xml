@@ -82,6 +82,7 @@
     <string name="organization">ORGANIZATION</string>
     <string name="tangible_expenses">TANGIBLE EXPENSES</string>
     <string name="staff">STAFF</string>
+    <string name="company_logo_upload">Upload Company Logo</string>
     //Tick mark
 
 </resources>

@@ -29,6 +29,7 @@ public class ServerURLModel {
     public static final String GET_PRODUCTS = "get_products";
     public static final String EXPENSE_HISTORY = "expense_history";
     public static final String GET_BROADCAST = "get_broadcast";
+    public static final String APPROVE_REJECT_INVOICE = "approve_reject_invoice";
 
     public static final String ADD_STAFF = "add_staff";
 //    public static final String UPDATE_SALE = "update_sale";

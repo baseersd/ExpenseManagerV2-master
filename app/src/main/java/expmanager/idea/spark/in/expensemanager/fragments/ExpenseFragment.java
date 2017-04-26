@@ -36,16 +36,15 @@ import java.util.Arrays;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
+import expmanager.idea.spark.in.expensemanager.model.ApproveRejectInvoiceRequest;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseHistoryResponse;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
-import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.service.CatlogService;
 import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
@@ -346,6 +345,14 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     }
 
     @Override
+    public void onRejectBtnClick(ExpenseSyncRequest syncRequest) {
+        ApproveRejectInvoiceRequest requestObj = new ApproveRejectInvoiceRequest();
+        requestObj.setApproved(false);
+        requestObj.setId(syncRequest.getInvoice().getInvNo());
+        approveRejectInvoice(requestObj);
+    }
+
+    @Override
     public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest) {
         if(syncRequest.getInvoice().getInvImgPath() == null){
             return;
@@ -403,6 +410,30 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                 } else {
                     Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
                 }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
+            }
+        });
+
+    }
+
+    public void approveRejectInvoice(ApproveRejectInvoiceRequest requestObj){
+        SessionManager sessionManager = new SessionManager(getContext());
+
+        RetrofitApi.getApi().ApproveRejectInvoice(sessionManager.getAuthToken(),requestObj).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    Toast.makeText(getContext(),"Expense Updated",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                }
+                Utils.dismissProgressBar(mDialog);
             }
 
             @Override

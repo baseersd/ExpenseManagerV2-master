@@ -68,7 +68,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
         SessionManager sessionManager = new SessionManager(AdminActivity.this);
 
-        if(sessionManager.isApproved()){
+        if(!sessionManager.isApproved()){
 
             btnReports.setVisibility(View.GONE);
             btnsales.setVisibility(View.GONE);

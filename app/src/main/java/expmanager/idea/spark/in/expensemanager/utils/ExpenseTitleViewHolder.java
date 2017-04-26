@@ -37,6 +37,7 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
 
     public interface OnApprovePress{
         public void onApproveBtnClick(ExpenseSyncRequest syncRequest);
+        public void onRejectBtnClick(ExpenseSyncRequest syncRequest);
         public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest);
     }
     public ExpenseTitleViewHolder(Context context, View itemView, OnApprovePress callback) {
