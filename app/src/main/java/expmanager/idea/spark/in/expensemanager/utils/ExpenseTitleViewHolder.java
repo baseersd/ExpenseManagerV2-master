@@ -89,11 +89,11 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
             llExpenseGroup.setBackgroundColor(context.getResources().getColor(R.color.grey05));
         }
 
-        /*if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
+        if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
             viewInvoice.setVisibility(View.VISIBLE);
         }else{
             viewInvoice.setVisibility(View.GONE);
-        }*/
+        }
     }
 
     @Override

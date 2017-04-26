@@ -56,7 +56,7 @@
     <string name="expense_history_for_last_6_weeks">Expense History For Last 6 weeks</string>
 
     <!-- Font awesome Icon list -->
-    <string name="fa_dollar">&#xf1fe;</string>
+    <string name="fa_dollar">&#xf155;</string>
     <string name="fa_calendar">&#xf073;</string>
     <string name="fa_dashboard">&#xf0e4;</string>
     <string name="fa_card">&#xf09d;</string>
@@ -77,12 +77,22 @@
     <string name="fa_check">&#xf00c;</string>
     <string name="fa_showpwd">&#xf06e;</string>
     <string name="fa_hidepwd">&#xf070;</string>
+    <string name="fa_user">&#xf007;</string>
+    <string name="fa_history">&#xf1da;</string>
+    <string name="fa_money">&#xf0d6;</string>
+    <string name="fa_balance_scale">&#xf24e;</string>
+
     <string name="saving_expenses">Saving expenses...</string>
     <string name="fetching_categories">Fetching Categories from Server...</string>
     <string name="organization">ORGANIZATION</string>
     <string name="tangible_expenses">TANGIBLE EXPENSES</string>
     <string name="staff">STAFF</string>
     <string name="company_logo_upload">Upload Company Logo</string>
+    <string name="currentweek">Current :</string>
+    <string name="previousweek">Previous :</string>
+    <string name="lastPrevWeek">Last Previous :</string>
+    <string name="nextweek">Next Week :</string>
+
     //Tick mark
 
 </resources>

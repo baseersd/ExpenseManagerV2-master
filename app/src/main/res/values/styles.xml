@@ -77,4 +77,15 @@
     <style name="spinneritemstyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
         <item name="android:textColor">@color/blue</item>
     </style>
+
+    <style name="menubar_item_style_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
 </resources>
