@@ -12,13 +12,13 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="#000"
             app:srcCompat="@drawable/header_logo" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:background="@drawable/menu_bg_gradient"
             android:orientation="vertical">
@@ -29,79 +29,50 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageButton
+                <TextView
                     android:id="@+id/btnexpense"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/expense"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_dollar"/>
 
-                <ImageButton
+                <TextView
                     android:id="@+id/btnhistory"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/history"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_calendar"/>
 
-                <ImageButton
+                <TextView
                     android:id="@+id/btndashboard"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/dashboard"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_dashboard"/>
 
-                <ImageButton
+                <TextView
                     android:id="@+id/btntanexpense"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/tanexpense"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_card"/>
 
-                <ImageButton
+                <TextView
                     android:id="@+id/btnstaff"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/profile"
-                    android:background="@android:color/transparent"/>
-                <ImageButton
-                    android:id="@+id/btnsales"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/sales"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_users"/>
 
-                <ImageButton
+                <TextView
+                    android:id="@+id/btnsales"
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_money"/>
+
+                <TextView
                     android:id="@+id/btnreports"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:background="@android:color/transparent"/>
+                    style="@style/menubar_item_style_txt"
+                    android:text="@string/fa_chart"
+                    android:gravity="center" />
             </LinearLayout>
 
-            <ImageButton
+            <TextView
                 android:id="@+id/btnprofile"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                style="@style/menubar_item_style_txt"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:src="@drawable/staff"
-                android:background="@android:color/transparent"/>
+                android:text="@string/fa_user"/>
         </RelativeLayout>
     </LinearLayout>
 

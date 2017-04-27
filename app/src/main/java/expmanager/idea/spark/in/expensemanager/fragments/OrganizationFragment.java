@@ -151,8 +151,8 @@ public class OrganizationFragment extends Fragment {
 //                                    SessionManager sessionManager = new SessionManager(getActivity());
 //                                    sessionManager.createLoginSession(loginResponse.getToken());
 
-                                    TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
-                                    getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
+                                    //TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
+                                    //getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
 
                                 } catch (IOException e) {
                                     e.printStackTrace();
@@ -211,6 +211,7 @@ public class OrganizationFragment extends Fragment {
 
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                imgCompanyLogo.setBackground(getResources().getDrawable(R.drawable.circular_ring));
                 imgCompanyLogo.setImageBitmap(bitmap);
                 ByteArrayOutputStream bao = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bao);

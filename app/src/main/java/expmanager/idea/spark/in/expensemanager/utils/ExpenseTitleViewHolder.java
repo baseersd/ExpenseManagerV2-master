@@ -37,6 +37,7 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
 
     public interface OnApprovePress{
         public void onApproveBtnClick(ExpenseSyncRequest syncRequest);
+        public void onRejectBtnClick(ExpenseSyncRequest syncRequest);
         public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest);
     }
     public ExpenseTitleViewHolder(Context context, View itemView, OnApprovePress callback) {
@@ -51,6 +52,14 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
         approve.setTypeface(fontAwesomeFont);
         reject = (TextView) itemView.findViewById(R.id.reject);
         reject.setTypeface(fontAwesomeFont);
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mCallback != null){
+                    mCallback.onRejectBtnClick(mGroupObj.getExpObj());
+                }
+            }
+        });
         viewInvoice = (TextView) itemView.findViewById(R.id.view_invoice);
         viewInvoice.setTypeface(fontAwesomeFont);
         viewInvoice.setOnClickListener(new View.OnClickListener() {
@@ -88,11 +97,11 @@ public class ExpenseTitleViewHolder extends GroupViewHolder {
             llExpenseGroup.setBackgroundColor(context.getResources().getColor(R.color.grey05));
         }
 
-        /*if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
+        if(mGroupObj.getExpObj().getInvoice().getInvImgPath() != null){
             viewInvoice.setVisibility(View.VISIBLE);
         }else{
             viewInvoice.setVisibility(View.GONE);
-        }*/
+        }
     }
 
     @Override

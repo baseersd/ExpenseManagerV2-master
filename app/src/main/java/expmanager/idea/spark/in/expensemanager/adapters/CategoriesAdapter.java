@@ -49,9 +49,15 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mTextView.setText(mItemList.get(position).getItemName());
+        String urlpath = null;
+        if(mItemList.get(position).getItemURL() != null){
+            urlpath = ServerURLModel.DOMAIN_URL+mItemList.get(position).getItemURL();
+        }else{
+            urlpath = ServerURLModel.DOMAIN_URL+ServerURLModel.DEFAULT_IMAGE;
+        }
         Picasso.with(mContext)
-                .load(ServerURLModel.DOMAIN_URL+mItemList.get(position).getItemURL())
-                .placeholder(R.mipmap.ic_launcher)
+                .load(urlpath)
+                .placeholder(R.drawable.default_cat_prod)
                 .into(holder.mImageView);
         holder.bind(mItemList.get(position),mCallback, position);
     }

@@ -14,18 +14,18 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:text="@string/reports"
-            android:textColor="@color/greenTextColor"
+            android:textColor="@color/blue"
             android:textSize="@dimen/text_size_large" />
 
         <LinearLayout
             android:id="@+id/linear_reports_filter"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="75dp"
             android:layout_alignStart="@id/txt_title_reports"
             android:layout_below="@+id/txt_title_reports"
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
-            android:background="@color/ashcolor"
+            android:background="@color/reports_header"
             android:orientation="horizontal">
 
             <RelativeLayout
@@ -45,7 +45,7 @@
                 <TextView
                     android:id="@+id/txt_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_height="@dimen/margin_xlarge"
                     android:layout_below="@+id/txt_title_from"
                     android:background="@android:color/white"
                     android:ems="10"
@@ -83,7 +83,7 @@
                 <TextView
                     android:id="@+id/txt_to_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_height="@dimen/margin_xlarge"
                     android:layout_below="@+id/txt_title_to"
                     android:background="@android:color/white"
                     android:ems="10"
@@ -123,21 +123,26 @@
                 <Spinner
                     android:id="@+id/spinner_report_type"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="@dimen/margin_xlarge"
                     android:layout_below="@id/txt_title_report_type"
                     android:background="@drawable/edit_text_border"
                     android:ems="10"
+                    android:layout_marginRight="@dimen/margin_small"
                     android:textSize="@dimen/text_size_medium"
                     android:inputType="textPersonName" />
 
-                <ImageView
+                <TextView
                     android:id="@+id/img_refresh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/spinner_report_type"
                     android:layout_alignParentRight="true"
                     android:layout_alignTop="@+id/spinner_report_type"
-                    android:src="@mipmap/ic_launcher" />
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="@string/fa_refresh"
+                    android:background="@color/blue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_xlarge"/>
 
 
             </RelativeLayout>
@@ -153,7 +158,7 @@
             android:layout_below="@+id/linear_reports_filter"
             android:layout_marginRight="40dp"
             android:layout_marginTop="@dimen/margin_small"
-            android:background="@color/ashcolor"
+            android:background="@color/reports_header"
             android:orientation="horizontal">
 
             <TextView

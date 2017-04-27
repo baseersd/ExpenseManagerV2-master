@@ -37,10 +37,10 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.txtSno.setText(""+position+1);
+        holder.txtSno.setText(""+(position+1));
         holder.txtCategoryName.setText(mItemList.get(position).getCategoryName());
         holder.txtProductName.setText(mItemList.get(position).getProductName());
-        holder.txtSum.setText(""+mItemList.get(position).getSum());
+        holder.txtSum.setText("$"+mItemList.get(position).getSum());
         //holder.bind(mItemList.get(position),mCallback, position);
     }
 

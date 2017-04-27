@@ -31,21 +31,24 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
-import expmanager.idea.spark.in.expensemanager.ViewInvoiceActivity;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
+import expmanager.idea.spark.in.expensemanager.model.ApproveRejectInvoiceRequest;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseHistoryResponse;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
-import expmanager.idea.spark.in.expensemanager.model.Invoice;
+import expmanager.idea.spark.in.expensemanager.model.ForecastResponse;
+import expmanager.idea.spark.in.expensemanager.model.ForecastResponseObj;
+import expmanager.idea.spark.in.expensemanager.model.WeekExpenseForecastModel;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.service.CatlogService;
 import expmanager.idea.spark.in.expensemanager.utils.ExpenseTitleViewHolder;
@@ -69,11 +72,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private TextView imgArrow;
     private TextView imgExpenseList;
     private TextView imgReports;
+    private TextView imgLogs;
     private RelativeLayout main_layout;
     private DatabaseHandler myDbHelper;
     private TextView mEmptyTodayExpense, mEmptyWeekExpense;
     private ExpenseHistoryResponse mExpenseHistoryTodaysResponse;
     private ExpenseHistoryResponse mExpenseHistoryWeeklyResponse;
+    private ForecastResponseObj mForecastResponse;
     private RecyclerView mRecyclerViewToday;
     private LinearLayoutManager mLayoutManager;
     private RecyclerView mRecyclerViewWeek;
@@ -84,6 +89,11 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private  Typeface typeface;
     private Button cancelDialog;
     private ImageView invoiceImage;
+    private LinearLayout llForecast;
+    private TextView tvCurrent;
+    private TextView tvPrev;
+    private TextView tvLastPrev;
+    private TextView tvNext;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -110,6 +120,26 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         imgExpenseList.setTypeface(typeface);
         imgReports = (TextView) rootView.findViewById(R.id.tv_reports);
         imgReports.setTypeface(typeface);
+
+        llForecast = (LinearLayout) rootView.findViewById(R.id.ll_forecast);
+
+        tvCurrent = (TextView) rootView.findViewById(R.id.tvCurrentexp);
+        tvPrev = (TextView) rootView.findViewById(R.id.tvPreviousweek);
+        tvLastPrev = (TextView) rootView.findViewById(R.id.tvLastPrevWeekExp);
+        tvNext = (TextView) rootView.findViewById(R.id.tvNextWeekExp);
+
+        imgLogs = (TextView) rootView.findViewById(R.id.tv_logs);
+        imgLogs.setTypeface(typeface);
+        imgLogs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(llForecast.getVisibility() == View.VISIBLE){
+                    llForecast.setVisibility(View.INVISIBLE);
+                }else{
+                    llForecast.setVisibility(View.VISIBLE);
+                }
+            }
+        });
         //drawableInitialasation(rootView);
 
         addexpbtn = (ImageView) rootView.findViewById(R.id.img_add_expense);
@@ -197,6 +227,16 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         mEmptyWeekExpense.setVisibility(View.GONE);
     }
 
+    private void initForecast(){
+        WeekExpenseForecastModel weekExpense = mForecastResponse.getForecastResponse().getForecast();
+        tvCurrent.setText(""+weekExpense.getCurrentWeekExpense());
+        tvPrev.setText(""+weekExpense.getPrevWeekExpense());
+        tvLastPrev.setText(""+weekExpense.getLastPrevWeekExpense());
+
+        tvNext.setText(""+new DecimalFormat("##.##").format(
+                (weekExpense.getCurrentWeekExpense() + weekExpense.getPrevWeekExpense()
+                        + weekExpense.getLastPrevWeekExpense())/(3.0)));
+    }
     private void getTangibleExpenses(){
         SessionManager sessionManager = new SessionManager(getActivity());
         showProgressBar(getString(R.string.fetch_tangible_expenses));
@@ -207,7 +247,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                 if (response.isSuccessful()) {
                     Gson gson = new GsonBuilder().serializeNulls().create();
                     try {
-                        //String jsonString = "{\"expenseHistoryList\" :"+response.body().string()+"}";
+                        String jsonString = "{\"forecastResponse\" :"+response.body().string()+"}";
+                        mForecastResponse = gson.fromJson(jsonString, ForecastResponseObj.class);
+                        initForecast();
                         Log.i(getClass().getName(),response.body().string());
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -346,6 +388,14 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     }
 
     @Override
+    public void onRejectBtnClick(ExpenseSyncRequest syncRequest) {
+        ApproveRejectInvoiceRequest requestObj = new ApproveRejectInvoiceRequest();
+        requestObj.setApproved(false);
+        requestObj.setId(syncRequest.getInvoice().getInvNo());
+        approveRejectInvoice(requestObj);
+    }
+
+    @Override
     public void onViewInvoiceBtnClick(ExpenseSyncRequest syncRequest) {
         if(syncRequest.getInvoice().getInvImgPath() == null){
             return;
@@ -403,6 +453,30 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                 } else {
                     Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
                 }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                Utils.dismissProgressBar(mDialog);
+            }
+        });
+
+    }
+
+    public void approveRejectInvoice(ApproveRejectInvoiceRequest requestObj){
+        SessionManager sessionManager = new SessionManager(getContext());
+
+        RetrofitApi.getApi().ApproveRejectInvoice(sessionManager.getAuthToken(),requestObj).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    Toast.makeText(getContext(),"Expense Updated",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(),"Expense Not Updated",Toast.LENGTH_SHORT).show();
+                }
+                Utils.dismissProgressBar(mDialog);
             }
 
             @Override

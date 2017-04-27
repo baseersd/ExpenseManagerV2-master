@@ -8,6 +8,7 @@ public class ServerURLModel {
 
     public static final String DOMAIN_URL = "https://expensemanagerapi.herokuapp.com";
     public static final String SERVER_BASE_IP = "https://expensemanagerapi.herokuapp.com/api/v1/";
+    public static final String DEFAULT_IMAGE = "/assets/default.png";
 
     public static final String USER_SIGN_UP = "users/signup";
     public static final String USER_LOGIN = "login";
@@ -28,7 +29,8 @@ public class ServerURLModel {
     public static final String UPDATE_INVOICE = "update_invoice";
     public static final String GET_PRODUCTS = "get_products";
     public static final String EXPENSE_HISTORY = "expense_history";
-    public static final String GET_BROADCAST = "get_broadcast";
+    public static final String GET_BROADCAST = "broadcast_data";
+    public static final String APPROVE_REJECT_INVOICE = "approve_reject_invoice";
 
     public static final String ADD_STAFF = "add_staff";
 //    public static final String UPDATE_SALE = "update_sale";

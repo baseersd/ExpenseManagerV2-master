@@ -8,8 +8,8 @@
     android:paddingRight="30dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
         android:id="@+id/textView3"
@@ -31,7 +31,7 @@
     android:layout_marginTop="@dimen/dp_30"
     android:background="@drawable/edit_text_border"
     android:ems="12"
-    android:hint="organization name"
+    android:hint="Organization Name"
     android:inputType="textPersonName"
         android:textSize="@dimen/sp_18"
     android:paddingLeft="5dp" />
@@ -91,7 +91,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_border"
         android:ems="12"
-        android:hint="suburb"
+        android:hint="Suburb"
         android:textSize="@dimen/sp_18"
         android:inputType="textPersonName"
         android:paddingLeft="5dp" />
@@ -178,13 +178,30 @@
         android:background="@drawable/circular_view"
         android:src="@drawable/right_arrow" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_100"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/et_organization"
+            android:layout_marginStart="100dp">
     <ImageView
-        android:layout_width="@dimen/dp_100"
-        android:layout_height="@dimen/dp_100"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_100"
+        android:layout_width="@dimen/company_logo_size"
+        android:layout_height="@dimen/company_logo_size"
+        android:background="@drawable/circular_view"
+        android:padding="@dimen/margin_small"
         android:id="@+id/img_company_logo"
-        android:src="@drawable/header_logo"/>
+        android:src="@drawable/ic_camera"/>
+        <TextView
+            android:id="@+id/tv_companylogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/blue"
+            android:text="@string/company_logo_upload"/>
+        </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progress_bar"
