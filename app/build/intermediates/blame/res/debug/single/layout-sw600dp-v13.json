@@ -100,10 +100,6 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\login_activity.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\tagibleexpense_layout.xml",
-        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\tagibleexpense_layout.xml"
-    },
-    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\add_manual_expense_layout.xml",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\layout-sw600dp\\add_manual_expense_layout.xml"
     },

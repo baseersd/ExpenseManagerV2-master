@@ -3431,9 +3431,8 @@ containing a value of this type.
         public static final int stafffragment_layout=0x7f040069;
         public static final int staffprofile_layout=0x7f04006a;
         public static final int support_simple_spinner_dropdown_item=0x7f04006b;
-        public static final int tagibleexpense_layout=0x7f04006c;
-        public static final int use_pin_activity=0x7f04006d;
-        public static final int view_invoice_dailog_layout=0x7f04006e;
+        public static final int use_pin_activity=0x7f04006c;
+        public static final int view_invoice_dailog_layout=0x7f04006d;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;

@@ -1439,9 +1439,8 @@ int layout staff_sidebar 0x7f040068
 int layout stafffragment_layout 0x7f040069
 int layout staffprofile_layout 0x7f04006a
 int layout support_simple_spinner_dropdown_item 0x7f04006b
-int layout tagibleexpense_layout 0x7f04006c
-int layout use_pin_activity 0x7f04006d
-int layout view_invoice_dailog_layout 0x7f04006e
+int layout use_pin_activity 0x7f04006c
+int layout view_invoice_dailog_layout 0x7f04006d
 int mipmap ic_launcher 0x7f030000
 int raw beep 0x7f080000
 int string abc_action_bar_home_description 0x7f090000
