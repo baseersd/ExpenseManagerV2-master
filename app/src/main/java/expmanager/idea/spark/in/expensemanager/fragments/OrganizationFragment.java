@@ -1,6 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -151,8 +151,8 @@ public class OrganizationFragment extends Fragment {
 //                                    SessionManager sessionManager = new SessionManager(getActivity());
 //                                    sessionManager.createLoginSession(loginResponse.getToken());
 
-                                    //TangibleExpenseFragment fragmenttangibleexp = new TangibleExpenseFragment();
-                                    //getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
+                                    AdminTangibleExpenses fragmenttangibleexp = new AdminTangibleExpenses();
+                                    getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmenttangibleexp).commit();
 
                                 } catch (IOException e) {
                                     e.printStackTrace();

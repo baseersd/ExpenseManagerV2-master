@@ -33,7 +33,6 @@ import com.google.gson.GsonBuilder;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
@@ -46,7 +45,6 @@ import expmanager.idea.spark.in.expensemanager.model.ExpenseGroup;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseHistoryResponse;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
-import expmanager.idea.spark.in.expensemanager.model.ForecastResponse;
 import expmanager.idea.spark.in.expensemanager.model.ForecastResponseObj;
 import expmanager.idea.spark.in.expensemanager.model.WeekExpenseForecastModel;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;

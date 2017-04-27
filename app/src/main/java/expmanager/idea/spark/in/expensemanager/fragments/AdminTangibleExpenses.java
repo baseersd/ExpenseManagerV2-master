@@ -1,9 +1,7 @@
 package expmanager.idea.spark.in.expensemanager.fragments;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +40,6 @@ import expmanager.idea.spark.in.expensemanager.adapters.MyTanExpAdapter;
 import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.AddTangibleExpenseRequest;
-import expmanager.idea.spark.in.expensemanager.model.LoginResponse;
 import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
 import expmanager.idea.spark.in.expensemanager.model.TangibleExpensesList;
 import expmanager.idea.spark.in.expensemanager.model.UpdateTangibleExpenseRequest;
@@ -179,11 +175,10 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
         List<TanExpenses> list = RuntimeData.getTagibleExpenseList();
         if (list != null) {
-            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list,this);
+            adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list, this);
             tanexplist.setAdapter(adapt);
         }
     }
-
 
 
     private void openAddtagibleExpDialog1() {
@@ -279,15 +274,14 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                                 try {
                                     TanExpenses tanExpenses = gson.fromJson(response.body().string(), TanExpenses.class);
                                     db.addTanExpenses(insertall);
-                                   List<TanExpenses> list = new ArrayList<TanExpenses>();
+                                    List<TanExpenses> list = new ArrayList<TanExpenses>();
                                     list.add(tanExpenses);
-                                    adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item,list ,AdminTangibleExpenses.this);
+                                    adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list, AdminTangibleExpenses.this);
                                     tanexplist.setAdapter(adapt);
 
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
-
 
 
                             } else {
@@ -325,7 +319,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
     public void onResume() {
         super.onResume();
 
-        if(getActivity() instanceof MainActivity){
+        if (getActivity() instanceof MainActivity) {
 
             MainActivity mainActivity = (MainActivity) getActivity();
             mainActivity.changeTangibleExpensesTextColor();
@@ -334,7 +328,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
             txtSetupsaff.setVisibility(View.VISIBLE);
             imgArrow.setVisibility(View.GONE);
 
-        }else {
+        } else {
 
             setupstaff.setVisibility(View.GONE);
             txtSetupsaff.setVisibility(View.GONE);
@@ -428,7 +422,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
 
                     AddTangibleExpenseRequest addTangibleExpenseRequest = new AddTangibleExpenseRequest(insertall.getCategory(), insertall.getWhen(), insertall.getPrice());
-                    UpdateTangibleExpenseRequest updateTangibleExpenseRequest = new UpdateTangibleExpenseRequest(tanExpenses.getId(),addTangibleExpenseRequest);
+                    UpdateTangibleExpenseRequest updateTangibleExpenseRequest = new UpdateTangibleExpenseRequest(tanExpenses.getId(), addTangibleExpenseRequest);
                     SessionManager sessionManager = new SessionManager(getActivity());
                     RetrofitApi.getApi().UpdateTangibleExpense(sessionManager.getAuthToken(), updateTangibleExpenseRequest).enqueue(new Callback<ResponseBody>() {
                         @Override
@@ -452,7 +446,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 //                                        RuntimeData.setTagibleExpenseList(list);
 //                                    }
 
-                                     adapt.add(tanExpenses);
+                                    adapt.add(tanExpenses);
                                     adapt.notifyDataSetChanged();
                                 } catch (IOException e) {
                                     e.printStackTrace();

@@ -39,13 +39,6 @@ public class ExpenseHistoryFragment extends Fragment {
 
 
         mContainer = (PagerContainer) rootView.findViewById(R.id.pager_container);
-        //monthExpenseHistory = (Spinner) rootView.findViewById(R.id.month_expense_history);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-//                R.array.months, R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
-//        monthExpenseHistory.setAdapter(adapter);
-//        //String[] array = getResources().getStringArray(R.array.months);
-//        monthExpenseHistory.setSelection(2);
 
          pager = (ViewPager) rootView.findViewById(R.id.view_pager);//mContainer.getViewPager();
          monthAdapter = new MyPagerAdapter(getFragmentManager());
@@ -59,76 +52,6 @@ public class ExpenseHistoryFragment extends Fragment {
         //If hardware acceleration is enabled, you should also remove
         // clipping on the pager for its children.
         pager.setClipChildren(false);
-
-//        monthExpenseHistory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-//
-//                DateFormat dateFormat = new SimpleDateFormat("dd");
-//                Date date = new Date();
-//                System.out.println(); //2016/11/16 12:08:43
-//
-//                switch (position){
-//
-//                    case 0:
-//                        input = "201701"+dateFormat.format(date);
-//                        //monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 1:  input = "201702"+dateFormat.format(date);
-//                        break;
-//                    case 2:  input = "201703"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 3:
-//                             input = "201704"+dateFormat.format(date);
-//                             //monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 4:  input = "201705"+dateFormat.format(date);
-//                             //monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 5:  input = "201706"+dateFormat.format(date);
-//                            //monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 6:  input = "201707"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 7:  input = "201708"+dateFormat.format(date);
-//                             //monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 8:  input = "201709"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 9:  input = "201710"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 10: input = "201711"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//                    case 11: input = "201712"+dateFormat.format(date);
-//                            // monthAdapter.notifyDataSetChanged();
-//                        break;
-//
-//                }
-//
-//                monthAdapter = new MyPagerAdapter(getFragmentManager());
-//                pager.setAdapter(monthAdapter);
-//                //Necessary or the pager will only have one extra page to show
-//                // make this at least however many pages you can see
-//                pager.setOffscreenPageLimit(6);
-//                //A little space between pages
-//                pager.setPageMargin(15);
-//
-//                //If hardware acceleration is enabled, you should also remove
-//                // clipping on the pager for its children.
-//                pager.setClipChildren(false);
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parentView) {
-//                // your code here
-//            }
-//
-//        });
 
         return rootView;
     }

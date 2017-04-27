@@ -115,11 +115,6 @@ public class ExpenseHistoryViewPagerFragment extends Fragment implements Expense
             ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
-//        adapter = new TodayExpenseAdapter(makeExpansesList());
-//        recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setAdapter(adapter);
-
-
         getExpenseHistoryForDates(getStartDate(), getEndDate());
 
 
