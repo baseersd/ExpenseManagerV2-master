@@ -7,8 +7,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="horizontal">
-
+    android:orientation="horizontal"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65">
 
     <RelativeLayout
         android:id="@+id/parent_main_layout"
@@ -24,8 +28,7 @@
             android:layout_width="520dp"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/linear_header"
@@ -33,7 +36,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_large"
-                android:layout_weight="0.1"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -84,7 +86,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
@@ -111,7 +112,6 @@
                 android:layout_below="@+id/tv_empty_list_today"
                 android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_large"
-                android:layout_weight="0.1"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -147,7 +147,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
@@ -167,31 +166,33 @@
             </LinearLayout>
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/img_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:background="@color/yellow"
-            android:padding="@dimen/text_size_medium"
-            android:text="@string/fa_arrow_left"
-            android:textSize="@dimen/text_size_xlarge" />
-
-
     </RelativeLayout>
+</ScrollView>
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_weight="0.35">
+    <TextView
+        android:id="@+id/img_arrow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:paddingLeft="@dimen/text_size_medium"
+        android:paddingRight="@dimen/text_size_medium"
+        android:text="@string/fa_arrow_left"
+        android:textSize="@dimen/text_size_xlarge"/>
     <RelativeLayout
         android:id="@+id/slide_nav_bar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+        android:gravity="end"
         android:background="@color/expense_side_panel_bg_color"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
             android:id="@+id/txt_hi"
@@ -383,6 +384,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -475,4 +477,5 @@
         </LinearLayout>
     </RelativeLayout>
 
+    </LinearLayout>
 </LinearLayout>
