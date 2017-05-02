@@ -1,12 +1,12 @@
 package expmanager.idea.spark.in.expensemanager;
 
+import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import expmanager.idea.spark.in.expensemanager.fragments.AdminAddStaffFragment;
@@ -30,9 +30,11 @@ import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener,
         InvoiceEntryFragment.OnFragmentInteractionListener, fragExpenseEntry.OnFragmentInteractionListener {
     private TextView tvTanexpense,tvStaff, tvSales;
-    private TextView tvExpense, tvHistory, tvDashboard, tvProfile,tvReports;
+    private TextView tvExpense, tvHistory, tvDashboard, tvProfile;
+    private static TextView tvReports;
     private static View oldSelectedView = null;
     private Typeface typeface;
+    private static Context mActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         /*ExpenseFragment fragmentorg = new ExpenseFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
 */
+        mActivity = this;
         tvExpense.callOnClick();
     }
 
@@ -98,6 +101,20 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
         }
 
+    }
+
+    public static  void updateViewHighlight(int viewId){
+        View view = null;
+        switch (viewId){
+            case R.id.btnreports:
+                view = tvReports;
+                break;
+        }
+        if(oldSelectedView != null){
+            oldSelectedView.setBackgroundColor(mActivity.getResources().getColor(android.R.color.transparent));
+        }
+        view.setBackgroundColor(mActivity.getResources().getColor(R.color.blue1));
+        oldSelectedView = view;
     }
 
     @Override

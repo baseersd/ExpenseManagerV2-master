@@ -35,6 +35,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.AdminActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
@@ -93,6 +94,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private TextView tvLastPrev;
     private TextView tvNext;
     private RelativeLayout rlSlideBar;
+    private LinearLayout llExpenseList;
+    private int convertWidth;
+    private LinearLayout llReports;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -104,7 +108,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         final int width = display.getWidth();
 
-        final int convertWidth = (int) (width*0.65);
+        convertWidth = (int) (width*0.65);
 
         myDbHelper = new DatabaseHandler(getContext());
 
@@ -128,6 +132,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         tvLastPrev = (TextView) rootView.findViewById(R.id.tvLastPrevWeekExp);
         tvNext = (TextView) rootView.findViewById(R.id.tvNextWeekExp);
 
+        llExpenseList = (LinearLayout)rootView.findViewById(R.id.ll_expense_list);
+        llExpenseList.setOnClickListener(this);
+
         imgLogs = (TextView) rootView.findViewById(R.id.tv_logs);
         imgLogs.setTypeface(typeface);
         imgLogs.setOnClickListener(new View.OnClickListener() {
@@ -150,30 +157,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.parent_main_layout);
 
-        imgArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        imgArrow.setOnClickListener(this);
 
-                if (flag == 0) {
-                    imgArrow.setText(getString(R.string.fa_arrow_right));
-                    rlSlideBar.setVisibility(View.VISIBLE);
-                    //rlSlideBar.getLayoutParams().width = 0;
-                    main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();
-                    flag = 1;
-
-                } else {
-                    imgArrow.setText(getString(R.string.fa_arrow_left));
-                    rlSlideBar.setVisibility(View.GONE);
-                    //rlSlideBar.getLayoutParams().width = (int)0.4 * width;
-                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();
-                    flag = 0;
-
-                }
-
-            }
-        });
+        llReports = (LinearLayout)rootView.findViewById(R.id.ll_reports);
+        llReports.setOnClickListener(this);
 
         mRecyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -343,6 +330,28 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
             //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
             InvoiceEntryFragment fragmentorg = new InvoiceEntryFragment();
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
+        }else if(view.getId() == R.id.ll_expense_list || view.getId() == R.id.img_arrow){
+            if (flag == 0) {
+                imgArrow.setText(getString(R.string.fa_arrow_right));
+                rlSlideBar.setVisibility(View.VISIBLE);
+                //rlSlideBar.getLayoutParams().width = 0;
+                main_layout.getLayoutParams().width = convertWidth;
+                main_layout.requestLayout();
+                flag = 1;
+
+            } else {
+                imgArrow.setText(getString(R.string.fa_arrow_left));
+                rlSlideBar.setVisibility(View.GONE);
+                //rlSlideBar.getLayoutParams().width = (int)0.4 * width;
+                main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                main_layout.requestLayout();
+                flag = 0;
+
+            }
+        }else if(view.getId() == R.id.ll_reports){
+            ReportsFragment reportsFragment = new ReportsFragment();
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, reportsFragment).commit();
+            AdminActivity.updateViewHighlight(R.id.btnreports);
         }
     }
 
