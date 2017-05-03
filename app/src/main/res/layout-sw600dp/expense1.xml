@@ -12,7 +12,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.65">
+        android:layout_weight="0.7">
 
     <RelativeLayout
         android:id="@+id/parent_main_layout"
@@ -25,7 +25,7 @@
 
         <LinearLayout
             android:id="@+id/main_layout"
-            android:layout_width="520dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
             android:orientation="vertical">
@@ -174,7 +174,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="end"
-        android:layout_weight="0.35">
+        android:layout_weight="0.3">
     <TextView
         android:id="@+id/img_arrow"
         android:layout_width="60dp"
@@ -410,8 +410,8 @@
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Expense list"
+                    android:gravity="center_horizontal"
+                    android:text="Expense\nList"
                     android:textColor="@color/expense_side_panel_text_color"
                     android:textSize="18dp" />
             </LinearLayout>

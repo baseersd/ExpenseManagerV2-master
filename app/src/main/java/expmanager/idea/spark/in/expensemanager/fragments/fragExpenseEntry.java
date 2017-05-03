@@ -215,7 +215,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         mBtnProductAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mProduct = new Item();
                 mProduct.setItemId(-1);
+                mProduct.setType(Item.ITEM_PRODUCT);
+                mProduct.setItemName(expProductName.getText().toString());
                 expAmt.setText("0.00");
                 expUnit.setText("0");
                 addExpenseToList();

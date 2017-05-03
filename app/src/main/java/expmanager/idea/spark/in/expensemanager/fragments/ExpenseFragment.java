@@ -335,16 +335,16 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                 imgArrow.setText(getString(R.string.fa_arrow_right));
                 rlSlideBar.setVisibility(View.VISIBLE);
                 //rlSlideBar.getLayoutParams().width = 0;
-                main_layout.getLayoutParams().width = convertWidth;
-                main_layout.requestLayout();
+                //main_layout.getLayoutParams().width = convertWidth;
+                //main_layout.requestLayout();
                 flag = 1;
 
             } else {
                 imgArrow.setText(getString(R.string.fa_arrow_left));
                 rlSlideBar.setVisibility(View.GONE);
                 //rlSlideBar.getLayoutParams().width = (int)0.4 * width;
-                main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                main_layout.requestLayout();
+                //main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                //main_layout.requestLayout();
                 flag = 0;
 
             }

@@ -22,6 +22,10 @@ public class Item {
         this.type = type;
     }
 
+    public Item(){
+
+    }
+
     public Item(int id, int type, String name, String url){
         this.type = type;
         this.itemId = id;

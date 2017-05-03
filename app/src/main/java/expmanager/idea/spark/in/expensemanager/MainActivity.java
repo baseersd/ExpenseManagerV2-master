@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
         OrganizationFragment fragmentorg = new OrganizationFragment();
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentorg).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentorg).commit();
 
         txtOrganization = (TextView)findViewById(R.id.txt_organization);
         txtTangibleExpenses = (TextView)findViewById(R.id.txt_tangible);
