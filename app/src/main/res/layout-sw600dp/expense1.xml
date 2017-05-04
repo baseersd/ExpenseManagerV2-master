@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff">-->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -212,7 +208,7 @@
             android:ellipsize="end"
             android:maxLines="10"
             android:paddingLeft="@dimen/margin_medium"
-            android:text="@string/today_expense_text"
+            android:text="@string/today_extra_expense"
             android:textColor="@color/expense_side_panel_text_color"
             android:textSize="@dimen/text_size_medium" />
 

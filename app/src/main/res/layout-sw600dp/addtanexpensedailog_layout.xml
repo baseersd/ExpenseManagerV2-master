@@ -45,8 +45,9 @@
             <AutoCompleteTextView
                 android:id="@+id/categoryval"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_below="@id/textView4"
+                android:layout_margin="@dimen/margin_extra_small"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
@@ -95,36 +96,30 @@
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:padding="@dimen/margin_extra_small"
                 android:text="" />
 
-
-
-            <Button
-                android:id="@+id/addtanexptoDb"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/priceval"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="@dimen/dp_40"
-                android:background="#1fb598"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="ADD"
-                android:textColor="#fff"
-                android:textStyle="bold" />
+                android:layout_marginTop="25dp"
+                android:background="@color/theme_color"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/add_img_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/addtanexptoDb"
-                android:layout_alignTop="@id/addtanexptoDb"
-                android:layout_marginLeft="15dp"
-                android:background="#1fb598"
-                android:gravity="center"
-                android:text="@string/fa_plus"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_large"/>
+                <TextView
+                    android:id="@+id/add_img_plus"
+                    style="@style/button_style"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/fa_plus"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/addtanexptoDb"
+                    style="@style/button_style"
+                    android:text="ADD" />
+            </LinearLayout>
         </RelativeLayout>
 
         <Button

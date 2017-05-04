@@ -13,6 +13,7 @@
     <string name="username">Username</string>
 
     <string name="today_expense_text">3 products were bought extra this month, your profit will be reduced by $40.00 from last month</string>
+    <string name="today_extra_expense">Below products were bought extra.</string>
     <string name="checkout">Check out the in tangible expenses for this month</string>
 
     <string name="new_to_expense_tracker">New to Expense Manager !</string>

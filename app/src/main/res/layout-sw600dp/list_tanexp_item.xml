@@ -39,6 +39,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:textColor="@color/blue"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/margin_extra_small"
+                android:layout_marginRight="@dimen/margin_extra_small"
+                android:textSize="@dimen/text_size_large"
                 android:text="TextView" />
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -47,6 +51,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:textColor="@color/blue"
+                android:layout_marginLeft="@dimen/margin_extra_small"
+                android:layout_marginRight="@dimen/margin_extra_small"
+                android:textSize="@dimen/text_size_small"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -58,6 +65,7 @@
             android:layout_weight="0.1"
             android:textColor="@color/blue"
             android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_medium"
             android:text="TextView" />
 
 
@@ -95,5 +103,5 @@
         android:gravity="center"
         android:background="@color/blue"
         android:textColor="#fff"
-        android:textSize="16sp" />
+        android:textSize="@dimen/text_size_medium" />
 </RelativeLayout>

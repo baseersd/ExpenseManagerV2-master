@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyStaffDetailsAdapter;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
@@ -106,6 +107,17 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
             stafflist.setAdapter(adapt);
         }
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(getActivity() instanceof MainActivity){
+
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.changeStaffTextColor();
+
+        }
     }
 
     public void openAddStaffDialog() {

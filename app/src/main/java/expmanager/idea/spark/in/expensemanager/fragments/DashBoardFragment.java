@@ -492,7 +492,7 @@ public class DashBoardFragment extends Fragment {
 //Setting background color of the graph to transparent
         multiRenderer.setBackgroundColor(Color.TRANSPARENT);
 //Setting margin color of the graph to transparent
-        multiRenderer.setMarginsColor(getResources().getColor(R.color.transparent_background));
+        multiRenderer.setMarginsColor(getActivity().getResources().getColor(R.color.transparent_background));
         multiRenderer.setApplyBackgroundColor(true);
         // multiRenderer.setScale(2f);
 //setting x axis point size

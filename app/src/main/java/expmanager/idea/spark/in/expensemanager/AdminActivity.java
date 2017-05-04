@@ -29,9 +29,9 @@ import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener,
         InvoiceEntryFragment.OnFragmentInteractionListener, fragExpenseEntry.OnFragmentInteractionListener {
-    private TextView tvTanexpense,tvStaff, tvSales;
+    private TextView tvStaff, tvSales;
     private TextView tvExpense, tvHistory, tvDashboard, tvProfile;
-    private static TextView tvReports;
+    private static TextView tvReports, tvTanexpense;
     private static View oldSelectedView = null;
     private Typeface typeface;
     private static Context mActivity;
@@ -109,12 +109,18 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
             case R.id.btnreports:
                 view = tvReports;
                 break;
+            case R.id.btntanexpense:
+                view = tvTanexpense;
+                break;
         }
         if(oldSelectedView != null){
             oldSelectedView.setBackgroundColor(mActivity.getResources().getColor(android.R.color.transparent));
         }
-        view.setBackgroundColor(mActivity.getResources().getColor(R.color.blue1));
-        oldSelectedView = view;
+
+        if(view != null) {
+            view.setBackgroundColor(mActivity.getResources().getColor(R.color.blue1));
+            oldSelectedView = view;
+        }
     }
 
     @Override

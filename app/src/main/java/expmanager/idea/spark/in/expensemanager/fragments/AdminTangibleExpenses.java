@@ -73,6 +73,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
     private AlertDialog mDialog;
     ImageView setupstaff;
     private TextView txtSetupsaff;
+    private TextView addimgplus;
+    private Typeface typeface;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,7 +117,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
         final int convertWidth = (int) (width * 0.65);
 
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+        typeface = Typeface.createFromAsset(getContext().getAssets(),
                 "fontawesome.ttf");
         imgArrow = (TextView) rootView.findViewById(R.id.img_arrow);
         imgArrow.setTypeface(typeface);
@@ -214,23 +216,25 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
         ArrayList<String> arrayList = new ArrayList<>();
 
-        for (int i = 0; i < RuntimeData.getCatelogList().size(); i++) {
+        if(RuntimeData.getCatelogList() != null) {
+            for (int i = 0; i < RuntimeData.getCatelogList().size(); i++) {
 
-            arrayList.add(RuntimeData.getCatelogList().get(i).getCategory().getCategoryName());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, arrayList);
-
-        categoryval.setAdapter(adapter);
-
-        categoryval.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                categoryval.setText((String) adapterView.getItemAtPosition(i));
+                arrayList.add(RuntimeData.getCatelogList().get(i).getCategory().getCategoryName());
             }
-        });
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_dropdown_item_1line, arrayList);
+
+            categoryval.setAdapter(adapter);
+
+            categoryval.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    categoryval.setText((String) adapterView.getItemAtPosition(i));
+                }
+            });
+        }
 
 
         canceltandialog.setOnClickListener(new View.OnClickListener() {
@@ -252,8 +256,13 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                     return;
                 }
 
+
                 if (!categoryval.getText().toString().isEmpty() && !whenval.getSelectedItem().toString().isEmpty() && !priceval.getText().toString().isEmpty()) {
                     final TanExpenses insertall = new TanExpenses(categoryval.getText().toString(), whenval.getSelectedItem().toString(), priceval.getText().toString());
+                    if(duplicateExists(insertall)){
+                        Toast.makeText(getContext(),"Please modify the existing tangible expense",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     dialog.cancel();
 
                     progressBar.setVisibility(View.VISIBLE);
@@ -317,6 +326,14 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
     }
 
+    private boolean duplicateExists(TanExpenses tangibleExpense){
+        List<TanExpenses> existingList = RuntimeData.getTagibleExpenseList();
+        for(TanExpenses indexExpense: existingList){
+            if(tangibleExpense.getCategory().equals(indexExpense.getCategory()) && tangibleExpense.getWhen().equals(indexExpense.getWhen()))
+                return true;
+        }
+        return false;
+    }
     @Override
     public void onResume() {
         super.onResume();
@@ -356,6 +373,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
         categoryval = (AutoCompleteTextView) dialogView.findViewById(R.id.categoryval);
         whenval = (Spinner) dialogView.findViewById(R.id.whenval);
         priceval = (EditText) dialogView.findViewById(R.id.priceval);
+        addimgplus = (TextView)dialogView.findViewById(R.id.add_img_plus);
+        addimgplus.setTypeface(typeface);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
         lp.gravity = Gravity.CENTER;
