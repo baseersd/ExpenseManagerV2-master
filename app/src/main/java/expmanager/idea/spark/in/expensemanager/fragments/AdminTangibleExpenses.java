@@ -130,13 +130,13 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
                 if (flag == 0) {
                     imgArrow.setText(getString(R.string.fa_arrow_right));
-                    main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();
+                    //main_layout.getLayoutParams().width = convertWidth;
+                    //main_layout.requestLayout();
                     flag = 1;
                 } else {
                     imgArrow.setText(getString(R.string.fa_arrow_left));
-                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();
+                    //main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                    //main_layout.requestLayout();
                     flag = 0;
                 }
 
@@ -373,8 +373,6 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
         categoryval = (AutoCompleteTextView) dialogView.findViewById(R.id.categoryval);
         whenval = (Spinner) dialogView.findViewById(R.id.whenval);
         priceval = (EditText) dialogView.findViewById(R.id.priceval);
-        addimgplus = (TextView)dialogView.findViewById(R.id.add_img_plus);
-        addimgplus.setTypeface(typeface);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
         lp.gravity = Gravity.CENTER;

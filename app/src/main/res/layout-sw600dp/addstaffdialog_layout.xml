@@ -258,6 +258,7 @@
                             android:layout_width="0dp"
                             android:layout_height="@dimen/edit_text_height"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/margin_medium"
                             android:layout_weight="0.5"
                             android:background="@drawable/edit_text_border"
                             android:ems="10"
@@ -268,6 +269,7 @@
                     <Button
                         android:id="@+id/addstafftodb"
                         style="@style/button_style"
+                        android:layout_width="@dimen/login_button_width"
                         android:layout_marginBottom="20dp"
                         android:layout_marginTop="25dp"
                         android:drawableLeft="@drawable/ic_add"

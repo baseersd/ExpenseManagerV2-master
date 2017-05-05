@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.LoginActivity;
 import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyStaffDetailsAdapter;
@@ -70,6 +71,8 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
     private String base64Image="";
     private DatePickerDialog datePickerDialog;
     public static MyStaffDetailsAdapter adapt;
+    ImageView done;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,10 +105,21 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
         });
         stafflist = (ListView) rootView.findViewById(R.id.stafflist);
         list = db.getAllStaff();
+        done = (ImageView) rootView.findViewById(R.id.complete);
         if(list != null) {
             adapt = new MyStaffDetailsAdapter(getActivity(), R.layout.list_staff_item, list);
             stafflist.setAdapter(adapt);
         }
+
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
         return rootView;
     }
 

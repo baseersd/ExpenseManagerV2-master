@@ -13,6 +13,7 @@
     <dimen name="login_screen_edit_text_margin">30dp</dimen>
 
     <!-- Text Sizes -->
+    <dimen name="text_size_xxlarge">40sp</dimen>
     <dimen name="text_size_xlarge">30sp</dimen>
     <dimen name="text_size_large">25sp</dimen>
     <dimen name="text_size_medium">20sp</dimen>
@@ -36,9 +37,10 @@
     <dimen name="dp_80">80dp</dimen>
     <dimen name="dp_300">300dp</dimen>
     <dimen name="sp_18">18sp</dimen>
-    <dimen name="edit_text_height">45dp</dimen>
-    <dimen name="org_setup_edit_text_height">50dp</dimen>
-    <dimen name="button_height">45dp</dimen>
+    <dimen name="edit_text_height">55dp</dimen>
+    <dimen name="org_setup_edit_text_height">55dp</dimen>
+    <dimen name="button_height">60dp</dimen>
     <dimen name="company_logo_size">150dp</dimen>
+    <dimen name="login_button_width">250dp</dimen>
 
 </resources>

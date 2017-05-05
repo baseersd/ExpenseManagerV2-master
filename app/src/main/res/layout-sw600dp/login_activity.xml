@@ -80,7 +80,7 @@
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:padding="6dp"
+                android:paddingLeft="@dimen/margin_medium"
                 android:text="" />
 
             <EditText
@@ -92,17 +92,18 @@
                 android:layout_marginRight="@dimen/margin_large"
                 android:layout_marginEnd="@dimen/margin_large"
                 android:ems="20"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/margin_small"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:paddingLeft="6dp"
+                android:paddingLeft="@dimen/margin_medium"
                 android:text="" />
 
             <Button
                 android:id="@+id/loginbtn"
                 style="@style/button_style"
                 android:layout_marginTop="@dimen/login_screen_edit_text_margin"
+                android:layout_width="@dimen/login_button_width"
                 android:paddingLeft="40dp"
                 android:paddingRight="40dp"
                 android:text="@string/login"/>

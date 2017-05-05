@@ -28,7 +28,7 @@
                 android:layout_marginTop="40dp"
                 android:text="Add Tangible Expenses"
                 android:textColor="#1fb598"
-                android:textSize="20sp"
+                android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -39,7 +39,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Category"
                 android:textColor="#1fb598"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold" />
 
             <AutoCompleteTextView
@@ -51,6 +51,8 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_border"
                 android:ems="10"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
                 android:inputType="textPersonName"
                 android:text="" />
 
@@ -59,17 +61,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/categoryval"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
                 android:text="When"
                 android:textColor="#1fb598"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/whenval"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_below="@id/textView5"
+                android:background="@drawable/edit_text_background"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
@@ -84,13 +88,13 @@
                 android:layout_marginTop="20dp"
                 android:text="Price"
                 android:textColor="#1fb598"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/priceval"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_below="@id/dddd"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edit_text_border"
@@ -118,6 +122,8 @@
                 <Button
                     android:id="@+id/addtanexptoDb"
                     style="@style/button_style"
+                    android:drawableLeft="@drawable/ic_plus"
+                    android:drawablePadding="@dimen/margin_large"
                     android:text="ADD" />
             </LinearLayout>
         </RelativeLayout>
