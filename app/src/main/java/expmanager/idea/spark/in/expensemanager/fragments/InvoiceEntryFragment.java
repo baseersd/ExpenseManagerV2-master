@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import expmanager.idea.spark.in.expensemanager.LoginActivity;
@@ -142,6 +143,7 @@ public class InvoiceEntryFragment extends Fragment implements View.OnClickListen
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 Calendar newDate = Calendar.getInstance();
                 newDate.set(year, monthOfYear, dayOfMonth);
+                invdateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
                 txtinvDate.setText(invdateFormatter.format(newDate.getTime()));
             }
 
@@ -155,8 +157,8 @@ public class InvoiceEntryFragment extends Fragment implements View.OnClickListen
 
         invPreview=(ImageView)v.findViewById(R.id.invpreview);
         spnPaymentMode = (Spinner) v.findViewById(R.id.spnpaymentmode);
-        ArrayAdapter<String> adapter_state = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item, paymentMode);
-        adapter_state.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter_state = new ArrayAdapter<String>(getContext(),R.layout.simple_spinner_item_black, paymentMode);
+        adapter_state.setDropDownViewResource(R.layout.simple_spinner_dropdown_item_black);
         spnPaymentMode.setAdapter(adapter_state);
         spnPaymentMode.setOnItemSelectedListener(this);
 /*

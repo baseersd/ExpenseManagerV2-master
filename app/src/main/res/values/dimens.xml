@@ -25,6 +25,7 @@
     <dimen name="margin_medium">20dp</dimen>
     <dimen name="margin_large">30dp</dimen>
     <dimen name="margin_xlarge">40dp</dimen>
+    <dimen name="margin_xxlarge">50dp</dimen>
 
 
     <dimen name="arrow_width">75dp</dimen>
@@ -42,5 +43,6 @@
     <dimen name="button_height">60dp</dimen>
     <dimen name="company_logo_size">150dp</dimen>
     <dimen name="login_button_width">250dp</dimen>
+    <dimen name="invoice_image_size">150dp</dimen>
 
 </resources>

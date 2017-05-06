@@ -105,7 +105,7 @@ public class StaffFragment extends Fragment {
         done = (ImageView) rootView.findViewById(R.id.complete);
         list = db.getAllStaff();
         if(list != null) {
-            adapt = new MyStaffDetailsAdapter(getActivity(), R.layout.list_staff_item, list);
+            //adapt = new MyStaffDetailsAdapter(getActivity(), R.layout.list_staff_item, list);
             stafflist.setAdapter(adapt);
         }
 
@@ -144,7 +144,7 @@ public class StaffFragment extends Fragment {
         spinnertime2 = (Spinner) dialog.findViewById(R.id.spinnertime2);
         spinnersal = (Spinner) dialog.findViewById(R.id.spinnersal);
         addstafftoDb  = (Button) dialog.findViewById(R.id.addstafftodb);
-        started = (EditText) dialog.findViewById(R.id.started);
+        //started = (EditText) dialog.findViewById(R.id.started);
         salary = (EditText) dialog.findViewById(R.id.salary);
         staffname= (EditText) dialog.findViewById(R.id.staff_name);
         staffemail = (EditText) dialog.findViewById(R.id.staffemail);
@@ -242,7 +242,7 @@ public class StaffFragment extends Fragment {
                             if (response.isSuccessful()) {
 
                                 db.addStaff(insertstaff);
-                                StaffFragment.adapt.add(insertstaff);
+                                //StaffFragment.adapt.add(insertstaff);
                                 StaffFragment.adapt.notifyDataSetChanged();
 
                                 Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();

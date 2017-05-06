@@ -851,6 +851,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             initProductsList(item.getItemId());
             mCategory = item;
         }else{
+            if(isProductExist(item.getItemName())){
+                return;
+            }
             expProductName.setText(item.getItemName());
             mProductIndex = position;
             expAmt.setText("0.00");
@@ -860,6 +863,16 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         }
     }
 
+    private boolean isProductExist(String productName){
+        myDbHelper.openConnection();
+        List<Expense> expenseList = myDbHelper.getExpenses(mInvoiceID);
+        myDbHelper.closeConnection();
+        for(Expense expense: expenseList){
+            if(expense.getExpProductName().equals(productName))
+                return true;
+        }
+        return false;
+    }
 
     private void onInvoiceCreateSuccess() {
 

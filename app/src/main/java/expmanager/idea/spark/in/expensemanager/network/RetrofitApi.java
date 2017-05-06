@@ -236,7 +236,11 @@ public class RetrofitApi {
         @POST(ServerURLModel.LOGOUT)
         Call<ResponseBody> Logout(@Header("Authtoken") String auth);
 
-
+         /*
+          * GET_STAFF
+          */
+        @GET(ServerURLModel.GET_STAFF)
+        Call<ResponseBody> GetStaff(@Header("Authtoken") String auth);
 
 
 //        /*

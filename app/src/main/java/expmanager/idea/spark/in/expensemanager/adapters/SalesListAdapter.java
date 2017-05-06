@@ -47,14 +47,16 @@ public class SalesListAdapter extends ArrayAdapter<Sales> {
         }
 
         Sales current = taskList.get(position);
+        TextView tvSNo = (CustomFonts) itemView.findViewById(R.id.serialno);
         TextView textView1 = (CustomFonts) itemView.findViewById(R.id.saletype);
         TextView textView2 = (CustomFonts) itemView.findViewById(R.id.saledate);
         TextView textView3 = (CustomFonts) itemView.findViewById(R.id.saleampunt);
 
 
+        tvSNo.setText(""+(position+1));
         textView1.setText(current.getSaletype());
         textView2.setText(current.getDate());
-        textView3.setText(current.getSameamount());
+        textView3.setText("$"+current.getSameamount());
 
         return itemView;
     }

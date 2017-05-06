@@ -585,11 +585,12 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         List<TanExpenses> extraExpenseList = new ArrayList<>();
 
         for(TanExpenses itemExpense: existingList){
-            String expense = null;
             Double amount = 0.0;
             for(ExpenseSyncRequest syncRequest: mExpenseHistoryTodaysResponse.getExpenseHistoryList()){
-                if(itemExpense.getCategory().equalsIgnoreCase(syncRequest.getInvoice().getInvDesc())){
-                    amount += syncRequest.getInvoice().getInvAmt();
+                for(Expense expense: syncRequest.getExpenseList()) {
+                    if (itemExpense.getCategory().equalsIgnoreCase(expense.getCategory_name())) {
+                        amount += expense.getExpAmt();
+                    }
                 }
             }
             if(amount > itemExpense.getPriceDouble()){

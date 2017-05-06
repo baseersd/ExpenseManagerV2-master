@@ -120,30 +120,37 @@
                     android:textSize="@dimen/text_size_medium"
                     android:textColor="@android:color/white" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_below="@id/txt_title_report_type">
                 <Spinner
                     android:id="@+id/spinner_report_type"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="@dimen/margin_xlarge"
-                    android:layout_below="@id/txt_title_report_type"
                     android:background="@drawable/edit_text_border"
                     android:ems="10"
                     android:layout_marginRight="@dimen/margin_small"
                     android:textSize="@dimen/text_size_medium"
+                    android:layout_weight="0.95"
                     android:inputType="textPersonName" />
 
                 <TextView
                     android:id="@+id/img_refresh"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/spinner_report_type"
                     android:layout_alignParentRight="true"
                     android:layout_alignTop="@+id/spinner_report_type"
                     android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_weight="0.05"
                     android:text="@string/fa_refresh"
                     android:background="@color/blue"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_xlarge"/>
-
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -159,13 +166,14 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="@dimen/margin_small"
             android:background="@color/reports_header"
+            android:weightSum="7"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_s_no"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:text="S.no"
                 android:padding="@dimen/margin_small"
@@ -174,9 +182,9 @@
 
             <TextView
                 android:id="@+id/tv_category_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:layout_weight="2"
                 android:padding="@dimen/margin_small"
                 android:text="Category"
@@ -185,9 +193,9 @@
 
             <TextView
                 android:id="@+id/tv_product_name"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:layout_weight="2"
                 android:text="Product"
                 android:padding="@dimen/margin_small"
@@ -196,10 +204,10 @@
 
             <TextView
                 android:id="@+id/tv_sum"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1.5"
+                android:gravity="center"
+                android:layout_weight="2"
                 android:text="Price"
                 android:padding="@dimen/margin_small"
                 android:textSize="@dimen/text_size_medium"

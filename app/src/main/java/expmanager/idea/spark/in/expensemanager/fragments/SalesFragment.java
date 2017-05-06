@@ -109,6 +109,7 @@ public class SalesFragment extends Fragment {
                                 db.addSalesDetails(task);
                                 adapt.add(task);
                                 adapt.notifyDataSetChanged();
+                                amountsale.setText("");
 
 
 
@@ -140,6 +141,8 @@ public class SalesFragment extends Fragment {
                         }
                     });
 
+                }else{
+                    Toast.makeText(getActivity(),"Enter all fields",Toast.LENGTH_SHORT).show();
                 }
 
             }

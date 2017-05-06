@@ -407,7 +407,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Expense\nList"
+                    android:text="Expenses"
                     android:textColor="@color/expense_side_panel_text_color"
                     android:textSize="18dp" />
             </LinearLayout>

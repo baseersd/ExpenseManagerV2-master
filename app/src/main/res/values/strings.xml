@@ -93,6 +93,8 @@
     <string name="previousweek">Previous :</string>
     <string name="lastPrevWeek">Last Previous :</string>
     <string name="nextweek">Next Week :</string>
+    <string name="income">Income</string>
+    <string name="amount">Amount</string>
 
     //Tick mark
 
