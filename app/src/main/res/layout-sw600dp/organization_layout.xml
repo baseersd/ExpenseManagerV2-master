@@ -2,212 +2,144 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="30dp"
     android:layout_marginBottom="@dimen/dp_30"
     android:layout_marginLeft="@dimen/dp_100"
+    android:paddingLeft="30dp"
     android:paddingRight="30dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_40"
-        android:text="Setup Organization"
-        android:textColor="#1fb598"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center_vertical">
 
-    <EditText
-    android:id="@+id/et_organization"
-    android:layout_width="wrap_content"
-    android:layout_height="@dimen/dp_50"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_below="@+id/textView3"
-    android:layout_marginTop="@dimen/dp_30"
-    android:background="@drawable/edit_text_border"
-    android:ems="12"
-    android:hint="Organization Name"
-    android:inputType="textPersonName"
-        android:textSize="@dimen/sp_18"
-    android:paddingLeft="5dp" />
+        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginTop="@dimen/dp_40"
+            android:text="Setup Organization"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_activation_code"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_organization"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Activation Code"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_organization"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/textView3"
+            android:hint="Organization Name" />
 
-    <EditText
-        android:id="@+id/et_address_line1"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_activation_code"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Address Line1"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_activation_code"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_organization"
+            android:hint="Activation Code" />
 
-    <EditText
-        android:id="@+id/et_address_line2"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_address_line1"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Address Line2"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_address_line1"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_activation_code"
+            android:hint="Address Line1" />
 
-    <EditText
-        android:id="@+id/et_suburb"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_address_line2"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Suburb"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_address_line2"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_address_line1"
+            android:hint="Address Line2" />
 
-    <EditText
-        android:id="@+id/et_city_id"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_suburb"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="City Id"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_suburb"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_address_line2"
+            android:hint="Suburb" />
 
-    <EditText
-        android:id="@+id/et_abn"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_city_id"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Abn"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_city_id"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_suburb"
+            android:hint="City Id" />
 
-    <EditText
-        android:id="@+id/et_acn"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_50"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/et_abn"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="@dimen/dp_30"
-        android:background="@drawable/edit_text_border"
-        android:ems="12"
-        android:hint="Acn"
-        android:textSize="@dimen/sp_18"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        <EditText
+            android:id="@+id/et_abn"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_city_id"
+            android:hint="Abn"
+            android:inputType="number"
+            android:maxLength="11" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/textView5"-->
-        <!--android:layout_width="50dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:textColor="#1fb598"-->
-        <!--android:textSize="40sp"-->
-        <!--android:text="&#xf1fe;"-->
-        <!--android:layout_centerInParent="true" />-->
-
-    <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Setup Expense"
-        android:textColor="#1fb598"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/setupexp"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
-        android:layout_alignBottom="@id/et_acn"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:background="@drawable/circular_view"
-        android:src="@drawable/right_arrow" />
+        <EditText
+            android:id="@+id/et_acn"
+            style="@style/organizational_setup_edittext_style"
+            android:layout_below="@+id/et_abn"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:hint="Acn"
+            android:inputType="number"
+            android:maxLength="11" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/dp_100"
-            android:layout_marginLeft="100dp"
-            android:layout_toRightOf="@id/et_organization"
-            android:layout_marginStart="100dp">
-    <ImageView
-        android:layout_width="@dimen/company_logo_size"
-        android:layout_height="@dimen/company_logo_size"
-        android:background="@drawable/circular_view"
-        android:padding="@dimen/margin_small"
-        android:id="@+id/img_company_logo"
-        android:src="@drawable/ic_camera"/>
-        <TextView
-            android:id="@+id/tv_companylogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textSize="@dimen/text_size_medium"
-            android:textColor="@color/blue"
-            android:text="@string/company_logo_upload"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/setupexp"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_alignBottom="@id/et_acn"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_view"
+                android:src="@drawable/right_arrow" />
+
+            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Setup Expense"
+                android:textAllCaps="true"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
         </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="@dimen/dp_100"
+            android:layout_toRightOf="@id/et_organization"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_company_logo"
+                android:layout_width="@dimen/company_logo_size"
+                android:layout_height="@dimen/company_logo_size"
+                android:background="@drawable/circular_view"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:id="@+id/tv_companylogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/company_logo_upload"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
     </RelativeLayout>
 </ScrollView>

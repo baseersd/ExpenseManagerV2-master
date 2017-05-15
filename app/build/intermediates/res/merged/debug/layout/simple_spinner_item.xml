@@ -6,4 +6,5 @@
     android:ellipsize="marquee"
     android:gravity="center"
     android:maxLines="1"
+    android:padding="@dimen/margin_extra_small"
     android:singleLine="true" />

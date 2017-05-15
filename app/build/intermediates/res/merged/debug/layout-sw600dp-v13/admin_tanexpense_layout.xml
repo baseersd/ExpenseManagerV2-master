@@ -2,24 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="horizontal"
-    android:weightSum="2">
-
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/parent_main_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_large"
         android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
         android:gravity="left">
 
         <RelativeLayout
             android:id="@+id/main_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
             android:gravity="left">
 
 
@@ -37,8 +34,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tangible Expenses"
-                    android:textColor="#1fb598"
-                    android:textSize="22sp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/text_size_xlarge"
                     android:textStyle="bold" />
 
                 <Button
@@ -51,13 +48,14 @@
                     android:background="#1fb598"
                     android:text="+"
                     android:textColor="#fff"
-                    android:textSize="30sp"
+                    android:textSize="@dimen/text_size_xlarge"
                     android:textStyle="bold" />
 
                 <ListView
                     android:id="@+id/tanexplist"
-                    android:layout_width="450dp"
-                    android:layout_height="400dp"
+                    android:layout_width="700dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_large"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp" />
             </LinearLayout>
@@ -68,29 +66,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toEndOf="@id/first"
+                android:visibility="gone"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/img_arrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
                     android:layout_marginTop="@dimen/margin_medium"
-                    android:padding="@dimen/text_size_medium"
                     android:background="@color/yellow"
+                    android:padding="@dimen/text_size_medium"
                     android:text="@string/fa_arrow_left"
-                    android:textSize="@dimen/text_size_xlarge"/>
+                    android:textSize="@dimen/text_size_xlarge" />
             </RelativeLayout>
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/second"
-            android:layout_width="200dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/main_layout"
+            android:visibility="gone"
             android:background="@color/yellow">
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -169,43 +169,43 @@
 
         </RelativeLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/margin_large"
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/setupstaff"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_view"
+                android:src="@drawable/right_arrow" />
+
+            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                android:id="@+id/txt_setup_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Setup Staff"
+                android:textAllCaps="true"
+                android:textColor="#1fb598"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:visibility="gone" />
-
-
-        <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-            android:id="@+id/txt_setup_staff"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/setupstaff"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignStart="@+id/setupstaff"
-            android:layout_marginBottom="22dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Setup Staff"
-            android:textColor="#1fb598"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/setupstaff"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_above="@+id/txt_setup_staff"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/circular_view"
-            android:src="@drawable/right_arrow" />
 
     </RelativeLayout>
 

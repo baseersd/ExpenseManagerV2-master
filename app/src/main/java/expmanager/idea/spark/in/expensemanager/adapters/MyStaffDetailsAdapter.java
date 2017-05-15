@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.model.AddStaffRequest;
 import expmanager.idea.spark.in.expensemanager.model.Staff;
 import expmanager.idea.spark.in.expensemanager.utils.CustomFonts;
 
@@ -18,11 +19,11 @@ import expmanager.idea.spark.in.expensemanager.utils.CustomFonts;
  * Created by Haresh.Veldurty on 2/24/2017.
  */
 
-public class MyStaffDetailsAdapter extends ArrayAdapter<Staff> {
+public class MyStaffDetailsAdapter extends ArrayAdapter<AddStaffRequest> {
 
-    List<Staff> qList = new ArrayList<>();
+    List<AddStaffRequest> qList = new ArrayList<>();
 
-    public MyStaffDetailsAdapter(Context context, int textViewResourceId, List<Staff> objects) {
+    public MyStaffDetailsAdapter(Context context, int textViewResourceId, List<AddStaffRequest> objects) {
         super(context, textViewResourceId, objects);
         qList = objects;
     }
@@ -50,23 +51,23 @@ public class MyStaffDetailsAdapter extends ArrayAdapter<Staff> {
         TextView textView8 = (CustomFonts) v.findViewById(R.id.staffadress);
         TextView textView9 = (CustomFonts) v.findViewById(R.id.startdate);
 
-        String s1 = qList.get(position).getShift_days1();
-        String s2 = qList.get(position).getShift_days2();
+        String s1 = qList.get(position).getShiftDayFrom();
+        String s2 = qList.get(position).getShiftDayTo();
         String s3 = " to ";
         String s = s1+s3+s2;
 
-        String s5 = qList.get(position).getShift_time1();
-        String s6 = qList.get(position).getShift_time2();
+        String s5 = qList.get(position).getShiftTimeFrom();
+        String s6 = qList.get(position).getShiftTimeTo();
         String s7 = " to ";
         String s8 = s5+s7+s6;
 
-        String s9 = qList.get(position).getPrice_perhr();
-        String s10 = qList.get(position).getPriceType();
-        String s12 = " $ ";
+        String s9 = ""+qList.get(position).getSalary();
+        String s10 = qList.get(position).getSalaryType();
+        String s12 = " $";
         String s11 = s12 +s9+ s10;
 
 
-        textView1.setText(qList.get(position).getStaff_name());
+        textView1.setText(qList.get(position).getName());
         textView2.setText(s);
         textView3.setText(s8);
         textView4.setText(s11);
@@ -74,7 +75,7 @@ public class MyStaffDetailsAdapter extends ArrayAdapter<Staff> {
         textView6.setText(qList.get(position).getStaff_phonenumber());
         textView7.setText(qList.get(position).getStaff_email());
         textView8.setText(qList.get(position).getStaff_address());
-        textView9.setText(qList.get(position).getStaff_startdate());
+        textView9.setText(qList.get(position).getStarted());
 
 
         return v;

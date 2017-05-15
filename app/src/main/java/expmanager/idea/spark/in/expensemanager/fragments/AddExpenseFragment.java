@@ -34,6 +34,7 @@ import java.util.ArrayList;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.ListAdapter;
+import expmanager.idea.spark.in.expensemanager.model.ScanInvoiceModel;
 import expmanager.idea.spark.in.expensemanager.ocr_usage.CaptureActivity;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsTool;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsToolImpl;
@@ -218,8 +219,32 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
 
                 }
 
+                ArrayList<ScanInvoiceModel> scanInvoiceModels = new ArrayList<>();
 
-                ListAdapter adapter=new ListAdapter(getActivity(),filterdataname,filterdataamount);
+                for (int i = 0; i <filterdataname.size() ; i++) {
+
+                    ScanInvoiceModel scanInvoiceModel = new ScanInvoiceModel();
+                    scanInvoiceModel.setProductName(filterdataname.get(i));
+                    if(filterdataname.size()==filterdataamount.size()){
+
+                        scanInvoiceModel.setPrice(filterdataamount.get(i));
+
+                    }else if(filterdataname.size()>filterdataamount.size()) {
+
+                        if(i>=filterdataamount.size()){
+
+                            scanInvoiceModel.setPrice("");
+                        }else {
+
+                            scanInvoiceModel.setPrice(filterdataamount.get(i));
+                        }
+
+                    }
+
+                    scanInvoiceModels.add(scanInvoiceModel);
+
+                }
+                ListAdapter adapter=new ListAdapter(getActivity(),scanInvoiceModels);
                 list.setAdapter(adapter);
             }
             if (resultCode == Activity.RESULT_CANCELED) {

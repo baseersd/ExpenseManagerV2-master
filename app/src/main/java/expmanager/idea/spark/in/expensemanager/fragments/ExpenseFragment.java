@@ -35,9 +35,12 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.AdminActivity;
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.adapters.ExtraExpensesAdapter;
 import expmanager.idea.spark.in.expensemanager.adapters.TodayExpenseAdapter;
 import expmanager.idea.spark.in.expensemanager.common.AppConstants;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.ApproveRejectInvoiceRequest;
 import expmanager.idea.spark.in.expensemanager.model.Expense;
@@ -46,6 +49,9 @@ import expmanager.idea.spark.in.expensemanager.model.ExpenseHistoryResponse;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseItem;
 import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
 import expmanager.idea.spark.in.expensemanager.model.ForecastResponseObj;
+import expmanager.idea.spark.in.expensemanager.model.Item;
+import expmanager.idea.spark.in.expensemanager.model.TanExpenses;
+import expmanager.idea.spark.in.expensemanager.model.TangibleExpensesList;
 import expmanager.idea.spark.in.expensemanager.model.WeekExpenseForecastModel;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.service.CatlogService;
@@ -65,12 +71,14 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
     public TodayExpenseAdapter adapter;
     public TodayExpenseAdapter weekAdapter;
+    public ExtraExpensesAdapter extraExpensesAdapter;
     private ImageView addexpbtn;
     private TextView imgAddocrExpense;
     private TextView imgArrow;
     private TextView imgExpenseList;
     private TextView imgReports;
     private TextView imgLogs;
+    private ImageView imgDone;
     private RelativeLayout main_layout;
     private DatabaseHandler myDbHelper;
     private TextView mEmptyTodayExpense, mEmptyWeekExpense;
@@ -79,7 +87,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private ForecastResponseObj mForecastResponse;
     private RecyclerView mRecyclerViewToday;
     private LinearLayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManagerExtraExpenses;
     private RecyclerView mRecyclerViewWeek;
+    private RecyclerView mRecyclerViewExtraList;
     private LinearLayoutManager mLayoutManagerWeek;
     private boolean isWeeklyExpense = false;
     private int flag;
@@ -92,6 +102,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     private TextView tvPrev;
     private TextView tvLastPrev;
     private TextView tvNext;
+    private RelativeLayout rlSlideBar;
+    private LinearLayout llExpenseList;
+    private int convertWidth;
+    private LinearLayout llReports;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -101,12 +115,13 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         Display display = getActivity().getWindowManager().getDefaultDisplay();
 
-        int width = display.getWidth();
+        final int width = display.getWidth();
 
-        final int convertWidth = (int) (width*0.65);
+        convertWidth = (int) (width*0.65);
 
         myDbHelper = new DatabaseHandler(getContext());
 
+        rlSlideBar = (RelativeLayout)rootView.findViewById(R.id.slide_nav_bar);
         typeface = Typeface.createFromAsset(getContext().getAssets(),
                 "fontawesome.ttf");
 
@@ -121,10 +136,15 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         llForecast = (LinearLayout) rootView.findViewById(R.id.ll_forecast);
 
+        imgDone = (ImageView) rootView.findViewById(R.id.img_done);
+        imgDone.setOnClickListener(this);
         tvCurrent = (TextView) rootView.findViewById(R.id.tvCurrentexp);
         tvPrev = (TextView) rootView.findViewById(R.id.tvPreviousweek);
         tvLastPrev = (TextView) rootView.findViewById(R.id.tvLastPrevWeekExp);
         tvNext = (TextView) rootView.findViewById(R.id.tvNextWeekExp);
+
+        llExpenseList = (LinearLayout)rootView.findViewById(R.id.ll_expense_list);
+        llExpenseList.setOnClickListener(this);
 
         imgLogs = (TextView) rootView.findViewById(R.id.tv_logs);
         imgLogs.setTypeface(typeface);
@@ -148,26 +168,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         main_layout = (RelativeLayout) rootView.findViewById(R.id.parent_main_layout);
 
-        imgArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        imgArrow.setOnClickListener(this);
 
-                if (flag == 0) {
-                    imgArrow.setText(getString(R.string.fa_arrow_right));
-                    main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();
-                    flag = 1;
-
-                } else {
-                    imgArrow.setText(getString(R.string.fa_arrow_left));
-                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();
-                    flag = 0;
-
-                }
-
-            }
-        });
+        llReports = (LinearLayout)rootView.findViewById(R.id.ll_reports);
+        llReports.setOnClickListener(this);
 
         mRecyclerViewToday = (RecyclerView) rootView.findViewById(R.id.recycler_view_todays);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -177,6 +181,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         mRecyclerViewWeek = (RecyclerView) rootView.findViewById(R.id.recycler_view_week);
         mLayoutManagerWeek = new LinearLayoutManager(getActivity());
+
+        mRecyclerViewExtraList = (RecyclerView) rootView.findViewById(R.id.recycler_view_today_products);
+        mLayoutManagerExtraExpenses = new LinearLayoutManager(getActivity());
+
 
         // RecyclerView has some built in animations to it, using the DefaultItemAnimator.
         // Specifically when you call notifyItemChanged() it does a fade animation for the changing
@@ -191,8 +199,9 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
 
         initCurrentWeekExpenses();
 
-        getTangibleExpenses();
+        //getTangibleExpenses();
 
+        //getBroadcastExpenses();
         //startCatlogService();
         return rootView;
     }
@@ -225,6 +234,17 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
         mEmptyWeekExpense.setVisibility(View.GONE);
     }
 
+    private void initForecastList(List<TanExpenses> extraExpenseList){
+        if(extraExpenseList == null || extraExpenseList.isEmpty()){
+            mRecyclerViewExtraList.setVisibility(View.INVISIBLE);
+            return;
+        }
+        extraExpensesAdapter = new ExtraExpensesAdapter(getContext(),extraExpenseList);
+        mRecyclerViewExtraList.setLayoutManager(mLayoutManagerExtraExpenses);
+        mRecyclerViewExtraList.setAdapter(extraExpensesAdapter);
+        mRecyclerViewExtraList.setVisibility(View.VISIBLE);
+    }
+
     private void initForecast(){
         WeekExpenseForecastModel weekExpense = mForecastResponse.getForecastResponse().getForecast();
         tvCurrent.setText(""+weekExpense.getCurrentWeekExpense());
@@ -235,7 +255,39 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                 (weekExpense.getCurrentWeekExpense() + weekExpense.getPrevWeekExpense()
                         + weekExpense.getLastPrevWeekExpense())/(3.0)));
     }
-    private void getTangibleExpenses(){
+
+    private void getTangibleExpenses() {
+        SessionManager sessionManager = new SessionManager(getActivity());
+        //mDialog = Utils.showProgressBar(getActivity(), getString(R.string.fetch_tangible_expenses));
+        RetrofitApi.getApi().GetTangibleExpense(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(), response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        String jsonString = "{\"tangibleExpensesList\" :" + response.body().string() + "}";
+                        Log.i(getClass().getName(), jsonString);
+                        RuntimeData.setTagibleExpenseList(gson.fromJson(jsonString, TangibleExpensesList.class));
+                        initForecastList(calculateForecastData());
+                        getBroadcastExpenses();
+                        //Utils.dismissProgressBar(mDialog);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        //Utils.dismissProgressBar(mDialog);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+                //Utils.dismissProgressBar(mDialog);
+            }
+        });
+    }
+
+    private void getBroadcastExpenses(){
         SessionManager sessionManager = new SessionManager(getActivity());
         showProgressBar(getString(R.string.fetch_tangible_expenses));
         RetrofitApi.getApi().GetBroadcast(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
@@ -248,10 +300,10 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                         String jsonString = "{\"forecastResponse\" :"+response.body().string()+"}";
                         mForecastResponse = gson.fromJson(jsonString, ForecastResponseObj.class);
                         initForecast();
-                        Log.i(getClass().getName(),response.body().string());
+                        //calculateForecastData();
+                        //Log.i(getClass().getName(),response.body().string());
                     } catch (Exception e) {
                         e.printStackTrace();
-                    }finally {
                         Utils.dismissProgressBar(mDialog);
                     }
                 }
@@ -337,6 +389,32 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
             //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
             InvoiceEntryFragment fragmentorg = new InvoiceEntryFragment();
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
+        }else if(view.getId() == R.id.ll_expense_list || view.getId() == R.id.img_arrow){
+            if (flag == 0) {
+                imgArrow.setText(getString(R.string.fa_arrow_right));
+                rlSlideBar.setVisibility(View.VISIBLE);
+                //rlSlideBar.getLayoutParams().width = 0;
+                //main_layout.getLayoutParams().width = convertWidth;
+                //main_layout.requestLayout();
+                flag = 1;
+
+            } else {
+                imgArrow.setText(getString(R.string.fa_arrow_left));
+                rlSlideBar.setVisibility(View.GONE);
+                //rlSlideBar.getLayoutParams().width = (int)0.4 * width;
+                //main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                //main_layout.requestLayout();
+                flag = 0;
+
+            }
+        }else if(view.getId() == R.id.ll_reports){
+            ReportsFragment reportsFragment = new ReportsFragment();
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, reportsFragment).commit();
+            AdminActivity.updateViewHighlight(R.id.btnreports);
+        }else if(view.getId() == R.id.img_done){
+            AdminTangibleExpenses fragtanexp = new AdminTangibleExpenses();
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragtanexp).commit();
+            AdminActivity.updateViewHighlight(R.id.btntanexpense);
         }
     }
 
@@ -357,6 +435,7 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
                             mExpenseHistoryWeeklyResponse = gson.fromJson(jsonString, ExpenseHistoryResponse.class);
                             Log.d(getClass().getName(),mExpenseHistoryWeeklyResponse.toString());
                             initCurrentWeekExpenses();
+                            getTangibleExpenses();
                         }else{
                             mExpenseHistoryTodaysResponse = gson.fromJson(jsonString, ExpenseHistoryResponse.class);
                             Log.d(getClass().getName(),mExpenseHistoryTodaysResponse.toString());
@@ -492,12 +571,35 @@ public class ExpenseFragment extends Fragment implements View.OnClickListener, E
     }
 
     private void startCatlogService(){
-        mDialog = Utils.showProgressBar(getActivity(),getString(R.string.fetching_categories));
+        //mDialog = Utils.showProgressBar(getActivity(),getString(R.string.fetching_categories));
         Intent intent = new Intent(getActivity(), CatlogService.class);
         getActivity().startService(intent);
     }
 
     public static void hideProgressbar(){
         Utils.dismissProgressBar(mDialog);
+    }
+
+    private List<TanExpenses> calculateForecastData(){
+        List<TanExpenses> existingList = RuntimeData.getTagibleExpenseList();
+        List<TanExpenses> extraExpenseList = new ArrayList<>();
+
+        for(TanExpenses itemExpense: existingList){
+            Double amount = 0.0;
+            for(ExpenseSyncRequest syncRequest: mExpenseHistoryTodaysResponse.getExpenseHistoryList()){
+                for(Expense expense: syncRequest.getExpenseList()) {
+                    if (itemExpense.getCategory().equalsIgnoreCase(expense.getCategory_name())) {
+                        amount += expense.getExpAmt();
+                    }
+                }
+            }
+            if(amount > itemExpense.getPriceDouble()){
+                TanExpenses extraItem = new TanExpenses();
+                extraItem.setCategory(itemExpense.getCategory());
+                extraItem.setPrice(amount);
+                extraExpenseList.add(extraItem);
+            }
+        }
+        return extraExpenseList;
     }
 }

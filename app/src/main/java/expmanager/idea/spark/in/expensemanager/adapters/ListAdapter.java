@@ -1,37 +1,54 @@
 package expmanager.idea.spark.in.expensemanager.adapters;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
+import expmanager.idea.spark.in.expensemanager.model.CategoryItem;
+import expmanager.idea.spark.in.expensemanager.model.ScanInvoiceModel;
 
 /**
  * Created by Creative IT Works on 31-Mar-17.
  */
 
 public class ListAdapter extends BaseAdapter {
-    ArrayList<String> name;
-    ArrayList<String> amount;
-    Context mContext;
-
+   private  ArrayList<ScanInvoiceModel> scanInvoiceModels;
+    private Context mContext;
+    private  List<String> categoryList;
     //constructor
-    public ListAdapter(Context mContext, ArrayList<String> name, ArrayList<String> amount) {
+    public ListAdapter(Context mContext, ArrayList<ScanInvoiceModel> scanInvoiceModels) {
         this.mContext = mContext;
-        this.name = name;
-        this.amount = amount;
+        this.scanInvoiceModels = scanInvoiceModels;
 
-        Log.i("SSSSSSSSSSS","SSSSSSS"+name.size()+amount.size());
+        categoryList = new ArrayList<>();
+        for(CategoryItem categoryItem: RuntimeData.getCatelogList()) {
+            // Initialize a new Adapter for RecyclerView
+
+            categoryList.add(categoryItem.getCategory().getCategoryName());
+
+        }
+
+
     }
 
     public int getCount() {
-        return name.size();
+        return scanInvoiceModels.size();
     }
 
     public Object getItem(int arg0) {
@@ -42,25 +59,87 @@ public class ListAdapter extends BaseAdapter {
         return position;
     }
 
-    public View getView(int position, View arg1, ViewGroup viewGroup) {
+    public View getView(final int position, View arg1, ViewGroup viewGroup) {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = inflater.inflate(R.layout.listadapter, viewGroup, false);
 
-        TextView expTitle = (TextView) row.findViewById(R.id.name);
-        TextView expAmt = (TextView) row.findViewById(R.id.price);
+        EditText expTitle = (EditText) row.findViewById(R.id.name);
+        EditText expAmt = (EditText) row.findViewById(R.id.price);
+        EditText qty= (EditText) row.findViewById(R.id.quantity);
+        Spinner category= (Spinner) row.findViewById(R.id.category);
         TextView ids = (TextView) row.findViewById(R.id.ids);
+        ImageView action=(ImageView)row.findViewById(R.id.action);
 
-
-        expTitle.setText(name.get(position));
+        expTitle.setText(scanInvoiceModels.get(position).getProductName());
         ids.setText(String.valueOf(position+1));
         try {
-            expAmt.setText(amount.get(position));
+            expAmt.setText(scanInvoiceModels.get(position).getPrice());
         }catch (Exception e)
         {
 
         }
 
+        scanInvoiceModels.get(position).setCategory(categoryList.get(0));
 
+        action.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scanInvoiceModels.remove(position);
+            }
+        });
+
+        expTitle.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+                if (!b){
+                    final int position = view.getId();
+                    final EditText caption = (EditText) view;
+                    scanInvoiceModels.get(position).setProductName(caption.getText().toString());
+                }
+            }
+        });
+
+        expAmt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+                if (!b){
+                    final int position = view.getId();
+                    final EditText price = (EditText) view;
+                    scanInvoiceModels.get(position).setPrice(price.getText().toString());
+                }
+            }
+        });
+
+        qty.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+                if (!b){
+                    final int position = view.getId();
+                    final EditText qty = (EditText) view;
+                    scanInvoiceModels.get(position).setQuantity(Integer.parseInt(qty.getText().toString()));
+                }
+            }
+        });
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, categoryList);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        category.setAdapter(dataAdapter);
+
+        category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+                scanInvoiceModels.get(position).setCategory(categoryList.get(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
 
         return row;
     }

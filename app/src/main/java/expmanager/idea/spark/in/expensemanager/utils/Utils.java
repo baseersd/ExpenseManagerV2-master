@@ -216,4 +216,24 @@ public class Utils {
 
         return encodedfile;
     }
+
+    public static String getFormattedCalenderString(int year, int month, int day){
+        StringBuilder formattedString = new StringBuilder();
+        formattedString.append(year);
+        formattedString.append("-");
+
+        if(month > 0 && month <10){
+            formattedString.append("0"+month);
+        }else{
+            formattedString.append(month);
+        }
+        formattedString.append("-");
+
+        if(day > 0 && day <10){
+            formattedString.append("0"+day);
+        }else{
+            formattedString.append(day);
+        }
+        return formattedString.toString();
+    }
 }

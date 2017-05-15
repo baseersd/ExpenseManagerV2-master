@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -71,6 +72,7 @@ public class DashBoardFragment extends Fragment {
 
     private TextView txtSelectedMonthProfit, txtSelectedMonthIncome, txtSelectedMonthTangible, txtSelectedMonthInTangible;
 
+    private RelativeLayout rlProfit;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +98,7 @@ public class DashBoardFragment extends Fragment {
         chartContainer = (LinearLayout) rootView.findViewById(R.id.chart);
         mothspinner = (Spinner) rootView.findViewById(R.id.mothspinner);
 
+
         txtCurrentMonth = (TextView) rootView.findViewById(R.id.txt_current_month);
         txtCurrentMonthProfit = (TextView) rootView.findViewById(R.id.txt_current_month_profit);
         txtPrevMonth1 = (TextView) rootView.findViewById(R.id.txt_prev_month1);
@@ -110,6 +113,8 @@ public class DashBoardFragment extends Fragment {
         txtPrevMonth1Year = (TextView) rootView.findViewById(R.id.txt_prev_month1_year);
         txtPrevMonth2Year = (TextView) rootView.findViewById(R.id.txt_prev_month2_year);
         txtPrevMonth3Year = (TextView) rootView.findViewById(R.id.txt_prev_month3_year);
+
+        rlProfit = (RelativeLayout) rootView.findViewById(R.id.rl_profit);
 
 
         txtCurrentMonthIncome = (TextView) rootView.findViewById(R.id.txt_current_month_income);
@@ -316,7 +321,12 @@ public class DashBoardFragment extends Fragment {
 
                     long profit = (long) (income - (tangible + intangible));
 
-                    txtCurrentMonthProfit.setText("$"+profit);
+                    if(profit < 0) {
+                        txtCurrentMonthProfit.setText("$" + -1 * profit);
+                        rlProfit.setBackgroundColor(getResources().getColor(R.color.loss_color));
+                    }else{
+                        txtCurrentMonthProfit.setText("$" + profit);
+                    }
 
                     txtCurrentMonthIncome.setText("$"+(long) income);
                     txtCurrentMonthTangible.setText("$"+(long) tangible);
@@ -492,7 +502,7 @@ public class DashBoardFragment extends Fragment {
 //Setting background color of the graph to transparent
         multiRenderer.setBackgroundColor(Color.TRANSPARENT);
 //Setting margin color of the graph to transparent
-        multiRenderer.setMarginsColor(getResources().getColor(R.color.transparent_background));
+        multiRenderer.setMarginsColor(getActivity().getResources().getColor(R.color.transparent_background));
         multiRenderer.setApplyBackgroundColor(true);
         // multiRenderer.setScale(2f);
 //setting x axis point size

@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -157,7 +159,12 @@ public class ReportsFragment extends Fragment implements View.OnClickListener, D
 
                 break;
             case R.id.img_refresh:
-
+                if(txtDateFrom.getText() == null || txtDateFrom.getText().toString().isEmpty() ||
+                        txtDateTo.getText() == null || txtDateTo.getText().toString().isEmpty()){
+                    Toast.makeText(getActivity(),"From and To Dates has to be filled",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //txtDateFrom.getText().toString(),txtDateTo.getText()
                 serviceCall();
                 break;
 

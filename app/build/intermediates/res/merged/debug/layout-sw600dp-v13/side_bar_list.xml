@@ -4,13 +4,14 @@
         android:id="@+id/listContainer"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/dp_30"
-        android:layout_marginTop="@dimen/dp_300">
+        android:layout_marginLeft="@dimen/dp_30">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_large">
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
                 android:id="@+id/txt_organization"
@@ -18,7 +19,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center|center_vertical"
                 android:padding="12dp"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
                 android:text="@string/organization" />
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -27,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center|center_vertical"
                 android:padding="12dp"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
                 android:text="@string/tangible_expenses" />
 
             <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
@@ -36,7 +39,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center|center_vertical"
                 android:padding="12dp"
-                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_large"
                 android:text="@string/staff" />
 
             <!--<ListView-->

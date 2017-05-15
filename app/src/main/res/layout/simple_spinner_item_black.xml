@@ -1,0 +1,10 @@
+<expmanager.idea.spark.in.expensemanager.utils.CustomFonts xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="@style/spinnerItemStyleBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="start"
+    android:maxLines="1"
+    android:padding="@dimen/margin_extra_small"
+    android:singleLine="true" />

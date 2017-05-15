@@ -129,10 +129,10 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_weight="0.1"
-                            android:gravity="center"
+                            android:gravity="center_vertical"
                             android:text="to"
                             android:textColor="#1fb598"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/margin_medium"
                             android:textStyle="bold" />
 
                         <Spinner
@@ -176,10 +176,10 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:layout_weight="0.1"
-                            android:gravity="center"
+                            android:gravity="center_vertical"
                             android:text="to"
                             android:textColor="#1fb598"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/text_size_medium"
                             android:textStyle="bold" />
 
                         <Spinner
@@ -216,6 +216,7 @@
                             android:textColor="@color/blue"
                             android:textSize="@dimen/text_size_medium"
                             android:inputType="textPersonName"
+                            android:paddingLeft="@dimen/margin_small"
                             android:gravity="center_vertical"
                             android:text="" />
 
@@ -258,6 +259,7 @@
                             android:layout_width="0dp"
                             android:layout_height="@dimen/edit_text_height"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/margin_medium"
                             android:layout_weight="0.5"
                             android:background="@drawable/edit_text_border"
                             android:ems="10"
@@ -268,10 +270,11 @@
                     <Button
                         android:id="@+id/addstafftodb"
                         style="@style/button_style"
+                        android:layout_width="@dimen/login_button_width"
                         android:layout_marginBottom="20dp"
                         android:layout_marginTop="25dp"
                         android:drawableLeft="@drawable/ic_add"
-                        android:drawablePadding="@dimen/margin_small"
+                        android:drawablePadding="@dimen/margin_extra_small"
                         android:text="Add"
                         android:textSize="@dimen/text_size_xlarge" />
                 </LinearLayout>

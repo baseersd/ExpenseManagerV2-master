@@ -73,6 +73,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
     private AlertDialog mDialog;
     ImageView setupstaff;
     private TextView txtSetupsaff;
+    private TextView addimgplus;
+    private Typeface typeface;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,7 +117,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
         final int convertWidth = (int) (width * 0.65);
 
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+        typeface = Typeface.createFromAsset(getContext().getAssets(),
                 "fontawesome.ttf");
         imgArrow = (TextView) rootView.findViewById(R.id.img_arrow);
         imgArrow.setTypeface(typeface);
@@ -128,13 +130,13 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
                 if (flag == 0) {
                     imgArrow.setText(getString(R.string.fa_arrow_right));
-                    main_layout.getLayoutParams().width = convertWidth;
-                    main_layout.requestLayout();
+                    //main_layout.getLayoutParams().width = convertWidth;
+                    //main_layout.requestLayout();
                     flag = 1;
                 } else {
                     imgArrow.setText(getString(R.string.fa_arrow_left));
-                    main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                    main_layout.requestLayout();
+                    //main_layout.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                    //main_layout.requestLayout();
                     flag = 0;
                 }
 
@@ -214,23 +216,25 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
         ArrayList<String> arrayList = new ArrayList<>();
 
-        for (int i = 0; i < RuntimeData.getCatelogList().size(); i++) {
+        if(RuntimeData.getCatelogList() != null) {
+            for (int i = 0; i < RuntimeData.getCatelogList().size(); i++) {
 
-            arrayList.add(RuntimeData.getCatelogList().get(i).getCategory().getCategoryName());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, arrayList);
-
-        categoryval.setAdapter(adapter);
-
-        categoryval.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                categoryval.setText((String) adapterView.getItemAtPosition(i));
+                arrayList.add(RuntimeData.getCatelogList().get(i).getCategory().getCategoryName());
             }
-        });
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_dropdown_item_1line, arrayList);
+
+            categoryval.setAdapter(adapter);
+
+            categoryval.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    categoryval.setText((String) adapterView.getItemAtPosition(i));
+                }
+            });
+        }
 
 
         canceltandialog.setOnClickListener(new View.OnClickListener() {
@@ -252,8 +256,13 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                     return;
                 }
 
+
                 if (!categoryval.getText().toString().isEmpty() && !whenval.getSelectedItem().toString().isEmpty() && !priceval.getText().toString().isEmpty()) {
                     final TanExpenses insertall = new TanExpenses(categoryval.getText().toString(), whenval.getSelectedItem().toString(), priceval.getText().toString());
+                    if(duplicateExists(insertall)){
+                        Toast.makeText(getContext(),"Please modify the existing tangible expense",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     dialog.cancel();
 
                     progressBar.setVisibility(View.VISIBLE);
@@ -268,21 +277,23 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                             progressBar.setVisibility(View.GONE);
 
                             if (response.isSuccessful()) {
-
-                                Gson gson = new Gson();
+                                getTangibleExpenses();
+                                /* Gson gson = new Gson();
 
                                 try {
                                     TanExpenses tanExpenses = gson.fromJson(response.body().string(), TanExpenses.class);
-                                    db.addTanExpenses(insertall);
-                                    List<TanExpenses> list = new ArrayList<TanExpenses>();
-                                    list.add(tanExpenses);
-                                    adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list, AdminTangibleExpenses.this);
-                                    tanexplist.setAdapter(adapt);
+                                    //db.addTanExpenses(insertall);
+                                    //List<TanExpenses> list = new ArrayList<TanExpenses>();
+                                    //list.add(tanExpenses);
+                                    adapt.add(tanExpenses);
+                                    adapt.notifyDataSetChanged();
+                                    //adapt = new MyTanExpAdapter(getActivity(), R.layout.list_tanexp_item, list, AdminTangibleExpenses.this);
+                                    //tanexplist.setAdapter(adapt);
 
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
-
+*/
 
                             } else {
 
@@ -315,6 +326,14 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
     }
 
+    private boolean duplicateExists(TanExpenses tangibleExpense){
+        List<TanExpenses> existingList = RuntimeData.getTagibleExpenseList();
+        for(TanExpenses indexExpense: existingList){
+            if(tangibleExpense.getCategory().equals(indexExpense.getCategory()) && tangibleExpense.getWhen().equals(indexExpense.getWhen()))
+                return true;
+        }
+        return false;
+    }
     @Override
     public void onResume() {
         super.onResume();
@@ -432,7 +451,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
                             if (response.isSuccessful()) {
 
-                                Gson gson = new Gson();
+                                getTangibleExpenses();
+                                /*Gson gson = new Gson();
                                 try {
 
 
@@ -450,7 +470,7 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                                     adapt.notifyDataSetChanged();
                                 } catch (IOException e) {
                                     e.printStackTrace();
-                                }
+                                }*/
 
 
                             } else {
@@ -481,8 +501,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
 
     private void getTangibleExpenses() {
         SessionManager sessionManager = new SessionManager(getActivity());
-
-        mDialog = Utils.showProgressBar(getActivity(), getString(R.string.fetch_tangible_expenses));
+        progressBar.setVisibility(View.VISIBLE);
+        //mDialog = Utils.showProgressBar(getActivity(), getString(R.string.fetch_tangible_expenses));
         RetrofitApi.getApi().GetTangibleExpense(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -494,10 +514,12 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
                         Log.i(getClass().getName(), jsonString);
                         RuntimeData.setTagibleExpenseList(gson.fromJson(jsonString, TangibleExpensesList.class));
                         initTangibleList();
-                        Utils.dismissProgressBar(mDialog);
+                        //Utils.dismissProgressBar(mDialog);
+                        progressBar.setVisibility(View.GONE);
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Utils.dismissProgressBar(mDialog);
+                        progressBar.setVisibility(View.GONE);
+                        //Utils.dismissProgressBar(mDialog);
                     }
                 }
             }
@@ -505,7 +527,8 @@ public class AdminTangibleExpenses extends Fragment implements EditTangibleListe
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
-                Utils.dismissProgressBar(mDialog);
+                //Utils.dismissProgressBar(mDialog);
+                progressBar.setVisibility(View.GONE);
             }
         });
     }

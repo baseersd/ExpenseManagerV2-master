@@ -215,7 +215,10 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         mBtnProductAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mProduct = new Item();
                 mProduct.setItemId(-1);
+                mProduct.setType(Item.ITEM_PRODUCT);
+                mProduct.setItemName(expProductName.getText().toString());
                 expAmt.setText("0.00");
                 expUnit.setText("0");
                 addExpenseToList();
@@ -848,6 +851,9 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
             initProductsList(item.getItemId());
             mCategory = item;
         }else{
+            if(isProductExist(item.getItemName())){
+                return;
+            }
             expProductName.setText(item.getItemName());
             mProductIndex = position;
             expAmt.setText("0.00");
@@ -857,6 +863,16 @@ public class fragExpenseEntry extends Fragment implements AdapterView.OnItemSele
         }
     }
 
+    private boolean isProductExist(String productName){
+        myDbHelper.openConnection();
+        List<Expense> expenseList = myDbHelper.getExpenses(mInvoiceID);
+        myDbHelper.closeConnection();
+        for(Expense expense: expenseList){
+            if(expense.getExpProductName().equals(productName))
+                return true;
+        }
+        return false;
+    }
 
     private void onInvoiceCreateSuccess() {
 

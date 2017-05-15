@@ -13,6 +13,7 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -31,16 +32,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
+import expmanager.idea.spark.in.expensemanager.LoginActivity;
+import expmanager.idea.spark.in.expensemanager.MainActivity;
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.MyStaffDetailsAdapter;
+import expmanager.idea.spark.in.expensemanager.common.RuntimeData;
 import expmanager.idea.spark.in.expensemanager.database.DatabaseHandler;
 import expmanager.idea.spark.in.expensemanager.model.AddStaffRequest;
+import expmanager.idea.spark.in.expensemanager.model.GetStaffResponse;
 import expmanager.idea.spark.in.expensemanager.model.Staff;
+import expmanager.idea.spark.in.expensemanager.model.TangibleExpensesList;
 import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
 import expmanager.idea.spark.in.expensemanager.utils.Utils;
@@ -69,6 +78,9 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
     private String base64Image="";
     private DatePickerDialog datePickerDialog;
     public static MyStaffDetailsAdapter adapt;
+    ImageView done;
+    private List<AddStaffRequest> staffList;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,11 +113,40 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
         });
         stafflist = (ListView) rootView.findViewById(R.id.stafflist);
         list = db.getAllStaff();
-        if(list != null) {
+        done = (ImageView) rootView.findViewById(R.id.complete);
+        /*if(list != null) {
             adapt = new MyStaffDetailsAdapter(getActivity(), R.layout.list_staff_item, list);
             stafflist.setAdapter(adapt);
-        }
+        }*/
+
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        getStaffService();
         return rootView;
+    }
+
+    private void initStaffList(){
+        if(staffList != null){
+            adapt = new MyStaffDetailsAdapter(getActivity(), R.layout.list_staff_item, staffList);
+            stafflist.setAdapter(adapt);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(getActivity() instanceof MainActivity){
+            MainActivity mainActivity = (MainActivity) getActivity();
+            mainActivity.changeStaffTextColor();
+            done.setVisibility(View.VISIBLE);
+        }
     }
 
     public void openAddStaffDialog() {
@@ -210,15 +251,15 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
                 if(!isValidMobile(staffphonenumber.getText().toString()))
                     Toast.makeText(getActivity(),"Please enter valid phone number",Toast.LENGTH_SHORT).show();
                 if(!staffname.getText().toString().isEmpty() ) {
-                   final  Staff insertstaff = new Staff();
-                    insertstaff.setStaff_name(staffname.getText().toString());
-                    insertstaff.setShift_days1(spinnershift1.getSelectedItem().toString());
-                    insertstaff.setShift_days2(spinnershift2.getSelectedItem().toString());
-                    insertstaff.setShift_time1(spinnertime1.getSelectedItem().toString());
-                    insertstaff.setShift_time2(spinnertime2.getSelectedItem().toString());
-                    insertstaff.setStaff_startdate(started.getText().toString());
-                    insertstaff.setPrice_perhr(salary.getText().toString());
-                    insertstaff.setPriceType(spinnersal.getSelectedItem().toString());
+                   final  AddStaffRequest insertstaff = new AddStaffRequest();
+                    insertstaff.setName(staffname.getText().toString());
+                    insertstaff.setShiftDayFrom(spinnershift1.getSelectedItem().toString());
+                    insertstaff.setShiftDayTo(spinnershift2.getSelectedItem().toString());
+                    insertstaff.setShiftTimeFrom(spinnertime1.getSelectedItem().toString());
+                    insertstaff.setShiftTimeTo(spinnertime2.getSelectedItem().toString());
+                    insertstaff.setStarted(started.getText().toString());
+                    insertstaff.setSalary(Integer.valueOf(salary.getText().toString()));
+                    insertstaff.setSalaryType(spinnersal.getSelectedItem().toString());
                     insertstaff.setStaff_email(staffemail.getText().toString());
                     insertstaff.setStaff_designation(designation.getText().toString());
                     insertstaff.setStaff_address(staffaddress.getText().toString());
@@ -250,7 +291,7 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
 
                             if (response.isSuccessful()) {
 
-                                db.addStaff(insertstaff);
+                                //db.addStaff(insertstaff);
                                 AdminAddStaffFragment.adapt.add(insertstaff);
                                 AdminAddStaffFragment.adapt.notifyDataSetChanged();
 
@@ -304,11 +345,8 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-        month = month+1;
-
-
-            started.setText(year+"-"+month+"-"+dayOfMonth);
-
+        month = month + 1;
+        started.setText(Utils.getFormattedCalenderString(year,month,dayOfMonth));
     }
 
     public final static boolean isValidEmail(CharSequence target) {
@@ -317,5 +355,32 @@ public class AdminAddStaffFragment extends Fragment implements  DatePickerDialog
 
     private boolean isValidMobile(String phone) {
         return android.util.Patterns.PHONE.matcher(phone).matches();
+    }
+
+    private void getStaffService(){
+        SessionManager sessionManager = new SessionManager(getActivity());
+        //mDialog = Utils.showProgressBar(getActivity(), getString(R.string.fetch_tangible_expenses));
+        RetrofitApi.getApi().GetStaff(sessionManager.getAuthToken()).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                Log.i(getClass().getName(), response.message());
+                if (response.isSuccessful()) {
+                    Gson gson = new GsonBuilder().serializeNulls().create();
+                    try {
+                        String jsonString = "{\"stafflist\" :" + response.body().string() + "}";
+                        Log.i(getClass().getName(), jsonString);
+                        staffList = gson.fromJson(jsonString, GetStaffResponse.class).getStaffList();
+                        initStaffList();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(getActivity(), "Oops something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
