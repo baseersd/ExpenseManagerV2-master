@@ -128,6 +128,10 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\shutter.png"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_camera.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_camera.png"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\staff.png",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-xxhdpi\\staff.png"
     },

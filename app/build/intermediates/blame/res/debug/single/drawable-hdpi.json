@@ -24,6 +24,10 @@
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_arrow_down.png"
     },
     {
+        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_camera.png",
+        "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_camera.png"
+    },
+    {
         "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_plus.png",
         "source": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\drawable-hdpi\\ic_plus.png"
     },
