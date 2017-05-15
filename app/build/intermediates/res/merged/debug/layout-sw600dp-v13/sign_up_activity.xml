@@ -117,6 +117,7 @@
         <Button
             android:id="@+id/btn_sign_up"
             style="@style/button_style"
+            android:layout_width="@dimen/login_button_width"
             android:layout_marginTop="20dip"
             android:text="@string/sign_up"
             android:textColor="@color/editTextBackgroundWhite"/>

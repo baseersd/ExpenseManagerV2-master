@@ -5,9 +5,6 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
-
-
-
         <LinearLayout
             android:id="@+id/addExpenseForm"
             android:layout_width="match_parent"
@@ -22,7 +19,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Invoice Id"
-                android:textSize="18sp"/>
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium"/>
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteInvId"
@@ -32,6 +30,7 @@
                 android:background="@color/greytext"
                 android:ems="10"
                 android:hint="Invoice Id"
+                android:textSize="@dimen/text_size_medium"
                 android:imeOptions="actionNext"
                 android:maxLength="26"
                 android:maxLines="1"
@@ -43,7 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
-                android:textSize="18sp"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium"
                 />
 
             <EditText
@@ -58,6 +58,7 @@
                 android:maxLines="1"
                 android:padding="10dp"
                 android:singleLine="true"
+                android:textSize="@dimen/text_size_medium"
                 android:textColorHint="@android:color/darker_gray"
                 />
 
@@ -65,7 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Category"
-                android:textSize="18sp"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium"
                 />
 
             <AutoCompleteTextView
@@ -95,7 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/product"
-                android:textSize="18sp"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/text_size_medium"
                 />
 
             <android.support.v7.widget.RecyclerView
@@ -117,17 +120,19 @@
                 style="@style/editTextClassic"
                 android:layout_width="0dp"
                 android:layout_weight="0.8"
-                android:layout_height="45dp"
+                android:layout_height="@dimen/edit_text_height"
                 android:background="@color/greytext"
                 android:hint="@string/product"
                 android:imeOptions="actionNext"
                 android:maxLength="26"
                 android:maxLines="1"
+                android:layout_marginRight="@dimen/margin_large"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColorHint="@android:color/darker_gray" />
                 <Button
                     android:id="@+id/btnProductAdd"
+                    style="@style/button_style"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
@@ -290,7 +295,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Category"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
                 <TextView
@@ -299,7 +304,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/product"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
                 <TextView
@@ -307,8 +312,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Unit"
-                    android:textSize="18sp"
+                    android:text="Qty"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
                 <TextView
@@ -317,7 +322,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Amount"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
                 <TextView
@@ -325,7 +330,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
                 <TextView
@@ -333,7 +338,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_size_medium"
                     android:textStyle="bold" />
 
 

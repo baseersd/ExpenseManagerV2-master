@@ -1,37 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="5dp"
-    android:weightSum="4">
-    <TextView
+    android:weightSum="18">
+
+    <EditText
         android:id="@+id/ids"
         android:layout_width="0dp"
-        android:textColor="@android:color/black"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <TextView
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:background="@drawable/edit_background"
+        android:padding="5dp"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:padding="5dp" />
+
+    <EditText
         android:id="@+id/name"
         android:layout_width="0dp"
-        android:textColor="@android:color/black"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-    <TextView
+        android:layout_weight="8"
+        android:maxLines="2"
+        android:background="@drawable/edit_background"
+        android:padding="5dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
         android:id="@+id/quantity"
         android:layout_width="0dp"
-        android:textColor="@android:color/black"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/edit_background"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5dp"
         android:text="1"
-        android:layout_weight="1"/>
+        android:textColor="@android:color/black" />
 
-    <TextView
+    <EditText
         android:id="@+id/price"
         android:layout_width="0dp"
-        android:textColor="@android:color/black"
-        android:gravity="right"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="3"
+        android:maxLines="1"
+        android:background="@drawable/edit_background"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/action"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:src="@drawable/ic_close" />
 </LinearLayout>

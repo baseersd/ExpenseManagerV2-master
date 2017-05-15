@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 295,
+                        "startOffset": 291,
                         "endColumn": 57,
-                        "endOffset": 348
+                        "endOffset": 344
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 162
                 },
                 "from": {
-                    "file": "C:\\Ramana\\ExpenseManagerV2-master\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 356,
+                        "startOffset": 350,
                         "endColumn": 53,
-                        "endOffset": 405
+                        "endOffset": 399
                     }
                 }
             }

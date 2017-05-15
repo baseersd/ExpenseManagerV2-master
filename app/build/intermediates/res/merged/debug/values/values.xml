@@ -191,9 +191,9 @@
         <item>per hour</item>
     </string-array>
     <string-array name="perWhen">
-        <item>daily</item>
-        <item>weekly</item>
-        <item>monthly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
     </string-array>
     <string-array name="saletype">
         <item>Sales</item>
@@ -201,15 +201,25 @@
     </string-array>
     <string-array name="timeArray">
         <item>10:00</item>
+        <item>10:30</item>
         <item>11:00</item>
+        <item>11:30</item>
         <item>12:00</item>
+        <item>12:30</item>
         <item>13:00</item>
+        <item>13:30</item>
         <item>14:00</item>
+        <item>14:30</item>
         <item>15:00</item>
+        <item>15:30</item>
         <item>16:00</item>
+        <item>16:30</item>
         <item>17:00</item>
+        <item>17:30</item>
         <item>18:00</item>
+        <item>18:30</item>
         <item>19:00</item>
+        <item>19:30</item>
         <item>20:00</item>
     </string-array>
     <string-array name="translationtargetiso6391_google">
@@ -454,6 +464,8 @@
         <item>WED</item>
         <item>THU</item>
         <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -475,6 +487,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black">#000000</color>
     <color name="blue">#1fb698</color>
     <color name="blue1">#4A1C8A</color>
     <color name="bluelay">#3179c3</color>
@@ -519,6 +532,7 @@
     <color name="help_view">#ff404040</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="loss_color">#FF0000</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -542,6 +556,7 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="reports_header">#133852</color>
     <color name="result_minor_text">#ffc0c0c0</color>
     <color name="result_text">#ffffffff</color>
     <color name="result_view">#b0000000</color>
@@ -950,7 +965,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="arrow_width">75dp</dimen>
-    <dimen name="button_height">45dp</dimen>
+    <dimen name="button_height">60dp</dimen>
+    <dimen name="company_logo_size">150dp</dimen>
     <dimen name="dashboard_graph">300dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
@@ -1001,7 +1017,7 @@
     <dimen name="dp_80">80dp</dimen>
     <dimen name="drawer_content_padding">0dp</dimen>
     <dimen name="drawer_size">75dp</dimen>
-    <dimen name="edit_text_height">45dp</dimen>
+    <dimen name="edit_text_height">55dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -1009,15 +1025,18 @@
     <item format="float" name="hint_alpha_material_light" type="dimen">0.38</item>
     <item format="float" name="hint_pressed_alpha_material_dark" type="dimen">0.70</item>
     <item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
+    <dimen name="invoice_image_size">150dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="login_button_width">250dp</dimen>
     <dimen name="login_screen_edit_text_margin">30dp</dimen>
     <dimen name="margin_extra_small">5dp</dimen>
     <dimen name="margin_large">30dp</dimen>
     <dimen name="margin_medium">20dp</dimen>
     <dimen name="margin_small">10dp</dimen>
     <dimen name="margin_xlarge">40dp</dimen>
+    <dimen name="margin_xxlarge">50dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>
@@ -1033,10 +1052,13 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="org_setup_edit_text_height">55dp</dimen>
     <dimen name="sp_18">18sp</dimen>
     <dimen name="text_size_large">25sp</dimen>
     <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
     <dimen name="text_size_xlarge">30sp</dimen>
+    <dimen name="text_size_xxlarge">40sp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -1105,6 +1127,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="amount">Amount</string>
     <string name="app_name">ExpenseManager</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="approve">Approve</string>
@@ -1112,8 +1135,10 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="checkout">Check out the in tangible expenses for this month</string>
+    <string name="company_logo_upload">Upload Company Logo</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="currencysymbol">$</string>
+    <string name="currentweek">Current :</string>
     <string name="email">Email</string>
     <string name="expense_history_for_last_6_weeks">Expense History For Last 6 weeks</string>
     <string name="expense_name">Expense Name</string>
@@ -1121,6 +1146,7 @@
     <string name="fa_arrow_left"></string>
     <string name="fa_arrow_right"></string>
     <string name="fa_arrow_up"></string>
+    <string name="fa_balance_scale"></string>
     <string name="fa_calendar"></string>
     <string name="fa_calendar_o"></string>
     <string name="fa_camera"></string>
@@ -1129,13 +1155,16 @@
     <string name="fa_check"></string>
     <string name="fa_cross"></string>
     <string name="fa_dashboard"></string>
-    <string name="fa_dollar"></string>
+    <string name="fa_dollar"></string>
     <string name="fa_file_photo"></string>
     <string name="fa_hidepwd"></string>
+    <string name="fa_history"></string>
+    <string name="fa_money"></string>
     <string name="fa_plus"></string>
     <string name="fa_refresh"></string>
     <string name="fa_showpwd"></string>
     <string name="fa_trash"></string>
+    <string name="fa_user"></string>
     <string name="fa_user_add"></string>
     <string name="fa_users"></string>
     <string name="fetch_tangible_expenses">Fetching tangible expenses from server...</string>
@@ -1144,6 +1173,7 @@
     <string name="fetching_expenses_for_today">Fetching expenses for Today...</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="forgot_password_ques">Forgot Password ?</string>
+    <string name="income">Income</string>
     <string name="ion_android_search"></string>
     <string name="ion_bag"></string>
     <string name="ion_card"></string>
@@ -1164,8 +1194,10 @@
     <string name="ion_person"></string>
     <string name="ion_person_add"></string>
     <string name="ion_person_stalker"></string>
+    <string name="lastPrevWeek">Last Previous :</string>
     <string name="login">Login</string>
     <string name="new_to_expense_tracker">New to Expense Manager !</string>
+    <string name="nextweek">Next Week :</string>
     <string name="no_expenses_recored">No expenses recorded for today</string>
     <string name="no_expenses_recored_forweek">No expenses recorded for this week</string>
     <string name="organization">ORGANIZATION</string>
@@ -1177,6 +1209,7 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="please_enter_your_mail">Please enter your email\nwe will send you new Pin</string>
     <string name="please_enter_your_username_and_mail">Please enter your username and mail\nWe will send you new password</string>
+    <string name="previousweek">Previous :</string>
     <string name="product">Product</string>
     <string name="reports">Reports</string>
     <string name="saving_expenses">Saving expenses...</string>
@@ -1187,6 +1220,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tangible_expenses">TANGIBLE EXPENSES</string>
     <string name="today_expense_text">3 products were bought extra this month, your profit will be reduced by $40.00 from last month</string>
+    <string name="today_extra_expense">Below products were bought extra.</string>
     <string name="use_pin">Use Pin</string>
     <string name="username">Username</string>
     <string name="view_invoice">View Invoice</string>
@@ -2730,10 +2764,10 @@
     </style>
     <style name="button_style">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:textColor">@color/editTextBackgroundWhite</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
         <item name="android:paddingTop">5dp</item>
         <item name="android:paddingBottom">5dp</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
@@ -2745,6 +2779,28 @@
         <item name="android:textColor">@android:color/primary_text_light</item>
         <item name="android:background">@android:drawable/edit_text</item>
     </style>
+    <style name="menubar_item_style_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">@dimen/margin_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="organizational_setup_edittext_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/org_setup_edit_text_height</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingLeft">@dimen/margin_medium</item>
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:ems">12</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
     <style name="pin_key_style">
         <item name="android:textColor">@color/yellow</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
@@ -2755,13 +2811,31 @@
         <item name="android:background">@color/transparentGray</item>
         <item name="android:layout_margin">2dp</item>
     </style>
+    <style name="plus_square_button_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">@dimen/margin_large</item>
+        <item name="android:text">+</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_xxlarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/theme_color</item>
+    </style>
     <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
         <item name="android:textColor">@color/blue</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="spinnerDropDownItemStyleBlack" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
     </style>
     <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
         <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:checkMark">@drawable/ic_arrow_down</item>
+    </style>
+    <style name="spinnerItemStyleBlack" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@android:color/primary_text_light</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:checkMark">@drawable/ic_arrow_down</item>
     </style>

@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff">-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="horizontal">
-
+    android:orientation="horizontal"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7">
 
     <RelativeLayout
         android:id="@+id/parent_main_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginLeft="@dimen/margin_medium"
-        android:orientation="vertical"
-        android:gravity="left">
+        android:layout_marginStart="@dimen/margin_medium"
+        android:gravity="left"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/main_layout"
-            android:layout_width="520dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="1"
-            android:gravity="left">
+            android:gravity="left"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/linear_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_large"
                 android:layout_marginBottom="@dimen/margin_medium"
-                android:layout_weight="0.1"
+                android:layout_marginTop="@dimen/margin_large"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -44,8 +41,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/double_circlular_view"
-                    android:src="@drawable/ic_attach_money"
-                     />
+                    android:src="@drawable/ic_attach_money" />
 
                 <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
                     android:id="@+id/today_expensies_label"
@@ -64,10 +60,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="20dp"
-                    android:background="@drawable/double_circlular_view"
-                    android:src="@drawable/ic_add"
                     android:layout_toStartOf="@+id/img_ocr_expense"
-                     />
+                    android:background="@drawable/double_circlular_view"
+                    android:src="@drawable/ic_add" />
 
                 <TextView
                     android:id="@+id/img_ocr_expense"
@@ -76,43 +71,43 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="15dp"
-                    android:gravity="center"
                     android:background="@drawable/double_circlular_view"
+                    android:gravity="center"
                     android:text="@string/fa_camera"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_large"/>
+                    android:textSize="@dimen/text_size_large" />
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.4">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_todays"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_empty_list_today"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/no_expenses_recored"
-                android:textSize="@dimen/text_size_large"
-                android:padding="@dimen/margin_medium"
-                android:layout_marginLeft="@dimen/margin_large"
-                android:layout_below="@id/recycler_view_todays"
-                android:visibility="visible"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_todays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_empty_list_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recycler_view_todays"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:padding="@dimen/margin_medium"
+                    android:text="@string/no_expenses_recored"
+                    android:textSize="@dimen/text_size_large"
+                    android:visibility="visible" />
             </LinearLayout>
+
             <RelativeLayout
                 android:id="@+id/linear_week_expense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_empty_list_today"
-                android:layout_marginTop="@dimen/margin_large"
                 android:layout_marginBottom="@dimen/margin_medium"
-                android:layout_weight="0.1"
+                android:layout_marginTop="@dimen/margin_large"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -148,51 +143,52 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.4">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_week"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_empty_list_week_expense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/no_expenses_recored_forweek"
-                android:textSize="@dimen/text_size_large"
-                android:padding="@dimen/margin_medium"
-                android:layout_marginLeft="@dimen/margin_large"
-                android:visibility="gone"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_empty_list_week_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:padding="@dimen/margin_medium"
+                    android:text="@string/no_expenses_recored_forweek"
+                    android:textSize="@dimen/text_size_large"
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/img_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:padding="@dimen/text_size_medium"
-            android:background="@color/yellow"
-            android:text="@string/fa_arrow_left"
-            android:textSize="@dimen/text_size_xlarge"
-            />
-
-
     </RelativeLayout>
+</ScrollView>
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_weight="0.3">
+    <TextView
+        android:id="@+id/img_arrow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:paddingLeft="@dimen/text_size_medium"
+        android:paddingRight="@dimen/text_size_medium"
+        android:text="@string/fa_arrow_left"
+        android:textSize="@dimen/text_size_xlarge"/>
     <RelativeLayout
         android:id="@+id/slide_nav_bar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="end"
         android:background="@color/expense_side_panel_bg_color"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
             android:id="@+id/txt_hi"
@@ -209,12 +205,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txt_hi"
-            android:maxLines="10"
             android:ellipsize="end"
+            android:maxLines="10"
             android:paddingLeft="@dimen/margin_medium"
-            android:text="@string/today_expense_text"
-            android:textSize="@dimen/text_size_medium"
-            android:textColor="@color/expense_side_panel_text_color" />
+            android:text="@string/today_extra_expense"
+            android:textColor="@color/expense_side_panel_text_color"
+            android:textSize="@dimen/text_size_medium" />
 
         <View
             android:id="@+id/view_above_recycler_view"
@@ -228,9 +224,9 @@
             android:id="@+id/recycler_view_today_products"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:paddingLeft="@dimen/margin_medium"
             android:layout_alignLeft="@+id/txt_hi"
-            android:layout_below="@id/view_above_recycler_view" />
+            android:layout_below="@id/view_above_recycler_view"
+            android:paddingLeft="@dimen/margin_medium" />
 
         <View
             android:id="@+id/view_below_recycler_view"
@@ -252,11 +248,11 @@
                 android:id="@+id/txt_add_to_tangible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_medium"
                 android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/margin_medium"
+                android:text="Do you want to add these as tangible from now on"
                 android:textColor="@color/expense_side_panel_text_color"
-                android:textSize="@dimen/text_size_medium"
-                android:text="Do you want to add these as tangible from now on" />
+                android:textSize="@dimen/text_size_medium" />
 
             <ImageView
                 android:id="@+id/img_close"
@@ -264,84 +260,218 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/txt_add_to_tangible"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_large"
-                android:layout_marginBottom="@dimen/margin_medium"
                 android:background="@drawable/circular_ring"
-                android:src="@drawable/ic_clear_green"
-                />
+                android:src="@drawable/ic_clear_green" />
 
             <ImageView
                 android:id="@+id/img_done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_add_to_tangible"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_marginRight="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_large"
-                android:layout_marginBottom="@dimen/margin_medium"
                 android:layout_toLeftOf="@+id/img_close"
                 android:background="@drawable/circular_ring"
-                android:src="@drawable/ic_check_green"
-                 />
+                android:src="@drawable/ic_check_green" />
 
 
         </RelativeLayout>
+
         <LinearLayout
-            android:id="@+id/ll_expense_list"
-            android:layout_width="wrap_content"
+            android:id="@+id/ll_forecast"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@id/rel_tangible"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp">
-            <TextView
-                android:id="@+id/tv_expense_list"
-                android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/text_size_medium"
+            android:layout_below="@id/rel_tangible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fa_dollar"
-                android:textColor="@color/expense_side_panel_text_color"
-                android:textSize="@dimen/text_size_large"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/circular_ring"/>
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currentweek"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentexp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/text_size_medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Expense list"
-                android:textColor="@color/expense_side_panel_text_color"
-                android:textSize="18dp" />
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/previousweek"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <TextView
+                    android:id="@+id/tvPreviousweek"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/text_size_medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lastPrevWeek"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <TextView
+                    android:id="@+id/tvLastPrevWeekExp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/text_size_medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nextweek"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <TextView
+                    android:id="@+id/tvNextWeekExp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/text_size_medium"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_reports"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/rel_tangible"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/ll_expense_list">
-            <TextView
-                android:id="@+id/tv_reports"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_expense_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/circular_ring"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/fa_chart"
-                android:textColor="@color/expense_side_panel_text_color"
-                android:textSize="@dimen/text_size_large"/>
-            <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
-                android:id="@+id/txt_reports"
+                android:layout_below="@id/rel_tangible"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_expense_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circular_ring"
+                    android:text="@string/fa_dollar"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Expenses"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_reports"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reports"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/expense_side_panel_text_color"
-                android:textSize="18dp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ll_expense_list"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circular_ring"
+                    android:text="@string/fa_chart"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                    android:id="@+id/txt_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Reports"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_logs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_tangible"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ll_expense_list"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circular_ring"
+                    android:text="@string/fa_balance_scale"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <expmanager.idea.spark.in.expensemanager.utils.CustomFonts
+                    android:id="@+id/txt_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Forecast"
+                    android:textColor="@color/expense_side_panel_text_color"
+                    android:textSize="18dp" />
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 
+    </LinearLayout>
 </LinearLayout>

@@ -5,10 +5,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 
@@ -46,10 +51,24 @@ public class ListAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = inflater.inflate(R.layout.listadapter, viewGroup, false);
 
-        TextView expTitle = (TextView) row.findViewById(R.id.name);
-        TextView expAmt = (TextView) row.findViewById(R.id.price);
+        EditText expTitle = (EditText) row.findViewById(R.id.name);
+        EditText expAmt = (EditText) row.findViewById(R.id.price);
+        EditText qty= (EditText) row.findViewById(R.id.quantity);
+        Spinner category= (Spinner) row.findViewById(R.id.category);
         TextView ids = (TextView) row.findViewById(R.id.ids);
+        ImageView action=(ImageView)row.findViewById(R.id.action);
 
+        List<String> categories = new ArrayList<String>();
+        categories.add("Automobile");
+        categories.add("Business Services");
+        categories.add("Computers");
+        categories.add("Education");
+        categories.add("Personal");
+        categories.add("Travel");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, categories);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        category.setAdapter(dataAdapter);
 
         expTitle.setText(name.get(position));
         ids.setText(String.valueOf(position+1));
