@@ -1,66 +1,130 @@
 [
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_snackbar_out.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_snackbar_out.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_snackbar_in.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_fab_out.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_out_top.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_out_bottom.xml"
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\f2399a69bd27d30ededb4624260154701ba191dd\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/30b487f2ab5edb55c67aa3eaa77f8e00c957e002/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Ramana\\ExpenseManagerV2-master\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "/Volumes/Macintosh_HD/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/C:\\Users\\Ramana.reddy\\.android\\build-cache\\7a0107f123da8ea95db7c35cee2eec230084bec1\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Ramana/OtherAndroidProjects/ExpenseManagerV2-master/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/RamanaRedddy/.android/build-cache/4e47bc336991d698aa88ed4d0d9ce2ca5bcb333f/output/res/anim/abc_popup_enter.xml"
     }
 ]

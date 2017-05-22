@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -19,8 +18,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -31,13 +34,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import expmanager.idea.spark.in.expensemanager.R;
 import expmanager.idea.spark.in.expensemanager.adapters.ListAdapter;
+import expmanager.idea.spark.in.expensemanager.model.Expense;
+import expmanager.idea.spark.in.expensemanager.model.ExpenseSyncRequest;
+import expmanager.idea.spark.in.expensemanager.model.Invoice;
 import expmanager.idea.spark.in.expensemanager.model.ScanInvoiceModel;
+import expmanager.idea.spark.in.expensemanager.network.RetrofitApi;
 import expmanager.idea.spark.in.expensemanager.ocr_usage.CaptureActivity;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsTool;
 import expmanager.idea.spark.in.expensemanager.utils.RequestPermissionsToolImpl;
+import expmanager.idea.spark.in.expensemanager.utils.SessionManager;
+import expmanager.idea.spark.in.expensemanager.utils.Utils;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 /**
@@ -50,9 +64,12 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
     ArrayList<String> filterdataname=null;
     private ImageView imageRescan;
     ListView list;
+    ListAdapter adapter;
     private Uri outputFileUri;
     private TessBaseAPI tessBaseApi;
     private static final int PHOTO_REQUEST_CODE = 1;
+    private RelativeLayout relativeLayout;
+    private android.app.AlertDialog mProgressDialog;
 
     private static final String DATA_PATH = Environment.getExternalStorageDirectory().toString() + "/ExpenseManager/";
     private static final String TESSDATA = "tessdata";
@@ -75,11 +92,18 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
 
         list=(ListView)rootView.findViewById(R.id.list);
         imageRescan = (ImageView) rootView.findViewById(R.id.img_rescan);
+        relativeLayout = (RelativeLayout) rootView.findViewById(R.id.done_layout);
 
         imageRescan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startCameraActivity();
+            }
+        });
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uploadInvoiceCall();
             }
         });
 
@@ -88,6 +112,102 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
         }
 
         return rootView;
+    }
+
+    private void uploadInvoiceCall(){
+
+        if(adapter==null)
+            return;
+
+        ArrayList<ScanInvoiceModel> invoiceModels = new ArrayList<>();
+
+        for (int i = 0; i <adapter.getCount() ; i++) {
+
+
+            View view = list.getChildAt(i);
+
+            EditText expTitle = (EditText) view.findViewById(R.id.name);
+            EditText expAmt = (EditText) view.findViewById(R.id.price);
+            EditText qty= (EditText) view.findViewById(R.id.quantity);
+            Spinner category= (Spinner) view.findViewById(R.id.category);
+            TextView ids = (TextView) view.findViewById(R.id.ids);
+
+            ScanInvoiceModel scanInvoiceModel = new ScanInvoiceModel();
+            scanInvoiceModel.setCategory(category.getSelectedItem().toString());
+            scanInvoiceModel.setPrice(expAmt.getText().toString());
+            scanInvoiceModel.setProductName(expTitle.getText().toString());
+            scanInvoiceModel.setQuantity(Integer.parseInt(qty.getText().toString()));
+
+            invoiceModels.add(scanInvoiceModel);
+
+
+        }
+
+        handleCreateInvoiceService();
+
+
+    }
+
+
+    private void handleCreateInvoiceService(){
+
+        if(true)
+         return;
+        List<Expense> expenseList = null;
+        Invoice invoice = null;
+        //TODO dB HANDLING......
+//        try{
+//            myDbHelper = new DatabaseHandler(getContext());
+//            myDbHelper.openConnection();
+//            invoice = myDbHelper.getInvoiceObjectForInvoiceId(mInvoiceID);
+//            expenseList = myDbHelper.getExpenses(mInvoiceID);
+//        }catch (Exception ex){
+//            ex.printStackTrace();
+//        }finally {
+//            myDbHelper.closeConnection();
+//        }
+        SessionManager sessionManager = new SessionManager(getContext());
+
+        invoice.setCompany_id(Integer.valueOf(sessionManager.getCompanyId()));
+        invoice.setExpIsApproved(sessionManager.isApproved());
+        //invoice.setInvImgPath(getBase64ImageString(invoice.getInvImgPath()));
+        invoice.setInvImgPath(Utils.encodeFileToBase64Binary(invoice.getInvImgPath()));
+        ExpenseSyncRequest expenseRequest = new ExpenseSyncRequest(invoice,expenseList);
+        mProgressDialog = Utils.showProgressBar(getActivity(),getString(R.string.saving_expenses));
+        RetrofitApi.getApi().CreateInvoice(sessionManager.getAuthToken(),expenseRequest).enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                if (response.isSuccessful()) {
+                    onInvoiceCreateSuccess();
+                } else {
+                    onInvoiceCreateFailure();
+                }
+                Utils.dismissProgressBar(mProgressDialog);
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                onInvoiceCreateFailure();
+                Utils.dismissProgressBar(mProgressDialog);
+            }
+        });
+    }
+
+    private void onInvoiceCreateSuccess() {
+
+        /*myDbHelper = new DatabaseHandler(getContext());
+        myDbHelper.openConnection();
+        myDbHelper.deleteExpenseEntries(mInvoiceID);*/
+       // dialog.cancel();
+
+        ExpenseFragment fragmentorg = new ExpenseFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.admin_content_frame, fragmentorg).commit();
+
+    }
+
+    private void onInvoiceCreateFailure() {
+        Toast.makeText(getContext(), "Oops something went wrong. Please Save again", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -160,7 +280,6 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
 
 
                     dd.add(datas);
-
 
 
 
@@ -244,7 +363,7 @@ public class AddExpenseFragment extends Fragment implements ActivityCompat.OnReq
                     scanInvoiceModels.add(scanInvoiceModel);
 
                 }
-                ListAdapter adapter=new ListAdapter(getActivity(),scanInvoiceModels);
+                adapter=new ListAdapter(getActivity(),scanInvoiceModels);
                 list.setAdapter(adapter);
             }
             if (resultCode == Activity.RESULT_CANCELED) {
