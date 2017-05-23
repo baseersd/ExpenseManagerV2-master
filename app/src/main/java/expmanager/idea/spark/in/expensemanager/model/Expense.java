@@ -55,6 +55,8 @@ public class Expense {
     @SerializedName("company_invoice_id")
     private int expCompanyInvoiceId;
 
+    public Expense(){}
+
     public Expense(String expDate, int expProdId, String expProductName, int expCatId, String expCategoryName,
                    String expInvId, int expUnit,int expIsApproved, int expIsRecursive, double expAmt,
                    int expCreateBy,String expCreatedAt, int isSaved, int expWeekIndex, int expid) {
@@ -202,5 +204,18 @@ public class Expense {
 
     public void setCompany_id(int company_id) {
         this.company_id = company_id;
+    }
+
+    public int getExpProdId() {
+        return expProdId;
+    }
+
+
+    public int getExpCompanyInvoiceId() {
+        return expCompanyInvoiceId;
+    }
+
+    public void setExpCompanyInvoiceId(int expCompanyInvoiceId) {
+        this.expCompanyInvoiceId = expCompanyInvoiceId;
     }
 }

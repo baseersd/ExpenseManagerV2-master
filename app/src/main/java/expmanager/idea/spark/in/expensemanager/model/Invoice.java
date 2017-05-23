@@ -142,4 +142,11 @@ public class Invoice implements Serializable{
         this.company_id = company_id;
     }
 
+    public void setInvCreatedAt(String invCreatedAt) {
+        this.invCreatedAt = invCreatedAt;
+    }
+
+    public void setInvCreateBy(int invCreateBy) {
+        this.invCreateBy = invCreateBy;
+    }
 }

@@ -1,9 +1,6 @@
 package expmanager.idea.spark.in.expensemanager.adapters;
 
 import android.content.Context;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,44 +82,10 @@ public class ListAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 scanInvoiceModels.remove(position);
+                notifyDataSetChanged();
             }
         });
 
-        expTitle.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-
-                if (!b){
-                    final int position = view.getId();
-                    final EditText caption = (EditText) view;
-                    scanInvoiceModels.get(position).setProductName(caption.getText().toString());
-                }
-            }
-        });
-
-        expAmt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-
-                if (!b){
-                    final int position = view.getId();
-                    final EditText price = (EditText) view;
-                    scanInvoiceModels.get(position).setPrice(price.getText().toString());
-                }
-            }
-        });
-
-        qty.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-
-                if (!b){
-                    final int position = view.getId();
-                    final EditText qty = (EditText) view;
-                    scanInvoiceModels.get(position).setQuantity(Integer.parseInt(qty.getText().toString()));
-                }
-            }
-        });
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, categoryList);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
